@@ -29,7 +29,7 @@ default_args = {
     'retry_delay': datetime.timedelta(seconds=10),
 }
 
-dag = DAG('covid_data_dag', start_date=airflow.utils.dates.days_ago(0), default_args=default_args, schedule_interval='@daily')
+dag = DAG('covid_data_dag_postgres', start_date=airflow.utils.dates.days_ago(0), default_args=default_args, schedule_interval='@daily')
 
 def download_cases_deaths():
     #url = 'https://covid19.who.int/WHO-COVID-19-global-data.csv'

@@ -16,7 +16,7 @@ import pandas as pd
 
 
 cases_deaths='https://covid19.who.int/WHO-COVID-19-global-data.csv'
-vaccinations='https://github.com/owid/covid-19-data/blob/master/public/data/vaccinations/vaccinations.csv'
+vaccinations='https://raw.githubusercontent.com/owid/covid-19-data/master/public/data/vaccinations/vaccinations.csv'
 government_measures='https://raw.githubusercontent.com/OxCGRT/covid-policy-dataset/main/data/OxCGRT_compact_national_v1.csv'
 
 default_args = {
@@ -27,7 +27,7 @@ default_args = {
     'retry_delay': datetime.timedelta(seconds=10),
 }
 
-dag = DAG('covid_data_dag', start_date=airflow.utils.dates.days_ago(0), default_args=default_args, schedule_interval='@daily')
+dag = DAG('covid_data_dag_mongo', start_date=airflow.utils.dates.days_ago(0), default_args=default_args, schedule_interval='@daily')
 
 def download_cases_deaths():
     response = requests.get(cases_deaths)
@@ -46,7 +46,7 @@ def download_government_measures():
 
 def _create_cases_deaths_query(previous_epoch: int, output_folder: str):
     df = pd.read_csv('/opt/airflow/dags/mongoDB/cases_deaths.csv')
-    client = MongoClient('localhost', 27017)
+    client = MongoClient('mongodb://mongo:27017/')
     db = client['covid_data']
     collection = db['cases_deaths']
     collection.insert_many(df.to_dict('records'))
@@ -54,15 +54,15 @@ def _create_cases_deaths_query(previous_epoch: int, output_folder: str):
 def _create_government_measures_query(previous_epoch: int, output_folder: str):
     df = pd.read_csv('/opt/airflow/dags/mongoDB/government_measures.csv')
     df = df[['CountryName', 'CountryCode', 'RegionName', 'RegionCode', 'Jurisdiction', 'Date', 'StringencyIndex_Average', 'GovernmentResponseIndex_Average', 'ContainmentHealthIndex_Average', 'EconomicSupportIndex']]
-    client = MongoClient('localhost', 27017)
+    client = MongoClient('mongodb://mongo:27017/')
     db = client['covid_data']
     collection = db['government_measures']
     collection.insert_many(df.to_dict('records'))
 
 def _create_vaccinations_query(previous_epoch: int, output_folder: str):
-    df = pd.read_csv('/opt/airflow/dags/vaccinations.csv')
+    df = pd.read_csv('/opt/airflow/dags/MongoDB/vaccinations.csv')
     df.fillna(0, inplace=True)
-    client = MongoClient('localhost', 27017)
+    client = MongoClient('mongodb://mongo:27017/')
     db = client['covid_data']
     collection = db['vaccinations']
     collection.insert_many(df.to_dict('records'))
