@@ -1,0 +1,350 @@
+[2023-11-08T12:32:41.239+0000] {taskinstance.py:1157} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: covid_data_dag.create_cases_deaths_table manual__2023-11-08T12:32:12.224672+00:00 [queued]>
+[2023-11-08T12:32:41.341+0000] {taskinstance.py:1157} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: covid_data_dag.create_cases_deaths_table manual__2023-11-08T12:32:12.224672+00:00 [queued]>
+[2023-11-08T12:32:41.345+0000] {taskinstance.py:1359} INFO - Starting attempt 1 of 2
+[2023-11-08T12:32:41.530+0000] {taskinstance.py:1380} INFO - Executing <Task(PostgresOperator): create_cases_deaths_table> on 2023-11-08 12:32:12.224672+00:00
+[2023-11-08T12:32:41.560+0000] {standard_task_runner.py:57} INFO - Started process 3027 to run task
+[2023-11-08T12:32:41.574+0000] {standard_task_runner.py:84} INFO - Running: ['***', 'tasks', 'run', 'covid_data_dag', 'create_cases_deaths_table', 'manual__2023-11-08T12:32:12.224672+00:00', '--job-id', '365', '--raw', '--subdir', 'DAGS_FOLDER/Dag_postgres.py', '--cfg-path', '/tmp/tmpzo17c2kb']
+[2023-11-08T12:32:41.619+0000] {standard_task_runner.py:85} INFO - Job 365: Subtask create_cases_deaths_table
+[2023-11-08T12:32:42.061+0000] {task_command.py:415} INFO - Running <TaskInstance: covid_data_dag.create_cases_deaths_table manual__2023-11-08T12:32:12.224672+00:00 [running]> on host 172.21.0.9
+[2023-11-08T12:32:42.650+0000] {taskinstance.py:1660} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='covid_data_dag' AIRFLOW_CTX_TASK_ID='create_cases_deaths_table' AIRFLOW_CTX_EXECUTION_DATE='2023-11-08T12:32:12.224672+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='manual__2023-11-08T12:32:12.224672+00:00'
+[2023-11-08T12:32:42.655+0000] {sql.py:274} INFO - Executing: CREATE TABLE IF NOT EXISTS cases_deaths_1 (
+id SERIAL PRIMARY KEY,
+date_reported DATE,
+country_code VARCHAR(10),
+country VARCHAR(100),
+who_region VARCHAR(100),
+new_cases INTEGER,
+cumulative_cases INTEGER,
+new_deaths INTEGER,
+cumulative_deaths INTEGER
+);
+INSERT INTO cases_deaths VALUES ('0', '2020-01-03', 'AF', 'Afghanistan', 'EMRO', 0, 0, 0, 0);
+INSERT INTO cases_deaths VALUES ('1', '2020-01-04', 'AF', 'Afghanistan', 'EMRO', 0, 0, 0, 0);
+INSERT INTO cases_deaths VALUES ('2', '2020-01-05', 'AF', 'Afghanistan', 'EMRO', 0, 0, 0, 0);
+INSERT INTO cases_deaths VALUES ('3', '2020-01-06', 'AF', 'Afghanistan', 'EMRO', 0, 0, 0, 0);
+INSERT INTO cases_deaths VALUES ('4', '2020-01-07', 'AF', 'Afghanistan', 'EMRO', 0, 0, 0, 0);
+INSERT INTO cases_deaths VALUES ('5', '2020-01-08', 'AF', 'Afghanistan', 'EMRO', 0, 0, 0, 0);
+INSERT INTO cases_deaths VALUES ('6', '2020-01-09', 'AF', 'Afghanistan', 'EMRO', 0, 0, 0, 0);
+INSERT INTO cases_deaths VALUES ('7', '2020-01-10', 'AF', 'Afghanistan', 'EMRO', 0, 0, 0, 0);
+INSERT INTO cases_deaths VALUES ('8', '2020-01-11', 'AF', 'Afghanistan', 'EMRO', 0, 0, 0, 0);
+INSERT INTO cases_deaths VALUES ('9', '2020-01-12', 'AF', 'Afghanistan', 'EMRO', 0, 0, 0, 0);
+INSERT INTO cases_deaths VALUES ('10', '2020-01-13', 'AF', 'Afghanistan', 'EMRO', 0, 0, 0, 0);
+INSERT INTO cases_deaths VALUES ('11', '2020-01-14', 'AF', 'Afghanistan', 'EMRO', 0, 0, 0, 0);
+INSERT INTO cases_deaths VALUES ('12', '2020-01-15', 'AF', 'Afghanistan', 'EMRO', 0, 0, 0, 0);
+INSERT INTO cases_deaths VALUES ('13', '2020-01-16', 'AF', 'Afghanistan', 'EMRO', 0, 0, 0, 0);
+INSERT INTO cases_deaths VALUES ('14', '2020-01-17', 'AF', 'Afghanistan', 'EMRO', 0, 0, 0, 0);
+INSERT INTO cases_deaths VALUES ('15', '2020-01-18', 'AF', 'Afghanistan', 'EMRO', 0, 0, 0, 0);
+INSERT INTO cases_deaths VALUES ('16', '2020-01-19', 'AF', 'Afghanistan', 'EMRO', 0, 0, 0, 0);
+INSERT INTO cases_deaths VALUES ('17', '2020-01-20', 'AF', 'Afghanistan', 'EMRO', 0, 0, 0, 0);
+INSERT INTO cases_deaths VALUES ('18', '2020-01-21', 'AF', 'Afghanistan', 'EMRO', 0, 0, 0, 0);
+INSERT INTO cases_deaths VALUES ('19', '2020-01-22', 'AF', 'Afghanistan', 'EMRO', 0, 0, 0, 0);
+INSERT INTO cases_deaths VALUES ('20', '2020-01-23', 'AF', 'Afghanistan', 'EMRO', 0, 0, 0, 0);
+INSERT INTO cases_deaths VALUES ('21', '2020-01-24', 'AF', 'Afghanistan', 'EMRO', 0, 0, 0, 0);
+INSERT INTO cases_deaths VALUES ('22', '2020-01-25', 'AF', 'Afghanistan', 'EMRO', 0, 0, 0, 0);
+INSERT INTO cases_deaths VALUES ('23', '2020-01-26', 'AF', 'Afghanistan', 'EMRO', 0, 0, 0, 0);
+INSERT INTO cases_deaths VALUES ('24', '2020-01-27', 'AF', 'Afghanistan', 'EMRO', 0, 0, 0, 0);
+INSERT INTO cases_deaths VALUES ('25', '2020-01-28', 'AF', 'Afghanistan', 'EMRO', 0, 0, 0, 0);
+INSERT INTO cases_deaths VALUES ('26', '2020-01-29', 'AF', 'Afghanistan', 'EMRO', 0, 0, 0, 0);
+INSERT INTO cases_deaths VALUES ('27', '2020-01-30', 'AF', 'Afghanistan', 'EMRO', 0, 0, 0, 0);
+INSERT INTO cases_deaths VALUES ('28', '2020-01-31', 'AF', 'Afghanistan', 'EMRO', 0, 0, 0, 0);
+INSERT INTO cases_deaths VALUES ('29', '2020-02-01', 'AF', 'Afghanistan', 'EMRO', 0, 0, 0, 0);
+INSERT INTO cases_deaths VALUES ('30', '2020-02-02', 'AF', 'Afghanistan', 'EMRO', 0, 0, 0, 0);
+INSERT INTO cases_deaths VALUES ('31', '2020-02-03', 'AF', 'Afghanistan', 'EMRO', 0, 0, 0, 0);
+INSERT INTO cases_deaths VALUES ('32', '2020-02-04', 'AF', 'Afghanistan', 'EMRO', 0, 0, 0, 0);
+INSERT INTO cases_deaths VALUES ('33', '2020-02-05', 'AF', 'Afghanistan', 'EMRO', 0, 0, 0, 0);
+INSERT INTO cases_deaths VALUES ('34', '2020-02-06', 'AF', 'Afghanistan', 'EMRO', 0, 0, 0, 0);
+INSERT INTO cases_deaths VALUES ('35', '2020-02-07', 'AF', 'Afghanistan', 'EMRO', 0, 0, 0, 0);
+INSERT INTO cases_deaths VALUES ('36', '2020-02-08', 'AF', 'Afghanistan', 'EMRO', 0, 0, 0, 0);
+INSERT INTO cases_deaths VALUES ('37', '2020-02-09', 'AF', 'Afghanistan', 'EMRO', 0, 0, 0, 0);
+INSERT INTO cases_deaths VALUES ('38', '2020-02-10', 'AF', 'Afghanistan', 'EMRO', 0, 0, 0, 0);
+INSERT INTO cases_deaths VALUES ('39', '2020-02-11', 'AF', 'Afghanistan', 'EMRO', 0, 0, 0, 0);
+INSERT INTO cases_deaths VALUES ('40', '2020-02-12', 'AF', 'Afghanistan', 'EMRO', 0, 0, 0, 0);
+INSERT INTO cases_deaths VALUES ('41', '2020-02-13', 'AF', 'Afghanistan', 'EMRO', 0, 0, 0, 0);
+INSERT INTO cases_deaths VALUES ('42', '2020-02-14', 'AF', 'Afghanistan', 'EMRO', 0, 0, 0, 0);
+INSERT INTO cases_deaths VALUES ('43', '2020-02-15', 'AF', 'Afghanistan', 'EMRO', 0, 0, 0, 0);
+INSERT INTO cases_deaths VALUES ('44', '2020-02-16', 'AF', 'Afghanistan', 'EMRO', 0, 0, 0, 0);
+INSERT INTO cases_deaths VALUES ('45', '2020-02-17', 'AF', 'Afghanistan', 'EMRO', 0, 0, 0, 0);
+INSERT INTO cases_deaths VALUES ('46', '2020-02-18', 'AF', 'Afghanistan', 'EMRO', 0, 0, 0, 0);
+INSERT INTO cases_deaths VALUES ('47', '2020-02-19', 'AF', 'Afghanistan', 'EMRO', 0, 0, 0, 0);
+INSERT INTO cases_deaths VALUES ('48', '2020-02-20', 'AF', 'Afghanistan', 'EMRO', 0, 0, 0, 0);
+INSERT INTO cases_deaths VALUES ('49', '2020-02-21', 'AF', 'Afghanistan', 'EMRO', 0, 0, 0, 0);
+INSERT INTO cases_deaths VALUES ('50', '2020-02-22', 'AF', 'Afghanistan', 'EMRO', 0, 0, 0, 0);
+INSERT INTO cases_deaths VALUES ('51', '2020-02-23', 'AF', 'Afghanistan', 'EMRO', 0, 0, 0, 0);
+INSERT INTO cases_deaths VALUES ('52', '2020-02-24', 'AF', 'Afghanistan', 'EMRO', 0, 0, 0, 0);
+INSERT INTO cases_deaths VALUES ('53', '2020-02-25', 'AF', 'Afghanistan', 'EMRO', 0, 0, 0, 0);
+INSERT INTO cases_deaths VALUES ('54', '2020-02-26', 'AF', 'Afghanistan', 'EMRO', 1, 1, 0, 0);
+INSERT INTO cases_deaths VALUES ('55', '2020-02-27', 'AF', 'Afghanistan', 'EMRO', 0, 1, 0, 0);
+INSERT INTO cases_deaths VALUES ('56', '2020-02-28', 'AF', 'Afghanistan', 'EMRO', 0, 1, 0, 0);
+INSERT INTO cases_deaths VALUES ('57', '2020-02-29', 'AF', 'Afghanistan', 'EMRO', 0, 1, 0, 0);
+INSERT INTO cases_deaths VALUES ('58', '2020-03-01', 'AF', 'Afghanistan', 'EMRO', 0, 1, 0, 0);
+INSERT INTO cases_deaths VALUES ('59', '2020-03-02', 'AF', 'Afghanistan', 'EMRO', 0, 1, 0, 0);
+INSERT INTO cases_deaths VALUES ('60', '2020-03-03', 'AF', 'Afghanistan', 'EMRO', 0, 1, 0, 0);
+INSERT INTO cases_deaths VALUES ('61', '2020-03-04', 'AF', 'Afghanistan', 'EMRO', 0, 1, 0, 0);
+INSERT INTO cases_deaths VALUES ('62', '2020-03-05', 'AF', 'Afghanistan', 'EMRO', 0, 1, 0, 0);
+INSERT INTO cases_deaths VALUES ('63', '2020-03-06', 'AF', 'Afghanistan', 'EMRO', 0, 1, 0, 0);
+INSERT INTO cases_deaths VALUES ('64', '2020-03-07', 'AF', 'Afghanistan', 'EMRO', 0, 1, 0, 0);
+INSERT INTO cases_deaths VALUES ('65', '2020-03-08', 'AF', 'Afghanistan', 'EMRO', 0, 1, 0, 0);
+INSERT INTO cases_deaths VALUES ('66', '2020-03-09', 'AF', 'Afghanistan', 'EMRO', 3, 4, 0, 0);
+INSERT INTO cases_deaths VALUES ('67', '2020-03-10', 'AF', 'Afghanistan', 'EMRO', 0, 4, 0, 0);
+INSERT INTO cases_deaths VALUES ('68', '2020-03-11', 'AF', 'Afghanistan', 'EMRO', 0, 4, 0, 0);
+INSERT INTO cases_deaths VALUES ('69', '2020-03-12', 'AF', 'Afghanistan', 'EMRO', 3, 7, 0, 0);
+INSERT INTO cases_deaths VALUES ('70', '2020-03-13', 'AF', 'Afghanistan', 'EMRO', 0, 7, 0, 0);
+INSERT INTO cases_deaths VALUES ('71', '2020-03-14', 'AF', 'Afghanistan', 'EMRO', 0, 7, 0, 0);
+INSERT INTO cases_deaths VALUES ('72', '2020-03-15', 'AF', 'Afghanistan', 'EMRO', 0, 7, 0, 0);
+INSERT INTO cases_deaths VALUES ('73', '2020-03-16', 'AF', 'Afghanistan', 'EMRO', 3, 10, 0, 0);
+INSERT INTO cases_deaths VALUES ('74', '2020-03-17', 'AF', 'Afghanistan', 'EMRO', 6, 16, 0, 0);
+INSERT INTO cases_deaths VALUES ('75', '2020-03-18', 'AF', 'Afghanistan', 'EMRO', 6, 22, 0, 0);
+INSERT INTO cases_deaths VALUES ('76', '2020-03-19', 'AF', 'Afghanistan', 'EMRO', 0, 22, 0, 0);
+INSERT INTO cases_deaths VALUES ('77', '2020-03-20', 'AF', 'Afghanistan', 'EMRO', 0, 22, 0, 0);
+INSERT INTO cases_deaths VALUES ('78', '2020-03-21', 'AF', 'Afghanistan', 'EMRO', 0, 22, 0, 0);
+INSERT INTO cases_deaths VALUES ('79', '2020-03-22', 'AF', 'Afghanistan', 'EMRO', 2, 24, 0, 0);
+INSERT INTO cases_deaths VALUES ('80', '2020-03-23', 'AF', 'Afghanistan', 'EMRO', 0, 24, 0, 0);
+INSERT INTO cases_deaths VALUES ('81', '2020-03-24', 'AF', 'Afghanistan', 'EMRO', 16, 40, 1, 1);
+INSERT INTO cases_deaths VALUES ('82', '2020-03-25', 'AF', 'Afghanistan', 'EMRO', 2, 42, 0, 1);
+INSERT INTO cases_deaths VALUES ('83', '2020-03-26', 'AF', 'Afghanistan', 'EMRO', 32, 74, 0, 1);
+INSERT INTO cases_deaths VALUES ('84', '2020-03-27', 'AF', 'Afghanistan', 'EMRO', 0, 74, 0, 1);
+INSERT INTO cases_deaths VALUES ('85', '2020-03-28', 'AF', 'Afghanistan', 'EMRO', 6, 80, 1, 2);
+INSERT INTO cases_deaths VALUES ('86', '2020-03-29', 'AF', 'Afghanistan', 'EMRO', 11, 91, 0, 2);
+INSERT INTO cases_deaths VALUES ('87', '2020-03-30', 'AF', 'Afghanistan', 'EMRO', 15, 106, 1, 3);
+INSERT INTO cases_deaths VALUES ('88', '2020-03-31', 'AF', 'Afghanistan', 'EMRO', 8, 114, 1, 4);
+INSERT INTO cases_deaths VALUES ('89', '2020-04-01', 'AF', 'Afghanistan', 'EMRO', 52, 166, 0, 4);
+INSERT INTO cases_deaths VALUES ('90', '2020-04-02', 'AF', 'Afghanistan', 'EMRO', 26, 192, 0, 4);
+INSERT INTO cases_deaths VALUES ('91', '2020-04-03', 'AF', 'Afghanistan', 'EMRO', 2, 194, 0, 4);
+INSERT INTO cases_deaths VALUES ('92', '2020-04-04', 'AF', 'Afghanistan', 'EMRO', 60, 254, 1, 5);
+INSERT INTO cases_deaths VALUES ('93', '2020-04-05', 'AF', 'Afghanistan', 'EMRO', 20, 274, 0, 5);
+INSERT INTO cases_deaths VALUES ('94', '2020-04-06', 'AF', 'Afghanistan', 'EMRO', 25, 299, 2, 7);
+INSERT INTO cases_deaths VALUES ('95', '2020-04-07', 'AF', 'Afghanistan', 'EMRO', 38, 337, 0, 7);
+INSERT INTO cases_deaths VALUES ('96', '2020-04-08', 'AF', 'Afghanistan', 'EMRO', 30, 367, 4, 11);
+INSERT INTO cases_deaths VALUES ('97', '2020-04-09', 'AF', 'Afghanistan', 'EMRO', 56, 423, 3, 14);
+INSERT INTO cases_deaths VALUES ('98', '2020-04-10', 'AF', 'Afghanistan', 'EMRO', 21, 444, 1, 15);
+INSERT INTO cases_deaths VALUES ('99', '2020-04-11', 'AF', 'Afghanistan', 'EMRO', 40, 484, 0, 15);
+INSERT INTO cases_deaths VALUES ('100', '2020-04-12', 'AF', 'Afghanistan', 'EMRO', 37, 521, 0, 15);
+INSERT INTO cases_deaths VALUES ('101', '2020-04-13', 'AF', 'Afghanistan', 'EMRO', 34, 555, 3, 18);
+INSERT INTO cases_deaths VALUES ('102', '2020-04-14', 'AF', 'Afghanistan', 'EMRO', 52, 607, 1, 19);
+INSERT INTO cases_deaths VALUES ('103', '2020-04-15', 'AF', 'Afghanistan', 'EMRO', 58, 665, 3, 22);
+INSERT INTO cases_deaths VALUES ('104', '2020-04-16', 'AF', 'Afghanistan', 'EMRO', 56, 721, 3, 25);
+INSERT INTO cases_deaths VALUES ('105', '2020-04-17', 'AF', 'Afghanistan', 'EMRO', 73, 794, 4, 29);
+INSERT INTO cases_deaths VALUES ('106', '2020-04-18', 'AF', 'Afghanistan', 'EMRO', 51, 845, 1, 30);
+INSERT INTO cases_deaths VALUES ('107', '2020-04-19', 'AF', 'Afghanistan', 'EMRO', 63, 908, 0, 30);
+INSERT INTO cases_deaths VALUES ('108', '2020-04-20', 'AF', 'Afghanistan', 'EMRO', 25, 933, 0, 30);
+INSERT INTO cases_deaths VALUES ('109', '2020-04-21', 'AF', 'Afghanistan', 'EMRO', 63, 996, 3, 33);
+INSERT INTO cases_deaths VALUES ('110', '2020-04-22', 'AF', 'Afghanistan', 'EMRO', 30, 1026, 3, 36);
+INSERT INTO cases_deaths VALUES ('111', '2020-04-23', 'AF', 'Afghanistan', 'EMRO', 66, 1092, 0, 36);
+INSERT INTO cases_deaths VALUES ('112', '2020-04-24', 'AF', 'Afghanistan', 'EMRO', 84, 1176, 4, 40);
+INSERT INTO cases_deaths VALUES ('113', '2020-04-25', 'AF', 'Afghanistan', 'EMRO', 50, 1226, 0, 40);
+INSERT INTO cases_deaths VALUES ('114', '2020-04-26', 'AF', 'Afghanistan', 'EMRO', 104, 1330, 3, 43);
+INSERT INTO cases_deaths VALUES ('115', '2020-04-27', 'AF', 'Afghanistan', 'EMRO', 133, 1463, 6, 49);
+INSERT INTO cases_deaths VALUES ('116', '2020-04-28', 'AF', 'Afghanistan', 'EMRO', 68, 1531, 1, 50);
+INSERT INTO cases_deaths VALUES ('117', '2020-04-29', 'AF', 'Afghanistan', 'EMRO', 172, 1703, 10, 60);
+INSERT INTO cases_deaths VALUES ('118', '2020-04-30', 'AF', 'Afghanistan', 'EMRO', 124, 1827, 0, 60);
+INSERT INTO cases_deaths VALUES ('119', '2020-05-01', 'AF', 'Afghanistan', 'EMRO', 110, 1937, 0, 60);
+INSERT INTO cases_deaths VALUES ('120', '2020-05-02', 'AF', 'Afghanistan', 'EMRO', 234, 2171, 4, 64);
+INSERT INTO cases_deaths VALUES ('121', '2020-05-03', 'AF', 'Afghanistan', 'EMRO', 0, 2171, 0, 64);
+INSERT INTO cases_deaths VALUES ('122', '2020-05-04', 'AF', 'Afghanistan', 'EMRO', 298, 2469, 8, 72);
+INSERT INTO cases_deaths VALUES ('123', '2020-05-05', 'AF', 'Afghanistan', 'EMRO', 0, 2469, 0, 72);
+INSERT INTO cases_deaths VALUES ('124', '2020-05-06', 'AF', 'Afghanistan', 'EMRO', 0, 2469, 0, 72);
+INSERT INTO cases_deaths VALUES ('125', '2020-05-07', 'AF', 'Afghanistan', 'EMRO', 755, 3224, 23, 95);
+INSERT INTO cases_deaths VALUES ('126', '2020-05-08', 'AF', 'Afghanistan', 'EMRO', 168, 3392, 9, 104);
+INSERT INTO cases_deaths VALUES ('127', '2020-05-09', 'AF', 'Afghanistan', 'EMRO', 171, 3563, 1, 105);
+INSERT INTO cases_deaths VALUES ('128', '2020-05-10', 'AF', 'Afghanistan', 'EMRO', 0, 3563, 0, 105);
+INSERT INTO cases_deaths VALUES ('129', '2020-05-11', 'AF', 'Afghanistan', 'EMRO', 478, 4041, 10, 115);
+INSERT INTO cases_deaths VALUES ('130', '2020-05-12', 'AF', 'Afghanistan', 'EMRO', 361, 4402, 4, 119);
+INSERT INTO cases_deaths VALUES ('131', '2020-05-13', 'AF', 'Afghanistan', 'EMRO', 262, 4664, 2, 121);
+INSERT INTO cases_deaths VALUES ('132', '2020-05-14', 'AF', 'Afghanistan', 'EMRO', 303, 4967, 6, 127);
+INSERT INTO cases_deaths VALUES ('133', '2020-05-15', 'AF', 'Afghanistan', 'EMRO', 259, 5226, 5, 132);
+INSERT INTO cases_deaths VALUES ('134', '2020-05-16', 'AF', 'Afghanistan', 'EMRO', 413, 5639, 4, 136);
+INSERT INTO cases_deaths VALUES ('135', '2020-05-17', 'AF', 'Afghanistan', 'EMRO', 414, 6053, 17, 153);
+INSERT INTO cases_deaths VALUES ('136', '2020-05-18', 'AF', 'Afghanistan', 'EMRO', 349, 6402, 15, 168);
+INSERT INTO cases_deaths VALUES ('137', '2020-05-19', 'AF', 'Afghanistan', 'EMRO', 262, 6664, 1, 169);
+INSERT INTO cases_deaths VALUES ('138', '2020-05-20', 'AF', 'Afghanistan', 'EMRO', 408, 7072, 4, 173);
+INSERT INTO cases_deaths VALUES ('139', '2020-05-21', 'AF', 'Afghanistan', 'EMRO', 581, 7653, 4, 177);
+INSERT INTO cases_deaths VALUES ('140', '2020-05-22', 'AF', 'Afghanistan', 'EMRO', 567, 8220, 12, 189);
+INSERT INTO cases_deaths VALUES ('141', '2020-05-23', 'AF', 'Afghanistan', 'EMRO', 910, 9130, 12, 201);
+INSERT INTO cases_deaths VALUES ('142', '2020-05-24', 'AF', 'Afghanistan', 'EMRO', 736, 9866, 10, 211);
+INSERT INTO cases_deaths VALUES ('143', '2020-05-25', 'AF', 'Afghanistan', 'EMRO', 716, 10582, 7, 218);
+INSERT INTO cases_deaths VALUES ('144', '2020-05-26', 'AF', 'Afghanistan', 'EMRO', 512, 11094, 1, 219);
+INSERT INTO cases_deaths VALUES ('145', '2020-05-27', 'AF', 'Afghanistan', 'EMRO', 737, 11831, 1, 220);
+INSERT INTO cases_deaths VALUES ('146', '2020-05-28', 'AF', 'Afghanistan', 'EMRO', 548, 12379, 6, 226);
+INSERT INTO cases_deaths VALUES ('147', '2020-05-29', 'AF', 'Afghanistan', 'EMRO', 637, 13016, 9, 235);
+INSERT INTO cases_deaths VALUES ('148', '2020-05-30', 'AF', 'Afghanistan', 'EMRO', 643, 13659, 11, 246);
+INSERT INTO cases_deaths VALUES ('149', '2020-05-31', 'AF', 'Afghanistan', 'EMRO', 784, 14443, 2, 248);
+[2023-11-08T12:32:42.707+0000] {base.py:73} INFO - Using connection ID 'postgres_default' for task execution.
+[2023-11-08T12:32:42.752+0000] {base.py:73} INFO - Using connection ID 'postgres_default' for task execution.
+[2023-11-08T12:32:42.799+0000] {sql.py:418} INFO - Running statement: CREATE TABLE IF NOT EXISTS cases_deaths_1 (
+id SERIAL PRIMARY KEY,
+date_reported DATE,
+country_code VARCHAR(10),
+country VARCHAR(100),
+who_region VARCHAR(100),
+new_cases INTEGER,
+cumulative_cases INTEGER,
+new_deaths INTEGER,
+cumulative_deaths INTEGER
+);
+INSERT INTO cases_deaths VALUES ('0', '2020-01-03', 'AF', 'Afghanistan', 'EMRO', 0, 0, 0, 0);
+INSERT INTO cases_deaths VALUES ('1', '2020-01-04', 'AF', 'Afghanistan', 'EMRO', 0, 0, 0, 0);
+INSERT INTO cases_deaths VALUES ('2', '2020-01-05', 'AF', 'Afghanistan', 'EMRO', 0, 0, 0, 0);
+INSERT INTO cases_deaths VALUES ('3', '2020-01-06', 'AF', 'Afghanistan', 'EMRO', 0, 0, 0, 0);
+INSERT INTO cases_deaths VALUES ('4', '2020-01-07', 'AF', 'Afghanistan', 'EMRO', 0, 0, 0, 0);
+INSERT INTO cases_deaths VALUES ('5', '2020-01-08', 'AF', 'Afghanistan', 'EMRO', 0, 0, 0, 0);
+INSERT INTO cases_deaths VALUES ('6', '2020-01-09', 'AF', 'Afghanistan', 'EMRO', 0, 0, 0, 0);
+INSERT INTO cases_deaths VALUES ('7', '2020-01-10', 'AF', 'Afghanistan', 'EMRO', 0, 0, 0, 0);
+INSERT INTO cases_deaths VALUES ('8', '2020-01-11', 'AF', 'Afghanistan', 'EMRO', 0, 0, 0, 0);
+INSERT INTO cases_deaths VALUES ('9', '2020-01-12', 'AF', 'Afghanistan', 'EMRO', 0, 0, 0, 0);
+INSERT INTO cases_deaths VALUES ('10', '2020-01-13', 'AF', 'Afghanistan', 'EMRO', 0, 0, 0, 0);
+INSERT INTO cases_deaths VALUES ('11', '2020-01-14', 'AF', 'Afghanistan', 'EMRO', 0, 0, 0, 0);
+INSERT INTO cases_deaths VALUES ('12', '2020-01-15', 'AF', 'Afghanistan', 'EMRO', 0, 0, 0, 0);
+INSERT INTO cases_deaths VALUES ('13', '2020-01-16', 'AF', 'Afghanistan', 'EMRO', 0, 0, 0, 0);
+INSERT INTO cases_deaths VALUES ('14', '2020-01-17', 'AF', 'Afghanistan', 'EMRO', 0, 0, 0, 0);
+INSERT INTO cases_deaths VALUES ('15', '2020-01-18', 'AF', 'Afghanistan', 'EMRO', 0, 0, 0, 0);
+INSERT INTO cases_deaths VALUES ('16', '2020-01-19', 'AF', 'Afghanistan', 'EMRO', 0, 0, 0, 0);
+INSERT INTO cases_deaths VALUES ('17', '2020-01-20', 'AF', 'Afghanistan', 'EMRO', 0, 0, 0, 0);
+INSERT INTO cases_deaths VALUES ('18', '2020-01-21', 'AF', 'Afghanistan', 'EMRO', 0, 0, 0, 0);
+INSERT INTO cases_deaths VALUES ('19', '2020-01-22', 'AF', 'Afghanistan', 'EMRO', 0, 0, 0, 0);
+INSERT INTO cases_deaths VALUES ('20', '2020-01-23', 'AF', 'Afghanistan', 'EMRO', 0, 0, 0, 0);
+INSERT INTO cases_deaths VALUES ('21', '2020-01-24', 'AF', 'Afghanistan', 'EMRO', 0, 0, 0, 0);
+INSERT INTO cases_deaths VALUES ('22', '2020-01-25', 'AF', 'Afghanistan', 'EMRO', 0, 0, 0, 0);
+INSERT INTO cases_deaths VALUES ('23', '2020-01-26', 'AF', 'Afghanistan', 'EMRO', 0, 0, 0, 0);
+INSERT INTO cases_deaths VALUES ('24', '2020-01-27', 'AF', 'Afghanistan', 'EMRO', 0, 0, 0, 0);
+INSERT INTO cases_deaths VALUES ('25', '2020-01-28', 'AF', 'Afghanistan', 'EMRO', 0, 0, 0, 0);
+INSERT INTO cases_deaths VALUES ('26', '2020-01-29', 'AF', 'Afghanistan', 'EMRO', 0, 0, 0, 0);
+INSERT INTO cases_deaths VALUES ('27', '2020-01-30', 'AF', 'Afghanistan', 'EMRO', 0, 0, 0, 0);
+INSERT INTO cases_deaths VALUES ('28', '2020-01-31', 'AF', 'Afghanistan', 'EMRO', 0, 0, 0, 0);
+INSERT INTO cases_deaths VALUES ('29', '2020-02-01', 'AF', 'Afghanistan', 'EMRO', 0, 0, 0, 0);
+INSERT INTO cases_deaths VALUES ('30', '2020-02-02', 'AF', 'Afghanistan', 'EMRO', 0, 0, 0, 0);
+INSERT INTO cases_deaths VALUES ('31', '2020-02-03', 'AF', 'Afghanistan', 'EMRO', 0, 0, 0, 0);
+INSERT INTO cases_deaths VALUES ('32', '2020-02-04', 'AF', 'Afghanistan', 'EMRO', 0, 0, 0, 0);
+INSERT INTO cases_deaths VALUES ('33', '2020-02-05', 'AF', 'Afghanistan', 'EMRO', 0, 0, 0, 0);
+INSERT INTO cases_deaths VALUES ('34', '2020-02-06', 'AF', 'Afghanistan', 'EMRO', 0, 0, 0, 0);
+INSERT INTO cases_deaths VALUES ('35', '2020-02-07', 'AF', 'Afghanistan', 'EMRO', 0, 0, 0, 0);
+INSERT INTO cases_deaths VALUES ('36', '2020-02-08', 'AF', 'Afghanistan', 'EMRO', 0, 0, 0, 0);
+INSERT INTO cases_deaths VALUES ('37', '2020-02-09', 'AF', 'Afghanistan', 'EMRO', 0, 0, 0, 0);
+INSERT INTO cases_deaths VALUES ('38', '2020-02-10', 'AF', 'Afghanistan', 'EMRO', 0, 0, 0, 0);
+INSERT INTO cases_deaths VALUES ('39', '2020-02-11', 'AF', 'Afghanistan', 'EMRO', 0, 0, 0, 0);
+INSERT INTO cases_deaths VALUES ('40', '2020-02-12', 'AF', 'Afghanistan', 'EMRO', 0, 0, 0, 0);
+INSERT INTO cases_deaths VALUES ('41', '2020-02-13', 'AF', 'Afghanistan', 'EMRO', 0, 0, 0, 0);
+INSERT INTO cases_deaths VALUES ('42', '2020-02-14', 'AF', 'Afghanistan', 'EMRO', 0, 0, 0, 0);
+INSERT INTO cases_deaths VALUES ('43', '2020-02-15', 'AF', 'Afghanistan', 'EMRO', 0, 0, 0, 0);
+INSERT INTO cases_deaths VALUES ('44', '2020-02-16', 'AF', 'Afghanistan', 'EMRO', 0, 0, 0, 0);
+INSERT INTO cases_deaths VALUES ('45', '2020-02-17', 'AF', 'Afghanistan', 'EMRO', 0, 0, 0, 0);
+INSERT INTO cases_deaths VALUES ('46', '2020-02-18', 'AF', 'Afghanistan', 'EMRO', 0, 0, 0, 0);
+INSERT INTO cases_deaths VALUES ('47', '2020-02-19', 'AF', 'Afghanistan', 'EMRO', 0, 0, 0, 0);
+INSERT INTO cases_deaths VALUES ('48', '2020-02-20', 'AF', 'Afghanistan', 'EMRO', 0, 0, 0, 0);
+INSERT INTO cases_deaths VALUES ('49', '2020-02-21', 'AF', 'Afghanistan', 'EMRO', 0, 0, 0, 0);
+INSERT INTO cases_deaths VALUES ('50', '2020-02-22', 'AF', 'Afghanistan', 'EMRO', 0, 0, 0, 0);
+INSERT INTO cases_deaths VALUES ('51', '2020-02-23', 'AF', 'Afghanistan', 'EMRO', 0, 0, 0, 0);
+INSERT INTO cases_deaths VALUES ('52', '2020-02-24', 'AF', 'Afghanistan', 'EMRO', 0, 0, 0, 0);
+INSERT INTO cases_deaths VALUES ('53', '2020-02-25', 'AF', 'Afghanistan', 'EMRO', 0, 0, 0, 0);
+INSERT INTO cases_deaths VALUES ('54', '2020-02-26', 'AF', 'Afghanistan', 'EMRO', 1, 1, 0, 0);
+INSERT INTO cases_deaths VALUES ('55', '2020-02-27', 'AF', 'Afghanistan', 'EMRO', 0, 1, 0, 0);
+INSERT INTO cases_deaths VALUES ('56', '2020-02-28', 'AF', 'Afghanistan', 'EMRO', 0, 1, 0, 0);
+INSERT INTO cases_deaths VALUES ('57', '2020-02-29', 'AF', 'Afghanistan', 'EMRO', 0, 1, 0, 0);
+INSERT INTO cases_deaths VALUES ('58', '2020-03-01', 'AF', 'Afghanistan', 'EMRO', 0, 1, 0, 0);
+INSERT INTO cases_deaths VALUES ('59', '2020-03-02', 'AF', 'Afghanistan', 'EMRO', 0, 1, 0, 0);
+INSERT INTO cases_deaths VALUES ('60', '2020-03-03', 'AF', 'Afghanistan', 'EMRO', 0, 1, 0, 0);
+INSERT INTO cases_deaths VALUES ('61', '2020-03-04', 'AF', 'Afghanistan', 'EMRO', 0, 1, 0, 0);
+INSERT INTO cases_deaths VALUES ('62', '2020-03-05', 'AF', 'Afghanistan', 'EMRO', 0, 1, 0, 0);
+INSERT INTO cases_deaths VALUES ('63', '2020-03-06', 'AF', 'Afghanistan', 'EMRO', 0, 1, 0, 0);
+INSERT INTO cases_deaths VALUES ('64', '2020-03-07', 'AF', 'Afghanistan', 'EMRO', 0, 1, 0, 0);
+INSERT INTO cases_deaths VALUES ('65', '2020-03-08', 'AF', 'Afghanistan', 'EMRO', 0, 1, 0, 0);
+INSERT INTO cases_deaths VALUES ('66', '2020-03-09', 'AF', 'Afghanistan', 'EMRO', 3, 4, 0, 0);
+INSERT INTO cases_deaths VALUES ('67', '2020-03-10', 'AF', 'Afghanistan', 'EMRO', 0, 4, 0, 0);
+INSERT INTO cases_deaths VALUES ('68', '2020-03-11', 'AF', 'Afghanistan', 'EMRO', 0, 4, 0, 0);
+INSERT INTO cases_deaths VALUES ('69', '2020-03-12', 'AF', 'Afghanistan', 'EMRO', 3, 7, 0, 0);
+INSERT INTO cases_deaths VALUES ('70', '2020-03-13', 'AF', 'Afghanistan', 'EMRO', 0, 7, 0, 0);
+INSERT INTO cases_deaths VALUES ('71', '2020-03-14', 'AF', 'Afghanistan', 'EMRO', 0, 7, 0, 0);
+INSERT INTO cases_deaths VALUES ('72', '2020-03-15', 'AF', 'Afghanistan', 'EMRO', 0, 7, 0, 0);
+INSERT INTO cases_deaths VALUES ('73', '2020-03-16', 'AF', 'Afghanistan', 'EMRO', 3, 10, 0, 0);
+INSERT INTO cases_deaths VALUES ('74', '2020-03-17', 'AF', 'Afghanistan', 'EMRO', 6, 16, 0, 0);
+INSERT INTO cases_deaths VALUES ('75', '2020-03-18', 'AF', 'Afghanistan', 'EMRO', 6, 22, 0, 0);
+INSERT INTO cases_deaths VALUES ('76', '2020-03-19', 'AF', 'Afghanistan', 'EMRO', 0, 22, 0, 0);
+INSERT INTO cases_deaths VALUES ('77', '2020-03-20', 'AF', 'Afghanistan', 'EMRO', 0, 22, 0, 0);
+INSERT INTO cases_deaths VALUES ('78', '2020-03-21', 'AF', 'Afghanistan', 'EMRO', 0, 22, 0, 0);
+INSERT INTO cases_deaths VALUES ('79', '2020-03-22', 'AF', 'Afghanistan', 'EMRO', 2, 24, 0, 0);
+INSERT INTO cases_deaths VALUES ('80', '2020-03-23', 'AF', 'Afghanistan', 'EMRO', 0, 24, 0, 0);
+INSERT INTO cases_deaths VALUES ('81', '2020-03-24', 'AF', 'Afghanistan', 'EMRO', 16, 40, 1, 1);
+INSERT INTO cases_deaths VALUES ('82', '2020-03-25', 'AF', 'Afghanistan', 'EMRO', 2, 42, 0, 1);
+INSERT INTO cases_deaths VALUES ('83', '2020-03-26', 'AF', 'Afghanistan', 'EMRO', 32, 74, 0, 1);
+INSERT INTO cases_deaths VALUES ('84', '2020-03-27', 'AF', 'Afghanistan', 'EMRO', 0, 74, 0, 1);
+INSERT INTO cases_deaths VALUES ('85', '2020-03-28', 'AF', 'Afghanistan', 'EMRO', 6, 80, 1, 2);
+INSERT INTO cases_deaths VALUES ('86', '2020-03-29', 'AF', 'Afghanistan', 'EMRO', 11, 91, 0, 2);
+INSERT INTO cases_deaths VALUES ('87', '2020-03-30', 'AF', 'Afghanistan', 'EMRO', 15, 106, 1, 3);
+INSERT INTO cases_deaths VALUES ('88', '2020-03-31', 'AF', 'Afghanistan', 'EMRO', 8, 114, 1, 4);
+INSERT INTO cases_deaths VALUES ('89', '2020-04-01', 'AF', 'Afghanistan', 'EMRO', 52, 166, 0, 4);
+INSERT INTO cases_deaths VALUES ('90', '2020-04-02', 'AF', 'Afghanistan', 'EMRO', 26, 192, 0, 4);
+INSERT INTO cases_deaths VALUES ('91', '2020-04-03', 'AF', 'Afghanistan', 'EMRO', 2, 194, 0, 4);
+INSERT INTO cases_deaths VALUES ('92', '2020-04-04', 'AF', 'Afghanistan', 'EMRO', 60, 254, 1, 5);
+INSERT INTO cases_deaths VALUES ('93', '2020-04-05', 'AF', 'Afghanistan', 'EMRO', 20, 274, 0, 5);
+INSERT INTO cases_deaths VALUES ('94', '2020-04-06', 'AF', 'Afghanistan', 'EMRO', 25, 299, 2, 7);
+INSERT INTO cases_deaths VALUES ('95', '2020-04-07', 'AF', 'Afghanistan', 'EMRO', 38, 337, 0, 7);
+INSERT INTO cases_deaths VALUES ('96', '2020-04-08', 'AF', 'Afghanistan', 'EMRO', 30, 367, 4, 11);
+INSERT INTO cases_deaths VALUES ('97', '2020-04-09', 'AF', 'Afghanistan', 'EMRO', 56, 423, 3, 14);
+INSERT INTO cases_deaths VALUES ('98', '2020-04-10', 'AF', 'Afghanistan', 'EMRO', 21, 444, 1, 15);
+INSERT INTO cases_deaths VALUES ('99', '2020-04-11', 'AF', 'Afghanistan', 'EMRO', 40, 484, 0, 15);
+INSERT INTO cases_deaths VALUES ('100', '2020-04-12', 'AF', 'Afghanistan', 'EMRO', 37, 521, 0, 15);
+INSERT INTO cases_deaths VALUES ('101', '2020-04-13', 'AF', 'Afghanistan', 'EMRO', 34, 555, 3, 18);
+INSERT INTO cases_deaths VALUES ('102', '2020-04-14', 'AF', 'Afghanistan', 'EMRO', 52, 607, 1, 19);
+INSERT INTO cases_deaths VALUES ('103', '2020-04-15', 'AF', 'Afghanistan', 'EMRO', 58, 665, 3, 22);
+INSERT INTO cases_deaths VALUES ('104', '2020-04-16', 'AF', 'Afghanistan', 'EMRO', 56, 721, 3, 25);
+INSERT INTO cases_deaths VALUES ('105', '2020-04-17', 'AF', 'Afghanistan', 'EMRO', 73, 794, 4, 29);
+INSERT INTO cases_deaths VALUES ('106', '2020-04-18', 'AF', 'Afghanistan', 'EMRO', 51, 845, 1, 30);
+INSERT INTO cases_deaths VALUES ('107', '2020-04-19', 'AF', 'Afghanistan', 'EMRO', 63, 908, 0, 30);
+INSERT INTO cases_deaths VALUES ('108', '2020-04-20', 'AF', 'Afghanistan', 'EMRO', 25, 933, 0, 30);
+INSERT INTO cases_deaths VALUES ('109', '2020-04-21', 'AF', 'Afghanistan', 'EMRO', 63, 996, 3, 33);
+INSERT INTO cases_deaths VALUES ('110', '2020-04-22', 'AF', 'Afghanistan', 'EMRO', 30, 1026, 3, 36);
+INSERT INTO cases_deaths VALUES ('111', '2020-04-23', 'AF', 'Afghanistan', 'EMRO', 66, 1092, 0, 36);
+INSERT INTO cases_deaths VALUES ('112', '2020-04-24', 'AF', 'Afghanistan', 'EMRO', 84, 1176, 4, 40);
+INSERT INTO cases_deaths VALUES ('113', '2020-04-25', 'AF', 'Afghanistan', 'EMRO', 50, 1226, 0, 40);
+INSERT INTO cases_deaths VALUES ('114', '2020-04-26', 'AF', 'Afghanistan', 'EMRO', 104, 1330, 3, 43);
+INSERT INTO cases_deaths VALUES ('115', '2020-04-27', 'AF', 'Afghanistan', 'EMRO', 133, 1463, 6, 49);
+INSERT INTO cases_deaths VALUES ('116', '2020-04-28', 'AF', 'Afghanistan', 'EMRO', 68, 1531, 1, 50);
+INSERT INTO cases_deaths VALUES ('117', '2020-04-29', 'AF', 'Afghanistan', 'EMRO', 172, 1703, 10, 60);
+INSERT INTO cases_deaths VALUES ('118', '2020-04-30', 'AF', 'Afghanistan', 'EMRO', 124, 1827, 0, 60);
+INSERT INTO cases_deaths VALUES ('119', '2020-05-01', 'AF', 'Afghanistan', 'EMRO', 110, 1937, 0, 60);
+INSERT INTO cases_deaths VALUES ('120', '2020-05-02', 'AF', 'Afghanistan', 'EMRO', 234, 2171, 4, 64);
+INSERT INTO cases_deaths VALUES ('121', '2020-05-03', 'AF', 'Afghanistan', 'EMRO', 0, 2171, 0, 64);
+INSERT INTO cases_deaths VALUES ('122', '2020-05-04', 'AF', 'Afghanistan', 'EMRO', 298, 2469, 8, 72);
+INSERT INTO cases_deaths VALUES ('123', '2020-05-05', 'AF', 'Afghanistan', 'EMRO', 0, 2469, 0, 72);
+INSERT INTO cases_deaths VALUES ('124', '2020-05-06', 'AF', 'Afghanistan', 'EMRO', 0, 2469, 0, 72);
+INSERT INTO cases_deaths VALUES ('125', '2020-05-07', 'AF', 'Afghanistan', 'EMRO', 755, 3224, 23, 95);
+INSERT INTO cases_deaths VALUES ('126', '2020-05-08', 'AF', 'Afghanistan', 'EMRO', 168, 3392, 9, 104);
+INSERT INTO cases_deaths VALUES ('127', '2020-05-09', 'AF', 'Afghanistan', 'EMRO', 171, 3563, 1, 105);
+INSERT INTO cases_deaths VALUES ('128', '2020-05-10', 'AF', 'Afghanistan', 'EMRO', 0, 3563, 0, 105);
+INSERT INTO cases_deaths VALUES ('129', '2020-05-11', 'AF', 'Afghanistan', 'EMRO', 478, 4041, 10, 115);
+INSERT INTO cases_deaths VALUES ('130', '2020-05-12', 'AF', 'Afghanistan', 'EMRO', 361, 4402, 4, 119);
+INSERT INTO cases_deaths VALUES ('131', '2020-05-13', 'AF', 'Afghanistan', 'EMRO', 262, 4664, 2, 121);
+INSERT INTO cases_deaths VALUES ('132', '2020-05-14', 'AF', 'Afghanistan', 'EMRO', 303, 4967, 6, 127);
+INSERT INTO cases_deaths VALUES ('133', '2020-05-15', 'AF', 'Afghanistan', 'EMRO', 259, 5226, 5, 132);
+INSERT INTO cases_deaths VALUES ('134', '2020-05-16', 'AF', 'Afghanistan', 'EMRO', 413, 5639, 4, 136);
+INSERT INTO cases_deaths VALUES ('135', '2020-05-17', 'AF', 'Afghanistan', 'EMRO', 414, 6053, 17, 153);
+INSERT INTO cases_deaths VALUES ('136', '2020-05-18', 'AF', 'Afghanistan', 'EMRO', 349, 6402, 15, 168);
+INSERT INTO cases_deaths VALUES ('137', '2020-05-19', 'AF', 'Afghanistan', 'EMRO', 262, 6664, 1, 169);
+INSERT INTO cases_deaths VALUES ('138', '2020-05-20', 'AF', 'Afghanistan', 'EMRO', 408, 7072, 4, 173);
+INSERT INTO cases_deaths VALUES ('139', '2020-05-21', 'AF', 'Afghanistan', 'EMRO', 581, 7653, 4, 177);
+INSERT INTO cases_deaths VALUES ('140', '2020-05-22', 'AF', 'Afghanistan', 'EMRO', 567, 8220, 12, 189);
+INSERT INTO cases_deaths VALUES ('141', '2020-05-23', 'AF', 'Afghanistan', 'EMRO', 910, 9130, 12, 201);
+INSERT INTO cases_deaths VALUES ('142', '2020-05-24', 'AF', 'Afghanistan', 'EMRO', 736, 9866, 10, 211);
+INSERT INTO cases_deaths VALUES ('143', '2020-05-25', 'AF', 'Afghanistan', 'EMRO', 716, 10582, 7, 218);
+INSERT INTO cases_deaths VALUES ('144', '2020-05-26', 'AF', 'Afghanistan', 'EMRO', 512, 11094, 1, 219);
+INSERT INTO cases_deaths VALUES ('145', '2020-05-27', 'AF', 'Afghanistan', 'EMRO', 737, 11831, 1, 220);
+INSERT INTO cases_deaths VALUES ('146', '2020-05-28', 'AF', 'Afghanistan', 'EMRO', 548, 12379, 6, 226);
+INSERT INTO cases_deaths VALUES ('147', '2020-05-29', 'AF', 'Afghanistan', 'EMRO', 637, 13016, 9, 235);
+INSERT INTO cases_deaths VALUES ('148', '2020-05-30', 'AF', 'Afghanistan', 'EMRO', 643, 13659, 11, 246);
+INSERT INTO cases_deaths VALUES ('149', '2020-05-31', 'AF', 'Afghanistan', 'EMRO', 784, 14443, 2, 248);, parameters: None
+[2023-11-08T12:32:43.079+0000] {taskinstance.py:1935} ERROR - Task failed with exception
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/providers/common/sql/operators/sql.py", line 280, in execute
+    output = hook.run(
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/providers/common/sql/hooks/sql.py", line 392, in run
+    self._run_command(cur, sql_statement, parameters)
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/providers/common/sql/hooks/sql.py", line 423, in _run_command
+    cur.execute(sql_statement)
+psycopg2.errors.UniqueViolation: duplicate key value violates unique constraint "cases_deaths_pkey"
+DETAIL:  Key (id)=(0) already exists.
+
+[2023-11-08T12:32:43.145+0000] {taskinstance.py:1398} INFO - Marking task as UP_FOR_RETRY. dag_id=covid_data_dag, task_id=create_cases_deaths_table, execution_date=20231108T123212, start_date=20231108T123241, end_date=20231108T123243
+[2023-11-08T12:32:43.222+0000] {standard_task_runner.py:104} ERROR - Failed to execute job 365 for task create_cases_deaths_table (duplicate key value violates unique constraint "cases_deaths_pkey"
+DETAIL:  Key (id)=(0) already exists.
+; 3027)
+[2023-11-08T12:32:43.263+0000] {local_task_job_runner.py:228} INFO - Task exited with return code 1
+[2023-11-08T12:32:43.361+0000] {taskinstance.py:2776} INFO - 0 downstream tasks scheduled from follow-on schedule check

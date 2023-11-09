@@ -1,0 +1,1582 @@
+[2023-11-09T09:57:31.422+0000] {processor.py:157} INFO - Started process (PID=71) to work on /opt/airflow/dags/Dag_mongo.py
+[2023-11-09T09:57:31.431+0000] {processor.py:829} INFO - Processing file /opt/airflow/dags/Dag_mongo.py for tasks to queue
+[2023-11-09T09:57:31.466+0000] {logging_mixin.py:151} INFO - [2023-11-09T09:57:31.465+0000] {dagbag.py:539} INFO - Filling up the DagBag from /opt/airflow/dags/Dag_mongo.py
+[2023-11-09T09:57:36.261+0000] {logging_mixin.py:151} INFO - [2023-11-09T09:57:36.192+0000] {dagbag.py:347} ERROR - Failed to import: /opt/airflow/dags/Dag_mongo.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/models/dagbag.py", line 343, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 843, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/opt/airflow/dags/Dag_mongo.py", line 11, in <module>
+    from airflow.providers.mongo.hooks.mongo import MongoHook
+ModuleNotFoundError: No module named 'airflow.providers.mongo'
+[2023-11-09T09:57:36.283+0000] {processor.py:841} WARNING - No viable dags retrieved from /opt/airflow/dags/Dag_mongo.py
+[2023-11-09T09:57:36.518+0000] {processor.py:179} INFO - Processing /opt/airflow/dags/Dag_mongo.py took 5.125 seconds
+[2023-11-09T09:58:07.055+0000] {processor.py:157} INFO - Started process (PID=91) to work on /opt/airflow/dags/Dag_mongo.py
+[2023-11-09T09:58:07.056+0000] {processor.py:829} INFO - Processing file /opt/airflow/dags/Dag_mongo.py for tasks to queue
+[2023-11-09T09:58:07.059+0000] {logging_mixin.py:151} INFO - [2023-11-09T09:58:07.058+0000] {dagbag.py:539} INFO - Filling up the DagBag from /opt/airflow/dags/Dag_mongo.py
+[2023-11-09T09:58:07.684+0000] {logging_mixin.py:151} INFO - [2023-11-09T09:58:07.678+0000] {dagbag.py:347} ERROR - Failed to import: /opt/airflow/dags/Dag_mongo.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/models/dagbag.py", line 343, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 843, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/opt/airflow/dags/Dag_mongo.py", line 11, in <module>
+    from airflow.providers.mongo.hooks.mongo import MongoHook
+ModuleNotFoundError: No module named 'airflow.providers.mongo'
+[2023-11-09T09:58:07.686+0000] {processor.py:841} WARNING - No viable dags retrieved from /opt/airflow/dags/Dag_mongo.py
+[2023-11-09T09:58:07.710+0000] {processor.py:179} INFO - Processing /opt/airflow/dags/Dag_mongo.py took 0.662 seconds
+[2023-11-09T09:58:38.057+0000] {processor.py:157} INFO - Started process (PID=112) to work on /opt/airflow/dags/Dag_mongo.py
+[2023-11-09T09:58:38.058+0000] {processor.py:829} INFO - Processing file /opt/airflow/dags/Dag_mongo.py for tasks to queue
+[2023-11-09T09:58:38.060+0000] {logging_mixin.py:151} INFO - [2023-11-09T09:58:38.059+0000] {dagbag.py:539} INFO - Filling up the DagBag from /opt/airflow/dags/Dag_mongo.py
+[2023-11-09T09:58:38.620+0000] {logging_mixin.py:151} INFO - [2023-11-09T09:58:38.607+0000] {dagbag.py:347} ERROR - Failed to import: /opt/airflow/dags/Dag_mongo.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/models/dagbag.py", line 343, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 843, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/opt/airflow/dags/Dag_mongo.py", line 11, in <module>
+    from airflow.providers.mongo.hooks.mongo import MongoHook
+ModuleNotFoundError: No module named 'airflow.providers.mongo'
+[2023-11-09T09:58:38.624+0000] {processor.py:841} WARNING - No viable dags retrieved from /opt/airflow/dags/Dag_mongo.py
+[2023-11-09T09:58:38.655+0000] {processor.py:179} INFO - Processing /opt/airflow/dags/Dag_mongo.py took 0.601 seconds
+[2023-11-09T09:59:08.998+0000] {processor.py:157} INFO - Started process (PID=142) to work on /opt/airflow/dags/Dag_mongo.py
+[2023-11-09T09:59:09.035+0000] {processor.py:829} INFO - Processing file /opt/airflow/dags/Dag_mongo.py for tasks to queue
+[2023-11-09T09:59:09.037+0000] {logging_mixin.py:151} INFO - [2023-11-09T09:59:09.036+0000] {dagbag.py:539} INFO - Filling up the DagBag from /opt/airflow/dags/Dag_mongo.py
+[2023-11-09T09:59:09.601+0000] {logging_mixin.py:151} INFO - [2023-11-09T09:59:09.596+0000] {dagbag.py:347} ERROR - Failed to import: /opt/airflow/dags/Dag_mongo.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/models/dagbag.py", line 343, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 843, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/opt/airflow/dags/Dag_mongo.py", line 11, in <module>
+    from airflow.providers.mongo.hooks.mongo import MongoHook
+ModuleNotFoundError: No module named 'airflow.providers.mongo'
+[2023-11-09T09:59:09.602+0000] {processor.py:841} WARNING - No viable dags retrieved from /opt/airflow/dags/Dag_mongo.py
+[2023-11-09T09:59:09.622+0000] {processor.py:179} INFO - Processing /opt/airflow/dags/Dag_mongo.py took 0.641 seconds
+[2023-11-09T09:59:39.773+0000] {processor.py:157} INFO - Started process (PID=163) to work on /opt/airflow/dags/Dag_mongo.py
+[2023-11-09T09:59:39.775+0000] {processor.py:829} INFO - Processing file /opt/airflow/dags/Dag_mongo.py for tasks to queue
+[2023-11-09T09:59:39.778+0000] {logging_mixin.py:151} INFO - [2023-11-09T09:59:39.777+0000] {dagbag.py:539} INFO - Filling up the DagBag from /opt/airflow/dags/Dag_mongo.py
+[2023-11-09T09:59:40.511+0000] {logging_mixin.py:151} INFO - [2023-11-09T09:59:40.497+0000] {dagbag.py:347} ERROR - Failed to import: /opt/airflow/dags/Dag_mongo.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/models/dagbag.py", line 343, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 843, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/opt/airflow/dags/Dag_mongo.py", line 11, in <module>
+    from airflow.providers.mongo.hooks.mongo import MongoHook
+ModuleNotFoundError: No module named 'airflow.providers.mongo'
+[2023-11-09T09:59:40.513+0000] {processor.py:841} WARNING - No viable dags retrieved from /opt/airflow/dags/Dag_mongo.py
+[2023-11-09T09:59:40.557+0000] {processor.py:179} INFO - Processing /opt/airflow/dags/Dag_mongo.py took 0.789 seconds
+[2023-11-09T10:00:11.000+0000] {processor.py:157} INFO - Started process (PID=183) to work on /opt/airflow/dags/Dag_mongo.py
+[2023-11-09T10:00:11.002+0000] {processor.py:829} INFO - Processing file /opt/airflow/dags/Dag_mongo.py for tasks to queue
+[2023-11-09T10:00:11.004+0000] {logging_mixin.py:151} INFO - [2023-11-09T10:00:11.003+0000] {dagbag.py:539} INFO - Filling up the DagBag from /opt/airflow/dags/Dag_mongo.py
+[2023-11-09T10:00:11.521+0000] {logging_mixin.py:151} INFO - [2023-11-09T10:00:11.515+0000] {dagbag.py:347} ERROR - Failed to import: /opt/airflow/dags/Dag_mongo.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/models/dagbag.py", line 343, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 843, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/opt/airflow/dags/Dag_mongo.py", line 11, in <module>
+    from airflow.providers.mongo.hooks.mongo import MongoHook
+ModuleNotFoundError: No module named 'airflow.providers.mongo'
+[2023-11-09T10:00:11.524+0000] {processor.py:841} WARNING - No viable dags retrieved from /opt/airflow/dags/Dag_mongo.py
+[2023-11-09T10:00:11.543+0000] {processor.py:179} INFO - Processing /opt/airflow/dags/Dag_mongo.py took 0.547 seconds
+[2023-11-09T10:00:41.896+0000] {processor.py:157} INFO - Started process (PID=212) to work on /opt/airflow/dags/Dag_mongo.py
+[2023-11-09T10:00:41.904+0000] {processor.py:829} INFO - Processing file /opt/airflow/dags/Dag_mongo.py for tasks to queue
+[2023-11-09T10:00:41.906+0000] {logging_mixin.py:151} INFO - [2023-11-09T10:00:41.905+0000] {dagbag.py:539} INFO - Filling up the DagBag from /opt/airflow/dags/Dag_mongo.py
+[2023-11-09T10:00:42.520+0000] {logging_mixin.py:151} INFO - [2023-11-09T10:00:42.511+0000] {dagbag.py:347} ERROR - Failed to import: /opt/airflow/dags/Dag_mongo.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/models/dagbag.py", line 343, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 843, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/opt/airflow/dags/Dag_mongo.py", line 11, in <module>
+    from airflow.providers.mongo.hooks.mongo import MongoHook
+ModuleNotFoundError: No module named 'airflow.providers.mongo'
+[2023-11-09T10:00:42.522+0000] {processor.py:841} WARNING - No viable dags retrieved from /opt/airflow/dags/Dag_mongo.py
+[2023-11-09T10:00:42.563+0000] {processor.py:179} INFO - Processing /opt/airflow/dags/Dag_mongo.py took 0.671 seconds
+[2023-11-09T10:01:12.892+0000] {processor.py:157} INFO - Started process (PID=234) to work on /opt/airflow/dags/Dag_mongo.py
+[2023-11-09T10:01:12.894+0000] {processor.py:829} INFO - Processing file /opt/airflow/dags/Dag_mongo.py for tasks to queue
+[2023-11-09T10:01:12.896+0000] {logging_mixin.py:151} INFO - [2023-11-09T10:01:12.896+0000] {dagbag.py:539} INFO - Filling up the DagBag from /opt/airflow/dags/Dag_mongo.py
+[2023-11-09T10:01:13.440+0000] {logging_mixin.py:151} INFO - [2023-11-09T10:01:13.434+0000] {dagbag.py:347} ERROR - Failed to import: /opt/airflow/dags/Dag_mongo.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/models/dagbag.py", line 343, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 843, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/opt/airflow/dags/Dag_mongo.py", line 11, in <module>
+    from airflow.providers.mongo.hooks.mongo import MongoHook
+ModuleNotFoundError: No module named 'airflow.providers.mongo'
+[2023-11-09T10:01:13.441+0000] {processor.py:841} WARNING - No viable dags retrieved from /opt/airflow/dags/Dag_mongo.py
+[2023-11-09T10:01:13.469+0000] {processor.py:179} INFO - Processing /opt/airflow/dags/Dag_mongo.py took 0.582 seconds
+[2023-11-09T10:01:43.830+0000] {processor.py:157} INFO - Started process (PID=262) to work on /opt/airflow/dags/Dag_mongo.py
+[2023-11-09T10:01:43.847+0000] {processor.py:829} INFO - Processing file /opt/airflow/dags/Dag_mongo.py for tasks to queue
+[2023-11-09T10:01:43.851+0000] {logging_mixin.py:151} INFO - [2023-11-09T10:01:43.850+0000] {dagbag.py:539} INFO - Filling up the DagBag from /opt/airflow/dags/Dag_mongo.py
+[2023-11-09T10:01:44.501+0000] {logging_mixin.py:151} INFO - [2023-11-09T10:01:44.494+0000] {dagbag.py:347} ERROR - Failed to import: /opt/airflow/dags/Dag_mongo.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/models/dagbag.py", line 343, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 843, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/opt/airflow/dags/Dag_mongo.py", line 11, in <module>
+    from airflow.providers.mongo.hooks.mongo import MongoHook
+ModuleNotFoundError: No module named 'airflow.providers.mongo'
+[2023-11-09T10:01:44.503+0000] {processor.py:841} WARNING - No viable dags retrieved from /opt/airflow/dags/Dag_mongo.py
+[2023-11-09T10:01:44.524+0000] {processor.py:179} INFO - Processing /opt/airflow/dags/Dag_mongo.py took 0.699 seconds
+[2023-11-09T10:02:14.894+0000] {processor.py:157} INFO - Started process (PID=283) to work on /opt/airflow/dags/Dag_mongo.py
+[2023-11-09T10:02:14.896+0000] {processor.py:829} INFO - Processing file /opt/airflow/dags/Dag_mongo.py for tasks to queue
+[2023-11-09T10:02:14.898+0000] {logging_mixin.py:151} INFO - [2023-11-09T10:02:14.897+0000] {dagbag.py:539} INFO - Filling up the DagBag from /opt/airflow/dags/Dag_mongo.py
+[2023-11-09T10:02:15.633+0000] {logging_mixin.py:151} INFO - [2023-11-09T10:02:15.627+0000] {dagbag.py:347} ERROR - Failed to import: /opt/airflow/dags/Dag_mongo.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/models/dagbag.py", line 343, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 843, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/opt/airflow/dags/Dag_mongo.py", line 11, in <module>
+    from airflow.providers.mongo.hooks.mongo import MongoHook
+ModuleNotFoundError: No module named 'airflow.providers.mongo'
+[2023-11-09T10:02:15.636+0000] {processor.py:841} WARNING - No viable dags retrieved from /opt/airflow/dags/Dag_mongo.py
+[2023-11-09T10:02:15.664+0000] {processor.py:179} INFO - Processing /opt/airflow/dags/Dag_mongo.py took 0.779 seconds
+[2023-11-09T10:02:46.273+0000] {processor.py:157} INFO - Started process (PID=313) to work on /opt/airflow/dags/Dag_mongo.py
+[2023-11-09T10:02:46.275+0000] {processor.py:829} INFO - Processing file /opt/airflow/dags/Dag_mongo.py for tasks to queue
+[2023-11-09T10:02:46.277+0000] {logging_mixin.py:151} INFO - [2023-11-09T10:02:46.276+0000] {dagbag.py:539} INFO - Filling up the DagBag from /opt/airflow/dags/Dag_mongo.py
+[2023-11-09T10:02:47.322+0000] {logging_mixin.py:151} INFO - [2023-11-09T10:02:47.309+0000] {dagbag.py:347} ERROR - Failed to import: /opt/airflow/dags/Dag_mongo.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/models/dagbag.py", line 343, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 843, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/opt/airflow/dags/Dag_mongo.py", line 11, in <module>
+    from airflow.providers.mongo.hooks.mongo import MongoHook
+ModuleNotFoundError: No module named 'airflow.providers.mongo'
+[2023-11-09T10:02:47.324+0000] {processor.py:841} WARNING - No viable dags retrieved from /opt/airflow/dags/Dag_mongo.py
+[2023-11-09T10:02:47.354+0000] {processor.py:179} INFO - Processing /opt/airflow/dags/Dag_mongo.py took 1.091 seconds
+[2023-11-09T10:03:17.803+0000] {processor.py:157} INFO - Started process (PID=334) to work on /opt/airflow/dags/Dag_mongo.py
+[2023-11-09T10:03:17.805+0000] {processor.py:829} INFO - Processing file /opt/airflow/dags/Dag_mongo.py for tasks to queue
+[2023-11-09T10:03:17.806+0000] {logging_mixin.py:151} INFO - [2023-11-09T10:03:17.806+0000] {dagbag.py:539} INFO - Filling up the DagBag from /opt/airflow/dags/Dag_mongo.py
+[2023-11-09T10:03:18.499+0000] {logging_mixin.py:151} INFO - [2023-11-09T10:03:18.489+0000] {dagbag.py:347} ERROR - Failed to import: /opt/airflow/dags/Dag_mongo.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/models/dagbag.py", line 343, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 843, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/opt/airflow/dags/Dag_mongo.py", line 11, in <module>
+    from airflow.providers.mongo.hooks.mongo import MongoHook
+ModuleNotFoundError: No module named 'airflow.providers.mongo'
+[2023-11-09T10:03:18.502+0000] {processor.py:841} WARNING - No viable dags retrieved from /opt/airflow/dags/Dag_mongo.py
+[2023-11-09T10:03:18.524+0000] {processor.py:179} INFO - Processing /opt/airflow/dags/Dag_mongo.py took 0.730 seconds
+[2023-11-09T10:03:48.753+0000] {processor.py:157} INFO - Started process (PID=358) to work on /opt/airflow/dags/Dag_mongo.py
+[2023-11-09T10:03:48.755+0000] {processor.py:829} INFO - Processing file /opt/airflow/dags/Dag_mongo.py for tasks to queue
+[2023-11-09T10:03:48.757+0000] {logging_mixin.py:151} INFO - [2023-11-09T10:03:48.756+0000] {dagbag.py:539} INFO - Filling up the DagBag from /opt/airflow/dags/Dag_mongo.py
+[2023-11-09T10:03:49.402+0000] {logging_mixin.py:151} INFO - [2023-11-09T10:03:49.395+0000] {dagbag.py:347} ERROR - Failed to import: /opt/airflow/dags/Dag_mongo.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/models/dagbag.py", line 343, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 843, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/opt/airflow/dags/Dag_mongo.py", line 11, in <module>
+    from airflow.providers.mongo.hooks.mongo import MongoHook
+ModuleNotFoundError: No module named 'airflow.providers.mongo'
+[2023-11-09T10:03:49.404+0000] {processor.py:841} WARNING - No viable dags retrieved from /opt/airflow/dags/Dag_mongo.py
+[2023-11-09T10:03:49.429+0000] {processor.py:179} INFO - Processing /opt/airflow/dags/Dag_mongo.py took 0.683 seconds
+[2023-11-09T10:04:19.766+0000] {processor.py:157} INFO - Started process (PID=385) to work on /opt/airflow/dags/Dag_mongo.py
+[2023-11-09T10:04:19.768+0000] {processor.py:829} INFO - Processing file /opt/airflow/dags/Dag_mongo.py for tasks to queue
+[2023-11-09T10:04:19.772+0000] {logging_mixin.py:151} INFO - [2023-11-09T10:04:19.771+0000] {dagbag.py:539} INFO - Filling up the DagBag from /opt/airflow/dags/Dag_mongo.py
+[2023-11-09T10:04:20.778+0000] {logging_mixin.py:151} INFO - [2023-11-09T10:04:20.771+0000] {dagbag.py:347} ERROR - Failed to import: /opt/airflow/dags/Dag_mongo.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/models/dagbag.py", line 343, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 843, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/opt/airflow/dags/Dag_mongo.py", line 11, in <module>
+    from airflow.providers.mongo.hooks.mongo import MongoHook
+ModuleNotFoundError: No module named 'airflow.providers.mongo'
+[2023-11-09T10:04:20.780+0000] {processor.py:841} WARNING - No viable dags retrieved from /opt/airflow/dags/Dag_mongo.py
+[2023-11-09T10:04:20.809+0000] {processor.py:179} INFO - Processing /opt/airflow/dags/Dag_mongo.py took 1.050 seconds
+[2023-11-09T10:04:51.010+0000] {processor.py:157} INFO - Started process (PID=408) to work on /opt/airflow/dags/Dag_mongo.py
+[2023-11-09T10:04:51.012+0000] {processor.py:829} INFO - Processing file /opt/airflow/dags/Dag_mongo.py for tasks to queue
+[2023-11-09T10:04:51.014+0000] {logging_mixin.py:151} INFO - [2023-11-09T10:04:51.013+0000] {dagbag.py:539} INFO - Filling up the DagBag from /opt/airflow/dags/Dag_mongo.py
+[2023-11-09T10:04:51.911+0000] {logging_mixin.py:151} INFO - [2023-11-09T10:04:51.905+0000] {dagbag.py:347} ERROR - Failed to import: /opt/airflow/dags/Dag_mongo.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/models/dagbag.py", line 343, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 843, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/opt/airflow/dags/Dag_mongo.py", line 11, in <module>
+    from airflow.providers.mongo.hooks.mongo import MongoHook
+ModuleNotFoundError: No module named 'airflow.providers.mongo'
+[2023-11-09T10:04:51.913+0000] {processor.py:841} WARNING - No viable dags retrieved from /opt/airflow/dags/Dag_mongo.py
+[2023-11-09T10:04:51.937+0000] {processor.py:179} INFO - Processing /opt/airflow/dags/Dag_mongo.py took 0.941 seconds
+[2023-11-09T10:05:22.112+0000] {processor.py:157} INFO - Started process (PID=431) to work on /opt/airflow/dags/Dag_mongo.py
+[2023-11-09T10:05:22.114+0000] {processor.py:829} INFO - Processing file /opt/airflow/dags/Dag_mongo.py for tasks to queue
+[2023-11-09T10:05:22.115+0000] {logging_mixin.py:151} INFO - [2023-11-09T10:05:22.115+0000] {dagbag.py:539} INFO - Filling up the DagBag from /opt/airflow/dags/Dag_mongo.py
+[2023-11-09T10:05:22.600+0000] {logging_mixin.py:151} INFO - [2023-11-09T10:05:22.591+0000] {dagbag.py:347} ERROR - Failed to import: /opt/airflow/dags/Dag_mongo.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/models/dagbag.py", line 343, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 843, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/opt/airflow/dags/Dag_mongo.py", line 11, in <module>
+    from airflow.providers.mongo.hooks.mongo import MongoHook
+ModuleNotFoundError: No module named 'airflow.providers.mongo'
+[2023-11-09T10:05:22.603+0000] {processor.py:841} WARNING - No viable dags retrieved from /opt/airflow/dags/Dag_mongo.py
+[2023-11-09T10:05:22.626+0000] {processor.py:179} INFO - Processing /opt/airflow/dags/Dag_mongo.py took 0.519 seconds
+[2023-11-09T10:05:52.972+0000] {processor.py:157} INFO - Started process (PID=458) to work on /opt/airflow/dags/Dag_mongo.py
+[2023-11-09T10:05:52.973+0000] {processor.py:829} INFO - Processing file /opt/airflow/dags/Dag_mongo.py for tasks to queue
+[2023-11-09T10:05:52.975+0000] {logging_mixin.py:151} INFO - [2023-11-09T10:05:52.974+0000] {dagbag.py:539} INFO - Filling up the DagBag from /opt/airflow/dags/Dag_mongo.py
+[2023-11-09T10:05:53.435+0000] {logging_mixin.py:151} INFO - [2023-11-09T10:05:53.428+0000] {dagbag.py:347} ERROR - Failed to import: /opt/airflow/dags/Dag_mongo.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/models/dagbag.py", line 343, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 843, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/opt/airflow/dags/Dag_mongo.py", line 11, in <module>
+    from airflow.providers.mongo.hooks.mongo import MongoHook
+ModuleNotFoundError: No module named 'airflow.providers.mongo'
+[2023-11-09T10:05:53.437+0000] {processor.py:841} WARNING - No viable dags retrieved from /opt/airflow/dags/Dag_mongo.py
+[2023-11-09T10:05:53.457+0000] {processor.py:179} INFO - Processing /opt/airflow/dags/Dag_mongo.py took 0.489 seconds
+[2023-11-09T10:06:23.797+0000] {processor.py:157} INFO - Started process (PID=480) to work on /opt/airflow/dags/Dag_mongo.py
+[2023-11-09T10:06:23.798+0000] {processor.py:829} INFO - Processing file /opt/airflow/dags/Dag_mongo.py for tasks to queue
+[2023-11-09T10:06:23.799+0000] {logging_mixin.py:151} INFO - [2023-11-09T10:06:23.799+0000] {dagbag.py:539} INFO - Filling up the DagBag from /opt/airflow/dags/Dag_mongo.py
+[2023-11-09T10:06:24.265+0000] {logging_mixin.py:151} INFO - [2023-11-09T10:06:24.258+0000] {dagbag.py:347} ERROR - Failed to import: /opt/airflow/dags/Dag_mongo.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/models/dagbag.py", line 343, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 843, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/opt/airflow/dags/Dag_mongo.py", line 11, in <module>
+    from airflow.providers.mongo.hooks.mongo import MongoHook
+ModuleNotFoundError: No module named 'airflow.providers.mongo'
+[2023-11-09T10:06:24.267+0000] {processor.py:841} WARNING - No viable dags retrieved from /opt/airflow/dags/Dag_mongo.py
+[2023-11-09T10:06:24.288+0000] {processor.py:179} INFO - Processing /opt/airflow/dags/Dag_mongo.py took 0.495 seconds
+[2023-11-09T10:06:55.105+0000] {processor.py:157} INFO - Started process (PID=501) to work on /opt/airflow/dags/Dag_mongo.py
+[2023-11-09T10:06:55.106+0000] {processor.py:829} INFO - Processing file /opt/airflow/dags/Dag_mongo.py for tasks to queue
+[2023-11-09T10:06:55.108+0000] {logging_mixin.py:151} INFO - [2023-11-09T10:06:55.108+0000] {dagbag.py:539} INFO - Filling up the DagBag from /opt/airflow/dags/Dag_mongo.py
+[2023-11-09T10:06:55.643+0000] {logging_mixin.py:151} INFO - [2023-11-09T10:06:55.634+0000] {dagbag.py:347} ERROR - Failed to import: /opt/airflow/dags/Dag_mongo.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/models/dagbag.py", line 343, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 843, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/opt/airflow/dags/Dag_mongo.py", line 11, in <module>
+    from airflow.providers.mongo.hooks.mongo import MongoHook
+ModuleNotFoundError: No module named 'airflow.providers.mongo'
+[2023-11-09T10:06:55.645+0000] {processor.py:841} WARNING - No viable dags retrieved from /opt/airflow/dags/Dag_mongo.py
+[2023-11-09T10:06:55.675+0000] {processor.py:179} INFO - Processing /opt/airflow/dags/Dag_mongo.py took 0.578 seconds
+[2023-11-09T10:07:25.923+0000] {processor.py:157} INFO - Started process (PID=541) to work on /opt/airflow/dags/Dag_mongo.py
+[2023-11-09T10:07:25.924+0000] {processor.py:829} INFO - Processing file /opt/airflow/dags/Dag_mongo.py for tasks to queue
+[2023-11-09T10:07:25.925+0000] {logging_mixin.py:151} INFO - [2023-11-09T10:07:25.925+0000] {dagbag.py:539} INFO - Filling up the DagBag from /opt/airflow/dags/Dag_mongo.py
+[2023-11-09T10:07:26.462+0000] {logging_mixin.py:151} INFO - [2023-11-09T10:07:26.455+0000] {dagbag.py:347} ERROR - Failed to import: /opt/airflow/dags/Dag_mongo.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/models/dagbag.py", line 343, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 843, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/opt/airflow/dags/Dag_mongo.py", line 11, in <module>
+    from airflow.providers.mongo.hooks.mongo import MongoHook
+ModuleNotFoundError: No module named 'airflow.providers.mongo'
+[2023-11-09T10:07:26.464+0000] {processor.py:841} WARNING - No viable dags retrieved from /opt/airflow/dags/Dag_mongo.py
+[2023-11-09T10:07:26.500+0000] {processor.py:179} INFO - Processing /opt/airflow/dags/Dag_mongo.py took 0.583 seconds
+[2023-11-09T10:07:56.836+0000] {processor.py:157} INFO - Started process (PID=569) to work on /opt/airflow/dags/Dag_mongo.py
+[2023-11-09T10:07:56.837+0000] {processor.py:829} INFO - Processing file /opt/airflow/dags/Dag_mongo.py for tasks to queue
+[2023-11-09T10:07:56.841+0000] {logging_mixin.py:151} INFO - [2023-11-09T10:07:56.839+0000] {dagbag.py:539} INFO - Filling up the DagBag from /opt/airflow/dags/Dag_mongo.py
+[2023-11-09T10:07:57.512+0000] {logging_mixin.py:151} INFO - [2023-11-09T10:07:57.503+0000] {dagbag.py:347} ERROR - Failed to import: /opt/airflow/dags/Dag_mongo.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/models/dagbag.py", line 343, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 843, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/opt/airflow/dags/Dag_mongo.py", line 11, in <module>
+    from airflow.providers.mongo.hooks.mongo import MongoHook
+ModuleNotFoundError: No module named 'airflow.providers.mongo'
+[2023-11-09T10:07:57.514+0000] {processor.py:841} WARNING - No viable dags retrieved from /opt/airflow/dags/Dag_mongo.py
+[2023-11-09T10:07:57.549+0000] {processor.py:179} INFO - Processing /opt/airflow/dags/Dag_mongo.py took 0.717 seconds
+[2023-11-09T10:08:27.988+0000] {processor.py:157} INFO - Started process (PID=593) to work on /opt/airflow/dags/Dag_mongo.py
+[2023-11-09T10:08:27.990+0000] {processor.py:829} INFO - Processing file /opt/airflow/dags/Dag_mongo.py for tasks to queue
+[2023-11-09T10:08:27.992+0000] {logging_mixin.py:151} INFO - [2023-11-09T10:08:27.991+0000] {dagbag.py:539} INFO - Filling up the DagBag from /opt/airflow/dags/Dag_mongo.py
+[2023-11-09T10:08:28.987+0000] {logging_mixin.py:151} INFO - [2023-11-09T10:08:28.977+0000] {dagbag.py:347} ERROR - Failed to import: /opt/airflow/dags/Dag_mongo.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/models/dagbag.py", line 343, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 843, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/opt/airflow/dags/Dag_mongo.py", line 11, in <module>
+    from airflow.providers.mongo.hooks.mongo import MongoHook
+ModuleNotFoundError: No module named 'airflow.providers.mongo'
+[2023-11-09T10:08:28.991+0000] {processor.py:841} WARNING - No viable dags retrieved from /opt/airflow/dags/Dag_mongo.py
+[2023-11-09T10:08:29.039+0000] {processor.py:179} INFO - Processing /opt/airflow/dags/Dag_mongo.py took 1.059 seconds
+[2023-11-09T10:08:59.212+0000] {processor.py:157} INFO - Started process (PID=621) to work on /opt/airflow/dags/Dag_mongo.py
+[2023-11-09T10:08:59.214+0000] {processor.py:829} INFO - Processing file /opt/airflow/dags/Dag_mongo.py for tasks to queue
+[2023-11-09T10:08:59.216+0000] {logging_mixin.py:151} INFO - [2023-11-09T10:08:59.216+0000] {dagbag.py:539} INFO - Filling up the DagBag from /opt/airflow/dags/Dag_mongo.py
+[2023-11-09T10:08:59.833+0000] {logging_mixin.py:151} INFO - [2023-11-09T10:08:59.827+0000] {dagbag.py:347} ERROR - Failed to import: /opt/airflow/dags/Dag_mongo.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/models/dagbag.py", line 343, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 843, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/opt/airflow/dags/Dag_mongo.py", line 11, in <module>
+    from airflow.providers.mongo.hooks.mongo import MongoHook
+ModuleNotFoundError: No module named 'airflow.providers.mongo'
+[2023-11-09T10:08:59.835+0000] {processor.py:841} WARNING - No viable dags retrieved from /opt/airflow/dags/Dag_mongo.py
+[2023-11-09T10:08:59.856+0000] {processor.py:179} INFO - Processing /opt/airflow/dags/Dag_mongo.py took 0.652 seconds
+[2023-11-09T10:09:30.183+0000] {processor.py:157} INFO - Started process (PID=643) to work on /opt/airflow/dags/Dag_mongo.py
+[2023-11-09T10:09:30.186+0000] {processor.py:829} INFO - Processing file /opt/airflow/dags/Dag_mongo.py for tasks to queue
+[2023-11-09T10:09:30.189+0000] {logging_mixin.py:151} INFO - [2023-11-09T10:09:30.188+0000] {dagbag.py:539} INFO - Filling up the DagBag from /opt/airflow/dags/Dag_mongo.py
+[2023-11-09T10:09:30.668+0000] {logging_mixin.py:151} INFO - [2023-11-09T10:09:30.662+0000] {dagbag.py:347} ERROR - Failed to import: /opt/airflow/dags/Dag_mongo.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/models/dagbag.py", line 343, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 843, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/opt/airflow/dags/Dag_mongo.py", line 11, in <module>
+    from airflow.providers.mongo.hooks.mongo import MongoHook
+ModuleNotFoundError: No module named 'airflow.providers.mongo'
+[2023-11-09T10:09:30.671+0000] {processor.py:841} WARNING - No viable dags retrieved from /opt/airflow/dags/Dag_mongo.py
+[2023-11-09T10:09:30.704+0000] {processor.py:179} INFO - Processing /opt/airflow/dags/Dag_mongo.py took 0.525 seconds
+[2023-11-09T10:10:01.042+0000] {processor.py:157} INFO - Started process (PID=663) to work on /opt/airflow/dags/Dag_mongo.py
+[2023-11-09T10:10:01.044+0000] {processor.py:829} INFO - Processing file /opt/airflow/dags/Dag_mongo.py for tasks to queue
+[2023-11-09T10:10:01.045+0000] {logging_mixin.py:151} INFO - [2023-11-09T10:10:01.045+0000] {dagbag.py:539} INFO - Filling up the DagBag from /opt/airflow/dags/Dag_mongo.py
+[2023-11-09T10:10:01.634+0000] {logging_mixin.py:151} INFO - [2023-11-09T10:10:01.622+0000] {dagbag.py:347} ERROR - Failed to import: /opt/airflow/dags/Dag_mongo.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/models/dagbag.py", line 343, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 843, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/opt/airflow/dags/Dag_mongo.py", line 11, in <module>
+    from airflow.providers.mongo.hooks.mongo import MongoHook
+ModuleNotFoundError: No module named 'airflow.providers.mongo'
+[2023-11-09T10:10:01.636+0000] {processor.py:841} WARNING - No viable dags retrieved from /opt/airflow/dags/Dag_mongo.py
+[2023-11-09T10:10:01.667+0000] {processor.py:179} INFO - Processing /opt/airflow/dags/Dag_mongo.py took 0.632 seconds
+[2023-11-09T10:10:31.996+0000] {processor.py:157} INFO - Started process (PID=691) to work on /opt/airflow/dags/Dag_mongo.py
+[2023-11-09T10:10:31.997+0000] {processor.py:829} INFO - Processing file /opt/airflow/dags/Dag_mongo.py for tasks to queue
+[2023-11-09T10:10:31.998+0000] {logging_mixin.py:151} INFO - [2023-11-09T10:10:31.997+0000] {dagbag.py:539} INFO - Filling up the DagBag from /opt/airflow/dags/Dag_mongo.py
+[2023-11-09T10:10:32.462+0000] {logging_mixin.py:151} INFO - [2023-11-09T10:10:32.457+0000] {dagbag.py:347} ERROR - Failed to import: /opt/airflow/dags/Dag_mongo.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/models/dagbag.py", line 343, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 843, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/opt/airflow/dags/Dag_mongo.py", line 11, in <module>
+    from airflow.providers.mongo.hooks.mongo import MongoHook
+ModuleNotFoundError: No module named 'airflow.providers.mongo'
+[2023-11-09T10:10:32.465+0000] {processor.py:841} WARNING - No viable dags retrieved from /opt/airflow/dags/Dag_mongo.py
+[2023-11-09T10:10:32.488+0000] {processor.py:179} INFO - Processing /opt/airflow/dags/Dag_mongo.py took 0.502 seconds
+[2023-11-09T10:11:02.555+0000] {processor.py:157} INFO - Started process (PID=713) to work on /opt/airflow/dags/Dag_mongo.py
+[2023-11-09T10:11:02.556+0000] {processor.py:829} INFO - Processing file /opt/airflow/dags/Dag_mongo.py for tasks to queue
+[2023-11-09T10:11:02.557+0000] {logging_mixin.py:151} INFO - [2023-11-09T10:11:02.557+0000] {dagbag.py:539} INFO - Filling up the DagBag from /opt/airflow/dags/Dag_mongo.py
+[2023-11-09T10:11:03.024+0000] {logging_mixin.py:151} INFO - [2023-11-09T10:11:03.017+0000] {dagbag.py:347} ERROR - Failed to import: /opt/airflow/dags/Dag_mongo.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/models/dagbag.py", line 343, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 843, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/opt/airflow/dags/Dag_mongo.py", line 11, in <module>
+    from airflow.providers.mongo.hooks.mongo import MongoHook
+ModuleNotFoundError: No module named 'airflow.providers.mongo'
+[2023-11-09T10:11:03.026+0000] {processor.py:841} WARNING - No viable dags retrieved from /opt/airflow/dags/Dag_mongo.py
+[2023-11-09T10:11:03.051+0000] {processor.py:179} INFO - Processing /opt/airflow/dags/Dag_mongo.py took 0.502 seconds
+[2023-11-09T10:11:33.400+0000] {processor.py:157} INFO - Started process (PID=742) to work on /opt/airflow/dags/Dag_mongo.py
+[2023-11-09T10:11:33.402+0000] {processor.py:829} INFO - Processing file /opt/airflow/dags/Dag_mongo.py for tasks to queue
+[2023-11-09T10:11:33.404+0000] {logging_mixin.py:151} INFO - [2023-11-09T10:11:33.403+0000] {dagbag.py:539} INFO - Filling up the DagBag from /opt/airflow/dags/Dag_mongo.py
+[2023-11-09T10:11:33.947+0000] {logging_mixin.py:151} INFO - [2023-11-09T10:11:33.940+0000] {dagbag.py:347} ERROR - Failed to import: /opt/airflow/dags/Dag_mongo.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/models/dagbag.py", line 343, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 843, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/opt/airflow/dags/Dag_mongo.py", line 11, in <module>
+    from airflow.providers.mongo.hooks.mongo import MongoHook
+ModuleNotFoundError: No module named 'airflow.providers.mongo'
+[2023-11-09T10:11:33.951+0000] {processor.py:841} WARNING - No viable dags retrieved from /opt/airflow/dags/Dag_mongo.py
+[2023-11-09T10:11:33.974+0000] {processor.py:179} INFO - Processing /opt/airflow/dags/Dag_mongo.py took 0.584 seconds
+[2023-11-09T10:12:04.393+0000] {processor.py:157} INFO - Started process (PID=762) to work on /opt/airflow/dags/Dag_mongo.py
+[2023-11-09T10:12:04.394+0000] {processor.py:829} INFO - Processing file /opt/airflow/dags/Dag_mongo.py for tasks to queue
+[2023-11-09T10:12:04.395+0000] {logging_mixin.py:151} INFO - [2023-11-09T10:12:04.395+0000] {dagbag.py:539} INFO - Filling up the DagBag from /opt/airflow/dags/Dag_mongo.py
+[2023-11-09T10:12:04.856+0000] {logging_mixin.py:151} INFO - [2023-11-09T10:12:04.851+0000] {dagbag.py:347} ERROR - Failed to import: /opt/airflow/dags/Dag_mongo.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/models/dagbag.py", line 343, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 843, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/opt/airflow/dags/Dag_mongo.py", line 11, in <module>
+    from airflow.providers.mongo.hooks.mongo import MongoHook
+ModuleNotFoundError: No module named 'airflow.providers.mongo'
+[2023-11-09T10:12:04.858+0000] {processor.py:841} WARNING - No viable dags retrieved from /opt/airflow/dags/Dag_mongo.py
+[2023-11-09T10:12:04.876+0000] {processor.py:179} INFO - Processing /opt/airflow/dags/Dag_mongo.py took 0.488 seconds
+[2023-11-09T10:12:35.259+0000] {processor.py:157} INFO - Started process (PID=783) to work on /opt/airflow/dags/Dag_mongo.py
+[2023-11-09T10:12:35.259+0000] {processor.py:829} INFO - Processing file /opt/airflow/dags/Dag_mongo.py for tasks to queue
+[2023-11-09T10:12:35.261+0000] {logging_mixin.py:151} INFO - [2023-11-09T10:12:35.260+0000] {dagbag.py:539} INFO - Filling up the DagBag from /opt/airflow/dags/Dag_mongo.py
+[2023-11-09T10:12:35.726+0000] {logging_mixin.py:151} INFO - [2023-11-09T10:12:35.719+0000] {dagbag.py:347} ERROR - Failed to import: /opt/airflow/dags/Dag_mongo.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/models/dagbag.py", line 343, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 843, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/opt/airflow/dags/Dag_mongo.py", line 11, in <module>
+    from airflow.providers.mongo.hooks.mongo import MongoHook
+ModuleNotFoundError: No module named 'airflow.providers.mongo'
+[2023-11-09T10:12:35.728+0000] {processor.py:841} WARNING - No viable dags retrieved from /opt/airflow/dags/Dag_mongo.py
+[2023-11-09T10:12:35.751+0000] {processor.py:179} INFO - Processing /opt/airflow/dags/Dag_mongo.py took 0.497 seconds
+[2023-11-09T10:13:06.108+0000] {processor.py:157} INFO - Started process (PID=811) to work on /opt/airflow/dags/Dag_mongo.py
+[2023-11-09T10:13:06.109+0000] {processor.py:829} INFO - Processing file /opt/airflow/dags/Dag_mongo.py for tasks to queue
+[2023-11-09T10:13:06.110+0000] {logging_mixin.py:151} INFO - [2023-11-09T10:13:06.110+0000] {dagbag.py:539} INFO - Filling up the DagBag from /opt/airflow/dags/Dag_mongo.py
+[2023-11-09T10:13:06.551+0000] {logging_mixin.py:151} INFO - [2023-11-09T10:13:06.545+0000] {dagbag.py:347} ERROR - Failed to import: /opt/airflow/dags/Dag_mongo.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/models/dagbag.py", line 343, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 843, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/opt/airflow/dags/Dag_mongo.py", line 11, in <module>
+    from airflow.providers.mongo.hooks.mongo import MongoHook
+ModuleNotFoundError: No module named 'airflow.providers.mongo'
+[2023-11-09T10:13:06.553+0000] {processor.py:841} WARNING - No viable dags retrieved from /opt/airflow/dags/Dag_mongo.py
+[2023-11-09T10:13:06.574+0000] {processor.py:179} INFO - Processing /opt/airflow/dags/Dag_mongo.py took 0.470 seconds
+[2023-11-09T10:13:36.739+0000] {processor.py:157} INFO - Started process (PID=831) to work on /opt/airflow/dags/Dag_mongo.py
+[2023-11-09T10:13:36.740+0000] {processor.py:829} INFO - Processing file /opt/airflow/dags/Dag_mongo.py for tasks to queue
+[2023-11-09T10:13:36.743+0000] {logging_mixin.py:151} INFO - [2023-11-09T10:13:36.742+0000] {dagbag.py:539} INFO - Filling up the DagBag from /opt/airflow/dags/Dag_mongo.py
+[2023-11-09T10:13:37.232+0000] {logging_mixin.py:151} INFO - [2023-11-09T10:13:37.225+0000] {dagbag.py:347} ERROR - Failed to import: /opt/airflow/dags/Dag_mongo.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/models/dagbag.py", line 343, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 843, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/opt/airflow/dags/Dag_mongo.py", line 11, in <module>
+    from airflow.providers.mongo.hooks.mongo import MongoHook
+ModuleNotFoundError: No module named 'airflow.providers.mongo'
+[2023-11-09T10:13:37.235+0000] {processor.py:841} WARNING - No viable dags retrieved from /opt/airflow/dags/Dag_mongo.py
+[2023-11-09T10:13:37.258+0000] {processor.py:179} INFO - Processing /opt/airflow/dags/Dag_mongo.py took 0.527 seconds
+[2023-11-09T10:14:07.632+0000] {processor.py:157} INFO - Started process (PID=859) to work on /opt/airflow/dags/Dag_mongo.py
+[2023-11-09T10:14:07.633+0000] {processor.py:829} INFO - Processing file /opt/airflow/dags/Dag_mongo.py for tasks to queue
+[2023-11-09T10:14:07.637+0000] {logging_mixin.py:151} INFO - [2023-11-09T10:14:07.636+0000] {dagbag.py:539} INFO - Filling up the DagBag from /opt/airflow/dags/Dag_mongo.py
+[2023-11-09T10:14:08.224+0000] {logging_mixin.py:151} INFO - [2023-11-09T10:14:08.215+0000] {dagbag.py:347} ERROR - Failed to import: /opt/airflow/dags/Dag_mongo.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/models/dagbag.py", line 343, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 843, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/opt/airflow/dags/Dag_mongo.py", line 11, in <module>
+    from airflow.providers.mongo.hooks.mongo import MongoHook
+ModuleNotFoundError: No module named 'airflow.providers.mongo'
+[2023-11-09T10:14:08.228+0000] {processor.py:841} WARNING - No viable dags retrieved from /opt/airflow/dags/Dag_mongo.py
+[2023-11-09T10:14:08.258+0000] {processor.py:179} INFO - Processing /opt/airflow/dags/Dag_mongo.py took 0.654 seconds
+[2023-11-09T10:14:38.577+0000] {processor.py:157} INFO - Started process (PID=880) to work on /opt/airflow/dags/Dag_mongo.py
+[2023-11-09T10:14:38.578+0000] {processor.py:829} INFO - Processing file /opt/airflow/dags/Dag_mongo.py for tasks to queue
+[2023-11-09T10:14:38.580+0000] {logging_mixin.py:151} INFO - [2023-11-09T10:14:38.579+0000] {dagbag.py:539} INFO - Filling up the DagBag from /opt/airflow/dags/Dag_mongo.py
+[2023-11-09T10:14:39.175+0000] {logging_mixin.py:151} INFO - [2023-11-09T10:14:39.170+0000] {dagbag.py:347} ERROR - Failed to import: /opt/airflow/dags/Dag_mongo.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/models/dagbag.py", line 343, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 843, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/opt/airflow/dags/Dag_mongo.py", line 11, in <module>
+    from airflow.providers.mongo.hooks.mongo import MongoHook
+ModuleNotFoundError: No module named 'airflow.providers.mongo'
+[2023-11-09T10:14:39.177+0000] {processor.py:841} WARNING - No viable dags retrieved from /opt/airflow/dags/Dag_mongo.py
+[2023-11-09T10:14:39.208+0000] {processor.py:179} INFO - Processing /opt/airflow/dags/Dag_mongo.py took 0.640 seconds
+[2023-11-09T10:15:09.557+0000] {processor.py:157} INFO - Started process (PID=900) to work on /opt/airflow/dags/Dag_mongo.py
+[2023-11-09T10:15:09.558+0000] {processor.py:829} INFO - Processing file /opt/airflow/dags/Dag_mongo.py for tasks to queue
+[2023-11-09T10:15:09.559+0000] {logging_mixin.py:151} INFO - [2023-11-09T10:15:09.559+0000] {dagbag.py:539} INFO - Filling up the DagBag from /opt/airflow/dags/Dag_mongo.py
+[2023-11-09T10:15:10.092+0000] {logging_mixin.py:151} INFO - [2023-11-09T10:15:10.085+0000] {dagbag.py:347} ERROR - Failed to import: /opt/airflow/dags/Dag_mongo.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/models/dagbag.py", line 343, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 843, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/opt/airflow/dags/Dag_mongo.py", line 11, in <module>
+    from airflow.providers.mongo.hooks.mongo import MongoHook
+ModuleNotFoundError: No module named 'airflow.providers.mongo'
+[2023-11-09T10:15:10.093+0000] {processor.py:841} WARNING - No viable dags retrieved from /opt/airflow/dags/Dag_mongo.py
+[2023-11-09T10:15:10.113+0000] {processor.py:179} INFO - Processing /opt/airflow/dags/Dag_mongo.py took 0.559 seconds
+[2023-11-09T10:15:40.504+0000] {processor.py:157} INFO - Started process (PID=930) to work on /opt/airflow/dags/Dag_mongo.py
+[2023-11-09T10:15:40.505+0000] {processor.py:829} INFO - Processing file /opt/airflow/dags/Dag_mongo.py for tasks to queue
+[2023-11-09T10:15:40.507+0000] {logging_mixin.py:151} INFO - [2023-11-09T10:15:40.506+0000] {dagbag.py:539} INFO - Filling up the DagBag from /opt/airflow/dags/Dag_mongo.py
+[2023-11-09T10:15:41.087+0000] {logging_mixin.py:151} INFO - [2023-11-09T10:15:41.081+0000] {dagbag.py:347} ERROR - Failed to import: /opt/airflow/dags/Dag_mongo.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/models/dagbag.py", line 343, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 843, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/opt/airflow/dags/Dag_mongo.py", line 11, in <module>
+    from airflow.providers.mongo.hooks.mongo import MongoHook
+ModuleNotFoundError: No module named 'airflow.providers.mongo'
+[2023-11-09T10:15:41.089+0000] {processor.py:841} WARNING - No viable dags retrieved from /opt/airflow/dags/Dag_mongo.py
+[2023-11-09T10:15:41.110+0000] {processor.py:179} INFO - Processing /opt/airflow/dags/Dag_mongo.py took 0.610 seconds
+[2023-11-09T10:16:11.338+0000] {processor.py:157} INFO - Started process (PID=951) to work on /opt/airflow/dags/Dag_mongo.py
+[2023-11-09T10:16:11.341+0000] {processor.py:829} INFO - Processing file /opt/airflow/dags/Dag_mongo.py for tasks to queue
+[2023-11-09T10:16:11.344+0000] {logging_mixin.py:151} INFO - [2023-11-09T10:16:11.343+0000] {dagbag.py:539} INFO - Filling up the DagBag from /opt/airflow/dags/Dag_mongo.py
+[2023-11-09T10:16:12.395+0000] {logging_mixin.py:151} INFO - [2023-11-09T10:16:12.389+0000] {dagbag.py:347} ERROR - Failed to import: /opt/airflow/dags/Dag_mongo.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/models/dagbag.py", line 343, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 843, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/opt/airflow/dags/Dag_mongo.py", line 11, in <module>
+    from airflow.providers.mongo.hooks.mongo import MongoHook
+ModuleNotFoundError: No module named 'airflow.providers.mongo'
+[2023-11-09T10:16:12.397+0000] {processor.py:841} WARNING - No viable dags retrieved from /opt/airflow/dags/Dag_mongo.py
+[2023-11-09T10:16:12.450+0000] {processor.py:179} INFO - Processing /opt/airflow/dags/Dag_mongo.py took 1.140 seconds
+[2023-11-09T10:16:42.929+0000] {processor.py:157} INFO - Started process (PID=981) to work on /opt/airflow/dags/Dag_mongo.py
+[2023-11-09T10:16:42.940+0000] {processor.py:829} INFO - Processing file /opt/airflow/dags/Dag_mongo.py for tasks to queue
+[2023-11-09T10:16:42.957+0000] {logging_mixin.py:151} INFO - [2023-11-09T10:16:42.957+0000] {dagbag.py:539} INFO - Filling up the DagBag from /opt/airflow/dags/Dag_mongo.py
+[2023-11-09T10:16:44.429+0000] {logging_mixin.py:151} INFO - [2023-11-09T10:16:44.349+0000] {dagbag.py:347} ERROR - Failed to import: /opt/airflow/dags/Dag_mongo.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/models/dagbag.py", line 343, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 843, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/opt/airflow/dags/Dag_mongo.py", line 11, in <module>
+    from airflow.providers.mongo.hooks.mongo import MongoHook
+ModuleNotFoundError: No module named 'airflow.providers.mongo'
+[2023-11-09T10:16:44.456+0000] {processor.py:841} WARNING - No viable dags retrieved from /opt/airflow/dags/Dag_mongo.py
+[2023-11-09T10:16:44.532+0000] {processor.py:179} INFO - Processing /opt/airflow/dags/Dag_mongo.py took 1.608 seconds
+[2023-11-09T10:17:14.879+0000] {processor.py:157} INFO - Started process (PID=1002) to work on /opt/airflow/dags/Dag_mongo.py
+[2023-11-09T10:17:14.881+0000] {processor.py:829} INFO - Processing file /opt/airflow/dags/Dag_mongo.py for tasks to queue
+[2023-11-09T10:17:14.883+0000] {logging_mixin.py:151} INFO - [2023-11-09T10:17:14.882+0000] {dagbag.py:539} INFO - Filling up the DagBag from /opt/airflow/dags/Dag_mongo.py
+[2023-11-09T10:17:15.588+0000] {logging_mixin.py:151} INFO - [2023-11-09T10:17:15.582+0000] {dagbag.py:347} ERROR - Failed to import: /opt/airflow/dags/Dag_mongo.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/models/dagbag.py", line 343, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 843, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/opt/airflow/dags/Dag_mongo.py", line 11, in <module>
+    from airflow.providers.mongo.hooks.mongo import MongoHook
+ModuleNotFoundError: No module named 'airflow.providers.mongo'
+[2023-11-09T10:17:15.591+0000] {processor.py:841} WARNING - No viable dags retrieved from /opt/airflow/dags/Dag_mongo.py
+[2023-11-09T10:17:15.627+0000] {processor.py:179} INFO - Processing /opt/airflow/dags/Dag_mongo.py took 0.759 seconds
+[2023-11-09T10:17:46.114+0000] {processor.py:157} INFO - Started process (PID=1022) to work on /opt/airflow/dags/Dag_mongo.py
+[2023-11-09T10:17:46.115+0000] {processor.py:829} INFO - Processing file /opt/airflow/dags/Dag_mongo.py for tasks to queue
+[2023-11-09T10:17:46.117+0000] {logging_mixin.py:151} INFO - [2023-11-09T10:17:46.116+0000] {dagbag.py:539} INFO - Filling up the DagBag from /opt/airflow/dags/Dag_mongo.py
+[2023-11-09T10:17:46.622+0000] {logging_mixin.py:151} INFO - [2023-11-09T10:17:46.611+0000] {dagbag.py:347} ERROR - Failed to import: /opt/airflow/dags/Dag_mongo.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/models/dagbag.py", line 343, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 843, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/opt/airflow/dags/Dag_mongo.py", line 11, in <module>
+    from airflow.providers.mongo.hooks.mongo import MongoHook
+ModuleNotFoundError: No module named 'airflow.providers.mongo'
+[2023-11-09T10:17:46.625+0000] {processor.py:841} WARNING - No viable dags retrieved from /opt/airflow/dags/Dag_mongo.py
+[2023-11-09T10:17:46.656+0000] {processor.py:179} INFO - Processing /opt/airflow/dags/Dag_mongo.py took 0.547 seconds
+[2023-11-09T10:18:17.120+0000] {processor.py:157} INFO - Started process (PID=1051) to work on /opt/airflow/dags/Dag_mongo.py
+[2023-11-09T10:18:17.127+0000] {processor.py:829} INFO - Processing file /opt/airflow/dags/Dag_mongo.py for tasks to queue
+[2023-11-09T10:18:17.130+0000] {logging_mixin.py:151} INFO - [2023-11-09T10:18:17.129+0000] {dagbag.py:539} INFO - Filling up the DagBag from /opt/airflow/dags/Dag_mongo.py
+[2023-11-09T10:18:18.223+0000] {logging_mixin.py:151} INFO - [2023-11-09T10:18:18.214+0000] {dagbag.py:347} ERROR - Failed to import: /opt/airflow/dags/Dag_mongo.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/models/dagbag.py", line 343, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 843, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/opt/airflow/dags/Dag_mongo.py", line 11, in <module>
+    from airflow.providers.mongo.hooks.mongo import MongoHook
+ModuleNotFoundError: No module named 'airflow.providers.mongo'
+[2023-11-09T10:18:18.227+0000] {processor.py:841} WARNING - No viable dags retrieved from /opt/airflow/dags/Dag_mongo.py
+[2023-11-09T10:18:18.283+0000] {processor.py:179} INFO - Processing /opt/airflow/dags/Dag_mongo.py took 1.170 seconds
+[2023-11-09T10:18:48.541+0000] {processor.py:157} INFO - Started process (PID=1077) to work on /opt/airflow/dags/Dag_mongo.py
+[2023-11-09T10:18:48.543+0000] {processor.py:829} INFO - Processing file /opt/airflow/dags/Dag_mongo.py for tasks to queue
+[2023-11-09T10:18:48.548+0000] {logging_mixin.py:151} INFO - [2023-11-09T10:18:48.545+0000] {dagbag.py:539} INFO - Filling up the DagBag from /opt/airflow/dags/Dag_mongo.py
+[2023-11-09T10:18:49.194+0000] {logging_mixin.py:151} INFO - [2023-11-09T10:18:49.187+0000] {dagbag.py:347} ERROR - Failed to import: /opt/airflow/dags/Dag_mongo.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/models/dagbag.py", line 343, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 843, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/opt/airflow/dags/Dag_mongo.py", line 11, in <module>
+    from airflow.providers.mongo.hooks.mongo import MongoHook
+ModuleNotFoundError: No module named 'airflow.providers.mongo'
+[2023-11-09T10:18:49.198+0000] {processor.py:841} WARNING - No viable dags retrieved from /opt/airflow/dags/Dag_mongo.py
+[2023-11-09T10:18:49.221+0000] {processor.py:179} INFO - Processing /opt/airflow/dags/Dag_mongo.py took 0.697 seconds
+[2023-11-09T10:19:19.714+0000] {processor.py:157} INFO - Started process (PID=1117) to work on /opt/airflow/dags/Dag_mongo.py
+[2023-11-09T10:19:19.715+0000] {processor.py:829} INFO - Processing file /opt/airflow/dags/Dag_mongo.py for tasks to queue
+[2023-11-09T10:19:19.717+0000] {logging_mixin.py:151} INFO - [2023-11-09T10:19:19.716+0000] {dagbag.py:539} INFO - Filling up the DagBag from /opt/airflow/dags/Dag_mongo.py
+[2023-11-09T10:19:20.239+0000] {logging_mixin.py:151} INFO - [2023-11-09T10:19:20.234+0000] {dagbag.py:347} ERROR - Failed to import: /opt/airflow/dags/Dag_mongo.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/models/dagbag.py", line 343, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 843, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/opt/airflow/dags/Dag_mongo.py", line 11, in <module>
+    from airflow.providers.mongo.hooks.mongo import MongoHook
+ModuleNotFoundError: No module named 'airflow.providers.mongo'
+[2023-11-09T10:19:20.241+0000] {processor.py:841} WARNING - No viable dags retrieved from /opt/airflow/dags/Dag_mongo.py
+[2023-11-09T10:19:20.271+0000] {processor.py:179} INFO - Processing /opt/airflow/dags/Dag_mongo.py took 0.560 seconds
+[2023-11-09T10:19:50.356+0000] {processor.py:157} INFO - Started process (PID=1142) to work on /opt/airflow/dags/Dag_mongo.py
+[2023-11-09T10:19:50.357+0000] {processor.py:829} INFO - Processing file /opt/airflow/dags/Dag_mongo.py for tasks to queue
+[2023-11-09T10:19:50.359+0000] {logging_mixin.py:151} INFO - [2023-11-09T10:19:50.358+0000] {dagbag.py:539} INFO - Filling up the DagBag from /opt/airflow/dags/Dag_mongo.py
+[2023-11-09T10:19:50.870+0000] {logging_mixin.py:151} INFO - [2023-11-09T10:19:50.863+0000] {dagbag.py:347} ERROR - Failed to import: /opt/airflow/dags/Dag_mongo.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/models/dagbag.py", line 343, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 843, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/opt/airflow/dags/Dag_mongo.py", line 11, in <module>
+    from airflow.providers.mongo.hooks.mongo import MongoHook
+ModuleNotFoundError: No module named 'airflow.providers.mongo'
+[2023-11-09T10:19:50.872+0000] {processor.py:841} WARNING - No viable dags retrieved from /opt/airflow/dags/Dag_mongo.py
+[2023-11-09T10:19:50.897+0000] {processor.py:179} INFO - Processing /opt/airflow/dags/Dag_mongo.py took 0.545 seconds
+[2023-11-09T10:20:21.057+0000] {processor.py:157} INFO - Started process (PID=1176) to work on /opt/airflow/dags/Dag_mongo.py
+[2023-11-09T10:20:21.071+0000] {processor.py:829} INFO - Processing file /opt/airflow/dags/Dag_mongo.py for tasks to queue
+[2023-11-09T10:20:21.073+0000] {logging_mixin.py:151} INFO - [2023-11-09T10:20:21.072+0000] {dagbag.py:539} INFO - Filling up the DagBag from /opt/airflow/dags/Dag_mongo.py
+[2023-11-09T10:20:21.981+0000] {logging_mixin.py:151} INFO - [2023-11-09T10:20:21.956+0000] {dagbag.py:347} ERROR - Failed to import: /opt/airflow/dags/Dag_mongo.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/models/dagbag.py", line 343, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 843, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/opt/airflow/dags/Dag_mongo.py", line 11, in <module>
+    from airflow.providers.mongo.hooks.mongo import MongoHook
+ModuleNotFoundError: No module named 'airflow.providers.mongo'
+[2023-11-09T10:20:21.985+0000] {processor.py:841} WARNING - No viable dags retrieved from /opt/airflow/dags/Dag_mongo.py
+[2023-11-09T10:20:22.023+0000] {processor.py:179} INFO - Processing /opt/airflow/dags/Dag_mongo.py took 0.973 seconds
+[2023-11-09T10:20:52.480+0000] {processor.py:157} INFO - Started process (PID=1196) to work on /opt/airflow/dags/Dag_mongo.py
+[2023-11-09T10:20:52.481+0000] {processor.py:829} INFO - Processing file /opt/airflow/dags/Dag_mongo.py for tasks to queue
+[2023-11-09T10:20:52.482+0000] {logging_mixin.py:151} INFO - [2023-11-09T10:20:52.482+0000] {dagbag.py:539} INFO - Filling up the DagBag from /opt/airflow/dags/Dag_mongo.py
+[2023-11-09T10:20:52.985+0000] {logging_mixin.py:151} INFO - [2023-11-09T10:20:52.979+0000] {dagbag.py:347} ERROR - Failed to import: /opt/airflow/dags/Dag_mongo.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/models/dagbag.py", line 343, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 843, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/opt/airflow/dags/Dag_mongo.py", line 11, in <module>
+    from airflow.providers.mongo.hooks.mongo import MongoHook
+ModuleNotFoundError: No module named 'airflow.providers.mongo'
+[2023-11-09T10:20:52.987+0000] {processor.py:841} WARNING - No viable dags retrieved from /opt/airflow/dags/Dag_mongo.py
+[2023-11-09T10:20:53.013+0000] {processor.py:179} INFO - Processing /opt/airflow/dags/Dag_mongo.py took 0.537 seconds
+[2023-11-09T10:21:23.338+0000] {processor.py:157} INFO - Started process (PID=1225) to work on /opt/airflow/dags/Dag_mongo.py
+[2023-11-09T10:21:23.338+0000] {processor.py:829} INFO - Processing file /opt/airflow/dags/Dag_mongo.py for tasks to queue
+[2023-11-09T10:21:23.340+0000] {logging_mixin.py:151} INFO - [2023-11-09T10:21:23.339+0000] {dagbag.py:539} INFO - Filling up the DagBag from /opt/airflow/dags/Dag_mongo.py
+[2023-11-09T10:21:23.797+0000] {logging_mixin.py:151} INFO - [2023-11-09T10:21:23.790+0000] {dagbag.py:347} ERROR - Failed to import: /opt/airflow/dags/Dag_mongo.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/models/dagbag.py", line 343, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 843, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/opt/airflow/dags/Dag_mongo.py", line 11, in <module>
+    from airflow.providers.mongo.hooks.mongo import MongoHook
+ModuleNotFoundError: No module named 'airflow.providers.mongo'
+[2023-11-09T10:21:23.799+0000] {processor.py:841} WARNING - No viable dags retrieved from /opt/airflow/dags/Dag_mongo.py
+[2023-11-09T10:21:23.821+0000] {processor.py:179} INFO - Processing /opt/airflow/dags/Dag_mongo.py took 0.488 seconds
+[2023-11-09T10:21:53.908+0000] {processor.py:157} INFO - Started process (PID=1246) to work on /opt/airflow/dags/Dag_mongo.py
+[2023-11-09T10:21:53.909+0000] {processor.py:829} INFO - Processing file /opt/airflow/dags/Dag_mongo.py for tasks to queue
+[2023-11-09T10:21:53.911+0000] {logging_mixin.py:151} INFO - [2023-11-09T10:21:53.911+0000] {dagbag.py:539} INFO - Filling up the DagBag from /opt/airflow/dags/Dag_mongo.py
+[2023-11-09T10:21:54.559+0000] {logging_mixin.py:151} INFO - [2023-11-09T10:21:54.554+0000] {dagbag.py:347} ERROR - Failed to import: /opt/airflow/dags/Dag_mongo.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/models/dagbag.py", line 343, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 843, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/opt/airflow/dags/Dag_mongo.py", line 11, in <module>
+    from airflow.providers.mongo.hooks.mongo import MongoHook
+ModuleNotFoundError: No module named 'airflow.providers.mongo'
+[2023-11-09T10:21:54.561+0000] {processor.py:841} WARNING - No viable dags retrieved from /opt/airflow/dags/Dag_mongo.py
+[2023-11-09T10:21:54.578+0000] {processor.py:179} INFO - Processing /opt/airflow/dags/Dag_mongo.py took 0.674 seconds
+[2023-11-09T10:22:24.801+0000] {processor.py:157} INFO - Started process (PID=1274) to work on /opt/airflow/dags/Dag_mongo.py
+[2023-11-09T10:22:24.803+0000] {processor.py:829} INFO - Processing file /opt/airflow/dags/Dag_mongo.py for tasks to queue
+[2023-11-09T10:22:24.804+0000] {logging_mixin.py:151} INFO - [2023-11-09T10:22:24.804+0000] {dagbag.py:539} INFO - Filling up the DagBag from /opt/airflow/dags/Dag_mongo.py
+[2023-11-09T10:22:25.312+0000] {logging_mixin.py:151} INFO - [2023-11-09T10:22:25.307+0000] {dagbag.py:347} ERROR - Failed to import: /opt/airflow/dags/Dag_mongo.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/models/dagbag.py", line 343, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 843, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/opt/airflow/dags/Dag_mongo.py", line 11, in <module>
+    from airflow.providers.mongo.hooks.mongo import MongoHook
+ModuleNotFoundError: No module named 'airflow.providers.mongo'
+[2023-11-09T10:22:25.314+0000] {processor.py:841} WARNING - No viable dags retrieved from /opt/airflow/dags/Dag_mongo.py
+[2023-11-09T10:22:25.340+0000] {processor.py:179} INFO - Processing /opt/airflow/dags/Dag_mongo.py took 0.555 seconds
+[2023-11-09T10:22:55.548+0000] {processor.py:157} INFO - Started process (PID=1294) to work on /opt/airflow/dags/Dag_mongo.py
+[2023-11-09T10:22:55.549+0000] {processor.py:829} INFO - Processing file /opt/airflow/dags/Dag_mongo.py for tasks to queue
+[2023-11-09T10:22:55.551+0000] {logging_mixin.py:151} INFO - [2023-11-09T10:22:55.550+0000] {dagbag.py:539} INFO - Filling up the DagBag from /opt/airflow/dags/Dag_mongo.py
+[2023-11-09T10:22:56.015+0000] {logging_mixin.py:151} INFO - [2023-11-09T10:22:56.009+0000] {dagbag.py:347} ERROR - Failed to import: /opt/airflow/dags/Dag_mongo.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/models/dagbag.py", line 343, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 843, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/opt/airflow/dags/Dag_mongo.py", line 11, in <module>
+    from airflow.providers.mongo.hooks.mongo import MongoHook
+ModuleNotFoundError: No module named 'airflow.providers.mongo'
+[2023-11-09T10:22:56.017+0000] {processor.py:841} WARNING - No viable dags retrieved from /opt/airflow/dags/Dag_mongo.py
+[2023-11-09T10:22:56.049+0000] {processor.py:179} INFO - Processing /opt/airflow/dags/Dag_mongo.py took 0.506 seconds
+[2023-11-09T10:23:26.388+0000] {processor.py:157} INFO - Started process (PID=1316) to work on /opt/airflow/dags/Dag_mongo.py
+[2023-11-09T10:23:26.389+0000] {processor.py:829} INFO - Processing file /opt/airflow/dags/Dag_mongo.py for tasks to queue
+[2023-11-09T10:23:26.390+0000] {logging_mixin.py:151} INFO - [2023-11-09T10:23:26.390+0000] {dagbag.py:539} INFO - Filling up the DagBag from /opt/airflow/dags/Dag_mongo.py
+[2023-11-09T10:23:27.003+0000] {logging_mixin.py:151} INFO - [2023-11-09T10:23:26.998+0000] {dagbag.py:347} ERROR - Failed to import: /opt/airflow/dags/Dag_mongo.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/models/dagbag.py", line 343, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 843, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/opt/airflow/dags/Dag_mongo.py", line 11, in <module>
+    from airflow.providers.mongo.hooks.mongo import MongoHook
+ModuleNotFoundError: No module named 'airflow.providers.mongo'
+[2023-11-09T10:23:27.005+0000] {processor.py:841} WARNING - No viable dags retrieved from /opt/airflow/dags/Dag_mongo.py
+[2023-11-09T10:23:27.024+0000] {processor.py:179} INFO - Processing /opt/airflow/dags/Dag_mongo.py took 0.640 seconds
+[2023-11-09T10:23:57.113+0000] {processor.py:157} INFO - Started process (PID=1345) to work on /opt/airflow/dags/Dag_mongo.py
+[2023-11-09T10:23:57.114+0000] {processor.py:829} INFO - Processing file /opt/airflow/dags/Dag_mongo.py for tasks to queue
+[2023-11-09T10:23:57.115+0000] {logging_mixin.py:151} INFO - [2023-11-09T10:23:57.115+0000] {dagbag.py:539} INFO - Filling up the DagBag from /opt/airflow/dags/Dag_mongo.py
+[2023-11-09T10:23:57.647+0000] {logging_mixin.py:151} INFO - [2023-11-09T10:23:57.638+0000] {dagbag.py:347} ERROR - Failed to import: /opt/airflow/dags/Dag_mongo.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/models/dagbag.py", line 343, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 843, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/opt/airflow/dags/Dag_mongo.py", line 11, in <module>
+    from airflow.providers.mongo.hooks.mongo import MongoHook
+ModuleNotFoundError: No module named 'airflow.providers.mongo'
+[2023-11-09T10:23:57.650+0000] {processor.py:841} WARNING - No viable dags retrieved from /opt/airflow/dags/Dag_mongo.py
+[2023-11-09T10:23:57.683+0000] {processor.py:179} INFO - Processing /opt/airflow/dags/Dag_mongo.py took 0.575 seconds
+[2023-11-09T10:24:28.029+0000] {processor.py:157} INFO - Started process (PID=1366) to work on /opt/airflow/dags/Dag_mongo.py
+[2023-11-09T10:24:28.030+0000] {processor.py:829} INFO - Processing file /opt/airflow/dags/Dag_mongo.py for tasks to queue
+[2023-11-09T10:24:28.032+0000] {logging_mixin.py:151} INFO - [2023-11-09T10:24:28.032+0000] {dagbag.py:539} INFO - Filling up the DagBag from /opt/airflow/dags/Dag_mongo.py
+[2023-11-09T10:24:28.629+0000] {logging_mixin.py:151} INFO - [2023-11-09T10:24:28.621+0000] {dagbag.py:347} ERROR - Failed to import: /opt/airflow/dags/Dag_mongo.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/models/dagbag.py", line 343, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 843, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/opt/airflow/dags/Dag_mongo.py", line 11, in <module>
+    from airflow.providers.mongo.hooks.mongo import MongoHook
+ModuleNotFoundError: No module named 'airflow.providers.mongo'
+[2023-11-09T10:24:28.631+0000] {processor.py:841} WARNING - No viable dags retrieved from /opt/airflow/dags/Dag_mongo.py
+[2023-11-09T10:24:28.664+0000] {processor.py:179} INFO - Processing /opt/airflow/dags/Dag_mongo.py took 0.638 seconds
+[2023-11-09T10:24:58.991+0000] {processor.py:157} INFO - Started process (PID=1394) to work on /opt/airflow/dags/Dag_mongo.py
+[2023-11-09T10:24:58.992+0000] {processor.py:829} INFO - Processing file /opt/airflow/dags/Dag_mongo.py for tasks to queue
+[2023-11-09T10:24:58.993+0000] {logging_mixin.py:151} INFO - [2023-11-09T10:24:58.993+0000] {dagbag.py:539} INFO - Filling up the DagBag from /opt/airflow/dags/Dag_mongo.py
+[2023-11-09T10:24:59.630+0000] {logging_mixin.py:151} INFO - [2023-11-09T10:24:59.620+0000] {dagbag.py:347} ERROR - Failed to import: /opt/airflow/dags/Dag_mongo.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/models/dagbag.py", line 343, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 843, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/opt/airflow/dags/Dag_mongo.py", line 11, in <module>
+    from airflow.providers.mongo.hooks.mongo import MongoHook
+ModuleNotFoundError: No module named 'airflow.providers.mongo'
+[2023-11-09T10:24:59.633+0000] {processor.py:841} WARNING - No viable dags retrieved from /opt/airflow/dags/Dag_mongo.py
+[2023-11-09T10:24:59.652+0000] {processor.py:179} INFO - Processing /opt/airflow/dags/Dag_mongo.py took 0.665 seconds
+[2023-11-09T10:25:29.996+0000] {processor.py:157} INFO - Started process (PID=1414) to work on /opt/airflow/dags/Dag_mongo.py
+[2023-11-09T10:25:29.997+0000] {processor.py:829} INFO - Processing file /opt/airflow/dags/Dag_mongo.py for tasks to queue
+[2023-11-09T10:25:29.998+0000] {logging_mixin.py:151} INFO - [2023-11-09T10:25:29.997+0000] {dagbag.py:539} INFO - Filling up the DagBag from /opt/airflow/dags/Dag_mongo.py
+[2023-11-09T10:25:30.662+0000] {logging_mixin.py:151} INFO - [2023-11-09T10:25:30.658+0000] {dagbag.py:347} ERROR - Failed to import: /opt/airflow/dags/Dag_mongo.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/models/dagbag.py", line 343, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 843, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/opt/airflow/dags/Dag_mongo.py", line 11, in <module>
+    from airflow.providers.mongo.hooks.mongo import MongoHook
+ModuleNotFoundError: No module named 'airflow.providers.mongo'
+[2023-11-09T10:25:30.664+0000] {processor.py:841} WARNING - No viable dags retrieved from /opt/airflow/dags/Dag_mongo.py
+[2023-11-09T10:25:30.685+0000] {processor.py:179} INFO - Processing /opt/airflow/dags/Dag_mongo.py took 0.693 seconds
+[2023-11-09T10:26:01.145+0000] {processor.py:157} INFO - Started process (PID=1445) to work on /opt/airflow/dags/Dag_mongo.py
+[2023-11-09T10:26:01.147+0000] {processor.py:829} INFO - Processing file /opt/airflow/dags/Dag_mongo.py for tasks to queue
+[2023-11-09T10:26:01.149+0000] {logging_mixin.py:151} INFO - [2023-11-09T10:26:01.149+0000] {dagbag.py:539} INFO - Filling up the DagBag from /opt/airflow/dags/Dag_mongo.py
+[2023-11-09T10:26:02.164+0000] {logging_mixin.py:151} INFO - [2023-11-09T10:26:02.159+0000] {dagbag.py:347} ERROR - Failed to import: /opt/airflow/dags/Dag_mongo.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/models/dagbag.py", line 343, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 843, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/opt/airflow/dags/Dag_mongo.py", line 11, in <module>
+    from airflow.providers.mongo.hooks.mongo import MongoHook
+ModuleNotFoundError: No module named 'airflow.providers.mongo'
+[2023-11-09T10:26:02.166+0000] {processor.py:841} WARNING - No viable dags retrieved from /opt/airflow/dags/Dag_mongo.py
+[2023-11-09T10:26:02.193+0000] {processor.py:179} INFO - Processing /opt/airflow/dags/Dag_mongo.py took 1.059 seconds
+[2023-11-09T10:26:33.327+0000] {processor.py:157} INFO - Started process (PID=1467) to work on /opt/airflow/dags/Dag_mongo.py
+[2023-11-09T10:26:33.377+0000] {processor.py:829} INFO - Processing file /opt/airflow/dags/Dag_mongo.py for tasks to queue
+[2023-11-09T10:26:33.450+0000] {logging_mixin.py:151} INFO - [2023-11-09T10:26:33.445+0000] {dagbag.py:539} INFO - Filling up the DagBag from /opt/airflow/dags/Dag_mongo.py
+[2023-11-09T10:26:36.423+0000] {logging_mixin.py:151} INFO - [2023-11-09T10:26:36.397+0000] {dagbag.py:347} ERROR - Failed to import: /opt/airflow/dags/Dag_mongo.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/models/dagbag.py", line 343, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 843, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/opt/airflow/dags/Dag_mongo.py", line 11, in <module>
+    from airflow.providers.mongo.hooks.mongo import MongoHook
+ModuleNotFoundError: No module named 'airflow.providers.mongo'
+[2023-11-09T10:26:36.433+0000] {processor.py:841} WARNING - No viable dags retrieved from /opt/airflow/dags/Dag_mongo.py
+[2023-11-09T10:26:36.544+0000] {processor.py:179} INFO - Processing /opt/airflow/dags/Dag_mongo.py took 3.322 seconds
+[2023-11-09T10:27:06.702+0000] {processor.py:157} INFO - Started process (PID=1486) to work on /opt/airflow/dags/Dag_mongo.py
+[2023-11-09T10:27:06.703+0000] {processor.py:829} INFO - Processing file /opt/airflow/dags/Dag_mongo.py for tasks to queue
+[2023-11-09T10:27:06.704+0000] {logging_mixin.py:151} INFO - [2023-11-09T10:27:06.704+0000] {dagbag.py:539} INFO - Filling up the DagBag from /opt/airflow/dags/Dag_mongo.py
+[2023-11-09T10:27:07.370+0000] {logging_mixin.py:151} INFO - [2023-11-09T10:27:07.361+0000] {dagbag.py:347} ERROR - Failed to import: /opt/airflow/dags/Dag_mongo.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/models/dagbag.py", line 343, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 843, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/opt/airflow/dags/Dag_mongo.py", line 11, in <module>
+    from airflow.providers.mongo.hooks.mongo import MongoHook
+ModuleNotFoundError: No module named 'airflow.providers.mongo'
+[2023-11-09T10:27:07.372+0000] {processor.py:841} WARNING - No viable dags retrieved from /opt/airflow/dags/Dag_mongo.py
+[2023-11-09T10:27:07.425+0000] {processor.py:179} INFO - Processing /opt/airflow/dags/Dag_mongo.py took 0.728 seconds
+[2023-11-09T10:27:37.899+0000] {processor.py:157} INFO - Started process (PID=1506) to work on /opt/airflow/dags/Dag_mongo.py
+[2023-11-09T10:27:37.900+0000] {processor.py:829} INFO - Processing file /opt/airflow/dags/Dag_mongo.py for tasks to queue
+[2023-11-09T10:27:37.901+0000] {logging_mixin.py:151} INFO - [2023-11-09T10:27:37.901+0000] {dagbag.py:539} INFO - Filling up the DagBag from /opt/airflow/dags/Dag_mongo.py
+[2023-11-09T10:27:38.598+0000] {logging_mixin.py:151} INFO - [2023-11-09T10:27:38.592+0000] {dagbag.py:347} ERROR - Failed to import: /opt/airflow/dags/Dag_mongo.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/models/dagbag.py", line 343, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 843, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/opt/airflow/dags/Dag_mongo.py", line 11, in <module>
+    from airflow.providers.mongo.hooks.mongo import MongoHook
+ModuleNotFoundError: No module named 'airflow.providers.mongo'
+[2023-11-09T10:27:38.600+0000] {processor.py:841} WARNING - No viable dags retrieved from /opt/airflow/dags/Dag_mongo.py
+[2023-11-09T10:27:38.619+0000] {processor.py:179} INFO - Processing /opt/airflow/dags/Dag_mongo.py took 0.724 seconds
+[2023-11-09T10:28:08.767+0000] {processor.py:157} INFO - Started process (PID=1536) to work on /opt/airflow/dags/Dag_mongo.py
+[2023-11-09T10:28:08.768+0000] {processor.py:829} INFO - Processing file /opt/airflow/dags/Dag_mongo.py for tasks to queue
+[2023-11-09T10:28:08.769+0000] {logging_mixin.py:151} INFO - [2023-11-09T10:28:08.768+0000] {dagbag.py:539} INFO - Filling up the DagBag from /opt/airflow/dags/Dag_mongo.py
+[2023-11-09T10:28:09.502+0000] {logging_mixin.py:151} INFO - [2023-11-09T10:28:09.497+0000] {dagbag.py:347} ERROR - Failed to import: /opt/airflow/dags/Dag_mongo.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/models/dagbag.py", line 343, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 843, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/opt/airflow/dags/Dag_mongo.py", line 11, in <module>
+    from airflow.providers.mongo.hooks.mongo import MongoHook
+ModuleNotFoundError: No module named 'airflow.providers.mongo'
+[2023-11-09T10:28:09.503+0000] {processor.py:841} WARNING - No viable dags retrieved from /opt/airflow/dags/Dag_mongo.py
+[2023-11-09T10:28:09.521+0000] {processor.py:179} INFO - Processing /opt/airflow/dags/Dag_mongo.py took 0.758 seconds
+[2023-11-09T10:28:39.697+0000] {processor.py:157} INFO - Started process (PID=1556) to work on /opt/airflow/dags/Dag_mongo.py
+[2023-11-09T10:28:39.698+0000] {processor.py:829} INFO - Processing file /opt/airflow/dags/Dag_mongo.py for tasks to queue
+[2023-11-09T10:28:39.699+0000] {logging_mixin.py:151} INFO - [2023-11-09T10:28:39.699+0000] {dagbag.py:539} INFO - Filling up the DagBag from /opt/airflow/dags/Dag_mongo.py
+[2023-11-09T10:28:40.345+0000] {logging_mixin.py:151} INFO - [2023-11-09T10:28:40.339+0000] {dagbag.py:347} ERROR - Failed to import: /opt/airflow/dags/Dag_mongo.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/models/dagbag.py", line 343, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 843, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/opt/airflow/dags/Dag_mongo.py", line 11, in <module>
+    from airflow.providers.mongo.hooks.mongo import MongoHook
+ModuleNotFoundError: No module named 'airflow.providers.mongo'
+[2023-11-09T10:28:40.347+0000] {processor.py:841} WARNING - No viable dags retrieved from /opt/airflow/dags/Dag_mongo.py
+[2023-11-09T10:28:40.366+0000] {processor.py:179} INFO - Processing /opt/airflow/dags/Dag_mongo.py took 0.673 seconds
+[2023-11-09T10:28:55.898+0000] {processor.py:157} INFO - Started process (PID=1566) to work on /opt/airflow/dags/Dag_mongo.py
+[2023-11-09T10:28:55.899+0000] {processor.py:829} INFO - Processing file /opt/airflow/dags/Dag_mongo.py for tasks to queue
+[2023-11-09T10:28:55.900+0000] {logging_mixin.py:151} INFO - [2023-11-09T10:28:55.900+0000] {dagbag.py:539} INFO - Filling up the DagBag from /opt/airflow/dags/Dag_mongo.py
+[2023-11-09T10:28:56.553+0000] {logging_mixin.py:151} INFO - [2023-11-09T10:28:56.547+0000] {dagbag.py:347} ERROR - Failed to import: /opt/airflow/dags/Dag_mongo.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/models/dagbag.py", line 343, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 843, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/opt/airflow/dags/Dag_mongo.py", line 11, in <module>
+    from airflow.providers.mongo.hooks.mongo import MongoHook
+ModuleNotFoundError: No module named 'airflow.providers.mongo'
+[2023-11-09T10:28:56.555+0000] {processor.py:841} WARNING - No viable dags retrieved from /opt/airflow/dags/Dag_mongo.py
+[2023-11-09T10:28:56.575+0000] {processor.py:179} INFO - Processing /opt/airflow/dags/Dag_mongo.py took 0.681 seconds
+[2023-11-09T10:29:26.793+0000] {processor.py:157} INFO - Started process (PID=1592) to work on /opt/airflow/dags/Dag_mongo.py
+[2023-11-09T10:29:26.794+0000] {processor.py:829} INFO - Processing file /opt/airflow/dags/Dag_mongo.py for tasks to queue
+[2023-11-09T10:29:26.796+0000] {logging_mixin.py:151} INFO - [2023-11-09T10:29:26.795+0000] {dagbag.py:539} INFO - Filling up the DagBag from /opt/airflow/dags/Dag_mongo.py
+[2023-11-09T10:29:27.378+0000] {logging_mixin.py:151} INFO - [2023-11-09T10:29:27.371+0000] {dagbag.py:347} ERROR - Failed to import: /opt/airflow/dags/Dag_mongo.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/models/dagbag.py", line 343, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 843, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/opt/airflow/dags/Dag_mongo.py", line 11, in <module>
+    from airflow.providers.mongo.hooks.mongo import MongoHook
+ModuleNotFoundError: No module named 'airflow.providers.mongo'
+[2023-11-09T10:29:27.380+0000] {processor.py:841} WARNING - No viable dags retrieved from /opt/airflow/dags/Dag_mongo.py
+[2023-11-09T10:29:27.425+0000] {processor.py:179} INFO - Processing /opt/airflow/dags/Dag_mongo.py took 0.635 seconds
+[2023-11-09T10:29:57.575+0000] {processor.py:157} INFO - Started process (PID=1613) to work on /opt/airflow/dags/Dag_mongo.py
+[2023-11-09T10:29:57.576+0000] {processor.py:829} INFO - Processing file /opt/airflow/dags/Dag_mongo.py for tasks to queue
+[2023-11-09T10:29:57.578+0000] {logging_mixin.py:151} INFO - [2023-11-09T10:29:57.577+0000] {dagbag.py:539} INFO - Filling up the DagBag from /opt/airflow/dags/Dag_mongo.py
+[2023-11-09T10:29:58.169+0000] {logging_mixin.py:151} INFO - [2023-11-09T10:29:58.163+0000] {dagbag.py:347} ERROR - Failed to import: /opt/airflow/dags/Dag_mongo.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/models/dagbag.py", line 343, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 843, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/opt/airflow/dags/Dag_mongo.py", line 11, in <module>
+    from airflow.providers.mongo.hooks.mongo import MongoHook
+ModuleNotFoundError: No module named 'airflow.providers.mongo'
+[2023-11-09T10:29:58.171+0000] {processor.py:841} WARNING - No viable dags retrieved from /opt/airflow/dags/Dag_mongo.py
+[2023-11-09T10:29:58.193+0000] {processor.py:179} INFO - Processing /opt/airflow/dags/Dag_mongo.py took 0.623 seconds
+[2023-11-09T10:30:19.498+0000] {processor.py:157} INFO - Started process (PID=1633) to work on /opt/airflow/dags/Dag_mongo.py
+[2023-11-09T10:30:19.499+0000] {processor.py:829} INFO - Processing file /opt/airflow/dags/Dag_mongo.py for tasks to queue
+[2023-11-09T10:30:19.501+0000] {logging_mixin.py:151} INFO - [2023-11-09T10:30:19.501+0000] {dagbag.py:539} INFO - Filling up the DagBag from /opt/airflow/dags/Dag_mongo.py
+[2023-11-09T10:30:20.095+0000] {logging_mixin.py:151} INFO - [2023-11-09T10:30:20.085+0000] {dagbag.py:347} ERROR - Failed to import: /opt/airflow/dags/Dag_mongo.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/models/dagbag.py", line 343, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 843, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/opt/airflow/dags/Dag_mongo.py", line 19, in <module>
+    dag = DAG('covid_data_dag', start_date=airflow.utils.dates.days_ago(0), default_args=default_args, schedule_interval='@daily')
+NameError: name 'DAG' is not defined
+[2023-11-09T10:30:20.098+0000] {processor.py:841} WARNING - No viable dags retrieved from /opt/airflow/dags/Dag_mongo.py
+[2023-11-09T10:30:20.126+0000] {processor.py:179} INFO - Processing /opt/airflow/dags/Dag_mongo.py took 0.633 seconds
+[2023-11-09T10:30:24.632+0000] {processor.py:157} INFO - Started process (PID=1644) to work on /opt/airflow/dags/Dag_mongo.py
+[2023-11-09T10:30:24.635+0000] {processor.py:829} INFO - Processing file /opt/airflow/dags/Dag_mongo.py for tasks to queue
+[2023-11-09T10:30:24.639+0000] {logging_mixin.py:151} INFO - [2023-11-09T10:30:24.638+0000] {dagbag.py:539} INFO - Filling up the DagBag from /opt/airflow/dags/Dag_mongo.py
+[2023-11-09T10:30:25.652+0000] {logging_mixin.py:151} INFO - [2023-11-09T10:30:25.646+0000] {dagbag.py:347} ERROR - Failed to import: /opt/airflow/dags/Dag_mongo.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/models/dagbag.py", line 343, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 843, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/opt/airflow/dags/Dag_mongo.py", line 11, in <module>
+    from airflow.providers.mongo.hooks.mongo import MongoHook
+ModuleNotFoundError: No module named 'airflow.providers.mongo'
+[2023-11-09T10:30:25.654+0000] {processor.py:841} WARNING - No viable dags retrieved from /opt/airflow/dags/Dag_mongo.py
+[2023-11-09T10:30:25.691+0000] {processor.py:179} INFO - Processing /opt/airflow/dags/Dag_mongo.py took 1.066 seconds
+[2023-11-09T10:30:55.822+0000] {processor.py:157} INFO - Started process (PID=1664) to work on /opt/airflow/dags/Dag_mongo.py
+[2023-11-09T10:30:55.824+0000] {processor.py:829} INFO - Processing file /opt/airflow/dags/Dag_mongo.py for tasks to queue
+[2023-11-09T10:30:55.825+0000] {logging_mixin.py:151} INFO - [2023-11-09T10:30:55.825+0000] {dagbag.py:539} INFO - Filling up the DagBag from /opt/airflow/dags/Dag_mongo.py
+[2023-11-09T10:30:56.548+0000] {logging_mixin.py:151} INFO - [2023-11-09T10:30:56.531+0000] {dagbag.py:347} ERROR - Failed to import: /opt/airflow/dags/Dag_mongo.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/models/dagbag.py", line 343, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 843, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/opt/airflow/dags/Dag_mongo.py", line 11, in <module>
+    from airflow.providers.mongo.hooks.mongo import MongoHook
+ModuleNotFoundError: No module named 'airflow.providers.mongo'
+[2023-11-09T10:30:56.553+0000] {processor.py:841} WARNING - No viable dags retrieved from /opt/airflow/dags/Dag_mongo.py
+[2023-11-09T10:30:56.606+0000] {processor.py:179} INFO - Processing /opt/airflow/dags/Dag_mongo.py took 0.789 seconds
+[2023-11-09T10:30:57.717+0000] {processor.py:157} INFO - Started process (PID=1666) to work on /opt/airflow/dags/Dag_mongo.py
+[2023-11-09T10:30:57.718+0000] {processor.py:829} INFO - Processing file /opt/airflow/dags/Dag_mongo.py for tasks to queue
+[2023-11-09T10:30:57.719+0000] {logging_mixin.py:151} INFO - [2023-11-09T10:30:57.719+0000] {dagbag.py:539} INFO - Filling up the DagBag from /opt/airflow/dags/Dag_mongo.py
+[2023-11-09T10:30:58.357+0000] {logging_mixin.py:151} INFO - [2023-11-09T10:30:58.352+0000] {dagbag.py:347} ERROR - Failed to import: /opt/airflow/dags/Dag_mongo.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/models/dagbag.py", line 343, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 843, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/opt/airflow/dags/Dag_mongo.py", line 11, in <module>
+    from airflow.providers.mongo.hooks.mongo import MongoHook
+ModuleNotFoundError: No module named 'airflow.providers.mongo'
+[2023-11-09T10:30:58.358+0000] {processor.py:841} WARNING - No viable dags retrieved from /opt/airflow/dags/Dag_mongo.py
+[2023-11-09T10:30:58.375+0000] {processor.py:179} INFO - Processing /opt/airflow/dags/Dag_mongo.py took 0.662 seconds
+[2023-11-09T10:31:28.711+0000] {processor.py:157} INFO - Started process (PID=1695) to work on /opt/airflow/dags/Dag_mongo.py
+[2023-11-09T10:31:28.712+0000] {processor.py:829} INFO - Processing file /opt/airflow/dags/Dag_mongo.py for tasks to queue
+[2023-11-09T10:31:28.713+0000] {logging_mixin.py:151} INFO - [2023-11-09T10:31:28.713+0000] {dagbag.py:539} INFO - Filling up the DagBag from /opt/airflow/dags/Dag_mongo.py
+[2023-11-09T10:31:29.346+0000] {logging_mixin.py:151} INFO - [2023-11-09T10:31:29.340+0000] {dagbag.py:347} ERROR - Failed to import: /opt/airflow/dags/Dag_mongo.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/models/dagbag.py", line 343, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 843, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/opt/airflow/dags/Dag_mongo.py", line 11, in <module>
+    from airflow.providers.mongo.hooks.mongo import MongoHook
+ModuleNotFoundError: No module named 'airflow.providers.mongo'
+[2023-11-09T10:31:29.348+0000] {processor.py:841} WARNING - No viable dags retrieved from /opt/airflow/dags/Dag_mongo.py
+[2023-11-09T10:31:29.372+0000] {processor.py:179} INFO - Processing /opt/airflow/dags/Dag_mongo.py took 0.666 seconds
+[2023-11-09T10:31:59.727+0000] {processor.py:157} INFO - Started process (PID=1715) to work on /opt/airflow/dags/Dag_mongo.py
+[2023-11-09T10:31:59.728+0000] {processor.py:829} INFO - Processing file /opt/airflow/dags/Dag_mongo.py for tasks to queue
+[2023-11-09T10:31:59.729+0000] {logging_mixin.py:151} INFO - [2023-11-09T10:31:59.729+0000] {dagbag.py:539} INFO - Filling up the DagBag from /opt/airflow/dags/Dag_mongo.py
+[2023-11-09T10:32:00.314+0000] {logging_mixin.py:151} INFO - [2023-11-09T10:32:00.308+0000] {dagbag.py:347} ERROR - Failed to import: /opt/airflow/dags/Dag_mongo.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/models/dagbag.py", line 343, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 843, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/opt/airflow/dags/Dag_mongo.py", line 11, in <module>
+    from airflow.providers.mongo.hooks.mongo import MongoHook
+ModuleNotFoundError: No module named 'airflow.providers.mongo'
+[2023-11-09T10:32:00.316+0000] {processor.py:841} WARNING - No viable dags retrieved from /opt/airflow/dags/Dag_mongo.py
+[2023-11-09T10:32:00.342+0000] {processor.py:179} INFO - Processing /opt/airflow/dags/Dag_mongo.py took 0.619 seconds
+[2023-11-09T10:32:30.549+0000] {processor.py:157} INFO - Started process (PID=1735) to work on /opt/airflow/dags/Dag_mongo.py
+[2023-11-09T10:32:30.550+0000] {processor.py:829} INFO - Processing file /opt/airflow/dags/Dag_mongo.py for tasks to queue
+[2023-11-09T10:32:30.551+0000] {logging_mixin.py:151} INFO - [2023-11-09T10:32:30.551+0000] {dagbag.py:539} INFO - Filling up the DagBag from /opt/airflow/dags/Dag_mongo.py
+[2023-11-09T10:32:31.138+0000] {logging_mixin.py:151} INFO - [2023-11-09T10:32:31.132+0000] {dagbag.py:347} ERROR - Failed to import: /opt/airflow/dags/Dag_mongo.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/models/dagbag.py", line 343, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 843, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/opt/airflow/dags/Dag_mongo.py", line 11, in <module>
+    from airflow.providers.mongo.hooks.mongo import MongoHook
+ModuleNotFoundError: No module named 'airflow.providers.mongo'
+[2023-11-09T10:32:31.140+0000] {processor.py:841} WARNING - No viable dags retrieved from /opt/airflow/dags/Dag_mongo.py
+[2023-11-09T10:32:31.169+0000] {processor.py:179} INFO - Processing /opt/airflow/dags/Dag_mongo.py took 0.624 seconds
+[2023-11-09T10:33:01.306+0000] {processor.py:157} INFO - Started process (PID=1763) to work on /opt/airflow/dags/Dag_mongo.py
+[2023-11-09T10:33:01.307+0000] {processor.py:829} INFO - Processing file /opt/airflow/dags/Dag_mongo.py for tasks to queue
+[2023-11-09T10:33:01.308+0000] {logging_mixin.py:151} INFO - [2023-11-09T10:33:01.308+0000] {dagbag.py:539} INFO - Filling up the DagBag from /opt/airflow/dags/Dag_mongo.py
+[2023-11-09T10:33:01.870+0000] {logging_mixin.py:151} INFO - [2023-11-09T10:33:01.866+0000] {dagbag.py:347} ERROR - Failed to import: /opt/airflow/dags/Dag_mongo.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/models/dagbag.py", line 343, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 843, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/opt/airflow/dags/Dag_mongo.py", line 11, in <module>
+    from airflow.providers.mongo.hooks.mongo import MongoHook
+ModuleNotFoundError: No module named 'airflow.providers.mongo'
+[2023-11-09T10:33:01.872+0000] {processor.py:841} WARNING - No viable dags retrieved from /opt/airflow/dags/Dag_mongo.py
+[2023-11-09T10:33:01.889+0000] {processor.py:179} INFO - Processing /opt/airflow/dags/Dag_mongo.py took 0.587 seconds
+[2023-11-09T10:33:32.210+0000] {processor.py:157} INFO - Started process (PID=1784) to work on /opt/airflow/dags/Dag_mongo.py
+[2023-11-09T10:33:32.212+0000] {processor.py:829} INFO - Processing file /opt/airflow/dags/Dag_mongo.py for tasks to queue
+[2023-11-09T10:33:32.214+0000] {logging_mixin.py:151} INFO - [2023-11-09T10:33:32.214+0000] {dagbag.py:539} INFO - Filling up the DagBag from /opt/airflow/dags/Dag_mongo.py
+[2023-11-09T10:33:32.793+0000] {logging_mixin.py:151} INFO - [2023-11-09T10:33:32.787+0000] {dagbag.py:347} ERROR - Failed to import: /opt/airflow/dags/Dag_mongo.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/models/dagbag.py", line 343, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 843, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/opt/airflow/dags/Dag_mongo.py", line 11, in <module>
+    from airflow.providers.mongo.hooks.mongo import MongoHook
+ModuleNotFoundError: No module named 'airflow.providers.mongo'
+[2023-11-09T10:33:32.795+0000] {processor.py:841} WARNING - No viable dags retrieved from /opt/airflow/dags/Dag_mongo.py
+[2023-11-09T10:33:32.813+0000] {processor.py:179} INFO - Processing /opt/airflow/dags/Dag_mongo.py took 0.607 seconds
+[2023-11-09T10:34:03.217+0000] {processor.py:157} INFO - Started process (PID=1814) to work on /opt/airflow/dags/Dag_mongo.py
+[2023-11-09T10:34:03.218+0000] {processor.py:829} INFO - Processing file /opt/airflow/dags/Dag_mongo.py for tasks to queue
+[2023-11-09T10:34:03.219+0000] {logging_mixin.py:151} INFO - [2023-11-09T10:34:03.219+0000] {dagbag.py:539} INFO - Filling up the DagBag from /opt/airflow/dags/Dag_mongo.py
+[2023-11-09T10:34:03.794+0000] {logging_mixin.py:151} INFO - [2023-11-09T10:34:03.788+0000] {dagbag.py:347} ERROR - Failed to import: /opt/airflow/dags/Dag_mongo.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/models/dagbag.py", line 343, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 843, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/opt/airflow/dags/Dag_mongo.py", line 11, in <module>
+    from airflow.providers.mongo.hooks.mongo import MongoHook
+ModuleNotFoundError: No module named 'airflow.providers.mongo'
+[2023-11-09T10:34:03.796+0000] {processor.py:841} WARNING - No viable dags retrieved from /opt/airflow/dags/Dag_mongo.py
+[2023-11-09T10:34:03.814+0000] {processor.py:179} INFO - Processing /opt/airflow/dags/Dag_mongo.py took 0.600 seconds
+[2023-11-09T10:34:34.186+0000] {processor.py:157} INFO - Started process (PID=1835) to work on /opt/airflow/dags/Dag_mongo.py
+[2023-11-09T10:34:34.187+0000] {processor.py:829} INFO - Processing file /opt/airflow/dags/Dag_mongo.py for tasks to queue
+[2023-11-09T10:34:34.188+0000] {logging_mixin.py:151} INFO - [2023-11-09T10:34:34.188+0000] {dagbag.py:539} INFO - Filling up the DagBag from /opt/airflow/dags/Dag_mongo.py
+[2023-11-09T10:34:34.762+0000] {logging_mixin.py:151} INFO - [2023-11-09T10:34:34.756+0000] {dagbag.py:347} ERROR - Failed to import: /opt/airflow/dags/Dag_mongo.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/models/dagbag.py", line 343, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 843, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/opt/airflow/dags/Dag_mongo.py", line 11, in <module>
+    from airflow.providers.mongo.hooks.mongo import MongoHook
+ModuleNotFoundError: No module named 'airflow.providers.mongo'
+[2023-11-09T10:34:34.764+0000] {processor.py:841} WARNING - No viable dags retrieved from /opt/airflow/dags/Dag_mongo.py
+[2023-11-09T10:34:34.790+0000] {processor.py:179} INFO - Processing /opt/airflow/dags/Dag_mongo.py took 0.608 seconds
+[2023-11-09T10:35:05.164+0000] {processor.py:157} INFO - Started process (PID=1863) to work on /opt/airflow/dags/Dag_mongo.py
+[2023-11-09T10:35:05.165+0000] {processor.py:829} INFO - Processing file /opt/airflow/dags/Dag_mongo.py for tasks to queue
+[2023-11-09T10:35:05.167+0000] {logging_mixin.py:151} INFO - [2023-11-09T10:35:05.166+0000] {dagbag.py:539} INFO - Filling up the DagBag from /opt/airflow/dags/Dag_mongo.py
+[2023-11-09T10:35:05.728+0000] {logging_mixin.py:151} INFO - [2023-11-09T10:35:05.722+0000] {dagbag.py:347} ERROR - Failed to import: /opt/airflow/dags/Dag_mongo.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/models/dagbag.py", line 343, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 843, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/opt/airflow/dags/Dag_mongo.py", line 11, in <module>
+    from airflow.providers.mongo.hooks.mongo import MongoHook
+ModuleNotFoundError: No module named 'airflow.providers.mongo'
+[2023-11-09T10:35:05.730+0000] {processor.py:841} WARNING - No viable dags retrieved from /opt/airflow/dags/Dag_mongo.py
+[2023-11-09T10:35:05.756+0000] {processor.py:179} INFO - Processing /opt/airflow/dags/Dag_mongo.py took 0.596 seconds
+[2023-11-09T10:35:36.177+0000] {processor.py:157} INFO - Started process (PID=1883) to work on /opt/airflow/dags/Dag_mongo.py
+[2023-11-09T10:35:36.177+0000] {processor.py:829} INFO - Processing file /opt/airflow/dags/Dag_mongo.py for tasks to queue
+[2023-11-09T10:35:36.179+0000] {logging_mixin.py:151} INFO - [2023-11-09T10:35:36.178+0000] {dagbag.py:539} INFO - Filling up the DagBag from /opt/airflow/dags/Dag_mongo.py
+[2023-11-09T10:35:36.751+0000] {logging_mixin.py:151} INFO - [2023-11-09T10:35:36.745+0000] {dagbag.py:347} ERROR - Failed to import: /opt/airflow/dags/Dag_mongo.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/models/dagbag.py", line 343, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 843, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/opt/airflow/dags/Dag_mongo.py", line 11, in <module>
+    from airflow.providers.mongo.hooks.mongo import MongoHook
+ModuleNotFoundError: No module named 'airflow.providers.mongo'
+[2023-11-09T10:35:36.753+0000] {processor.py:841} WARNING - No viable dags retrieved from /opt/airflow/dags/Dag_mongo.py
+[2023-11-09T10:35:36.771+0000] {processor.py:179} INFO - Processing /opt/airflow/dags/Dag_mongo.py took 0.598 seconds
+[2023-11-09T10:36:07.105+0000] {processor.py:157} INFO - Started process (PID=1914) to work on /opt/airflow/dags/Dag_mongo.py
+[2023-11-09T10:36:07.106+0000] {processor.py:829} INFO - Processing file /opt/airflow/dags/Dag_mongo.py for tasks to queue
+[2023-11-09T10:36:07.108+0000] {logging_mixin.py:151} INFO - [2023-11-09T10:36:07.107+0000] {dagbag.py:539} INFO - Filling up the DagBag from /opt/airflow/dags/Dag_mongo.py
+[2023-11-09T10:36:07.662+0000] {logging_mixin.py:151} INFO - [2023-11-09T10:36:07.657+0000] {dagbag.py:347} ERROR - Failed to import: /opt/airflow/dags/Dag_mongo.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/models/dagbag.py", line 343, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 843, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/opt/airflow/dags/Dag_mongo.py", line 11, in <module>
+    from airflow.providers.mongo.hooks.mongo import MongoHook
+ModuleNotFoundError: No module named 'airflow.providers.mongo'
+[2023-11-09T10:36:07.663+0000] {processor.py:841} WARNING - No viable dags retrieved from /opt/airflow/dags/Dag_mongo.py
+[2023-11-09T10:36:07.680+0000] {processor.py:179} INFO - Processing /opt/airflow/dags/Dag_mongo.py took 0.578 seconds
+[2023-11-09T10:36:38.090+0000] {processor.py:157} INFO - Started process (PID=1934) to work on /opt/airflow/dags/Dag_mongo.py
+[2023-11-09T10:36:38.090+0000] {processor.py:829} INFO - Processing file /opt/airflow/dags/Dag_mongo.py for tasks to queue
+[2023-11-09T10:36:38.092+0000] {logging_mixin.py:151} INFO - [2023-11-09T10:36:38.091+0000] {dagbag.py:539} INFO - Filling up the DagBag from /opt/airflow/dags/Dag_mongo.py
+[2023-11-09T10:36:38.683+0000] {logging_mixin.py:151} INFO - [2023-11-09T10:36:38.675+0000] {dagbag.py:347} ERROR - Failed to import: /opt/airflow/dags/Dag_mongo.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/models/dagbag.py", line 343, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 843, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/opt/airflow/dags/Dag_mongo.py", line 11, in <module>
+    from airflow.providers.mongo.hooks.mongo import MongoHook
+ModuleNotFoundError: No module named 'airflow.providers.mongo'
+[2023-11-09T10:36:38.685+0000] {processor.py:841} WARNING - No viable dags retrieved from /opt/airflow/dags/Dag_mongo.py
+[2023-11-09T10:36:38.708+0000] {processor.py:179} INFO - Processing /opt/airflow/dags/Dag_mongo.py took 0.623 seconds
+[2023-11-09T10:37:09.087+0000] {processor.py:157} INFO - Started process (PID=1964) to work on /opt/airflow/dags/Dag_mongo.py
+[2023-11-09T10:37:09.088+0000] {processor.py:829} INFO - Processing file /opt/airflow/dags/Dag_mongo.py for tasks to queue
+[2023-11-09T10:37:09.089+0000] {logging_mixin.py:151} INFO - [2023-11-09T10:37:09.089+0000] {dagbag.py:539} INFO - Filling up the DagBag from /opt/airflow/dags/Dag_mongo.py
+[2023-11-09T10:37:09.831+0000] {logging_mixin.py:151} INFO - [2023-11-09T10:37:09.825+0000] {dagbag.py:347} ERROR - Failed to import: /opt/airflow/dags/Dag_mongo.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/models/dagbag.py", line 343, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 843, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/opt/airflow/dags/Dag_mongo.py", line 11, in <module>
+    from airflow.providers.mongo.hooks.mongo import MongoHook
+ModuleNotFoundError: No module named 'airflow.providers.mongo'
+[2023-11-09T10:37:09.833+0000] {processor.py:841} WARNING - No viable dags retrieved from /opt/airflow/dags/Dag_mongo.py
+[2023-11-09T10:37:09.854+0000] {processor.py:179} INFO - Processing /opt/airflow/dags/Dag_mongo.py took 0.772 seconds
+[2023-11-09T10:37:40.241+0000] {processor.py:157} INFO - Started process (PID=1984) to work on /opt/airflow/dags/Dag_mongo.py
+[2023-11-09T10:37:40.242+0000] {processor.py:829} INFO - Processing file /opt/airflow/dags/Dag_mongo.py for tasks to queue
+[2023-11-09T10:37:40.243+0000] {logging_mixin.py:151} INFO - [2023-11-09T10:37:40.242+0000] {dagbag.py:539} INFO - Filling up the DagBag from /opt/airflow/dags/Dag_mongo.py
+[2023-11-09T10:37:41.095+0000] {logging_mixin.py:151} INFO - [2023-11-09T10:37:41.089+0000] {dagbag.py:347} ERROR - Failed to import: /opt/airflow/dags/Dag_mongo.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/models/dagbag.py", line 343, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 843, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/opt/airflow/dags/Dag_mongo.py", line 11, in <module>
+    from airflow.providers.mongo.hooks.mongo import MongoHook
+ModuleNotFoundError: No module named 'airflow.providers.mongo'
+[2023-11-09T10:37:41.097+0000] {processor.py:841} WARNING - No viable dags retrieved from /opt/airflow/dags/Dag_mongo.py
+[2023-11-09T10:37:41.121+0000] {processor.py:179} INFO - Processing /opt/airflow/dags/Dag_mongo.py took 0.884 seconds
+[2023-11-09T10:38:11.228+0000] {processor.py:157} INFO - Started process (PID=2013) to work on /opt/airflow/dags/Dag_mongo.py
+[2023-11-09T10:38:11.229+0000] {processor.py:829} INFO - Processing file /opt/airflow/dags/Dag_mongo.py for tasks to queue
+[2023-11-09T10:38:11.230+0000] {logging_mixin.py:151} INFO - [2023-11-09T10:38:11.230+0000] {dagbag.py:539} INFO - Filling up the DagBag from /opt/airflow/dags/Dag_mongo.py
+[2023-11-09T10:38:11.862+0000] {logging_mixin.py:151} INFO - [2023-11-09T10:38:11.856+0000] {dagbag.py:347} ERROR - Failed to import: /opt/airflow/dags/Dag_mongo.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/models/dagbag.py", line 343, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 843, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/opt/airflow/dags/Dag_mongo.py", line 11, in <module>
+    from airflow.providers.mongo.hooks.mongo import MongoHook
+ModuleNotFoundError: No module named 'airflow.providers.mongo'
+[2023-11-09T10:38:11.864+0000] {processor.py:841} WARNING - No viable dags retrieved from /opt/airflow/dags/Dag_mongo.py
+[2023-11-09T10:38:11.882+0000] {processor.py:179} INFO - Processing /opt/airflow/dags/Dag_mongo.py took 0.660 seconds
+[2023-11-09T10:38:41.987+0000] {processor.py:157} INFO - Started process (PID=2033) to work on /opt/airflow/dags/Dag_mongo.py
+[2023-11-09T10:38:41.988+0000] {processor.py:829} INFO - Processing file /opt/airflow/dags/Dag_mongo.py for tasks to queue
+[2023-11-09T10:38:41.989+0000] {logging_mixin.py:151} INFO - [2023-11-09T10:38:41.989+0000] {dagbag.py:539} INFO - Filling up the DagBag from /opt/airflow/dags/Dag_mongo.py
+[2023-11-09T10:38:42.659+0000] {logging_mixin.py:151} INFO - [2023-11-09T10:38:42.654+0000] {dagbag.py:347} ERROR - Failed to import: /opt/airflow/dags/Dag_mongo.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/models/dagbag.py", line 343, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 843, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/opt/airflow/dags/Dag_mongo.py", line 11, in <module>
+    from airflow.providers.mongo.hooks.mongo import MongoHook
+ModuleNotFoundError: No module named 'airflow.providers.mongo'
+[2023-11-09T10:38:42.660+0000] {processor.py:841} WARNING - No viable dags retrieved from /opt/airflow/dags/Dag_mongo.py
+[2023-11-09T10:38:42.678+0000] {processor.py:179} INFO - Processing /opt/airflow/dags/Dag_mongo.py took 0.695 seconds
+[2023-11-09T10:39:13.051+0000] {processor.py:157} INFO - Started process (PID=2053) to work on /opt/airflow/dags/Dag_mongo.py
+[2023-11-09T10:39:13.052+0000] {processor.py:829} INFO - Processing file /opt/airflow/dags/Dag_mongo.py for tasks to queue
+[2023-11-09T10:39:13.053+0000] {logging_mixin.py:151} INFO - [2023-11-09T10:39:13.053+0000] {dagbag.py:539} INFO - Filling up the DagBag from /opt/airflow/dags/Dag_mongo.py
+[2023-11-09T10:39:13.723+0000] {logging_mixin.py:151} INFO - [2023-11-09T10:39:13.718+0000] {dagbag.py:347} ERROR - Failed to import: /opt/airflow/dags/Dag_mongo.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/models/dagbag.py", line 343, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 843, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/opt/airflow/dags/Dag_mongo.py", line 11, in <module>
+    from airflow.providers.mongo.hooks.mongo import MongoHook
+ModuleNotFoundError: No module named 'airflow.providers.mongo'
+[2023-11-09T10:39:13.724+0000] {processor.py:841} WARNING - No viable dags retrieved from /opt/airflow/dags/Dag_mongo.py
+[2023-11-09T10:39:13.744+0000] {processor.py:179} INFO - Processing /opt/airflow/dags/Dag_mongo.py took 0.697 seconds
+[2023-11-09T10:39:44.160+0000] {processor.py:157} INFO - Started process (PID=2081) to work on /opt/airflow/dags/Dag_mongo.py
+[2023-11-09T10:39:44.162+0000] {processor.py:829} INFO - Processing file /opt/airflow/dags/Dag_mongo.py for tasks to queue
+[2023-11-09T10:39:44.164+0000] {logging_mixin.py:151} INFO - [2023-11-09T10:39:44.163+0000] {dagbag.py:539} INFO - Filling up the DagBag from /opt/airflow/dags/Dag_mongo.py
+[2023-11-09T10:39:44.730+0000] {logging_mixin.py:151} INFO - [2023-11-09T10:39:44.723+0000] {dagbag.py:347} ERROR - Failed to import: /opt/airflow/dags/Dag_mongo.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/models/dagbag.py", line 343, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 843, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/opt/airflow/dags/Dag_mongo.py", line 11, in <module>
+    from airflow.providers.mongo.hooks.mongo import MongoHook
+ModuleNotFoundError: No module named 'airflow.providers.mongo'
+[2023-11-09T10:39:44.732+0000] {processor.py:841} WARNING - No viable dags retrieved from /opt/airflow/dags/Dag_mongo.py
+[2023-11-09T10:39:44.750+0000] {processor.py:179} INFO - Processing /opt/airflow/dags/Dag_mongo.py took 0.595 seconds
+[2023-11-09T10:40:15.089+0000] {processor.py:157} INFO - Started process (PID=2101) to work on /opt/airflow/dags/Dag_mongo.py
+[2023-11-09T10:40:15.090+0000] {processor.py:829} INFO - Processing file /opt/airflow/dags/Dag_mongo.py for tasks to queue
+[2023-11-09T10:40:15.091+0000] {logging_mixin.py:151} INFO - [2023-11-09T10:40:15.091+0000] {dagbag.py:539} INFO - Filling up the DagBag from /opt/airflow/dags/Dag_mongo.py
+[2023-11-09T10:40:16.050+0000] {logging_mixin.py:151} INFO - [2023-11-09T10:40:16.046+0000] {dagbag.py:347} ERROR - Failed to import: /opt/airflow/dags/Dag_mongo.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/models/dagbag.py", line 343, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 843, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/opt/airflow/dags/Dag_mongo.py", line 11, in <module>
+    from airflow.providers.mongo.hooks.mongo import MongoHook
+ModuleNotFoundError: No module named 'airflow.providers.mongo'
+[2023-11-09T10:40:16.051+0000] {processor.py:841} WARNING - No viable dags retrieved from /opt/airflow/dags/Dag_mongo.py
+[2023-11-09T10:40:16.067+0000] {processor.py:179} INFO - Processing /opt/airflow/dags/Dag_mongo.py took 0.983 seconds
+[2023-11-09T10:40:46.243+0000] {processor.py:157} INFO - Started process (PID=2130) to work on /opt/airflow/dags/Dag_mongo.py
+[2023-11-09T10:40:46.244+0000] {processor.py:829} INFO - Processing file /opt/airflow/dags/Dag_mongo.py for tasks to queue
+[2023-11-09T10:40:46.245+0000] {logging_mixin.py:151} INFO - [2023-11-09T10:40:46.245+0000] {dagbag.py:539} INFO - Filling up the DagBag from /opt/airflow/dags/Dag_mongo.py
+[2023-11-09T10:40:46.848+0000] {logging_mixin.py:151} INFO - [2023-11-09T10:40:46.843+0000] {dagbag.py:347} ERROR - Failed to import: /opt/airflow/dags/Dag_mongo.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/models/dagbag.py", line 343, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 843, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/opt/airflow/dags/Dag_mongo.py", line 11, in <module>
+    from airflow.providers.mongo.hooks.mongo import MongoHook
+ModuleNotFoundError: No module named 'airflow.providers.mongo'
+[2023-11-09T10:40:46.849+0000] {processor.py:841} WARNING - No viable dags retrieved from /opt/airflow/dags/Dag_mongo.py
+[2023-11-09T10:40:46.877+0000] {processor.py:179} INFO - Processing /opt/airflow/dags/Dag_mongo.py took 0.638 seconds
+[2023-11-09T10:41:17.125+0000] {processor.py:157} INFO - Started process (PID=2150) to work on /opt/airflow/dags/Dag_mongo.py
+[2023-11-09T10:41:17.126+0000] {processor.py:829} INFO - Processing file /opt/airflow/dags/Dag_mongo.py for tasks to queue
+[2023-11-09T10:41:17.127+0000] {logging_mixin.py:151} INFO - [2023-11-09T10:41:17.127+0000] {dagbag.py:539} INFO - Filling up the DagBag from /opt/airflow/dags/Dag_mongo.py
+[2023-11-09T10:41:17.726+0000] {logging_mixin.py:151} INFO - [2023-11-09T10:41:17.721+0000] {dagbag.py:347} ERROR - Failed to import: /opt/airflow/dags/Dag_mongo.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/models/dagbag.py", line 343, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 843, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/opt/airflow/dags/Dag_mongo.py", line 11, in <module>
+    from airflow.providers.mongo.hooks.mongo import MongoHook
+ModuleNotFoundError: No module named 'airflow.providers.mongo'
+[2023-11-09T10:41:17.727+0000] {processor.py:841} WARNING - No viable dags retrieved from /opt/airflow/dags/Dag_mongo.py
+[2023-11-09T10:41:17.745+0000] {processor.py:179} INFO - Processing /opt/airflow/dags/Dag_mongo.py took 0.629 seconds
+[2023-11-09T10:41:48.113+0000] {processor.py:157} INFO - Started process (PID=2178) to work on /opt/airflow/dags/Dag_mongo.py
+[2023-11-09T10:41:48.114+0000] {processor.py:829} INFO - Processing file /opt/airflow/dags/Dag_mongo.py for tasks to queue
+[2023-11-09T10:41:48.119+0000] {logging_mixin.py:151} INFO - [2023-11-09T10:41:48.117+0000] {dagbag.py:539} INFO - Filling up the DagBag from /opt/airflow/dags/Dag_mongo.py
+[2023-11-09T10:41:48.889+0000] {logging_mixin.py:151} INFO - [2023-11-09T10:41:48.880+0000] {dagbag.py:347} ERROR - Failed to import: /opt/airflow/dags/Dag_mongo.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/models/dagbag.py", line 343, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 843, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/opt/airflow/dags/Dag_mongo.py", line 11, in <module>
+    from airflow.providers.mongo.hooks.mongo import MongoHook
+ModuleNotFoundError: No module named 'airflow.providers.mongo'
+[2023-11-09T10:41:48.890+0000] {processor.py:841} WARNING - No viable dags retrieved from /opt/airflow/dags/Dag_mongo.py
+[2023-11-09T10:41:48.920+0000] {processor.py:179} INFO - Processing /opt/airflow/dags/Dag_mongo.py took 0.811 seconds
+[2023-11-09T10:42:19.067+0000] {processor.py:157} INFO - Started process (PID=2198) to work on /opt/airflow/dags/Dag_mongo.py
+[2023-11-09T10:42:19.068+0000] {processor.py:829} INFO - Processing file /opt/airflow/dags/Dag_mongo.py for tasks to queue
+[2023-11-09T10:42:19.069+0000] {logging_mixin.py:151} INFO - [2023-11-09T10:42:19.069+0000] {dagbag.py:539} INFO - Filling up the DagBag from /opt/airflow/dags/Dag_mongo.py
+[2023-11-09T10:42:19.645+0000] {logging_mixin.py:151} INFO - [2023-11-09T10:42:19.639+0000] {dagbag.py:347} ERROR - Failed to import: /opt/airflow/dags/Dag_mongo.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/models/dagbag.py", line 343, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 843, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/opt/airflow/dags/Dag_mongo.py", line 11, in <module>
+    from airflow.providers.mongo.hooks.mongo import MongoHook
+ModuleNotFoundError: No module named 'airflow.providers.mongo'
+[2023-11-09T10:42:19.647+0000] {processor.py:841} WARNING - No viable dags retrieved from /opt/airflow/dags/Dag_mongo.py
+[2023-11-09T10:42:19.666+0000] {processor.py:179} INFO - Processing /opt/airflow/dags/Dag_mongo.py took 0.603 seconds
+[2023-11-09T10:42:50.052+0000] {processor.py:157} INFO - Started process (PID=2227) to work on /opt/airflow/dags/Dag_mongo.py
+[2023-11-09T10:42:50.053+0000] {processor.py:829} INFO - Processing file /opt/airflow/dags/Dag_mongo.py for tasks to queue
+[2023-11-09T10:42:50.055+0000] {logging_mixin.py:151} INFO - [2023-11-09T10:42:50.054+0000] {dagbag.py:539} INFO - Filling up the DagBag from /opt/airflow/dags/Dag_mongo.py
+[2023-11-09T10:42:50.745+0000] {logging_mixin.py:151} INFO - [2023-11-09T10:42:50.739+0000] {dagbag.py:347} ERROR - Failed to import: /opt/airflow/dags/Dag_mongo.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/models/dagbag.py", line 343, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 843, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/opt/airflow/dags/Dag_mongo.py", line 11, in <module>
+    from airflow.providers.mongo.hooks.mongo import MongoHook
+ModuleNotFoundError: No module named 'airflow.providers.mongo'
+[2023-11-09T10:42:50.746+0000] {processor.py:841} WARNING - No viable dags retrieved from /opt/airflow/dags/Dag_mongo.py
+[2023-11-09T10:42:50.764+0000] {processor.py:179} INFO - Processing /opt/airflow/dags/Dag_mongo.py took 0.716 seconds
+[2023-11-09T10:43:21.121+0000] {processor.py:157} INFO - Started process (PID=2249) to work on /opt/airflow/dags/Dag_mongo.py
+[2023-11-09T10:43:21.122+0000] {processor.py:829} INFO - Processing file /opt/airflow/dags/Dag_mongo.py for tasks to queue
+[2023-11-09T10:43:21.123+0000] {logging_mixin.py:151} INFO - [2023-11-09T10:43:21.123+0000] {dagbag.py:539} INFO - Filling up the DagBag from /opt/airflow/dags/Dag_mongo.py
+[2023-11-09T10:43:21.694+0000] {logging_mixin.py:151} INFO - [2023-11-09T10:43:21.689+0000] {dagbag.py:347} ERROR - Failed to import: /opt/airflow/dags/Dag_mongo.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/models/dagbag.py", line 343, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 843, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/opt/airflow/dags/Dag_mongo.py", line 11, in <module>
+    from airflow.providers.mongo.hooks.mongo import MongoHook
+ModuleNotFoundError: No module named 'airflow.providers.mongo'
+[2023-11-09T10:43:21.697+0000] {processor.py:841} WARNING - No viable dags retrieved from /opt/airflow/dags/Dag_mongo.py
+[2023-11-09T10:43:21.724+0000] {processor.py:179} INFO - Processing /opt/airflow/dags/Dag_mongo.py took 0.607 seconds
+[2023-11-09T10:43:51.997+0000] {processor.py:157} INFO - Started process (PID=2277) to work on /opt/airflow/dags/Dag_mongo.py
+[2023-11-09T10:43:51.998+0000] {processor.py:829} INFO - Processing file /opt/airflow/dags/Dag_mongo.py for tasks to queue
+[2023-11-09T10:43:52.000+0000] {logging_mixin.py:151} INFO - [2023-11-09T10:43:51.999+0000] {dagbag.py:539} INFO - Filling up the DagBag from /opt/airflow/dags/Dag_mongo.py
+[2023-11-09T10:43:52.809+0000] {logging_mixin.py:151} INFO - [2023-11-09T10:43:52.726+0000] {dagbag.py:347} ERROR - Failed to import: /opt/airflow/dags/Dag_mongo.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/models/dagbag.py", line 343, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 843, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/opt/airflow/dags/Dag_mongo.py", line 11, in <module>
+    from airflow.providers.mongo.hooks.mongo import MongoHook
+ModuleNotFoundError: No module named 'airflow.providers.mongo'
+[2023-11-09T10:43:52.827+0000] {processor.py:841} WARNING - No viable dags retrieved from /opt/airflow/dags/Dag_mongo.py
+[2023-11-09T10:43:52.922+0000] {processor.py:179} INFO - Processing /opt/airflow/dags/Dag_mongo.py took 0.930 seconds
+[2023-11-09T10:44:23.136+0000] {processor.py:157} INFO - Started process (PID=2300) to work on /opt/airflow/dags/Dag_mongo.py
+[2023-11-09T10:44:23.137+0000] {processor.py:829} INFO - Processing file /opt/airflow/dags/Dag_mongo.py for tasks to queue
+[2023-11-09T10:44:23.138+0000] {logging_mixin.py:151} INFO - [2023-11-09T10:44:23.138+0000] {dagbag.py:539} INFO - Filling up the DagBag from /opt/airflow/dags/Dag_mongo.py
+[2023-11-09T10:44:23.699+0000] {logging_mixin.py:151} INFO - [2023-11-09T10:44:23.694+0000] {dagbag.py:347} ERROR - Failed to import: /opt/airflow/dags/Dag_mongo.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/models/dagbag.py", line 343, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 843, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/opt/airflow/dags/Dag_mongo.py", line 11, in <module>
+    from airflow.providers.mongo.hooks.mongo import MongoHook
+ModuleNotFoundError: No module named 'airflow.providers.mongo'
+[2023-11-09T10:44:23.701+0000] {processor.py:841} WARNING - No viable dags retrieved from /opt/airflow/dags/Dag_mongo.py
+[2023-11-09T10:44:23.718+0000] {processor.py:179} INFO - Processing /opt/airflow/dags/Dag_mongo.py took 0.586 seconds
+[2023-11-09T10:44:53.813+0000] {processor.py:157} INFO - Started process (PID=2320) to work on /opt/airflow/dags/Dag_mongo.py
+[2023-11-09T10:44:53.814+0000] {processor.py:829} INFO - Processing file /opt/airflow/dags/Dag_mongo.py for tasks to queue
+[2023-11-09T10:44:53.815+0000] {logging_mixin.py:151} INFO - [2023-11-09T10:44:53.815+0000] {dagbag.py:539} INFO - Filling up the DagBag from /opt/airflow/dags/Dag_mongo.py
+[2023-11-09T10:44:54.402+0000] {logging_mixin.py:151} INFO - [2023-11-09T10:44:54.396+0000] {dagbag.py:347} ERROR - Failed to import: /opt/airflow/dags/Dag_mongo.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/models/dagbag.py", line 343, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 843, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/opt/airflow/dags/Dag_mongo.py", line 11, in <module>
+    from airflow.providers.mongo.hooks.mongo import MongoHook
+ModuleNotFoundError: No module named 'airflow.providers.mongo'
+[2023-11-09T10:44:54.404+0000] {processor.py:841} WARNING - No viable dags retrieved from /opt/airflow/dags/Dag_mongo.py
+[2023-11-09T10:44:54.423+0000] {processor.py:179} INFO - Processing /opt/airflow/dags/Dag_mongo.py took 0.614 seconds
+[2023-11-09T10:45:25.001+0000] {processor.py:157} INFO - Started process (PID=2348) to work on /opt/airflow/dags/Dag_mongo.py
+[2023-11-09T10:45:25.002+0000] {processor.py:829} INFO - Processing file /opt/airflow/dags/Dag_mongo.py for tasks to queue
+[2023-11-09T10:45:25.004+0000] {logging_mixin.py:151} INFO - [2023-11-09T10:45:25.004+0000] {dagbag.py:539} INFO - Filling up the DagBag from /opt/airflow/dags/Dag_mongo.py
+[2023-11-09T10:45:26.320+0000] {logging_mixin.py:151} INFO - [2023-11-09T10:45:26.315+0000] {dagbag.py:347} ERROR - Failed to import: /opt/airflow/dags/Dag_mongo.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/models/dagbag.py", line 343, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 843, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/opt/airflow/dags/Dag_mongo.py", line 11, in <module>
+    from airflow.providers.mongo.hooks.mongo import MongoHook
+ModuleNotFoundError: No module named 'airflow.providers.mongo'
+[2023-11-09T10:45:26.322+0000] {processor.py:841} WARNING - No viable dags retrieved from /opt/airflow/dags/Dag_mongo.py
+[2023-11-09T10:45:26.344+0000] {processor.py:179} INFO - Processing /opt/airflow/dags/Dag_mongo.py took 1.352 seconds
+[2023-11-09T10:57:11.428+0000] {processor.py:157} INFO - Started process (PID=98) to work on /opt/airflow/dags/Dag_mongo.py
+[2023-11-09T10:57:11.441+0000] {processor.py:829} INFO - Processing file /opt/airflow/dags/Dag_mongo.py for tasks to queue
+[2023-11-09T10:57:11.442+0000] {logging_mixin.py:151} INFO - [2023-11-09T10:57:11.442+0000] {dagbag.py:539} INFO - Filling up the DagBag from /opt/airflow/dags/Dag_mongo.py
+[2023-11-09T10:57:22.576+0000] {processor.py:839} INFO - DAG(s) dict_keys(['covid_data_dag']) retrieved from /opt/airflow/dags/Dag_mongo.py
+[2023-11-09T10:57:27.063+0000] {logging_mixin.py:151} INFO - [2023-11-09T10:57:27.062+0000] {security.py:708} INFO - Not syncing DAG-level permissions for DAG 'DAG:covid_data_dag' as access control is unset.
+[2023-11-09T10:57:27.082+0000] {logging_mixin.py:151} INFO - [2023-11-09T10:57:27.081+0000] {dag.py:2915} INFO - Sync 1 DAGs
+[2023-11-09T10:57:27.354+0000] {logging_mixin.py:151} INFO - [2023-11-09T10:57:27.354+0000] {dag.py:3696} INFO - Setting next_dagrun for covid_data_dag to 2023-11-09T00:00:00+00:00, run_after=2023-11-10T00:00:00+00:00
+[2023-11-09T10:57:27.824+0000] {logging_mixin.py:151} INFO - [2023-11-09T10:57:27.802+0000] {dagbag.py:647} ERROR - Failed to write serialized DAG: /opt/airflow/dags/Dag_mongo.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/models/dagbag.py", line 636, in _serialize_dag_capturing_errors
+    dag_was_updated = SerializedDagModel.write_dag(
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/utils/session.py", line 74, in wrapper
+    return func(*args, **kwargs)
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/models/serialized_dag.py", line 147, in write_dag
+    if session.scalar(
+  File "/home/airflow/.local/lib/python3.8/site-packages/sqlalchemy/orm/session.py", line 1747, in scalar
+    return self.execute(
+  File "/home/airflow/.local/lib/python3.8/site-packages/sqlalchemy/orm/session.py", line 1716, in execute
+    conn = self._connection_for_bind(bind)
+  File "/home/airflow/.local/lib/python3.8/site-packages/sqlalchemy/orm/session.py", line 1555, in _connection_for_bind
+    return self._transaction._connection_for_bind(
+  File "/home/airflow/.local/lib/python3.8/site-packages/sqlalchemy/orm/session.py", line 724, in _connection_for_bind
+    self._assert_active()
+  File "/home/airflow/.local/lib/python3.8/site-packages/sqlalchemy/orm/session.py", line 604, in _assert_active
+    raise sa_exc.PendingRollbackError(
+sqlalchemy.exc.PendingRollbackError: This Session's transaction has been rolled back due to a previous exception during flush. To begin a new transaction with this Session, first issue Session.rollback(). Original exception was: (psycopg2.errors.UniqueViolation) duplicate key value violates unique constraint "serialized_dag_pkey"
+DETAIL:  Key (dag_id)=(covid_data_dag) already exists.
+
+[SQL: INSERT INTO serialized_dag (dag_id, fileloc, fileloc_hash, data, data_compressed, last_updated, dag_hash, processor_subdir) VALUES (%(dag_id)s, %(fileloc)s, %(fileloc_hash)s, %(data)s, %(data_compressed)s, %(last_updated)s, %(dag_hash)s, %(processor_subdir)s)]
+[parameters: {'dag_id': 'covid_data_dag', 'fileloc': '/opt/airflow/dags/Dag_mongo.py', 'fileloc_hash': 1668631668554199, 'data': '{"__version": 1, "dag": {"dataset_triggers": [], "_task_group": {"_group_id": null, "prefix_group_id": true, "tooltip": "", "ui_color": "CornflowerBl ... (5375 characters truncated) ... onOperator", "_task_module": "airflow.operators.python", "_is_empty": false, "op_args": [], "op_kwargs": {}}], "dag_dependencies": [], "params": {}}}', 'data_compressed': None, 'last_updated': datetime.datetime(2023, 11, 9, 10, 57, 23, 10091, tzinfo=Timezone('UTC')), 'dag_hash': 'a890919de5607c3b422c8324750d9420', 'processor_subdir': None}]
+(Background on this error at: https://sqlalche.me/e/14/gkpj) (Background on this error at: https://sqlalche.me/e/14/7s2a)
+[2023-11-09T10:57:27.826+0000] {logging_mixin.py:151} INFO - [2023-11-09T10:57:27.825+0000] {dag.py:2915} INFO - Sync 1 DAGs
+[2023-11-09T10:57:27.828+0000] {processor.py:182} ERROR - Got an exception! Propagating...
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/dag_processing/processor.py", line 178, in _run_file_processor
+    _handle_dag_file_processing()
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/dag_processing/processor.py", line 159, in _handle_dag_file_processing
+    result: tuple[int, int] = dag_file_processor.process_file(
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/utils/session.py", line 77, in wrapper
+    return func(*args, session=session, **kwargs)
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/dag_processing/processor.py", line 857, in process_file
+    serialize_errors = DagFileProcessor.save_dag_to_db(
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/api_internal/internal_api_call.py", line 114, in wrapper
+    return func(*args, **kwargs)
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/utils/session.py", line 77, in wrapper
+    return func(*args, session=session, **kwargs)
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/dag_processing/processor.py", line 893, in save_dag_to_db
+    import_errors = DagBag._sync_to_db(dags=dags, processor_subdir=dag_directory, session=session)
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/utils/session.py", line 74, in wrapper
+    return func(*args, **kwargs)
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/models/dagbag.py", line 657, in _sync_to_db
+    for attempt in run_with_db_retries(logger=log):
+  File "/home/airflow/.local/lib/python3.8/site-packages/tenacity/__init__.py", line 347, in __iter__
+    do = self.iter(retry_state=retry_state)
+  File "/home/airflow/.local/lib/python3.8/site-packages/tenacity/__init__.py", line 314, in iter
+    return fut.result()
+  File "/usr/local/lib/python3.8/concurrent/futures/_base.py", line 437, in result
+    return self.__get_result()
+  File "/usr/local/lib/python3.8/concurrent/futures/_base.py", line 389, in __get_result
+    raise self._exception
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/models/dagbag.py", line 671, in _sync_to_db
+    DAG.bulk_write_to_db(dags.values(), processor_subdir=processor_subdir, session=session)
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/utils/session.py", line 74, in wrapper
+    return func(*args, **kwargs)
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/models/dag.py", line 2927, in bulk_write_to_db
+    orm_dags: list[DagModel] = session.scalars(query).unique().all()
+  File "/home/airflow/.local/lib/python3.8/site-packages/sqlalchemy/orm/session.py", line 1778, in scalars
+    return self.execute(
+  File "/home/airflow/.local/lib/python3.8/site-packages/sqlalchemy/orm/session.py", line 1716, in execute
+    conn = self._connection_for_bind(bind)
+  File "/home/airflow/.local/lib/python3.8/site-packages/sqlalchemy/orm/session.py", line 1555, in _connection_for_bind
+    return self._transaction._connection_for_bind(
+  File "/home/airflow/.local/lib/python3.8/site-packages/sqlalchemy/orm/session.py", line 724, in _connection_for_bind
+    self._assert_active()
+  File "/home/airflow/.local/lib/python3.8/site-packages/sqlalchemy/orm/session.py", line 604, in _assert_active
+    raise sa_exc.PendingRollbackError(
+sqlalchemy.exc.PendingRollbackError: This Session's transaction has been rolled back due to a previous exception during flush. To begin a new transaction with this Session, first issue Session.rollback(). Original exception was: (psycopg2.errors.UniqueViolation) duplicate key value violates unique constraint "serialized_dag_pkey"
+DETAIL:  Key (dag_id)=(covid_data_dag) already exists.
+
+[SQL: INSERT INTO serialized_dag (dag_id, fileloc, fileloc_hash, data, data_compressed, last_updated, dag_hash, processor_subdir) VALUES (%(dag_id)s, %(fileloc)s, %(fileloc_hash)s, %(data)s, %(data_compressed)s, %(last_updated)s, %(dag_hash)s, %(processor_subdir)s)]
+[parameters: {'dag_id': 'covid_data_dag', 'fileloc': '/opt/airflow/dags/Dag_mongo.py', 'fileloc_hash': 1668631668554199, 'data': '{"__version": 1, "dag": {"dataset_triggers": [], "_task_group": {"_group_id": null, "prefix_group_id": true, "tooltip": "", "ui_color": "CornflowerBl ... (5375 characters truncated) ... onOperator", "_task_module": "airflow.operators.python", "_is_empty": false, "op_args": [], "op_kwargs": {}}], "dag_dependencies": [], "params": {}}}', 'data_compressed': None, 'last_updated': datetime.datetime(2023, 11, 9, 10, 57, 23, 10091, tzinfo=Timezone('UTC')), 'dag_hash': 'a890919de5607c3b422c8324750d9420', 'processor_subdir': None}]
+(Background on this error at: https://sqlalche.me/e/14/gkpj) (Background on this error at: https://sqlalche.me/e/14/7s2a)
+[2023-11-09T10:57:58.383+0000] {processor.py:157} INFO - Started process (PID=126) to work on /opt/airflow/dags/Dag_mongo.py
+[2023-11-09T10:57:58.386+0000] {processor.py:829} INFO - Processing file /opt/airflow/dags/Dag_mongo.py for tasks to queue
+[2023-11-09T10:57:58.387+0000] {logging_mixin.py:151} INFO - [2023-11-09T10:57:58.387+0000] {dagbag.py:539} INFO - Filling up the DagBag from /opt/airflow/dags/Dag_mongo.py
+[2023-11-09T10:58:00.259+0000] {processor.py:839} INFO - DAG(s) dict_keys(['covid_data_dag']) retrieved from /opt/airflow/dags/Dag_mongo.py
+[2023-11-09T10:58:00.507+0000] {logging_mixin.py:151} INFO - [2023-11-09T10:58:00.507+0000] {security.py:708} INFO - Not syncing DAG-level permissions for DAG 'DAG:covid_data_dag' as access control is unset.
+[2023-11-09T10:58:00.508+0000] {logging_mixin.py:151} INFO - [2023-11-09T10:58:00.508+0000] {dag.py:2915} INFO - Sync 1 DAGs
+[2023-11-09T10:58:00.538+0000] {logging_mixin.py:151} INFO - [2023-11-09T10:58:00.537+0000] {dag.py:3696} INFO - Setting next_dagrun for covid_data_dag to 2023-11-09T00:00:00+00:00, run_after=2023-11-10T00:00:00+00:00
+[2023-11-09T10:58:00.571+0000] {processor.py:179} INFO - Processing /opt/airflow/dags/Dag_mongo.py took 2.192 seconds
+[2023-11-09T10:58:30.820+0000] {processor.py:157} INFO - Started process (PID=153) to work on /opt/airflow/dags/Dag_mongo.py
+[2023-11-09T10:58:30.821+0000] {processor.py:829} INFO - Processing file /opt/airflow/dags/Dag_mongo.py for tasks to queue
+[2023-11-09T10:58:30.823+0000] {logging_mixin.py:151} INFO - [2023-11-09T10:58:30.822+0000] {dagbag.py:539} INFO - Filling up the DagBag from /opt/airflow/dags/Dag_mongo.py
+[2023-11-09T10:58:31.261+0000] {processor.py:839} INFO - DAG(s) dict_keys(['covid_data_dag']) retrieved from /opt/airflow/dags/Dag_mongo.py
+[2023-11-09T10:58:31.303+0000] {logging_mixin.py:151} INFO - [2023-11-09T10:58:31.302+0000] {dag.py:2915} INFO - Sync 1 DAGs
+[2023-11-09T10:58:31.329+0000] {logging_mixin.py:151} INFO - [2023-11-09T10:58:31.329+0000] {dag.py:3696} INFO - Setting next_dagrun for covid_data_dag to 2023-11-09T00:00:00+00:00, run_after=2023-11-10T00:00:00+00:00
+[2023-11-09T10:58:31.351+0000] {processor.py:179} INFO - Processing /opt/airflow/dags/Dag_mongo.py took 0.534 seconds
+[2023-11-09T10:59:01.875+0000] {processor.py:157} INFO - Started process (PID=172) to work on /opt/airflow/dags/Dag_mongo.py
+[2023-11-09T10:59:01.876+0000] {processor.py:829} INFO - Processing file /opt/airflow/dags/Dag_mongo.py for tasks to queue
+[2023-11-09T10:59:01.877+0000] {logging_mixin.py:151} INFO - [2023-11-09T10:59:01.877+0000] {dagbag.py:539} INFO - Filling up the DagBag from /opt/airflow/dags/Dag_mongo.py
+[2023-11-09T10:59:02.264+0000] {processor.py:839} INFO - DAG(s) dict_keys(['covid_data_dag']) retrieved from /opt/airflow/dags/Dag_mongo.py
+[2023-11-09T10:59:02.395+0000] {logging_mixin.py:151} INFO - [2023-11-09T10:59:02.394+0000] {security.py:708} INFO - Not syncing DAG-level permissions for DAG 'DAG:covid_data_dag' as access control is unset.
+[2023-11-09T10:59:02.404+0000] {logging_mixin.py:151} INFO - [2023-11-09T10:59:02.403+0000] {dag.py:2915} INFO - Sync 1 DAGs
+[2023-11-09T10:59:02.429+0000] {logging_mixin.py:151} INFO - [2023-11-09T10:59:02.429+0000] {dag.py:3696} INFO - Setting next_dagrun for covid_data_dag to 2023-11-09T00:00:00+00:00, run_after=2023-11-10T00:00:00+00:00
+[2023-11-09T10:59:02.454+0000] {processor.py:179} INFO - Processing /opt/airflow/dags/Dag_mongo.py took 0.582 seconds
+[2023-11-09T10:59:32.811+0000] {processor.py:157} INFO - Started process (PID=202) to work on /opt/airflow/dags/Dag_mongo.py
+[2023-11-09T10:59:32.812+0000] {processor.py:829} INFO - Processing file /opt/airflow/dags/Dag_mongo.py for tasks to queue
+[2023-11-09T10:59:32.813+0000] {logging_mixin.py:151} INFO - [2023-11-09T10:59:32.813+0000] {dagbag.py:539} INFO - Filling up the DagBag from /opt/airflow/dags/Dag_mongo.py
+[2023-11-09T10:59:33.195+0000] {processor.py:839} INFO - DAG(s) dict_keys(['covid_data_dag']) retrieved from /opt/airflow/dags/Dag_mongo.py
+[2023-11-09T10:59:33.227+0000] {logging_mixin.py:151} INFO - [2023-11-09T10:59:33.226+0000] {dag.py:2915} INFO - Sync 1 DAGs
+[2023-11-09T10:59:33.254+0000] {logging_mixin.py:151} INFO - [2023-11-09T10:59:33.254+0000] {dag.py:3696} INFO - Setting next_dagrun for covid_data_dag to 2023-11-09T00:00:00+00:00, run_after=2023-11-10T00:00:00+00:00
+[2023-11-09T10:59:33.275+0000] {processor.py:179} INFO - Processing /opt/airflow/dags/Dag_mongo.py took 0.469 seconds
+[2023-11-09T11:00:03.779+0000] {processor.py:157} INFO - Started process (PID=223) to work on /opt/airflow/dags/Dag_mongo.py
+[2023-11-09T11:00:03.780+0000] {processor.py:829} INFO - Processing file /opt/airflow/dags/Dag_mongo.py for tasks to queue
+[2023-11-09T11:00:03.782+0000] {logging_mixin.py:151} INFO - [2023-11-09T11:00:03.781+0000] {dagbag.py:539} INFO - Filling up the DagBag from /opt/airflow/dags/Dag_mongo.py
+[2023-11-09T11:00:04.190+0000] {processor.py:839} INFO - DAG(s) dict_keys(['covid_data_dag']) retrieved from /opt/airflow/dags/Dag_mongo.py
+[2023-11-09T11:00:04.313+0000] {logging_mixin.py:151} INFO - [2023-11-09T11:00:04.313+0000] {security.py:708} INFO - Not syncing DAG-level permissions for DAG 'DAG:covid_data_dag' as access control is unset.
+[2023-11-09T11:00:04.314+0000] {logging_mixin.py:151} INFO - [2023-11-09T11:00:04.314+0000] {dag.py:2915} INFO - Sync 1 DAGs
+[2023-11-09T11:00:04.340+0000] {logging_mixin.py:151} INFO - [2023-11-09T11:00:04.339+0000] {dag.py:3696} INFO - Setting next_dagrun for covid_data_dag to 2023-11-09T00:00:00+00:00, run_after=2023-11-10T00:00:00+00:00
+[2023-11-09T11:00:04.362+0000] {processor.py:179} INFO - Processing /opt/airflow/dags/Dag_mongo.py took 0.587 seconds
+[2023-11-09T11:00:34.781+0000] {processor.py:157} INFO - Started process (PID=251) to work on /opt/airflow/dags/Dag_mongo.py
+[2023-11-09T11:00:34.782+0000] {processor.py:829} INFO - Processing file /opt/airflow/dags/Dag_mongo.py for tasks to queue
+[2023-11-09T11:00:34.783+0000] {logging_mixin.py:151} INFO - [2023-11-09T11:00:34.783+0000] {dagbag.py:539} INFO - Filling up the DagBag from /opt/airflow/dags/Dag_mongo.py
+[2023-11-09T11:00:35.163+0000] {processor.py:839} INFO - DAG(s) dict_keys(['covid_data_dag']) retrieved from /opt/airflow/dags/Dag_mongo.py
+[2023-11-09T11:00:35.201+0000] {logging_mixin.py:151} INFO - [2023-11-09T11:00:35.200+0000] {dag.py:2915} INFO - Sync 1 DAGs
+[2023-11-09T11:00:35.227+0000] {logging_mixin.py:151} INFO - [2023-11-09T11:00:35.226+0000] {dag.py:3696} INFO - Setting next_dagrun for covid_data_dag to 2023-11-09T00:00:00+00:00, run_after=2023-11-10T00:00:00+00:00
+[2023-11-09T11:00:35.250+0000] {processor.py:179} INFO - Processing /opt/airflow/dags/Dag_mongo.py took 0.474 seconds
+[2023-11-09T11:01:05.717+0000] {processor.py:157} INFO - Started process (PID=271) to work on /opt/airflow/dags/Dag_mongo.py
+[2023-11-09T11:01:05.720+0000] {processor.py:829} INFO - Processing file /opt/airflow/dags/Dag_mongo.py for tasks to queue
+[2023-11-09T11:01:05.722+0000] {logging_mixin.py:151} INFO - [2023-11-09T11:01:05.721+0000] {dagbag.py:539} INFO - Filling up the DagBag from /opt/airflow/dags/Dag_mongo.py
+[2023-11-09T11:01:06.167+0000] {processor.py:839} INFO - DAG(s) dict_keys(['covid_data_dag']) retrieved from /opt/airflow/dags/Dag_mongo.py
+[2023-11-09T11:01:06.394+0000] {logging_mixin.py:151} INFO - [2023-11-09T11:01:06.393+0000] {security.py:708} INFO - Not syncing DAG-level permissions for DAG 'DAG:covid_data_dag' as access control is unset.
+[2023-11-09T11:01:06.395+0000] {logging_mixin.py:151} INFO - [2023-11-09T11:01:06.394+0000] {dag.py:2915} INFO - Sync 1 DAGs
+[2023-11-09T11:01:06.436+0000] {logging_mixin.py:151} INFO - [2023-11-09T11:01:06.435+0000] {dag.py:3696} INFO - Setting next_dagrun for covid_data_dag to 2023-11-09T00:00:00+00:00, run_after=2023-11-10T00:00:00+00:00
+[2023-11-09T11:01:06.464+0000] {processor.py:179} INFO - Processing /opt/airflow/dags/Dag_mongo.py took 0.756 seconds
+[2023-11-09T11:01:36.787+0000] {processor.py:157} INFO - Started process (PID=299) to work on /opt/airflow/dags/Dag_mongo.py
+[2023-11-09T11:01:36.789+0000] {processor.py:829} INFO - Processing file /opt/airflow/dags/Dag_mongo.py for tasks to queue
+[2023-11-09T11:01:36.799+0000] {logging_mixin.py:151} INFO - [2023-11-09T11:01:36.798+0000] {dagbag.py:539} INFO - Filling up the DagBag from /opt/airflow/dags/Dag_mongo.py
+[2023-11-09T11:01:37.345+0000] {processor.py:839} INFO - DAG(s) dict_keys(['covid_data_dag']) retrieved from /opt/airflow/dags/Dag_mongo.py
+[2023-11-09T11:01:37.391+0000] {logging_mixin.py:151} INFO - [2023-11-09T11:01:37.391+0000] {dag.py:2915} INFO - Sync 1 DAGs
+[2023-11-09T11:01:37.442+0000] {logging_mixin.py:151} INFO - [2023-11-09T11:01:37.442+0000] {dag.py:3696} INFO - Setting next_dagrun for covid_data_dag to 2023-11-09T00:00:00+00:00, run_after=2023-11-10T00:00:00+00:00
+[2023-11-09T11:01:37.474+0000] {processor.py:179} INFO - Processing /opt/airflow/dags/Dag_mongo.py took 0.707 seconds
+[2023-11-09T11:02:08.205+0000] {processor.py:157} INFO - Started process (PID=318) to work on /opt/airflow/dags/Dag_mongo.py
+[2023-11-09T11:02:08.206+0000] {processor.py:829} INFO - Processing file /opt/airflow/dags/Dag_mongo.py for tasks to queue
+[2023-11-09T11:02:08.207+0000] {logging_mixin.py:151} INFO - [2023-11-09T11:02:08.207+0000] {dagbag.py:539} INFO - Filling up the DagBag from /opt/airflow/dags/Dag_mongo.py
+[2023-11-09T11:02:08.588+0000] {processor.py:839} INFO - DAG(s) dict_keys(['covid_data_dag']) retrieved from /opt/airflow/dags/Dag_mongo.py
+[2023-11-09T11:02:08.714+0000] {logging_mixin.py:151} INFO - [2023-11-09T11:02:08.714+0000] {security.py:708} INFO - Not syncing DAG-level permissions for DAG 'DAG:covid_data_dag' as access control is unset.
+[2023-11-09T11:02:08.716+0000] {logging_mixin.py:151} INFO - [2023-11-09T11:02:08.715+0000] {dag.py:2915} INFO - Sync 1 DAGs
+[2023-11-09T11:02:08.740+0000] {logging_mixin.py:151} INFO - [2023-11-09T11:02:08.740+0000] {dag.py:3696} INFO - Setting next_dagrun for covid_data_dag to 2023-11-09T00:00:00+00:00, run_after=2023-11-10T00:00:00+00:00
+[2023-11-09T11:02:08.775+0000] {processor.py:179} INFO - Processing /opt/airflow/dags/Dag_mongo.py took 0.573 seconds
+[2023-11-09T11:02:39.310+0000] {processor.py:157} INFO - Started process (PID=344) to work on /opt/airflow/dags/Dag_mongo.py
+[2023-11-09T11:02:39.313+0000] {processor.py:829} INFO - Processing file /opt/airflow/dags/Dag_mongo.py for tasks to queue
+[2023-11-09T11:02:39.321+0000] {logging_mixin.py:151} INFO - [2023-11-09T11:02:39.321+0000] {dagbag.py:539} INFO - Filling up the DagBag from /opt/airflow/dags/Dag_mongo.py
+[2023-11-09T11:02:39.912+0000] {processor.py:839} INFO - DAG(s) dict_keys(['covid_data_dag']) retrieved from /opt/airflow/dags/Dag_mongo.py
+[2023-11-09T11:02:39.960+0000] {logging_mixin.py:151} INFO - [2023-11-09T11:02:39.960+0000] {dag.py:2915} INFO - Sync 1 DAGs
+[2023-11-09T11:02:39.998+0000] {logging_mixin.py:151} INFO - [2023-11-09T11:02:39.998+0000] {dag.py:3696} INFO - Setting next_dagrun for covid_data_dag to 2023-11-09T00:00:00+00:00, run_after=2023-11-10T00:00:00+00:00
+[2023-11-09T11:02:40.072+0000] {processor.py:179} INFO - Processing /opt/airflow/dags/Dag_mongo.py took 0.780 seconds
+[2023-11-09T11:03:10.446+0000] {processor.py:157} INFO - Started process (PID=367) to work on /opt/airflow/dags/Dag_mongo.py
+[2023-11-09T11:03:10.448+0000] {processor.py:829} INFO - Processing file /opt/airflow/dags/Dag_mongo.py for tasks to queue
+[2023-11-09T11:03:10.449+0000] {logging_mixin.py:151} INFO - [2023-11-09T11:03:10.448+0000] {dagbag.py:539} INFO - Filling up the DagBag from /opt/airflow/dags/Dag_mongo.py
+[2023-11-09T11:03:10.857+0000] {processor.py:839} INFO - DAG(s) dict_keys(['covid_data_dag']) retrieved from /opt/airflow/dags/Dag_mongo.py
+[2023-11-09T11:03:10.873+0000] {logging_mixin.py:151} INFO - [2023-11-09T11:03:10.872+0000] {dag.py:2915} INFO - Sync 1 DAGs
+[2023-11-09T11:03:10.903+0000] {logging_mixin.py:151} INFO - [2023-11-09T11:03:10.902+0000] {dag.py:3696} INFO - Setting next_dagrun for covid_data_dag to 2023-11-09T00:00:00+00:00, run_after=2023-11-10T00:00:00+00:00
+[2023-11-09T11:03:10.929+0000] {processor.py:179} INFO - Processing /opt/airflow/dags/Dag_mongo.py took 0.486 seconds
+[2023-11-09T11:03:41.314+0000] {processor.py:157} INFO - Started process (PID=387) to work on /opt/airflow/dags/Dag_mongo.py
+[2023-11-09T11:03:41.315+0000] {processor.py:829} INFO - Processing file /opt/airflow/dags/Dag_mongo.py for tasks to queue
+[2023-11-09T11:03:41.316+0000] {logging_mixin.py:151} INFO - [2023-11-09T11:03:41.316+0000] {dagbag.py:539} INFO - Filling up the DagBag from /opt/airflow/dags/Dag_mongo.py
+[2023-11-09T11:03:41.707+0000] {processor.py:839} INFO - DAG(s) dict_keys(['covid_data_dag']) retrieved from /opt/airflow/dags/Dag_mongo.py
+[2023-11-09T11:03:41.835+0000] {logging_mixin.py:151} INFO - [2023-11-09T11:03:41.834+0000] {security.py:708} INFO - Not syncing DAG-level permissions for DAG 'DAG:covid_data_dag' as access control is unset.
+[2023-11-09T11:03:41.836+0000] {logging_mixin.py:151} INFO - [2023-11-09T11:03:41.835+0000] {dag.py:2915} INFO - Sync 1 DAGs
+[2023-11-09T11:03:41.860+0000] {logging_mixin.py:151} INFO - [2023-11-09T11:03:41.860+0000] {dag.py:3696} INFO - Setting next_dagrun for covid_data_dag to 2023-11-09T00:00:00+00:00, run_after=2023-11-10T00:00:00+00:00
+[2023-11-09T11:03:41.884+0000] {processor.py:179} INFO - Processing /opt/airflow/dags/Dag_mongo.py took 0.574 seconds
+[2023-11-09T11:04:12.216+0000] {processor.py:157} INFO - Started process (PID=415) to work on /opt/airflow/dags/Dag_mongo.py
+[2023-11-09T11:04:12.217+0000] {processor.py:829} INFO - Processing file /opt/airflow/dags/Dag_mongo.py for tasks to queue
+[2023-11-09T11:04:12.218+0000] {logging_mixin.py:151} INFO - [2023-11-09T11:04:12.217+0000] {dagbag.py:539} INFO - Filling up the DagBag from /opt/airflow/dags/Dag_mongo.py
+[2023-11-09T11:04:12.591+0000] {processor.py:839} INFO - DAG(s) dict_keys(['covid_data_dag']) retrieved from /opt/airflow/dags/Dag_mongo.py
+[2023-11-09T11:04:12.620+0000] {logging_mixin.py:151} INFO - [2023-11-09T11:04:12.620+0000] {dag.py:2915} INFO - Sync 1 DAGs
+[2023-11-09T11:04:12.663+0000] {logging_mixin.py:151} INFO - [2023-11-09T11:04:12.663+0000] {dag.py:3696} INFO - Setting next_dagrun for covid_data_dag to 2023-11-09T00:00:00+00:00, run_after=2023-11-10T00:00:00+00:00
+[2023-11-09T11:04:12.689+0000] {processor.py:179} INFO - Processing /opt/airflow/dags/Dag_mongo.py took 0.477 seconds
+[2023-11-09T11:04:43.075+0000] {processor.py:157} INFO - Started process (PID=436) to work on /opt/airflow/dags/Dag_mongo.py
+[2023-11-09T11:04:43.076+0000] {processor.py:829} INFO - Processing file /opt/airflow/dags/Dag_mongo.py for tasks to queue
+[2023-11-09T11:04:43.077+0000] {logging_mixin.py:151} INFO - [2023-11-09T11:04:43.076+0000] {dagbag.py:539} INFO - Filling up the DagBag from /opt/airflow/dags/Dag_mongo.py
+[2023-11-09T11:04:43.481+0000] {processor.py:839} INFO - DAG(s) dict_keys(['covid_data_dag']) retrieved from /opt/airflow/dags/Dag_mongo.py
+[2023-11-09T11:04:43.495+0000] {logging_mixin.py:151} INFO - [2023-11-09T11:04:43.494+0000] {dag.py:2915} INFO - Sync 1 DAGs
+[2023-11-09T11:04:43.522+0000] {logging_mixin.py:151} INFO - [2023-11-09T11:04:43.521+0000] {dag.py:3696} INFO - Setting next_dagrun for covid_data_dag to 2023-11-09T00:00:00+00:00, run_after=2023-11-10T00:00:00+00:00
+[2023-11-09T11:04:43.557+0000] {processor.py:179} INFO - Processing /opt/airflow/dags/Dag_mongo.py took 0.486 seconds
+[2023-11-09T11:05:13.940+0000] {processor.py:157} INFO - Started process (PID=465) to work on /opt/airflow/dags/Dag_mongo.py
+[2023-11-09T11:05:13.941+0000] {processor.py:829} INFO - Processing file /opt/airflow/dags/Dag_mongo.py for tasks to queue
+[2023-11-09T11:05:13.942+0000] {logging_mixin.py:151} INFO - [2023-11-09T11:05:13.942+0000] {dagbag.py:539} INFO - Filling up the DagBag from /opt/airflow/dags/Dag_mongo.py
+[2023-11-09T11:05:14.416+0000] {processor.py:839} INFO - DAG(s) dict_keys(['covid_data_dag']) retrieved from /opt/airflow/dags/Dag_mongo.py
+[2023-11-09T11:05:14.546+0000] {logging_mixin.py:151} INFO - [2023-11-09T11:05:14.545+0000] {security.py:708} INFO - Not syncing DAG-level permissions for DAG 'DAG:covid_data_dag' as access control is unset.
+[2023-11-09T11:05:14.547+0000] {logging_mixin.py:151} INFO - [2023-11-09T11:05:14.546+0000] {dag.py:2915} INFO - Sync 1 DAGs
+[2023-11-09T11:05:14.571+0000] {logging_mixin.py:151} INFO - [2023-11-09T11:05:14.571+0000] {dag.py:3696} INFO - Setting next_dagrun for covid_data_dag to 2023-11-09T00:00:00+00:00, run_after=2023-11-10T00:00:00+00:00
+[2023-11-09T11:05:14.599+0000] {processor.py:179} INFO - Processing /opt/airflow/dags/Dag_mongo.py took 0.663 seconds
+[2023-11-09T11:05:45.149+0000] {processor.py:157} INFO - Started process (PID=484) to work on /opt/airflow/dags/Dag_mongo.py
+[2023-11-09T11:05:45.150+0000] {processor.py:829} INFO - Processing file /opt/airflow/dags/Dag_mongo.py for tasks to queue
+[2023-11-09T11:05:45.151+0000] {logging_mixin.py:151} INFO - [2023-11-09T11:05:45.151+0000] {dagbag.py:539} INFO - Filling up the DagBag from /opt/airflow/dags/Dag_mongo.py
+[2023-11-09T11:05:45.569+0000] {processor.py:839} INFO - DAG(s) dict_keys(['covid_data_dag']) retrieved from /opt/airflow/dags/Dag_mongo.py
+[2023-11-09T11:05:45.604+0000] {logging_mixin.py:151} INFO - [2023-11-09T11:05:45.603+0000] {dag.py:2915} INFO - Sync 1 DAGs
+[2023-11-09T11:05:45.631+0000] {logging_mixin.py:151} INFO - [2023-11-09T11:05:45.630+0000] {dag.py:3696} INFO - Setting next_dagrun for covid_data_dag to 2023-11-09T00:00:00+00:00, run_after=2023-11-10T00:00:00+00:00
+[2023-11-09T11:05:45.655+0000] {processor.py:179} INFO - Processing /opt/airflow/dags/Dag_mongo.py took 0.509 seconds
+[2023-11-09T11:06:16.126+0000] {processor.py:157} INFO - Started process (PID=504) to work on /opt/airflow/dags/Dag_mongo.py
+[2023-11-09T11:06:16.127+0000] {processor.py:829} INFO - Processing file /opt/airflow/dags/Dag_mongo.py for tasks to queue
+[2023-11-09T11:06:16.128+0000] {logging_mixin.py:151} INFO - [2023-11-09T11:06:16.128+0000] {dagbag.py:539} INFO - Filling up the DagBag from /opt/airflow/dags/Dag_mongo.py
+[2023-11-09T11:06:16.621+0000] {processor.py:839} INFO - DAG(s) dict_keys(['covid_data_dag']) retrieved from /opt/airflow/dags/Dag_mongo.py
+[2023-11-09T11:06:16.637+0000] {logging_mixin.py:151} INFO - [2023-11-09T11:06:16.635+0000] {dag.py:2915} INFO - Sync 1 DAGs
+[2023-11-09T11:06:16.664+0000] {logging_mixin.py:151} INFO - [2023-11-09T11:06:16.663+0000] {dag.py:3696} INFO - Setting next_dagrun for covid_data_dag to 2023-11-09T00:00:00+00:00, run_after=2023-11-10T00:00:00+00:00
+[2023-11-09T11:06:16.687+0000] {processor.py:179} INFO - Processing /opt/airflow/dags/Dag_mongo.py took 0.565 seconds
+[2023-11-09T11:06:47.677+0000] {processor.py:157} INFO - Started process (PID=532) to work on /opt/airflow/dags/Dag_mongo.py
+[2023-11-09T11:06:47.678+0000] {processor.py:829} INFO - Processing file /opt/airflow/dags/Dag_mongo.py for tasks to queue
+[2023-11-09T11:06:47.680+0000] {logging_mixin.py:151} INFO - [2023-11-09T11:06:47.679+0000] {dagbag.py:539} INFO - Filling up the DagBag from /opt/airflow/dags/Dag_mongo.py
+[2023-11-09T11:06:48.064+0000] {processor.py:839} INFO - DAG(s) dict_keys(['covid_data_dag']) retrieved from /opt/airflow/dags/Dag_mongo.py
+[2023-11-09T11:06:48.187+0000] {logging_mixin.py:151} INFO - [2023-11-09T11:06:48.186+0000] {security.py:708} INFO - Not syncing DAG-level permissions for DAG 'DAG:covid_data_dag' as access control is unset.
+[2023-11-09T11:06:48.188+0000] {logging_mixin.py:151} INFO - [2023-11-09T11:06:48.188+0000] {dag.py:2915} INFO - Sync 1 DAGs
+[2023-11-09T11:06:48.342+0000] {logging_mixin.py:151} INFO - [2023-11-09T11:06:48.341+0000] {dag.py:3696} INFO - Setting next_dagrun for covid_data_dag to 2023-11-09T00:00:00+00:00, run_after=2023-11-10T00:00:00+00:00
+[2023-11-09T11:06:48.370+0000] {processor.py:179} INFO - Processing /opt/airflow/dags/Dag_mongo.py took 0.697 seconds
+[2023-11-09T11:07:19.231+0000] {processor.py:157} INFO - Started process (PID=553) to work on /opt/airflow/dags/Dag_mongo.py
+[2023-11-09T11:07:19.232+0000] {processor.py:829} INFO - Processing file /opt/airflow/dags/Dag_mongo.py for tasks to queue
+[2023-11-09T11:07:19.233+0000] {logging_mixin.py:151} INFO - [2023-11-09T11:07:19.233+0000] {dagbag.py:539} INFO - Filling up the DagBag from /opt/airflow/dags/Dag_mongo.py
+[2023-11-09T11:07:19.612+0000] {processor.py:839} INFO - DAG(s) dict_keys(['covid_data_dag']) retrieved from /opt/airflow/dags/Dag_mongo.py
+[2023-11-09T11:07:19.642+0000] {logging_mixin.py:151} INFO - [2023-11-09T11:07:19.642+0000] {dag.py:2915} INFO - Sync 1 DAGs
+[2023-11-09T11:07:19.667+0000] {logging_mixin.py:151} INFO - [2023-11-09T11:07:19.667+0000] {dag.py:3696} INFO - Setting next_dagrun for covid_data_dag to 2023-11-09T00:00:00+00:00, run_after=2023-11-10T00:00:00+00:00
+[2023-11-09T11:07:19.698+0000] {processor.py:179} INFO - Processing /opt/airflow/dags/Dag_mongo.py took 0.471 seconds
+[2023-11-09T11:07:50.130+0000] {processor.py:157} INFO - Started process (PID=581) to work on /opt/airflow/dags/Dag_mongo.py
+[2023-11-09T11:07:50.131+0000] {processor.py:829} INFO - Processing file /opt/airflow/dags/Dag_mongo.py for tasks to queue
+[2023-11-09T11:07:50.133+0000] {logging_mixin.py:151} INFO - [2023-11-09T11:07:50.132+0000] {dagbag.py:539} INFO - Filling up the DagBag from /opt/airflow/dags/Dag_mongo.py
+[2023-11-09T11:07:50.513+0000] {processor.py:839} INFO - DAG(s) dict_keys(['covid_data_dag']) retrieved from /opt/airflow/dags/Dag_mongo.py
+[2023-11-09T11:07:50.527+0000] {logging_mixin.py:151} INFO - [2023-11-09T11:07:50.527+0000] {dag.py:2915} INFO - Sync 1 DAGs
+[2023-11-09T11:07:50.554+0000] {logging_mixin.py:151} INFO - [2023-11-09T11:07:50.554+0000] {dag.py:3696} INFO - Setting next_dagrun for covid_data_dag to 2023-11-09T00:00:00+00:00, run_after=2023-11-10T00:00:00+00:00
+[2023-11-09T11:07:50.578+0000] {processor.py:179} INFO - Processing /opt/airflow/dags/Dag_mongo.py took 0.452 seconds
+[2023-11-09T11:08:20.989+0000] {processor.py:157} INFO - Started process (PID=601) to work on /opt/airflow/dags/Dag_mongo.py
+[2023-11-09T11:08:20.990+0000] {processor.py:829} INFO - Processing file /opt/airflow/dags/Dag_mongo.py for tasks to queue
+[2023-11-09T11:08:20.991+0000] {logging_mixin.py:151} INFO - [2023-11-09T11:08:20.990+0000] {dagbag.py:539} INFO - Filling up the DagBag from /opt/airflow/dags/Dag_mongo.py
+[2023-11-09T11:08:21.365+0000] {processor.py:839} INFO - DAG(s) dict_keys(['covid_data_dag']) retrieved from /opt/airflow/dags/Dag_mongo.py
+[2023-11-09T11:08:21.487+0000] {logging_mixin.py:151} INFO - [2023-11-09T11:08:21.486+0000] {security.py:708} INFO - Not syncing DAG-level permissions for DAG 'DAG:covid_data_dag' as access control is unset.
+[2023-11-09T11:08:21.488+0000] {logging_mixin.py:151} INFO - [2023-11-09T11:08:21.488+0000] {dag.py:2915} INFO - Sync 1 DAGs
+[2023-11-09T11:08:21.647+0000] {logging_mixin.py:151} INFO - [2023-11-09T11:08:21.647+0000] {dag.py:3696} INFO - Setting next_dagrun for covid_data_dag to 2023-11-09T00:00:00+00:00, run_after=2023-11-10T00:00:00+00:00
+[2023-11-09T11:08:21.683+0000] {processor.py:179} INFO - Processing /opt/airflow/dags/Dag_mongo.py took 0.698 seconds

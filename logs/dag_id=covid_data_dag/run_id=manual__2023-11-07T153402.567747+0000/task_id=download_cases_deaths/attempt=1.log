@@ -1,0 +1,13 @@
+[2023-11-07T15:34:10.323+0000] {taskinstance.py:1157} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: covid_data_dag.download_cases_deaths manual__2023-11-07T15:34:02.567747+00:00 [queued]>
+[2023-11-07T15:34:10.349+0000] {taskinstance.py:1157} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: covid_data_dag.download_cases_deaths manual__2023-11-07T15:34:02.567747+00:00 [queued]>
+[2023-11-07T15:34:10.350+0000] {taskinstance.py:1359} INFO - Starting attempt 1 of 2
+[2023-11-07T15:34:10.392+0000] {taskinstance.py:1380} INFO - Executing <Task(PythonOperator): download_cases_deaths> on 2023-11-07 15:34:02.567747+00:00
+[2023-11-07T15:34:10.413+0000] {standard_task_runner.py:57} INFO - Started process 2862 to run task
+[2023-11-07T15:34:10.428+0000] {standard_task_runner.py:84} INFO - Running: ['***', 'tasks', 'run', 'covid_data_dag', 'download_cases_deaths', 'manual__2023-11-07T15:34:02.567747+00:00', '--job-id', '98', '--raw', '--subdir', 'DAGS_FOLDER/Dags.py', '--cfg-path', '/tmp/tmpj_otnare']
+[2023-11-07T15:34:10.444+0000] {standard_task_runner.py:85} INFO - Job 98: Subtask download_cases_deaths
+[2023-11-07T15:34:10.552+0000] {task_command.py:415} INFO - Running <TaskInstance: covid_data_dag.download_cases_deaths manual__2023-11-07T15:34:02.567747+00:00 [running]> on host 172.21.0.8
+[2023-11-07T15:34:10.719+0000] {taskinstance.py:1660} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='covid_data_dag' AIRFLOW_CTX_TASK_ID='download_cases_deaths' AIRFLOW_CTX_EXECUTION_DATE='2023-11-07T15:34:02.567747+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='manual__2023-11-07T15:34:02.567747+00:00'
+[2023-11-07T15:43:23.035+0000] {python.py:194} INFO - Done. Returned value was: None
+[2023-11-07T15:43:23.161+0000] {taskinstance.py:1398} INFO - Marking task as SUCCESS. dag_id=covid_data_dag, task_id=download_cases_deaths, execution_date=20231107T153402, start_date=20231107T153410, end_date=20231107T154323
+[2023-11-07T15:43:23.275+0000] {local_task_job_runner.py:228} INFO - Task exited with return code 0
+[2023-11-07T15:43:23.353+0000] {taskinstance.py:2776} INFO - 1 downstream tasks scheduled from follow-on schedule check

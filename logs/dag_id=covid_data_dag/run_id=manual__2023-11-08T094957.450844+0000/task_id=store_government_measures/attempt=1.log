@@ -1,0 +1,50 @@
+[2023-11-08T09:50:33.135+0000] {taskinstance.py:1157} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: covid_data_dag.store_government_measures manual__2023-11-08T09:49:57.450844+00:00 [queued]>
+[2023-11-08T09:50:33.220+0000] {taskinstance.py:1157} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: covid_data_dag.store_government_measures manual__2023-11-08T09:49:57.450844+00:00 [queued]>
+[2023-11-08T09:50:33.229+0000] {taskinstance.py:1359} INFO - Starting attempt 1 of 2
+[2023-11-08T09:50:33.362+0000] {taskinstance.py:1380} INFO - Executing <Task(PostgresOperator): store_government_measures> on 2023-11-08 09:49:57.450844+00:00
+[2023-11-08T09:50:33.390+0000] {standard_task_runner.py:57} INFO - Started process 2480 to run task
+[2023-11-08T09:50:33.414+0000] {standard_task_runner.py:84} INFO - Running: ['***', 'tasks', 'run', 'covid_data_dag', 'store_government_measures', 'manual__2023-11-08T09:49:57.450844+00:00', '--job-id', '167', '--raw', '--subdir', 'DAGS_FOLDER/Dag_postgres.py', '--cfg-path', '/tmp/tmphxlz36ui']
+[2023-11-08T09:50:33.477+0000] {standard_task_runner.py:85} INFO - Job 167: Subtask store_government_measures
+[2023-11-08T09:50:34.023+0000] {task_command.py:415} INFO - Running <TaskInstance: covid_data_dag.store_government_measures manual__2023-11-08T09:49:57.450844+00:00 [running]> on host 172.21.0.5
+[2023-11-08T09:50:34.242+0000] {abstractoperator.py:709} ERROR - Exception rendering Jinja template for task 'store_government_measures', field 'sql'. Template: 'INSERT INTO government_measures (country_name, region_name, date, c1_school_closing, c1_flag, c2_workplace_closing, c2_flag, c3_cancel_public_events, c3_flag, c4_restrictions_on_gatherings, c4_flag, c5_close_public_transport, c5_flag, c6_stay_at_home_requirements, c6_flag, c7_restrictions_on_internal_movement, c7_flag, c8_international_travel_controls, h1_public_information_campaigns, h1_flag, h2_testing_policy, h3_contact_tracing, h4_emergency_investment_in_healthcare, h5_investment_in_vaccines, m1_wildcard, stringency_index, stringency_index_for_display, stringency_legacy_index, stringency_legacy_index_for_display, government_response_index, government_response_index_for_display, containment_health_index, containment_health_index_for_display, economic_support_index, economic_support_index_for_display) SELECT country_name, region_name, date, c1_school_closing, c1_flag, c2_workplace_closing, c2_flag, c3_cancel_public_events, c3_flag, c4_restrictions_on_gatherings, c4_flag, c5_close_public_transport, c5_flag, c6_stay_at_home_requirements, c6_flag, c7_restrictions_on_internal_movement, c7_flag, c8_international_travel_controls, h1_public_information_campaigns, h1_flag, h2_testing_policy, h3_contact_tracing, h4_emergency_investment_in_healthcare, h5_investment_in_vaccines, m1_wildcard, stringency_index, stringency_index_for_display, stringency_legacy_index, stringency_legacy_index_for_display, government_response_index, government_response_index_for_display, containment_health_index, containment_health_index_for_display, economic_support_index, economic_support_index_for_display FROM csv \'{{"/opt/***/dags/government_measures.csv"|filename}}\' WITH (FORMAT csv, HEADER true)'
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/models/abstractoperator.py", line 701, in _do_render_template_fields
+    rendered_content = self.render_template(
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/template/templater.py", line 156, in render_template
+    template = jinja_env.from_string(value)
+  File "/home/airflow/.local/lib/python3.8/site-packages/jinja2/environment.py", line 1105, in from_string
+    return cls.from_code(self, self.compile(source), gs, None)
+  File "/home/airflow/.local/lib/python3.8/site-packages/jinja2/environment.py", line 768, in compile
+    self.handle_exception(source=source_hint)
+  File "/home/airflow/.local/lib/python3.8/site-packages/jinja2/environment.py", line 936, in handle_exception
+    raise rewrite_traceback_stack(source=source)
+  File "<unknown>", line 1, in template
+jinja2.exceptions.TemplateAssertionError: No filter named 'filename'.
+[2023-11-08T09:50:34.253+0000] {taskinstance.py:1935} ERROR - Task failed with exception
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/models/taskinstance.py", line 1516, in _run_raw_task
+    self._execute_task_with_callbacks(context, test_mode, session=session)
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/models/taskinstance.py", line 1645, in _execute_task_with_callbacks
+    task_orig = self.render_templates(context=context)
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/models/taskinstance.py", line 2283, in render_templates
+    original_task.render_template_fields(context)
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/models/baseoperator.py", line 1245, in render_template_fields
+    self._do_render_template_fields(self, self.template_fields, context, jinja_env, set())
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/utils/session.py", line 77, in wrapper
+    return func(*args, session=session, **kwargs)
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/models/abstractoperator.py", line 701, in _do_render_template_fields
+    rendered_content = self.render_template(
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/template/templater.py", line 156, in render_template
+    template = jinja_env.from_string(value)
+  File "/home/airflow/.local/lib/python3.8/site-packages/jinja2/environment.py", line 1105, in from_string
+    return cls.from_code(self, self.compile(source), gs, None)
+  File "/home/airflow/.local/lib/python3.8/site-packages/jinja2/environment.py", line 768, in compile
+    self.handle_exception(source=source_hint)
+  File "/home/airflow/.local/lib/python3.8/site-packages/jinja2/environment.py", line 936, in handle_exception
+    raise rewrite_traceback_stack(source=source)
+  File "<unknown>", line 1, in template
+jinja2.exceptions.TemplateAssertionError: No filter named 'filename'.
+[2023-11-08T09:50:34.306+0000] {taskinstance.py:1398} INFO - Marking task as UP_FOR_RETRY. dag_id=covid_data_dag, task_id=store_government_measures, execution_date=20231108T094957, start_date=20231108T095033, end_date=20231108T095034
+[2023-11-08T09:50:34.394+0000] {standard_task_runner.py:104} ERROR - Failed to execute job 167 for task store_government_measures (No filter named 'filename'.; 2480)
+[2023-11-08T09:50:34.430+0000] {local_task_job_runner.py:228} INFO - Task exited with return code 1
+[2023-11-08T09:50:34.576+0000] {taskinstance.py:2776} INFO - 0 downstream tasks scheduled from follow-on schedule check

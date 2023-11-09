@@ -16,3 +16,6 @@ rdflib
 tf-nightly
 
 pandasql
+
+pymongo 
+apache-airflow-providers-mongo

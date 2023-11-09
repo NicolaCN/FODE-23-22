@@ -1,0 +1,6 @@
+[2023-11-08T12:51:16.701+0000] {task_command.py:415} INFO - Running <TaskInstance: covid_data_dag.create_vaccinations_query_operator manual__2023-11-08T12:47:59.375380+00:00 [failed]> on host 172.21.0.9
+[2023-11-08T12:51:17.557+0000] {warnings.py:109} WARNING - /home/***/.local/lib/python3.8/site-packages/***/utils/context.py:206: AirflowContextDeprecationWarning: Accessing 'prev_execution_date' from the template is deprecated and will be removed in a future version.
+  warnings.warn(_create_deprecation_warning(key, self._deprecation_replacements[key]))
+
+[2023-11-08T12:51:18.375+0000] {taskinstance.py:1660} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='covid_data_dag' AIRFLOW_CTX_TASK_ID='create_vaccinations_query_operator' AIRFLOW_CTX_EXECUTION_DATE='2023-11-08T12:47:59.375380+00:00' AIRFLOW_CTX_TRY_NUMBER='3' AIRFLOW_CTX_DAG_RUN_ID='manual__2023-11-08T12:47:59.375380+00:00'
+[2023-11-08T12:51:27.501+0000] {taskinstance.py:1630} ERROR - Received SIGTERM. Terminating subprocesses.

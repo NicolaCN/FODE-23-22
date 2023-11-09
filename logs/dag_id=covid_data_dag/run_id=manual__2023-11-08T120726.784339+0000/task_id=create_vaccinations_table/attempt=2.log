@@ -1,0 +1,266 @@
+[2023-11-08T12:08:09.653+0000] {taskinstance.py:1157} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: covid_data_dag.create_vaccinations_table manual__2023-11-08T12:07:26.784339+00:00 [queued]>
+[2023-11-08T12:08:09.671+0000] {taskinstance.py:1157} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: covid_data_dag.create_vaccinations_table manual__2023-11-08T12:07:26.784339+00:00 [queued]>
+[2023-11-08T12:08:09.672+0000] {taskinstance.py:1359} INFO - Starting attempt 2 of 2
+[2023-11-08T12:08:09.696+0000] {taskinstance.py:1380} INFO - Executing <Task(PostgresOperator): create_vaccinations_table> on 2023-11-08 12:07:26.784339+00:00
+[2023-11-08T12:08:09.705+0000] {standard_task_runner.py:57} INFO - Started process 1932 to run task
+[2023-11-08T12:08:09.710+0000] {standard_task_runner.py:84} INFO - Running: ['***', 'tasks', 'run', 'covid_data_dag', 'create_vaccinations_table', 'manual__2023-11-08T12:07:26.784339+00:00', '--job-id', '297', '--raw', '--subdir', 'DAGS_FOLDER/Dag_postgres.py', '--cfg-path', '/tmp/tmpmu8yex1s']
+[2023-11-08T12:08:09.715+0000] {standard_task_runner.py:85} INFO - Job 297: Subtask create_vaccinations_table
+[2023-11-08T12:08:09.796+0000] {task_command.py:415} INFO - Running <TaskInstance: covid_data_dag.create_vaccinations_table manual__2023-11-08T12:07:26.784339+00:00 [running]> on host 172.21.0.9
+[2023-11-08T12:08:09.925+0000] {taskinstance.py:1660} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='covid_data_dag' AIRFLOW_CTX_TASK_ID='create_vaccinations_table' AIRFLOW_CTX_EXECUTION_DATE='2023-11-08T12:07:26.784339+00:00' AIRFLOW_CTX_TRY_NUMBER='2' AIRFLOW_CTX_DAG_RUN_ID='manual__2023-11-08T12:07:26.784339+00:00'
+[2023-11-08T12:08:09.927+0000] {sql.py:274} INFO - Executing: CREATE TABLE IF NOT EXISTS vaccinations (
+id SERIAL PRIMARY KEY,
+date DATE,
+location VARCHAR(100),
+iso_code VARCHAR(10),
+total_vaccinations INTEGER,
+people_vaccinated INTEGER,
+total_boosters INTEGER,
+people_fully_vaccinated INTEGER,
+daily_vaccinations_raw INTEGER,
+daily_vaccinations INTEGER,
+total_vaccinations_per_hundred FLOAT,
+people_vaccinated_per_hundred FLOAT,
+people_fully_vaccinated_per_hundred FLOAT,
+daily_vaccinations_per_million INTEGER
+daily_people_vaccinated INTEGER
+daily_people_vaccinated_per_hundred FLOAT
+);
+INSERT INTO vaccinations VALUES ('0', '2021-02-22', 'Afghanistan', 'AFG', 0.0, 0.0, nan, nan, nan, 0.0, 0.0, nan, nan);
+INSERT INTO vaccinations VALUES ('1', '2021-02-23', 'Afghanistan', 'AFG', nan, nan, nan, nan, 1367.0, nan, nan, nan, 33.0);
+INSERT INTO vaccinations VALUES ('2', '2021-02-24', 'Afghanistan', 'AFG', nan, nan, nan, nan, 1367.0, nan, nan, nan, 33.0);
+INSERT INTO vaccinations VALUES ('3', '2021-02-25', 'Afghanistan', 'AFG', nan, nan, nan, nan, 1367.0, nan, nan, nan, 33.0);
+INSERT INTO vaccinations VALUES ('4', '2021-02-26', 'Afghanistan', 'AFG', nan, nan, nan, nan, 1367.0, nan, nan, nan, 33.0);
+INSERT INTO vaccinations VALUES ('5', '2021-02-27', 'Afghanistan', 'AFG', nan, nan, nan, nan, 1367.0, nan, nan, nan, 33.0);
+INSERT INTO vaccinations VALUES ('6', '2021-02-28', 'Afghanistan', 'AFG', 8200.0, 8200.0, nan, nan, 1367.0, 0.02, 0.02, nan, 33.0);
+INSERT INTO vaccinations VALUES ('7', '2021-03-01', 'Afghanistan', 'AFG', nan, nan, nan, nan, 1580.0, nan, nan, nan, 38.0);
+INSERT INTO vaccinations VALUES ('8', '2021-03-02', 'Afghanistan', 'AFG', nan, nan, nan, nan, 1794.0, nan, nan, nan, 44.0);
+INSERT INTO vaccinations VALUES ('9', '2021-03-03', 'Afghanistan', 'AFG', nan, nan, nan, nan, 2008.0, nan, nan, nan, 49.0);
+INSERT INTO vaccinations VALUES ('10', '2021-03-04', 'Afghanistan', 'AFG', nan, nan, nan, nan, 2221.0, nan, nan, nan, 54.0);
+INSERT INTO vaccinations VALUES ('11', '2021-03-05', 'Afghanistan', 'AFG', nan, nan, nan, nan, 2435.0, nan, nan, nan, 59.0);
+INSERT INTO vaccinations VALUES ('12', '2021-03-06', 'Afghanistan', 'AFG', nan, nan, nan, nan, 2649.0, nan, nan, nan, 64.0);
+INSERT INTO vaccinations VALUES ('13', '2021-03-07', 'Afghanistan', 'AFG', nan, nan, nan, nan, 2862.0, nan, nan, nan, 70.0);
+INSERT INTO vaccinations VALUES ('14', '2021-03-08', 'Afghanistan', 'AFG', nan, nan, nan, nan, 2862.0, nan, nan, nan, 70.0);
+INSERT INTO vaccinations VALUES ('15', '2021-03-09', 'Afghanistan', 'AFG', nan, nan, nan, nan, 2862.0, nan, nan, nan, 70.0);
+INSERT INTO vaccinations VALUES ('16', '2021-03-10', 'Afghanistan', 'AFG', nan, nan, nan, nan, 2862.0, nan, nan, nan, 70.0);
+INSERT INTO vaccinations VALUES ('17', '2021-03-11', 'Afghanistan', 'AFG', nan, nan, nan, nan, 2862.0, nan, nan, nan, 70.0);
+INSERT INTO vaccinations VALUES ('18', '2021-03-12', 'Afghanistan', 'AFG', nan, nan, nan, nan, 2862.0, nan, nan, nan, 70.0);
+INSERT INTO vaccinations VALUES ('19', '2021-03-13', 'Afghanistan', 'AFG', nan, nan, nan, nan, 2862.0, nan, nan, nan, 70.0);
+INSERT INTO vaccinations VALUES ('20', '2021-03-14', 'Afghanistan', 'AFG', nan, nan, nan, nan, 2862.0, nan, nan, nan, 70.0);
+INSERT INTO vaccinations VALUES ('21', '2021-03-15', 'Afghanistan', 'AFG', nan, nan, nan, nan, 2862.0, nan, nan, nan, 70.0);
+INSERT INTO vaccinations VALUES ('22', '2021-03-16', 'Afghanistan', 'AFG', 54000.0, 54000.0, nan, nan, 2862.0, 0.13, 0.13, nan, 70.0);
+INSERT INTO vaccinations VALUES ('23', '2021-03-17', 'Afghanistan', 'AFG', nan, nan, nan, nan, 2882.0, nan, nan, nan, 70.0);
+INSERT INTO vaccinations VALUES ('24', '2021-03-18', 'Afghanistan', 'AFG', nan, nan, nan, nan, 2902.0, nan, nan, nan, 71.0);
+INSERT INTO vaccinations VALUES ('25', '2021-03-19', 'Afghanistan', 'AFG', nan, nan, nan, nan, 2921.0, nan, nan, nan, 71.0);
+INSERT INTO vaccinations VALUES ('26', '2021-03-20', 'Afghanistan', 'AFG', nan, nan, nan, nan, 2941.0, nan, nan, nan, 72.0);
+INSERT INTO vaccinations VALUES ('27', '2021-03-21', 'Afghanistan', 'AFG', nan, nan, nan, nan, 2961.0, nan, nan, nan, 72.0);
+INSERT INTO vaccinations VALUES ('28', '2021-03-22', 'Afghanistan', 'AFG', nan, nan, nan, nan, 2980.0, nan, nan, nan, 72.0);
+INSERT INTO vaccinations VALUES ('29', '2021-03-23', 'Afghanistan', 'AFG', nan, nan, nan, nan, 3000.0, nan, nan, nan, 73.0);
+INSERT INTO vaccinations VALUES ('30', '2021-03-24', 'Afghanistan', 'AFG', nan, nan, nan, nan, 3000.0, nan, nan, nan, 73.0);
+INSERT INTO vaccinations VALUES ('31', '2021-03-25', 'Afghanistan', 'AFG', nan, nan, nan, nan, 3000.0, nan, nan, nan, 73.0);
+INSERT INTO vaccinations VALUES ('32', '2021-03-26', 'Afghanistan', 'AFG', nan, nan, nan, nan, 3000.0, nan, nan, nan, 73.0);
+INSERT INTO vaccinations VALUES ('33', '2021-03-27', 'Afghanistan', 'AFG', nan, nan, nan, nan, 3000.0, nan, nan, nan, 73.0);
+INSERT INTO vaccinations VALUES ('34', '2021-03-28', 'Afghanistan', 'AFG', nan, nan, nan, nan, 3000.0, nan, nan, nan, 73.0);
+INSERT INTO vaccinations VALUES ('35', '2021-03-29', 'Afghanistan', 'AFG', nan, nan, nan, nan, 3000.0, nan, nan, nan, 73.0);
+INSERT INTO vaccinations VALUES ('36', '2021-03-30', 'Afghanistan', 'AFG', nan, nan, nan, nan, 3000.0, nan, nan, nan, 73.0);
+INSERT INTO vaccinations VALUES ('37', '2021-03-31', 'Afghanistan', 'AFG', nan, nan, nan, nan, 3000.0, nan, nan, nan, 73.0);
+INSERT INTO vaccinations VALUES ('38', '2021-04-01', 'Afghanistan', 'AFG', nan, nan, nan, nan, 3000.0, nan, nan, nan, 73.0);
+INSERT INTO vaccinations VALUES ('39', '2021-04-02', 'Afghanistan', 'AFG', nan, nan, nan, nan, 3000.0, nan, nan, nan, 73.0);
+INSERT INTO vaccinations VALUES ('40', '2021-04-03', 'Afghanistan', 'AFG', nan, nan, nan, nan, 3000.0, nan, nan, nan, 73.0);
+INSERT INTO vaccinations VALUES ('41', '2021-04-04', 'Afghanistan', 'AFG', nan, nan, nan, nan, 3000.0, nan, nan, nan, 73.0);
+INSERT INTO vaccinations VALUES ('42', '2021-04-05', 'Afghanistan', 'AFG', nan, nan, nan, nan, 3000.0, nan, nan, nan, 73.0);
+INSERT INTO vaccinations VALUES ('43', '2021-04-06', 'Afghanistan', 'AFG', nan, nan, nan, nan, 3000.0, nan, nan, nan, 73.0);
+INSERT INTO vaccinations VALUES ('44', '2021-04-07', 'Afghanistan', 'AFG', 120000.0, 120000.0, nan, nan, 3000.0, 0.29, 0.29, nan, 73.0);
+INSERT INTO vaccinations VALUES ('45', '2021-04-08', 'Afghanistan', 'AFG', nan, nan, nan, nan, 3714.0, nan, nan, nan, 90.0);
+INSERT INTO vaccinations VALUES ('46', '2021-04-09', 'Afghanistan', 'AFG', nan, nan, nan, nan, 4429.0, nan, nan, nan, 108.0);
+INSERT INTO vaccinations VALUES ('47', '2021-04-10', 'Afghanistan', 'AFG', nan, nan, nan, nan, 5143.0, nan, nan, nan, 125.0);
+INSERT INTO vaccinations VALUES ('48', '2021-04-11', 'Afghanistan', 'AFG', nan, nan, nan, nan, 5857.0, nan, nan, nan, 142.0);
+INSERT INTO vaccinations VALUES ('49', '2021-04-12', 'Afghanistan', 'AFG', nan, nan, nan, nan, 6571.0, nan, nan, nan, 160.0);
+INSERT INTO vaccinations VALUES ('50', '2021-04-13', 'Afghanistan', 'AFG', nan, nan, nan, nan, 7286.0, nan, nan, nan, 177.0);
+INSERT INTO vaccinations VALUES ('51', '2021-04-14', 'Afghanistan', 'AFG', nan, nan, nan, nan, 8000.0, nan, nan, nan, 195.0);
+INSERT INTO vaccinations VALUES ('52', '2021-04-15', 'Afghanistan', 'AFG', nan, nan, nan, nan, 8000.0, nan, nan, nan, 195.0);
+INSERT INTO vaccinations VALUES ('53', '2021-04-16', 'Afghanistan', 'AFG', nan, nan, nan, nan, 8000.0, nan, nan, nan, 195.0);
+INSERT INTO vaccinations VALUES ('54', '2021-04-17', 'Afghanistan', 'AFG', nan, nan, nan, nan, 8000.0, nan, nan, nan, 195.0);
+INSERT INTO vaccinations VALUES ('55', '2021-04-18', 'Afghanistan', 'AFG', nan, nan, nan, nan, 8000.0, nan, nan, nan, 195.0);
+INSERT INTO vaccinations VALUES ('56', '2021-04-19', 'Afghanistan', 'AFG', nan, nan, nan, nan, 8000.0, nan, nan, nan, 195.0);
+INSERT INTO vaccinations VALUES ('57', '2021-04-20', 'Afghanistan', 'AFG', nan, nan, nan, nan, 8000.0, nan, nan, nan, 195.0);
+INSERT INTO vaccinations VALUES ('58', '2021-04-21', 'Afghanistan', 'AFG', nan, nan, nan, nan, 8000.0, nan, nan, nan, 195.0);
+INSERT INTO vaccinations VALUES ('59', '2021-04-22', 'Afghanistan', 'AFG', 240000.0, 240000.0, nan, nan, 8000.0, 0.58, 0.58, nan, 195.0);
+INSERT INTO vaccinations VALUES ('60', '2021-04-23', 'Afghanistan', 'AFG', nan, nan, nan, nan, 8846.0, nan, nan, nan, 215.0);
+INSERT INTO vaccinations VALUES ('61', '2021-04-24', 'Afghanistan', 'AFG', nan, nan, nan, nan, 9692.0, nan, nan, nan, 236.0);
+INSERT INTO vaccinations VALUES ('62', '2021-04-25', 'Afghanistan', 'AFG', nan, nan, nan, nan, 10538.0, nan, nan, nan, 256.0);
+INSERT INTO vaccinations VALUES ('63', '2021-04-26', 'Afghanistan', 'AFG', nan, nan, nan, nan, 11384.0, nan, nan, nan, 277.0);
+INSERT INTO vaccinations VALUES ('64', '2021-04-27', 'Afghanistan', 'AFG', nan, nan, nan, nan, 12229.0, nan, nan, nan, 297.0);
+INSERT INTO vaccinations VALUES ('65', '2021-04-28', 'Afghanistan', 'AFG', nan, nan, nan, nan, 13075.0, nan, nan, nan, 318.0);
+INSERT INTO vaccinations VALUES ('66', '2021-04-29', 'Afghanistan', 'AFG', nan, nan, nan, nan, 13921.0, nan, nan, nan, 338.0);
+INSERT INTO vaccinations VALUES ('67', '2021-04-30', 'Afghanistan', 'AFG', nan, nan, nan, nan, 13921.0, nan, nan, nan, 338.0);
+INSERT INTO vaccinations VALUES ('68', '2021-05-01', 'Afghanistan', 'AFG', nan, nan, nan, nan, 13921.0, nan, nan, nan, 338.0);
+INSERT INTO vaccinations VALUES ('69', '2021-05-02', 'Afghanistan', 'AFG', nan, nan, nan, nan, 13921.0, nan, nan, nan, 338.0);
+INSERT INTO vaccinations VALUES ('70', '2021-05-03', 'Afghanistan', 'AFG', nan, nan, nan, nan, 13921.0, nan, nan, nan, 338.0);
+INSERT INTO vaccinations VALUES ('71', '2021-05-04', 'Afghanistan', 'AFG', nan, nan, nan, nan, 13921.0, nan, nan, nan, 338.0);
+INSERT INTO vaccinations VALUES ('72', '2021-05-05', 'Afghanistan', 'AFG', nan, nan, nan, nan, 13921.0, nan, nan, nan, 338.0);
+INSERT INTO vaccinations VALUES ('73', '2021-05-06', 'Afghanistan', 'AFG', nan, nan, nan, nan, 13921.0, nan, nan, nan, 338.0);
+INSERT INTO vaccinations VALUES ('74', '2021-05-07', 'Afghanistan', 'AFG', nan, nan, nan, nan, 13921.0, nan, nan, nan, 338.0);
+INSERT INTO vaccinations VALUES ('75', '2021-05-08', 'Afghanistan', 'AFG', nan, nan, nan, nan, 13921.0, nan, nan, nan, 338.0);
+INSERT INTO vaccinations VALUES ('76', '2021-05-09', 'Afghanistan', 'AFG', nan, nan, nan, nan, 13921.0, nan, nan, nan, 338.0);
+INSERT INTO vaccinations VALUES ('77', '2021-05-10', 'Afghanistan', 'AFG', nan, nan, nan, nan, 13921.0, nan, nan, nan, 338.0);
+INSERT INTO vaccinations VALUES ('78', '2021-05-11', 'Afghanistan', 'AFG', 504502.0, 448878.0, 55624.0, nan, 13921.0, 1.23, 1.09, 0.14, 338.0);
+INSERT INTO vaccinations VALUES ('79', '2021-05-12', 'Afghanistan', 'AFG', nan, nan, nan, nan, 12621.0, nan, nan, nan, 307.0);
+INSERT INTO vaccinations VALUES ('80', '2021-05-13', 'Afghanistan', 'AFG', nan, nan, nan, nan, 11321.0, nan, nan, nan, 275.0);
+INSERT INTO vaccinations VALUES ('81', '2021-05-14', 'Afghanistan', 'AFG', nan, nan, nan, nan, 10022.0, nan, nan, nan, 244.0);
+INSERT INTO vaccinations VALUES ('82', '2021-05-15', 'Afghanistan', 'AFG', nan, nan, nan, nan, 8722.0, nan, nan, nan, 212.0);
+INSERT INTO vaccinations VALUES ('83', '2021-05-16', 'Afghanistan', 'AFG', nan, nan, nan, nan, 7422.0, nan, nan, nan, 180.0);
+INSERT INTO vaccinations VALUES ('84', '2021-05-17', 'Afghanistan', 'AFG', nan, nan, nan, nan, 6122.0, nan, nan, nan, 149.0);
+INSERT INTO vaccinations VALUES ('85', '2021-05-18', 'Afghanistan', 'AFG', nan, nan, nan, nan, 4822.0, nan, nan, nan, 117.0);
+INSERT INTO vaccinations VALUES ('86', '2021-05-19', 'Afghanistan', 'AFG', nan, nan, nan, nan, 4822.0, nan, nan, nan, 117.0);
+INSERT INTO vaccinations VALUES ('87', '2021-05-20', 'Afghanistan', 'AFG', 547901.0, 470341.0, 77560.0, nan, 4822.0, 1.33, 1.14, 0.19, 117.0);
+INSERT INTO vaccinations VALUES ('88', '2021-05-21', 'Afghanistan', 'AFG', nan, nan, nan, nan, 5040.0, nan, nan, nan, 123.0);
+INSERT INTO vaccinations VALUES ('89', '2021-05-22', 'Afghanistan', 'AFG', nan, nan, nan, nan, 5257.0, nan, nan, nan, 128.0);
+INSERT INTO vaccinations VALUES ('90', '2021-05-23', 'Afghanistan', 'AFG', nan, nan, nan, nan, 5474.0, nan, nan, nan, 133.0);
+INSERT INTO vaccinations VALUES ('91', '2021-05-24', 'Afghanistan', 'AFG', 573277.0, 476367.0, 96910.0, nan, 5692.0, 1.39, 1.16, 0.24, 138.0);
+INSERT INTO vaccinations VALUES ('92', '2021-05-25', 'Afghanistan', 'AFG', nan, nan, nan, nan, 6230.0, nan, nan, nan, 151.0);
+INSERT INTO vaccinations VALUES ('93', '2021-05-26', 'Afghanistan', 'AFG', 590454.0, 479372.0, 111082.0, nan, 6768.0, 1.44, 1.17, 0.27, 165.0);
+INSERT INTO vaccinations VALUES ('94', '2021-05-27', 'Afghanistan', 'AFG', 593313.0, 479574.0, 113739.0, 2859.0, 6487.0, 1.44, 1.17, 0.28, 158.0);
+INSERT INTO vaccinations VALUES ('95', '2021-05-28', 'Afghanistan', 'AFG', nan, nan, nan, nan, 5907.0, nan, nan, nan, 144.0);
+INSERT INTO vaccinations VALUES ('96', '2021-05-29', 'Afghanistan', 'AFG', nan, nan, nan, nan, 5326.0, nan, nan, nan, 129.0);
+INSERT INTO vaccinations VALUES ('97', '2021-05-30', 'Afghanistan', 'AFG', 600152.0, 480226.0, 119926.0, nan, 4746.0, 1.46, 1.17, 0.29, 115.0);
+INSERT INTO vaccinations VALUES ('98', '2021-05-31', 'Afghanistan', 'AFG', nan, nan, nan, nan, 5084.0, nan, nan, nan, 124.0);
+INSERT INTO vaccinations VALUES ('99', '2021-06-01', 'Afghanistan', 'AFG', nan, nan, nan, nan, 5102.0, nan, nan, nan, 124.0);
+[2023-11-08T12:08:09.939+0000] {base.py:73} INFO - Using connection ID 'postgres_default' for task execution.
+[2023-11-08T12:08:09.950+0000] {base.py:73} INFO - Using connection ID 'postgres_default' for task execution.
+[2023-11-08T12:08:09.957+0000] {sql.py:418} INFO - Running statement: CREATE TABLE IF NOT EXISTS vaccinations (
+id SERIAL PRIMARY KEY,
+date DATE,
+location VARCHAR(100),
+iso_code VARCHAR(10),
+total_vaccinations INTEGER,
+people_vaccinated INTEGER,
+total_boosters INTEGER,
+people_fully_vaccinated INTEGER,
+daily_vaccinations_raw INTEGER,
+daily_vaccinations INTEGER,
+total_vaccinations_per_hundred FLOAT,
+people_vaccinated_per_hundred FLOAT,
+people_fully_vaccinated_per_hundred FLOAT,
+daily_vaccinations_per_million INTEGER
+daily_people_vaccinated INTEGER
+daily_people_vaccinated_per_hundred FLOAT
+);
+INSERT INTO vaccinations VALUES ('0', '2021-02-22', 'Afghanistan', 'AFG', 0.0, 0.0, nan, nan, nan, 0.0, 0.0, nan, nan);
+INSERT INTO vaccinations VALUES ('1', '2021-02-23', 'Afghanistan', 'AFG', nan, nan, nan, nan, 1367.0, nan, nan, nan, 33.0);
+INSERT INTO vaccinations VALUES ('2', '2021-02-24', 'Afghanistan', 'AFG', nan, nan, nan, nan, 1367.0, nan, nan, nan, 33.0);
+INSERT INTO vaccinations VALUES ('3', '2021-02-25', 'Afghanistan', 'AFG', nan, nan, nan, nan, 1367.0, nan, nan, nan, 33.0);
+INSERT INTO vaccinations VALUES ('4', '2021-02-26', 'Afghanistan', 'AFG', nan, nan, nan, nan, 1367.0, nan, nan, nan, 33.0);
+INSERT INTO vaccinations VALUES ('5', '2021-02-27', 'Afghanistan', 'AFG', nan, nan, nan, nan, 1367.0, nan, nan, nan, 33.0);
+INSERT INTO vaccinations VALUES ('6', '2021-02-28', 'Afghanistan', 'AFG', 8200.0, 8200.0, nan, nan, 1367.0, 0.02, 0.02, nan, 33.0);
+INSERT INTO vaccinations VALUES ('7', '2021-03-01', 'Afghanistan', 'AFG', nan, nan, nan, nan, 1580.0, nan, nan, nan, 38.0);
+INSERT INTO vaccinations VALUES ('8', '2021-03-02', 'Afghanistan', 'AFG', nan, nan, nan, nan, 1794.0, nan, nan, nan, 44.0);
+INSERT INTO vaccinations VALUES ('9', '2021-03-03', 'Afghanistan', 'AFG', nan, nan, nan, nan, 2008.0, nan, nan, nan, 49.0);
+INSERT INTO vaccinations VALUES ('10', '2021-03-04', 'Afghanistan', 'AFG', nan, nan, nan, nan, 2221.0, nan, nan, nan, 54.0);
+INSERT INTO vaccinations VALUES ('11', '2021-03-05', 'Afghanistan', 'AFG', nan, nan, nan, nan, 2435.0, nan, nan, nan, 59.0);
+INSERT INTO vaccinations VALUES ('12', '2021-03-06', 'Afghanistan', 'AFG', nan, nan, nan, nan, 2649.0, nan, nan, nan, 64.0);
+INSERT INTO vaccinations VALUES ('13', '2021-03-07', 'Afghanistan', 'AFG', nan, nan, nan, nan, 2862.0, nan, nan, nan, 70.0);
+INSERT INTO vaccinations VALUES ('14', '2021-03-08', 'Afghanistan', 'AFG', nan, nan, nan, nan, 2862.0, nan, nan, nan, 70.0);
+INSERT INTO vaccinations VALUES ('15', '2021-03-09', 'Afghanistan', 'AFG', nan, nan, nan, nan, 2862.0, nan, nan, nan, 70.0);
+INSERT INTO vaccinations VALUES ('16', '2021-03-10', 'Afghanistan', 'AFG', nan, nan, nan, nan, 2862.0, nan, nan, nan, 70.0);
+INSERT INTO vaccinations VALUES ('17', '2021-03-11', 'Afghanistan', 'AFG', nan, nan, nan, nan, 2862.0, nan, nan, nan, 70.0);
+INSERT INTO vaccinations VALUES ('18', '2021-03-12', 'Afghanistan', 'AFG', nan, nan, nan, nan, 2862.0, nan, nan, nan, 70.0);
+INSERT INTO vaccinations VALUES ('19', '2021-03-13', 'Afghanistan', 'AFG', nan, nan, nan, nan, 2862.0, nan, nan, nan, 70.0);
+INSERT INTO vaccinations VALUES ('20', '2021-03-14', 'Afghanistan', 'AFG', nan, nan, nan, nan, 2862.0, nan, nan, nan, 70.0);
+INSERT INTO vaccinations VALUES ('21', '2021-03-15', 'Afghanistan', 'AFG', nan, nan, nan, nan, 2862.0, nan, nan, nan, 70.0);
+INSERT INTO vaccinations VALUES ('22', '2021-03-16', 'Afghanistan', 'AFG', 54000.0, 54000.0, nan, nan, 2862.0, 0.13, 0.13, nan, 70.0);
+INSERT INTO vaccinations VALUES ('23', '2021-03-17', 'Afghanistan', 'AFG', nan, nan, nan, nan, 2882.0, nan, nan, nan, 70.0);
+INSERT INTO vaccinations VALUES ('24', '2021-03-18', 'Afghanistan', 'AFG', nan, nan, nan, nan, 2902.0, nan, nan, nan, 71.0);
+INSERT INTO vaccinations VALUES ('25', '2021-03-19', 'Afghanistan', 'AFG', nan, nan, nan, nan, 2921.0, nan, nan, nan, 71.0);
+INSERT INTO vaccinations VALUES ('26', '2021-03-20', 'Afghanistan', 'AFG', nan, nan, nan, nan, 2941.0, nan, nan, nan, 72.0);
+INSERT INTO vaccinations VALUES ('27', '2021-03-21', 'Afghanistan', 'AFG', nan, nan, nan, nan, 2961.0, nan, nan, nan, 72.0);
+INSERT INTO vaccinations VALUES ('28', '2021-03-22', 'Afghanistan', 'AFG', nan, nan, nan, nan, 2980.0, nan, nan, nan, 72.0);
+INSERT INTO vaccinations VALUES ('29', '2021-03-23', 'Afghanistan', 'AFG', nan, nan, nan, nan, 3000.0, nan, nan, nan, 73.0);
+INSERT INTO vaccinations VALUES ('30', '2021-03-24', 'Afghanistan', 'AFG', nan, nan, nan, nan, 3000.0, nan, nan, nan, 73.0);
+INSERT INTO vaccinations VALUES ('31', '2021-03-25', 'Afghanistan', 'AFG', nan, nan, nan, nan, 3000.0, nan, nan, nan, 73.0);
+INSERT INTO vaccinations VALUES ('32', '2021-03-26', 'Afghanistan', 'AFG', nan, nan, nan, nan, 3000.0, nan, nan, nan, 73.0);
+INSERT INTO vaccinations VALUES ('33', '2021-03-27', 'Afghanistan', 'AFG', nan, nan, nan, nan, 3000.0, nan, nan, nan, 73.0);
+INSERT INTO vaccinations VALUES ('34', '2021-03-28', 'Afghanistan', 'AFG', nan, nan, nan, nan, 3000.0, nan, nan, nan, 73.0);
+INSERT INTO vaccinations VALUES ('35', '2021-03-29', 'Afghanistan', 'AFG', nan, nan, nan, nan, 3000.0, nan, nan, nan, 73.0);
+INSERT INTO vaccinations VALUES ('36', '2021-03-30', 'Afghanistan', 'AFG', nan, nan, nan, nan, 3000.0, nan, nan, nan, 73.0);
+INSERT INTO vaccinations VALUES ('37', '2021-03-31', 'Afghanistan', 'AFG', nan, nan, nan, nan, 3000.0, nan, nan, nan, 73.0);
+INSERT INTO vaccinations VALUES ('38', '2021-04-01', 'Afghanistan', 'AFG', nan, nan, nan, nan, 3000.0, nan, nan, nan, 73.0);
+INSERT INTO vaccinations VALUES ('39', '2021-04-02', 'Afghanistan', 'AFG', nan, nan, nan, nan, 3000.0, nan, nan, nan, 73.0);
+INSERT INTO vaccinations VALUES ('40', '2021-04-03', 'Afghanistan', 'AFG', nan, nan, nan, nan, 3000.0, nan, nan, nan, 73.0);
+INSERT INTO vaccinations VALUES ('41', '2021-04-04', 'Afghanistan', 'AFG', nan, nan, nan, nan, 3000.0, nan, nan, nan, 73.0);
+INSERT INTO vaccinations VALUES ('42', '2021-04-05', 'Afghanistan', 'AFG', nan, nan, nan, nan, 3000.0, nan, nan, nan, 73.0);
+INSERT INTO vaccinations VALUES ('43', '2021-04-06', 'Afghanistan', 'AFG', nan, nan, nan, nan, 3000.0, nan, nan, nan, 73.0);
+INSERT INTO vaccinations VALUES ('44', '2021-04-07', 'Afghanistan', 'AFG', 120000.0, 120000.0, nan, nan, 3000.0, 0.29, 0.29, nan, 73.0);
+INSERT INTO vaccinations VALUES ('45', '2021-04-08', 'Afghanistan', 'AFG', nan, nan, nan, nan, 3714.0, nan, nan, nan, 90.0);
+INSERT INTO vaccinations VALUES ('46', '2021-04-09', 'Afghanistan', 'AFG', nan, nan, nan, nan, 4429.0, nan, nan, nan, 108.0);
+INSERT INTO vaccinations VALUES ('47', '2021-04-10', 'Afghanistan', 'AFG', nan, nan, nan, nan, 5143.0, nan, nan, nan, 125.0);
+INSERT INTO vaccinations VALUES ('48', '2021-04-11', 'Afghanistan', 'AFG', nan, nan, nan, nan, 5857.0, nan, nan, nan, 142.0);
+INSERT INTO vaccinations VALUES ('49', '2021-04-12', 'Afghanistan', 'AFG', nan, nan, nan, nan, 6571.0, nan, nan, nan, 160.0);
+INSERT INTO vaccinations VALUES ('50', '2021-04-13', 'Afghanistan', 'AFG', nan, nan, nan, nan, 7286.0, nan, nan, nan, 177.0);
+INSERT INTO vaccinations VALUES ('51', '2021-04-14', 'Afghanistan', 'AFG', nan, nan, nan, nan, 8000.0, nan, nan, nan, 195.0);
+INSERT INTO vaccinations VALUES ('52', '2021-04-15', 'Afghanistan', 'AFG', nan, nan, nan, nan, 8000.0, nan, nan, nan, 195.0);
+INSERT INTO vaccinations VALUES ('53', '2021-04-16', 'Afghanistan', 'AFG', nan, nan, nan, nan, 8000.0, nan, nan, nan, 195.0);
+INSERT INTO vaccinations VALUES ('54', '2021-04-17', 'Afghanistan', 'AFG', nan, nan, nan, nan, 8000.0, nan, nan, nan, 195.0);
+INSERT INTO vaccinations VALUES ('55', '2021-04-18', 'Afghanistan', 'AFG', nan, nan, nan, nan, 8000.0, nan, nan, nan, 195.0);
+INSERT INTO vaccinations VALUES ('56', '2021-04-19', 'Afghanistan', 'AFG', nan, nan, nan, nan, 8000.0, nan, nan, nan, 195.0);
+INSERT INTO vaccinations VALUES ('57', '2021-04-20', 'Afghanistan', 'AFG', nan, nan, nan, nan, 8000.0, nan, nan, nan, 195.0);
+INSERT INTO vaccinations VALUES ('58', '2021-04-21', 'Afghanistan', 'AFG', nan, nan, nan, nan, 8000.0, nan, nan, nan, 195.0);
+INSERT INTO vaccinations VALUES ('59', '2021-04-22', 'Afghanistan', 'AFG', 240000.0, 240000.0, nan, nan, 8000.0, 0.58, 0.58, nan, 195.0);
+INSERT INTO vaccinations VALUES ('60', '2021-04-23', 'Afghanistan', 'AFG', nan, nan, nan, nan, 8846.0, nan, nan, nan, 215.0);
+INSERT INTO vaccinations VALUES ('61', '2021-04-24', 'Afghanistan', 'AFG', nan, nan, nan, nan, 9692.0, nan, nan, nan, 236.0);
+INSERT INTO vaccinations VALUES ('62', '2021-04-25', 'Afghanistan', 'AFG', nan, nan, nan, nan, 10538.0, nan, nan, nan, 256.0);
+INSERT INTO vaccinations VALUES ('63', '2021-04-26', 'Afghanistan', 'AFG', nan, nan, nan, nan, 11384.0, nan, nan, nan, 277.0);
+INSERT INTO vaccinations VALUES ('64', '2021-04-27', 'Afghanistan', 'AFG', nan, nan, nan, nan, 12229.0, nan, nan, nan, 297.0);
+INSERT INTO vaccinations VALUES ('65', '2021-04-28', 'Afghanistan', 'AFG', nan, nan, nan, nan, 13075.0, nan, nan, nan, 318.0);
+INSERT INTO vaccinations VALUES ('66', '2021-04-29', 'Afghanistan', 'AFG', nan, nan, nan, nan, 13921.0, nan, nan, nan, 338.0);
+INSERT INTO vaccinations VALUES ('67', '2021-04-30', 'Afghanistan', 'AFG', nan, nan, nan, nan, 13921.0, nan, nan, nan, 338.0);
+INSERT INTO vaccinations VALUES ('68', '2021-05-01', 'Afghanistan', 'AFG', nan, nan, nan, nan, 13921.0, nan, nan, nan, 338.0);
+INSERT INTO vaccinations VALUES ('69', '2021-05-02', 'Afghanistan', 'AFG', nan, nan, nan, nan, 13921.0, nan, nan, nan, 338.0);
+INSERT INTO vaccinations VALUES ('70', '2021-05-03', 'Afghanistan', 'AFG', nan, nan, nan, nan, 13921.0, nan, nan, nan, 338.0);
+INSERT INTO vaccinations VALUES ('71', '2021-05-04', 'Afghanistan', 'AFG', nan, nan, nan, nan, 13921.0, nan, nan, nan, 338.0);
+INSERT INTO vaccinations VALUES ('72', '2021-05-05', 'Afghanistan', 'AFG', nan, nan, nan, nan, 13921.0, nan, nan, nan, 338.0);
+INSERT INTO vaccinations VALUES ('73', '2021-05-06', 'Afghanistan', 'AFG', nan, nan, nan, nan, 13921.0, nan, nan, nan, 338.0);
+INSERT INTO vaccinations VALUES ('74', '2021-05-07', 'Afghanistan', 'AFG', nan, nan, nan, nan, 13921.0, nan, nan, nan, 338.0);
+INSERT INTO vaccinations VALUES ('75', '2021-05-08', 'Afghanistan', 'AFG', nan, nan, nan, nan, 13921.0, nan, nan, nan, 338.0);
+INSERT INTO vaccinations VALUES ('76', '2021-05-09', 'Afghanistan', 'AFG', nan, nan, nan, nan, 13921.0, nan, nan, nan, 338.0);
+INSERT INTO vaccinations VALUES ('77', '2021-05-10', 'Afghanistan', 'AFG', nan, nan, nan, nan, 13921.0, nan, nan, nan, 338.0);
+INSERT INTO vaccinations VALUES ('78', '2021-05-11', 'Afghanistan', 'AFG', 504502.0, 448878.0, 55624.0, nan, 13921.0, 1.23, 1.09, 0.14, 338.0);
+INSERT INTO vaccinations VALUES ('79', '2021-05-12', 'Afghanistan', 'AFG', nan, nan, nan, nan, 12621.0, nan, nan, nan, 307.0);
+INSERT INTO vaccinations VALUES ('80', '2021-05-13', 'Afghanistan', 'AFG', nan, nan, nan, nan, 11321.0, nan, nan, nan, 275.0);
+INSERT INTO vaccinations VALUES ('81', '2021-05-14', 'Afghanistan', 'AFG', nan, nan, nan, nan, 10022.0, nan, nan, nan, 244.0);
+INSERT INTO vaccinations VALUES ('82', '2021-05-15', 'Afghanistan', 'AFG', nan, nan, nan, nan, 8722.0, nan, nan, nan, 212.0);
+INSERT INTO vaccinations VALUES ('83', '2021-05-16', 'Afghanistan', 'AFG', nan, nan, nan, nan, 7422.0, nan, nan, nan, 180.0);
+INSERT INTO vaccinations VALUES ('84', '2021-05-17', 'Afghanistan', 'AFG', nan, nan, nan, nan, 6122.0, nan, nan, nan, 149.0);
+INSERT INTO vaccinations VALUES ('85', '2021-05-18', 'Afghanistan', 'AFG', nan, nan, nan, nan, 4822.0, nan, nan, nan, 117.0);
+INSERT INTO vaccinations VALUES ('86', '2021-05-19', 'Afghanistan', 'AFG', nan, nan, nan, nan, 4822.0, nan, nan, nan, 117.0);
+INSERT INTO vaccinations VALUES ('87', '2021-05-20', 'Afghanistan', 'AFG', 547901.0, 470341.0, 77560.0, nan, 4822.0, 1.33, 1.14, 0.19, 117.0);
+INSERT INTO vaccinations VALUES ('88', '2021-05-21', 'Afghanistan', 'AFG', nan, nan, nan, nan, 5040.0, nan, nan, nan, 123.0);
+INSERT INTO vaccinations VALUES ('89', '2021-05-22', 'Afghanistan', 'AFG', nan, nan, nan, nan, 5257.0, nan, nan, nan, 128.0);
+INSERT INTO vaccinations VALUES ('90', '2021-05-23', 'Afghanistan', 'AFG', nan, nan, nan, nan, 5474.0, nan, nan, nan, 133.0);
+INSERT INTO vaccinations VALUES ('91', '2021-05-24', 'Afghanistan', 'AFG', 573277.0, 476367.0, 96910.0, nan, 5692.0, 1.39, 1.16, 0.24, 138.0);
+INSERT INTO vaccinations VALUES ('92', '2021-05-25', 'Afghanistan', 'AFG', nan, nan, nan, nan, 6230.0, nan, nan, nan, 151.0);
+INSERT INTO vaccinations VALUES ('93', '2021-05-26', 'Afghanistan', 'AFG', 590454.0, 479372.0, 111082.0, nan, 6768.0, 1.44, 1.17, 0.27, 165.0);
+INSERT INTO vaccinations VALUES ('94', '2021-05-27', 'Afghanistan', 'AFG', 593313.0, 479574.0, 113739.0, 2859.0, 6487.0, 1.44, 1.17, 0.28, 158.0);
+INSERT INTO vaccinations VALUES ('95', '2021-05-28', 'Afghanistan', 'AFG', nan, nan, nan, nan, 5907.0, nan, nan, nan, 144.0);
+INSERT INTO vaccinations VALUES ('96', '2021-05-29', 'Afghanistan', 'AFG', nan, nan, nan, nan, 5326.0, nan, nan, nan, 129.0);
+INSERT INTO vaccinations VALUES ('97', '2021-05-30', 'Afghanistan', 'AFG', 600152.0, 480226.0, 119926.0, nan, 4746.0, 1.46, 1.17, 0.29, 115.0);
+INSERT INTO vaccinations VALUES ('98', '2021-05-31', 'Afghanistan', 'AFG', nan, nan, nan, nan, 5084.0, nan, nan, nan, 124.0);
+INSERT INTO vaccinations VALUES ('99', '2021-06-01', 'Afghanistan', 'AFG', nan, nan, nan, nan, 5102.0, nan, nan, nan, 124.0);, parameters: None
+[2023-11-08T12:08:09.959+0000] {taskinstance.py:1935} ERROR - Task failed with exception
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/providers/common/sql/operators/sql.py", line 280, in execute
+    output = hook.run(
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/providers/common/sql/hooks/sql.py", line 392, in run
+    self._run_command(cur, sql_statement, parameters)
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/providers/common/sql/hooks/sql.py", line 423, in _run_command
+    cur.execute(sql_statement)
+psycopg2.errors.SyntaxError: syntax error at or near "daily_people_vaccinated"
+LINE 16: daily_people_vaccinated INTEGER
+         ^
+
+[2023-11-08T12:08:09.973+0000] {taskinstance.py:1398} INFO - Marking task as FAILED. dag_id=covid_data_dag, task_id=create_vaccinations_table, execution_date=20231108T120726, start_date=20231108T120809, end_date=20231108T120809
+[2023-11-08T12:08:09.992+0000] {standard_task_runner.py:104} ERROR - Failed to execute job 297 for task create_vaccinations_table (syntax error at or near "daily_people_vaccinated"
+LINE 16: daily_people_vaccinated INTEGER
+         ^
+; 1932)
+[2023-11-08T12:08:10.044+0000] {local_task_job_runner.py:228} INFO - Task exited with return code 1
+[2023-11-08T12:08:10.078+0000] {taskinstance.py:2776} INFO - 0 downstream tasks scheduled from follow-on schedule check
