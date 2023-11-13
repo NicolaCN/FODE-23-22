@@ -128,7 +128,7 @@ create_government_measures_query_operator = PythonOperator(
 )
 
 def print_vaccinations():
-    hook = MongoHook(conn_id="mongo_default")
+    hook = MongoHook(conn_id="mongo")
     conn = hook.get_conn()
     db = conn['covid_data']
     vaccinations = db['vaccinations']

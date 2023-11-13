@@ -15,7 +15,6 @@ kafka-python
 rdflib
 tf-nightly
 
-pandasql
+pandasql 
 
-pymongo 
 apache-airflow-providers-mongo

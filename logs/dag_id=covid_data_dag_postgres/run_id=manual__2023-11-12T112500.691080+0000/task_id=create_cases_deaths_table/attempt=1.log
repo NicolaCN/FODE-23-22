@@ -1,0 +1,22 @@
+[2023-11-12T11:25:43.069+0000] {taskinstance.py:1157} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: covid_data_dag_postgres.create_cases_deaths_table manual__2023-11-12T11:25:00.691080+00:00 [queued]>
+[2023-11-12T11:25:43.120+0000] {taskinstance.py:1157} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: covid_data_dag_postgres.create_cases_deaths_table manual__2023-11-12T11:25:00.691080+00:00 [queued]>
+[2023-11-12T11:25:43.120+0000] {taskinstance.py:1359} INFO - Starting attempt 1 of 2
+[2023-11-12T11:25:44.172+0000] {taskinstance.py:1380} INFO - Executing <Task(PostgresOperator): create_cases_deaths_table> on 2023-11-12 11:25:00.691080+00:00
+[2023-11-12T11:25:44.193+0000] {standard_task_runner.py:57} INFO - Started process 1291 to run task
+[2023-11-12T11:25:44.208+0000] {standard_task_runner.py:84} INFO - Running: ['***', 'tasks', 'run', 'covid_data_dag_postgres', 'create_cases_deaths_table', 'manual__2023-11-12T11:25:00.691080+00:00', '--job-id', '795', '--raw', '--subdir', 'DAGS_FOLDER/Dag_postgres.py', '--cfg-path', '/tmp/tmpyyn3znk0']
+[2023-11-12T11:25:44.240+0000] {standard_task_runner.py:85} INFO - Job 795: Subtask create_cases_deaths_table
+[2023-11-12T11:25:44.507+0000] {task_command.py:415} INFO - Running <TaskInstance: covid_data_dag_postgres.create_cases_deaths_table manual__2023-11-12T11:25:00.691080+00:00 [running]> on host 172.21.0.6
+[2023-11-12T11:25:49.208+0000] {taskinstance.py:1660} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='covid_data_dag_postgres' AIRFLOW_CTX_TASK_ID='create_cases_deaths_table' AIRFLOW_CTX_EXECUTION_DATE='2023-11-12T11:25:00.691080+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='manual__2023-11-12T11:25:00.691080+00:00'
+[2023-11-12T11:25:49.210+0000] {sql.py:274} INFO - Executing: 
+[2023-11-12T11:25:49.234+0000] {base.py:73} INFO - Using connection ID 'postgres_default' for task execution.
+[2023-11-12T11:25:49.236+0000] {taskinstance.py:1935} ERROR - Task failed with exception
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/providers/common/sql/operators/sql.py", line 280, in execute
+    output = hook.run(
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/providers/common/sql/hooks/sql.py", line 383, in run
+    raise ValueError("List of SQL statements is empty")
+ValueError: List of SQL statements is empty
+[2023-11-12T11:25:49.256+0000] {taskinstance.py:1398} INFO - Marking task as UP_FOR_RETRY. dag_id=covid_data_dag_postgres, task_id=create_cases_deaths_table, execution_date=20231112T112500, start_date=20231112T112543, end_date=20231112T112549
+[2023-11-12T11:25:49.294+0000] {standard_task_runner.py:104} ERROR - Failed to execute job 795 for task create_cases_deaths_table (List of SQL statements is empty; 1291)
+[2023-11-12T11:25:49.331+0000] {local_task_job_runner.py:228} INFO - Task exited with return code 1
+[2023-11-12T11:25:54.539+0000] {taskinstance.py:2776} INFO - 0 downstream tasks scheduled from follow-on schedule check

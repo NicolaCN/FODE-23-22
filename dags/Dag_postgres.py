@@ -1,7 +1,6 @@
 import airflow
 import datetime
 import pandas as pd
-from pymongo import MongoClient
 import requests
 from airflow import DAG
 from airflow.operators.bash_operator import BashOperator
@@ -13,9 +12,9 @@ import pandas as pd
 from airflow.providers.postgres.hooks.postgres import PostgresHook
 import csv
 import pandas as pd
+import wbgapi as wb
 
-
-
+population_data='https://api.worldbank.org/v2/en/indicator/SP.POP.TOTL?downloadformat=csv'
 cases_deaths='https://covid19.who.int/WHO-COVID-19-global-data.csv'
 vaccinations='https://raw.githubusercontent.com/owid/covid-19-data/master/public/data/vaccinations/vaccinations.csv'
 government_measures='https://raw.githubusercontent.com/OxCGRT/covid-policy-dataset/main/data/OxCGRT_compact_national_v1.csv'
@@ -27,29 +26,73 @@ default_args = {
     'schedule_interval': None,
     'retries': 1,
     'retry_delay': datetime.timedelta(seconds=10),
+    'catchup': False,
+    "depends_on_past": False,
 }
 
 dag = DAG('covid_data_dag_postgres', start_date=airflow.utils.dates.days_ago(0), default_args=default_args, schedule_interval='@daily')
 
 def download_cases_deaths():
-    #url = 'https://covid19.who.int/WHO-COVID-19-global-data.csv'
     response = requests.get(cases_deaths)
     with open('/opt/airflow/dags/postgres/cases_deaths.csv', 'wb') as f:
         f.write(response.content)
 
 def download_vaccinations():
-    #url = 'https://raw.githubusercontent.com/owid/covid-19-data/master/public/data/vaccinations/vaccinations.csv'
     response = requests.get(vaccinations)
     with open('/opt/airflow/dags/postgres/vaccinations.csv', 'wb') as f:
         f.write(response.content)
 
 def download_government_measures():
-    #url = 'https://raw.githubusercontent.com/OxCGRT/covid-policy-dataset/main/data/OxCGRT_compact_national_v1.csv'
     response = requests.get(government_measures)
     with open('/opt/airflow/dags/postgres/government_measures.csv', 'wb') as f:
         f.write(response.content)
+        
+# Population data from the World Bank API, used to calculate the per capita metrics 
+# for every table (e.g. total_vaccinations_per_hundred, people_vaccinated_per_hundred, etc.)         
+def download_population_data():
+    data = wb.data.DataFrame('SP.POP.TOTL', labels=True, time=range(2019, 2023))
+    
+    data_reshaped = pd.melt(data, id_vars=['Country'], var_name='Year', value_name='Total Population')
+    data_reshaped['Year'] = data_reshaped['Year'].apply(lambda year: int(year[2:]))
+    
+    data_reshaped.to_csv('/opt/airflow/dags/postgres/population_data.csv', index=False)
 
-# Create the file cases_deaths_inserts.sql with the SQL query to insert the data into the database
+  
+def wrangle_cases_deaths():
+    df = pd.read_csv('/opt/airflow/dags/postgres/cases_deaths.csv')
+    
+    # Apply data wrangling here
+    # ...
+    
+    df.to_csv('/opt/airflow/dags/postgres/cases_deaths_wrangled.csv', index=False)
+
+def wrangle_vaccinations():
+    df = pd.read_csv('/opt/airflow/dags/postgres/vaccinations.csv')
+    # Apply data wrangling here
+    # ...
+    df.to_csv('/opt/airflow/dags/postgres/vaccinations_wrangled.csv', index=False)
+
+def wrangle_government_measures():
+    df = pd.read_csv('/opt/airflow/dags/postgres/government_measures.csv')
+    # Apply data wrangling here
+    
+    # Mantain only the columns of interest
+    #df = df[['CountryName', 'CountryCode', 'RegionName', 'RegionCode', 'Jurisdiction', 'Date', 'StringencyIndex_Average', 'GovernmentResponseIndex_Average', 'ContainmentHealthIndex_Average', 'EconomicSupportIndex']]
+    
+    
+    df.to_csv('/opt/airflow/dags/postgres/government_measures_wrangled.csv', index=False)
+
+def wrangle_population_data():
+    df = pd.read_csv('/opt/airflow/dags/postgres/population_data.csv')
+    # Apply data wrangling here
+    df_reshaped = pd.melt(df, id_vars=['Country'], var_name='Year', value_name='Total Population')
+    df_reshaped['Year'] = df_reshaped['Year'].apply(lambda year: int(year[2:]))
+    
+    df.to_csv('/opt/airflow/dags/postgres/population_data_wrangled.csv', index=False)
+
+# I KEPT (COMMENTED) THE FOLLOWING FUNCTIONS (bla_bla_query()) AS A REFERENCE, BUT 
+# THEY SHOULD BE MODIFIED BASED ON THE SHAPE OF THE DATA AFTER THE WRANGLING
+'''
 def _create_cases_deaths_query(previous_epoch: int, output_folder: str):
     df = pd.read_csv('/opt/airflow/dags/postgres/cases_deaths.csv')
     with open("/opt/airflow/dags/postgres/cases_deaths_inserts.sql", "w") as f:
@@ -96,9 +139,9 @@ def _create_cases_deaths_query(previous_epoch: int, output_folder: str):
 
         f.close()
         
-
 def _create_government_measures_query(previous_epoch: int, output_folder: str):
     df = pd.read_csv('/opt/airflow/dags/postgres/government_measures.csv')
+    # Mantain only the columns of interest
     df = df[['CountryName', 'CountryCode', 'RegionName', 'RegionCode', 'Jurisdiction', 'Date', 'StringencyIndex_Average', 'GovernmentResponseIndex_Average', 'ContainmentHealthIndex_Average', 'EconomicSupportIndex']]
     
     with open("/opt/airflow/dags/postgres/government_measures_inserts.sql", "w") as f:
@@ -125,14 +168,14 @@ def _create_government_measures_query(previous_epoch: int, output_folder: str):
             id = index
             country_name = row['CountryName'].replace("'", "''")
             country_code = row['CountryCode']
-            region_name = row['RegionName'] if pd.notnull(row['RegionName']) else None
-            region_code = row['RegionCode'] if pd.notnull(row['RegionCode']) else None
-            jurisdiction = row['Jurisdiction'].replace("'", "''") if pd.notnull(row['Jurisdiction']) else None
+            region_name = row['RegionName'] if pd.notnull(row['RegionName']) else "null"
+            region_code = row['RegionCode'] if pd.notnull(row['RegionCode']) else "null"
+            jurisdiction = row['Jurisdiction'].replace("'", "''") if pd.notnull(row['Jurisdiction']) else "null"
             date = row['Date']
-            stringency_index_average = row['StringencyIndex_Average'] if pd.notnull(row['StringencyIndex_Average']) else None
-            government_response_index_average = row['GovernmentResponseIndex_Average'] if pd.notnull(row['GovernmentResponseIndex_Average']) else None
-            containment_health_index_average = row['ContainmentHealthIndex_Average'] if pd.notnull(row['ContainmentHealthIndex_Average']) else None
-            economic_support_index = row['EconomicSupportIndex'] if pd.notnull(row['EconomicSupportIndex']) else None
+            stringency_index_average = row['StringencyIndex_Average'] if pd.notnull(row['StringencyIndex_Average']) else "null"
+            government_response_index_average = row['GovernmentResponseIndex_Average'] if pd.notnull(row['GovernmentResponseIndex_Average']) else "null"
+            containment_health_index_average = row['ContainmentHealthIndex_Average'] if pd.notnull(row['ContainmentHealthIndex_Average']) else "null"
+            economic_support_index = row['EconomicSupportIndex'] if pd.notnull(row['EconomicSupportIndex']) else "null"
 
             f.write(
                 "INSERT INTO government_measures VALUES ("
@@ -146,10 +189,9 @@ def _create_government_measures_query(previous_epoch: int, output_folder: str):
 
         f.close()
         
-# Create the file vaccinations_inserts.sql with the SQL query to insert the data into the database   
 def _create_vaccinations_query(previous_epoch: int, output_folder: str):
     df = pd.read_csv('/opt/airflow/dags/postgres/vaccinations.csv')
-    df.fillna(0, inplace=True)
+    df.fillna("null", inplace=True)
     with open("/opt/airflow/dags/postgres/vaccinations_inserts.sql", "w") as f:
         df_iterable = df.iterrows()
         
@@ -201,7 +243,7 @@ def _create_vaccinations_query(previous_epoch: int, output_folder: str):
                 break
 
         f.close()
-        
+'''    
 
 # Download the cases_deaths.csv file from the WHO website
 download_cases_deaths = PythonOperator(
@@ -230,6 +272,41 @@ download_government_measures = PythonOperator(
     dag=dag
 )
 
+# Download the population_data.csv file from the World Bank API
+download_population_data_task = PythonOperator(
+    task_id='download_population_data',
+    python_callable=download_population_data,
+    dag=dag,
+)
+
+wrangle_cases_deaths_task = PythonOperator(
+    task_id='wrangle_cases_deaths',
+    python_callable=wrangle_cases_deaths,
+    dag=dag,
+)
+
+wrangle_vaccinations_task = PythonOperator(
+    task_id='wrangle_vaccinations',
+    python_callable=wrangle_vaccinations,
+    dag=dag,
+)
+
+wrangle_government_measures_task = PythonOperator(
+    task_id='wrangle_government_measures',
+    python_callable=wrangle_government_measures,
+    dag=dag,
+)
+
+# Define the task to wrangle the population data
+wrangle_population_data_task = PythonOperator(
+    task_id='wrangle_population_data',
+    python_callable=wrangle_population_data,
+    dag=dag,
+)
+
+# I KEPT THE FOLLOWING OPERATORS AS A REFERENCE, BUT THEY SHOULD BE 
+# MODIFIED BASED ON THE SHAPE OF THE DATA AFTER THE WRANGLING
+'''
 # Create the cases_deaths_inserts.sql file with the SQL query to insert the data into the database
 create_cases_deaths_query_operator = PythonOperator(
     task_id='create_cases_deaths_query_operator',
@@ -292,35 +369,11 @@ create_government_measures_table = PostgresOperator(
     sql='/postgres/government_measures_inserts.sql',
     dag=dag
 )
+'''
 
-
-def print_vaccinations():
-    hook = PostgresHook(postgres_conn_id="postgres_default")
-    conn = hook.get_conn()
-    cursor = conn.cursor()
-    cursor.execute("SELECT * FROM vaccinations;")
-    results = cursor.fetchall()
-
-    with open('/opt/airflow/dags/postgres/speriamo.csv', 'a') as csvfile:
-        #transform results to string
-        results = str(results)
-        csvfile.write(results)
-        #writer = csv.writer(csvfile)
-        #writer.writerows(results)
-    cursor.close()
-    
-# Print the first 100 records of the vaccinations table 
-# (to see if the data has been correctly inserted)
-print_vaccinations_operator = PythonOperator(
-    task_id='print_vaccinations_operator',
-    dag=dag,
-    python_callable=print_vaccinations,
-)
-
-
-download_cases_deaths >> create_cases_deaths_query_operator >> create_cases_deaths_table >> print_vaccinations_operator
-download_vaccinations >> create_vaccinations_query_operator >> create_vaccinations_table 
-download_government_measures >> create_government_measures_query_operator >> create_government_measures_table 
-
+download_cases_deaths >> wrangle_cases_deaths_task #>> create_cases_deaths_query_operator >> create_cases_deaths_table >> print_vaccinations_operator
+download_vaccinations >> wrangle_vaccinations_task #>> create_vaccinations_query_operator >> create_vaccinations_table
+download_government_measures >> wrangle_government_measures_task #>> create_government_measures_query_operator >> create_government_measures_table
+download_population_data >> wrangle_population_data
 
  
