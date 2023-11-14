@@ -1,0 +1,32 @@
+[2023-11-14T17:38:08.751+0000] {taskinstance.py:1157} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: covid_data_dag_postgres.download_location_data manual__2023-11-14T17:37:27.865188+00:00 [queued]>
+[2023-11-14T17:38:09.078+0000] {taskinstance.py:1157} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: covid_data_dag_postgres.download_location_data manual__2023-11-14T17:37:27.865188+00:00 [queued]>
+[2023-11-14T17:38:09.087+0000] {taskinstance.py:1359} INFO - Starting attempt 1 of 2
+[2023-11-14T17:38:09.306+0000] {taskinstance.py:1380} INFO - Executing <Task(PythonOperator): download_location_data> on 2023-11-14 17:37:27.865188+00:00
+[2023-11-14T17:38:09.371+0000] {standard_task_runner.py:57} INFO - Started process 16871 to run task
+[2023-11-14T17:38:09.652+0000] {standard_task_runner.py:84} INFO - Running: ['***', 'tasks', 'run', 'covid_data_dag_postgres', 'download_location_data', 'manual__2023-11-14T17:37:27.865188+00:00', '--job-id', '926', '--raw', '--subdir', 'DAGS_FOLDER/Dag_postgres.py', '--cfg-path', '/tmp/tmpjydidr2w']
+[2023-11-14T17:38:09.746+0000] {standard_task_runner.py:85} INFO - Job 926: Subtask download_location_data
+[2023-11-14T17:39:21.750+0000] {task_command.py:415} INFO - Running <TaskInstance: covid_data_dag_postgres.download_location_data manual__2023-11-14T17:37:27.865188+00:00 [running]> on host 172.21.0.4
+[2023-11-14T17:39:32.205+0000] {taskinstance.py:1660} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='covid_data_dag_postgres' AIRFLOW_CTX_TASK_ID='download_location_data' AIRFLOW_CTX_EXECUTION_DATE='2023-11-14T17:37:27.865188+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='manual__2023-11-14T17:37:27.865188+00:00'
+[2023-11-14T17:39:32.219+0000] {taskinstance.py:1935} ERROR - Task failed with exception
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/operators/python.py", line 192, in execute
+    return_value = self.execute_callable()
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/operators/python.py", line 209, in execute_callable
+    return self.python_callable(*self.op_args, **self.op_kwargs)
+  File "/opt/airflow/dags/Dag_postgres.py", line 55, in download_location_table
+    response = requests.get(location_csv)
+  File "/home/airflow/.local/lib/python3.8/site-packages/requests/api.py", line 73, in get
+    return request("get", url, params=params, **kwargs)
+  File "/home/airflow/.local/lib/python3.8/site-packages/requests/api.py", line 59, in request
+    return session.request(method=method, url=url, **kwargs)
+  File "/home/airflow/.local/lib/python3.8/site-packages/requests/sessions.py", line 589, in request
+    resp = self.send(prep, **send_kwargs)
+  File "/home/airflow/.local/lib/python3.8/site-packages/requests/sessions.py", line 697, in send
+    adapter = self.get_adapter(url=request.url)
+  File "/home/airflow/.local/lib/python3.8/site-packages/requests/sessions.py", line 794, in get_adapter
+    raise InvalidSchema(f"No connection adapters were found for {url!r}")
+requests.exceptions.InvalidSchema: No connection adapters were found for 'blob:https://unstats.un.org/fe93165f-9927-40fd-8696-be4e89c34232'
+[2023-11-14T17:39:32.287+0000] {taskinstance.py:1398} INFO - Marking task as UP_FOR_RETRY. dag_id=covid_data_dag_postgres, task_id=download_location_data, execution_date=20231114T173727, start_date=20231114T173808, end_date=20231114T173932
+[2023-11-14T17:39:32.335+0000] {standard_task_runner.py:104} ERROR - Failed to execute job 926 for task download_location_data (No connection adapters were found for 'blob:https://unstats.un.org/fe93165f-9927-40fd-8696-be4e89c34232'; 16871)
+[2023-11-14T17:39:32.548+0000] {local_task_job_runner.py:228} INFO - Task exited with return code 1
+[2023-11-14T17:40:02.911+0000] {taskinstance.py:2776} INFO - 0 downstream tasks scheduled from follow-on schedule check

@@ -15,6 +15,7 @@ import pandas as pd
 import wbgapi as wb
 import numpy as np
 
+location_csv = 'https://raw.githubusercontent.com/lukes/ISO-3166-Countries-with-Regional-Codes/master/all/all.csv'
 population_data='https://api.worldbank.org/v2/en/indicator/SP.POP.TOTL?downloadformat=csv'
 cases_deaths='https://covid19.who.int/WHO-COVID-19-global-data.csv'
 vaccinations='https://raw.githubusercontent.com/owid/covid-19-data/master/public/data/vaccinations/vaccinations.csv'
@@ -33,6 +34,28 @@ default_args = {
 
 dag = DAG('covid_data_dag_postgres', start_date=airflow.utils.dates.days_ago(0), default_args=default_args, schedule_interval='@daily')
 
+def create_time_csv():
+    start_date = f"{2019}-01-01"
+    end_date = f"{2023}-12-31"
+    date_range = pd.date_range(start=start_date, end=end_date, freq='D')
+    
+    data = {
+        'Date': date_range,
+        'Week': date_range.isocalendar().week,
+        'Month': date_range.month,
+        'Trimester': (date_range.month - 1) // 3 + 1,
+        'Semester': (date_range.month <= 6).astype(int) + 1,
+        'Year': date_range.year
+        }
+    
+    df = pd.DataFrame(data)
+    df.to_csv('/opt/airflow/dags/postgres/time_table.csv', index=False)
+
+def download_location_table():
+    response = requests.get(location_csv)
+    with open('/opt/airflow/dags/postgres/location.csv', 'wb') as f:
+        f.write(response.content)
+    
 def download_cases_deaths():
     response = requests.get(cases_deaths)
     with open('/opt/airflow/dags/postgres/cases_deaths.csv', 'wb') as f:
@@ -145,13 +168,19 @@ def wrangle_government_measures():
     #df = df[['CountryName', 'CountryCode', 'RegionName', 'RegionCode', 'Jurisdiction', 'Date', 'StringencyIndex_Average', 'GovernmentResponseIndex_Average', 'ContainmentHealthIndex_Average', 'EconomicSupportIndex']]
     
     
-    df.to_csv('/opt/airflow/dags/postgres/government_measures_wrangled.csv', index=False)
+    #df.to_csv('/opt/airflow/dags/postgres/government_measures_wrangled.csv', index=False)
 
 def wrangle_population_data():
     df = pd.read_csv('/opt/airflow/dags/postgres/population_data.csv')
     # Apply data wrangling here
     # ...
-    df.to_csv('/opt/airflow/dags/postgres/population_data_wrangled.csv', index=False)
+    #df.to_csv('/opt/airflow/dags/postgres/population_data_wrangled.csv', index=False)
+    
+def wrangle_location_data():
+    df = pd.read_csv('/opt/airflow/dags/postgres/location.csv')
+    # Apply data wrangling here
+    # ...
+    #df.to_csv('/opt/airflow/dags/postgres/location_wrangled.csv', index=False)
 
 # I KEPT (COMMENTED) THE FOLLOWING FUNCTIONS (bla_bla_query()) AS A REFERENCE, BUT 
 # THEY SHOULD BE MODIFIED BASED ON THE SHAPE OF THE DATA AFTER THE WRANGLING
@@ -342,6 +371,20 @@ download_population_data_task = PythonOperator(
     dag=dag,
 )
 
+# Download the location.csv file from the GitHub repository
+download_location_data_task = PythonOperator(
+    task_id='download_location_data',
+    python_callable=download_location_table,
+    dag=dag,
+)
+
+# Create the time_table.csv file with the time dimensions
+create_time_csv = PythonOperator(
+    task_id='create_time_csv',
+    python_callable=create_time_csv,
+    dag=dag,
+)
+
 wrangle_cases_deaths_task = PythonOperator(
     task_id='wrangle_cases_deaths',
     python_callable=wrangle_cases_deaths,
@@ -364,6 +407,13 @@ wrangle_government_measures_task = PythonOperator(
 wrangle_population_data_task = PythonOperator(
     task_id='wrangle_population_data',
     python_callable=wrangle_population_data,
+    dag=dag,
+)
+
+
+wrangle_location_data_task = PythonOperator(
+    task_id='wrangle_location_data',
+    python_callable=wrangle_location_data,
     dag=dag,
 )
 
@@ -438,5 +488,10 @@ create_government_measures_table = PostgresOperator(
 [download_vaccinations, download_population_data_task] >> wrangle_vaccinations_task #>> create_vaccinations_query_operator >> create_vaccinations_table
 download_government_measures >> wrangle_government_measures_task #>> create_government_measures_query_operator >> create_government_measures_table
 download_population_data_task >> wrangle_population_data_task
+download_location_data_task >> wrangle_location_data_task #>> create_location_table
+create_time_csv #>> create_time_table
+#[wrangle_cases_deaths_task, wrangle_vaccinations_task, wrangle_government_measures_task, wrangle_location_data_task] >> [join_wrangled_data_task]
+#join_wrangled_data_task >> create_big_table
+
 
  
