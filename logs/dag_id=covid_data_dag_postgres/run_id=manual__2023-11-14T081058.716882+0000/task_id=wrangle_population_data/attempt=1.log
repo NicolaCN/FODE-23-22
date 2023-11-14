@@ -1,0 +1,13 @@
+[2023-11-14T08:11:23.742+0000] {taskinstance.py:1157} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: covid_data_dag_postgres.wrangle_population_data manual__2023-11-14T08:10:58.716882+00:00 [queued]>
+[2023-11-14T08:11:23.837+0000] {taskinstance.py:1157} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: covid_data_dag_postgres.wrangle_population_data manual__2023-11-14T08:10:58.716882+00:00 [queued]>
+[2023-11-14T08:11:23.839+0000] {taskinstance.py:1359} INFO - Starting attempt 1 of 2
+[2023-11-14T08:11:24.011+0000] {taskinstance.py:1380} INFO - Executing <Task(PythonOperator): wrangle_population_data> on 2023-11-14 08:10:58.716882+00:00
+[2023-11-14T08:11:24.065+0000] {standard_task_runner.py:57} INFO - Started process 618 to run task
+[2023-11-14T08:11:24.213+0000] {standard_task_runner.py:84} INFO - Running: ['***', 'tasks', 'run', 'covid_data_dag_postgres', 'wrangle_population_data', 'manual__2023-11-14T08:10:58.716882+00:00', '--job-id', '893', '--raw', '--subdir', 'DAGS_FOLDER/Dag_postgres.py', '--cfg-path', '/tmp/tmpobk5p5cw']
+[2023-11-14T08:11:24.286+0000] {standard_task_runner.py:85} INFO - Job 893: Subtask wrangle_population_data
+[2023-11-14T08:11:26.741+0000] {task_command.py:415} INFO - Running <TaskInstance: covid_data_dag_postgres.wrangle_population_data manual__2023-11-14T08:10:58.716882+00:00 [running]> on host 172.21.0.4
+[2023-11-14T08:11:27.176+0000] {taskinstance.py:1660} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='covid_data_dag_postgres' AIRFLOW_CTX_TASK_ID='wrangle_population_data' AIRFLOW_CTX_EXECUTION_DATE='2023-11-14T08:10:58.716882+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='manual__2023-11-14T08:10:58.716882+00:00'
+[2023-11-14T08:11:27.289+0000] {python.py:194} INFO - Done. Returned value was: None
+[2023-11-14T08:11:27.324+0000] {taskinstance.py:1398} INFO - Marking task as SUCCESS. dag_id=covid_data_dag_postgres, task_id=wrangle_population_data, execution_date=20231114T081058, start_date=20231114T081123, end_date=20231114T081127
+[2023-11-14T08:11:27.396+0000] {local_task_job_runner.py:228} INFO - Task exited with return code 0
+[2023-11-14T08:11:27.509+0000] {taskinstance.py:2776} INFO - 0 downstream tasks scheduled from follow-on schedule check

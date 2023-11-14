@@ -1,0 +1,22 @@
+[2023-11-13T17:00:30.756+0000] {taskinstance.py:1157} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: covid_data_dag_postgres.download_population_data manual__2023-11-13T16:59:54.495736+00:00 [queued]>
+[2023-11-13T17:00:30.776+0000] {taskinstance.py:1157} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: covid_data_dag_postgres.download_population_data manual__2023-11-13T16:59:54.495736+00:00 [queued]>
+[2023-11-13T17:00:30.787+0000] {taskinstance.py:1359} INFO - Starting attempt 2 of 2
+[2023-11-13T17:00:30.847+0000] {taskinstance.py:1380} INFO - Executing <Task(PythonOperator): download_population_data> on 2023-11-13 16:59:54.495736+00:00
+[2023-11-13T17:00:30.860+0000] {standard_task_runner.py:57} INFO - Started process 1054 to run task
+[2023-11-13T17:00:30.876+0000] {standard_task_runner.py:84} INFO - Running: ['***', 'tasks', 'run', 'covid_data_dag_postgres', 'download_population_data', 'manual__2023-11-13T16:59:54.495736+00:00', '--job-id', '855', '--raw', '--subdir', 'DAGS_FOLDER/Dag_postgres.py', '--cfg-path', '/tmp/tmpfnk5g4zb']
+[2023-11-13T17:00:30.883+0000] {standard_task_runner.py:85} INFO - Job 855: Subtask download_population_data
+[2023-11-13T17:00:31.442+0000] {task_command.py:415} INFO - Running <TaskInstance: covid_data_dag_postgres.download_population_data manual__2023-11-13T16:59:54.495736+00:00 [running]> on host 172.21.0.9
+[2023-11-13T17:00:31.732+0000] {taskinstance.py:1660} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='covid_data_dag_postgres' AIRFLOW_CTX_TASK_ID='download_population_data' AIRFLOW_CTX_EXECUTION_DATE='2023-11-13T16:59:54.495736+00:00' AIRFLOW_CTX_TRY_NUMBER='2' AIRFLOW_CTX_DAG_RUN_ID='manual__2023-11-13T16:59:54.495736+00:00'
+[2023-11-13T17:00:38.173+0000] {taskinstance.py:1935} ERROR - Task failed with exception
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/operators/python.py", line 192, in execute
+    return_value = self.execute_callable()
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/operators/python.py", line 209, in execute_callable
+    return self.python_callable(*self.op_args, **self.op_kwargs)
+  File "/opt/airflow/dags/Dag_postgres.py", line 57, in download_population_data
+    data_reshaped["YR2023"] = data_reshaped["YR2022"]
+UnboundLocalError: local variable 'data_reshaped' referenced before assignment
+[2023-11-13T17:00:38.195+0000] {taskinstance.py:1398} INFO - Marking task as FAILED. dag_id=covid_data_dag_postgres, task_id=download_population_data, execution_date=20231113T165954, start_date=20231113T170030, end_date=20231113T170038
+[2023-11-13T17:00:38.231+0000] {standard_task_runner.py:104} ERROR - Failed to execute job 855 for task download_population_data (local variable 'data_reshaped' referenced before assignment; 1054)
+[2023-11-13T17:00:38.265+0000] {local_task_job_runner.py:228} INFO - Task exited with return code 1
+[2023-11-13T17:00:38.657+0000] {taskinstance.py:2776} INFO - 0 downstream tasks scheduled from follow-on schedule check

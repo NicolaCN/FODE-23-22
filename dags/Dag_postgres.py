@@ -13,6 +13,7 @@ from airflow.providers.postgres.hooks.postgres import PostgresHook
 import csv
 import pandas as pd
 import wbgapi as wb
+import numpy as np
 
 population_data='https://api.worldbank.org/v2/en/indicator/SP.POP.TOTL?downloadformat=csv'
 cases_deaths='https://covid19.who.int/WHO-COVID-19-global-data.csv'
@@ -52,17 +53,81 @@ def download_government_measures():
 def download_population_data():
     data = wb.data.DataFrame('SP.POP.TOTL', labels=True, time=range(2019, 2023))
     
-    data_reshaped = pd.melt(data, id_vars=['Country'], var_name='Year', value_name='Total Population')
+    #Manually add the population for 2023 and set it equal to the population of 2022
+    data["YR2023"] = data["YR2022"]
+    
+    data_reshaped = pd.melt(data, id_vars=['Country'], var_name='Year', value_name='population')
     data_reshaped['Year'] = data_reshaped['Year'].apply(lambda year: int(year[2:]))
     
     data_reshaped.to_csv('/opt/airflow/dags/postgres/population_data.csv', index=False)
 
-  
+def format_date(df: pd.DataFrame) -> pd.DataFrame:
+    print("Formatting date…")
+    df["Date_reported"] = pd.to_datetime(df["Date_reported"], format="%Y-%m-%d")
+    return df
+
+def discard_rows(df):
+    print("Discarding rows…")
+    # For all rows where new_cases or new_deaths is negative, we keep the cumulative value but set
+    # the daily change to NA. This also sets the 7-day rolling average to NA for the next 7 days.
+    df.loc[df.New_cases < 0, "New_cases"] = np.nan
+    df.loc[df.New_deaths < 0, "New_deaths"] = np.nan
+    return df
+
+def _inject_growth(df, prefix, periods):
+    cases_colname = "%s_cases" % prefix
+    deaths_colname = "%s_deaths" % prefix
+    cases_growth_colname = "%s_pct_growth_cases" % prefix
+    deaths_growth_colname = "%s_pct_growth_deaths" % prefix
+
+    df[[cases_colname, deaths_colname]] = (
+        df[["Country", "New_cases", "New_deaths"]]
+        .groupby("Country")[["New_cases", "New_deaths"]]
+        .rolling(window=periods, min_periods=periods - 1, center=False)
+        .sum()
+        .reset_index(level=0, drop=True)
+    )
+    df[[cases_growth_colname, deaths_growth_colname]] = (
+        df[["Country", cases_colname, deaths_colname]]
+        .groupby("Country")[[cases_colname, deaths_colname]]
+        .pct_change(periods=periods, fill_method=None)
+        .round(3)
+        .replace([np.inf, -np.inf], pd.NA)
+        * 100
+    )
+    
+    return df
+    
+def _inject_population(df):
+    'dags\postgres\population_data.csv'
+    df_population = pd.read_csv('/opt/airflow/dags/postgres/population_data.csv')
+    # Extract year from Date_reported column and create a new column Year
+    df['Year'] = pd.DatetimeIndex(df['Date_reported']).year
+    # 
+    # Merge the two dataframes based on Country and Year columns
+    df_merged = pd.merge(df, df_population, how='left', on=['Country', 'Year'])
+    df_merged.drop('Year', axis=1, inplace=True)
+    
+    return df_merged
+
+def _per_capita(df, measures):
+    for measure in measures:
+        pop_measure = measure + "_per_million"
+        series = df[measure] / (df["population"] / 1e6)
+        df[pop_measure] = series.round(decimals=3)
+    #df = drop_population(df)
+    return df
+
 def wrangle_cases_deaths():
     df = pd.read_csv('/opt/airflow/dags/postgres/cases_deaths.csv')
     
-    # Apply data wrangling here
-    # ...
+    df = format_date(df)
+    df = discard_rows(df)
+    df = _inject_growth(df, 'Weekly', 7)   
+    df = _inject_population(df)
+    df = _per_capita(df, ["New_cases", "New_deaths", "Cumulative_cases", 
+                          "Cumulative_deaths", "Weekly_cases", "Weekly_deaths",])
+    
     
     df.to_csv('/opt/airflow/dags/postgres/cases_deaths_wrangled.csv', index=False)
 
@@ -85,9 +150,7 @@ def wrangle_government_measures():
 def wrangle_population_data():
     df = pd.read_csv('/opt/airflow/dags/postgres/population_data.csv')
     # Apply data wrangling here
-    df_reshaped = pd.melt(df, id_vars=['Country'], var_name='Year', value_name='Total Population')
-    df_reshaped['Year'] = df_reshaped['Year'].apply(lambda year: int(year[2:]))
-    
+    # ...
     df.to_csv('/opt/airflow/dags/postgres/population_data_wrangled.csv', index=False)
 
 # I KEPT (COMMENTED) THE FOLLOWING FUNCTIONS (bla_bla_query()) AS A REFERENCE, BUT 
@@ -371,9 +434,9 @@ create_government_measures_table = PostgresOperator(
 )
 '''
 
-download_cases_deaths >> wrangle_cases_deaths_task #>> create_cases_deaths_query_operator >> create_cases_deaths_table >> print_vaccinations_operator
-download_vaccinations >> wrangle_vaccinations_task #>> create_vaccinations_query_operator >> create_vaccinations_table
+[download_cases_deaths, download_population_data_task] >> wrangle_cases_deaths_task #>> create_cases_deaths_query_operator >> create_cases_deaths_table >> print_vaccinations_operator
+[download_vaccinations, download_population_data_task] >> wrangle_vaccinations_task #>> create_vaccinations_query_operator >> create_vaccinations_table
 download_government_measures >> wrangle_government_measures_task #>> create_government_measures_query_operator >> create_government_measures_table
-download_population_data >> wrangle_population_data
+download_population_data_task >> wrangle_population_data_task
 
  

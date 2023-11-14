@@ -1,0 +1,470 @@
+[2023-11-14T07:59:11.883+0000] {processor.py:157} INFO - Started process (PID=117) to work on /opt/airflow/dags/Dag_postgres.py
+[2023-11-14T07:59:11.885+0000] {processor.py:829} INFO - Processing file /opt/airflow/dags/Dag_postgres.py for tasks to queue
+[2023-11-14T07:59:11.891+0000] {logging_mixin.py:151} INFO - [2023-11-14T07:59:11.890+0000] {dagbag.py:539} INFO - Filling up the DagBag from /opt/airflow/dags/Dag_postgres.py
+[2023-11-14T07:59:14.800+0000] {processor.py:839} INFO - DAG(s) dict_keys(['covid_data_dag_postgres']) retrieved from /opt/airflow/dags/Dag_postgres.py
+[2023-11-14T07:59:16.477+0000] {logging_mixin.py:151} INFO - [2023-11-14T07:59:16.476+0000] {security.py:708} INFO - Not syncing DAG-level permissions for DAG 'DAG:covid_data_dag_postgres' as access control is unset.
+[2023-11-14T07:59:16.482+0000] {logging_mixin.py:151} INFO - [2023-11-14T07:59:16.481+0000] {dag.py:2915} INFO - Sync 1 DAGs
+[2023-11-14T07:59:16.633+0000] {logging_mixin.py:151} INFO - [2023-11-14T07:59:16.633+0000] {dag.py:3696} INFO - Setting next_dagrun for covid_data_dag_postgres to 2023-11-14T00:00:00+00:00, run_after=2023-11-15T00:00:00+00:00
+[2023-11-14T07:59:16.800+0000] {processor.py:179} INFO - Processing /opt/airflow/dags/Dag_postgres.py took 4.927 seconds
+[2023-11-14T07:59:47.493+0000] {processor.py:157} INFO - Started process (PID=136) to work on /opt/airflow/dags/Dag_postgres.py
+[2023-11-14T07:59:47.505+0000] {processor.py:829} INFO - Processing file /opt/airflow/dags/Dag_postgres.py for tasks to queue
+[2023-11-14T07:59:47.512+0000] {logging_mixin.py:151} INFO - [2023-11-14T07:59:47.511+0000] {dagbag.py:539} INFO - Filling up the DagBag from /opt/airflow/dags/Dag_postgres.py
+[2023-11-14T07:59:48.984+0000] {processor.py:839} INFO - DAG(s) dict_keys(['covid_data_dag_postgres']) retrieved from /opt/airflow/dags/Dag_postgres.py
+[2023-11-14T07:59:49.129+0000] {logging_mixin.py:151} INFO - [2023-11-14T07:59:49.128+0000] {dag.py:2915} INFO - Sync 1 DAGs
+[2023-11-14T07:59:49.226+0000] {logging_mixin.py:151} INFO - [2023-11-14T07:59:49.226+0000] {dag.py:3696} INFO - Setting next_dagrun for covid_data_dag_postgres to 2023-11-14T00:00:00+00:00, run_after=2023-11-15T00:00:00+00:00
+[2023-11-14T07:59:49.297+0000] {processor.py:179} INFO - Processing /opt/airflow/dags/Dag_postgres.py took 1.825 seconds
+[2023-11-14T08:00:19.836+0000] {processor.py:157} INFO - Started process (PID=156) to work on /opt/airflow/dags/Dag_postgres.py
+[2023-11-14T08:00:19.838+0000] {processor.py:829} INFO - Processing file /opt/airflow/dags/Dag_postgres.py for tasks to queue
+[2023-11-14T08:00:19.841+0000] {logging_mixin.py:151} INFO - [2023-11-14T08:00:19.840+0000] {dagbag.py:539} INFO - Filling up the DagBag from /opt/airflow/dags/Dag_postgres.py
+[2023-11-14T08:00:20.608+0000] {processor.py:839} INFO - DAG(s) dict_keys(['covid_data_dag_postgres']) retrieved from /opt/airflow/dags/Dag_postgres.py
+[2023-11-14T08:00:20.659+0000] {logging_mixin.py:151} INFO - [2023-11-14T08:00:20.658+0000] {dag.py:2915} INFO - Sync 1 DAGs
+[2023-11-14T08:00:20.700+0000] {logging_mixin.py:151} INFO - [2023-11-14T08:00:20.700+0000] {dag.py:3696} INFO - Setting next_dagrun for covid_data_dag_postgres to 2023-11-14T00:00:00+00:00, run_after=2023-11-15T00:00:00+00:00
+[2023-11-14T08:00:20.741+0000] {processor.py:179} INFO - Processing /opt/airflow/dags/Dag_postgres.py took 0.913 seconds
+[2023-11-14T08:00:51.362+0000] {processor.py:157} INFO - Started process (PID=185) to work on /opt/airflow/dags/Dag_postgres.py
+[2023-11-14T08:00:51.364+0000] {processor.py:829} INFO - Processing file /opt/airflow/dags/Dag_postgres.py for tasks to queue
+[2023-11-14T08:00:51.365+0000] {logging_mixin.py:151} INFO - [2023-11-14T08:00:51.365+0000] {dagbag.py:539} INFO - Filling up the DagBag from /opt/airflow/dags/Dag_postgres.py
+[2023-11-14T08:00:52.083+0000] {processor.py:839} INFO - DAG(s) dict_keys(['covid_data_dag_postgres']) retrieved from /opt/airflow/dags/Dag_postgres.py
+[2023-11-14T08:00:52.287+0000] {logging_mixin.py:151} INFO - [2023-11-14T08:00:52.285+0000] {dag.py:2915} INFO - Sync 1 DAGs
+[2023-11-14T08:00:52.426+0000] {logging_mixin.py:151} INFO - [2023-11-14T08:00:52.425+0000] {dag.py:3696} INFO - Setting next_dagrun for covid_data_dag_postgres to 2023-11-14T00:00:00+00:00, run_after=2023-11-15T00:00:00+00:00
+[2023-11-14T08:00:52.502+0000] {processor.py:179} INFO - Processing /opt/airflow/dags/Dag_postgres.py took 1.146 seconds
+[2023-11-14T08:01:23.118+0000] {processor.py:157} INFO - Started process (PID=206) to work on /opt/airflow/dags/Dag_postgres.py
+[2023-11-14T08:01:23.121+0000] {processor.py:829} INFO - Processing file /opt/airflow/dags/Dag_postgres.py for tasks to queue
+[2023-11-14T08:01:23.127+0000] {logging_mixin.py:151} INFO - [2023-11-14T08:01:23.126+0000] {dagbag.py:539} INFO - Filling up the DagBag from /opt/airflow/dags/Dag_postgres.py
+[2023-11-14T08:01:23.814+0000] {processor.py:839} INFO - DAG(s) dict_keys(['covid_data_dag_postgres']) retrieved from /opt/airflow/dags/Dag_postgres.py
+[2023-11-14T08:01:23.860+0000] {logging_mixin.py:151} INFO - [2023-11-14T08:01:23.859+0000] {dag.py:2915} INFO - Sync 1 DAGs
+[2023-11-14T08:01:23.897+0000] {logging_mixin.py:151} INFO - [2023-11-14T08:01:23.896+0000] {dag.py:3696} INFO - Setting next_dagrun for covid_data_dag_postgres to 2023-11-14T00:00:00+00:00, run_after=2023-11-15T00:00:00+00:00
+[2023-11-14T08:01:23.936+0000] {processor.py:179} INFO - Processing /opt/airflow/dags/Dag_postgres.py took 0.835 seconds
+[2023-11-14T08:01:54.522+0000] {processor.py:157} INFO - Started process (PID=227) to work on /opt/airflow/dags/Dag_postgres.py
+[2023-11-14T08:01:54.562+0000] {processor.py:829} INFO - Processing file /opt/airflow/dags/Dag_postgres.py for tasks to queue
+[2023-11-14T08:01:54.569+0000] {logging_mixin.py:151} INFO - [2023-11-14T08:01:54.567+0000] {dagbag.py:539} INFO - Filling up the DagBag from /opt/airflow/dags/Dag_postgres.py
+[2023-11-14T08:01:55.378+0000] {processor.py:839} INFO - DAG(s) dict_keys(['covid_data_dag_postgres']) retrieved from /opt/airflow/dags/Dag_postgres.py
+[2023-11-14T08:01:55.425+0000] {logging_mixin.py:151} INFO - [2023-11-14T08:01:55.424+0000] {dag.py:2915} INFO - Sync 1 DAGs
+[2023-11-14T08:01:55.465+0000] {logging_mixin.py:151} INFO - [2023-11-14T08:01:55.464+0000] {dag.py:3696} INFO - Setting next_dagrun for covid_data_dag_postgres to 2023-11-14T00:00:00+00:00, run_after=2023-11-15T00:00:00+00:00
+[2023-11-14T08:01:55.506+0000] {processor.py:179} INFO - Processing /opt/airflow/dags/Dag_postgres.py took 1.002 seconds
+[2023-11-14T08:02:26.053+0000] {processor.py:157} INFO - Started process (PID=256) to work on /opt/airflow/dags/Dag_postgres.py
+[2023-11-14T08:02:26.054+0000] {processor.py:829} INFO - Processing file /opt/airflow/dags/Dag_postgres.py for tasks to queue
+[2023-11-14T08:02:26.057+0000] {logging_mixin.py:151} INFO - [2023-11-14T08:02:26.056+0000] {dagbag.py:539} INFO - Filling up the DagBag from /opt/airflow/dags/Dag_postgres.py
+[2023-11-14T08:02:26.842+0000] {processor.py:839} INFO - DAG(s) dict_keys(['covid_data_dag_postgres']) retrieved from /opt/airflow/dags/Dag_postgres.py
+[2023-11-14T08:02:26.899+0000] {logging_mixin.py:151} INFO - [2023-11-14T08:02:26.898+0000] {dag.py:2915} INFO - Sync 1 DAGs
+[2023-11-14T08:02:26.948+0000] {logging_mixin.py:151} INFO - [2023-11-14T08:02:26.948+0000] {dag.py:3696} INFO - Setting next_dagrun for covid_data_dag_postgres to 2023-11-14T00:00:00+00:00, run_after=2023-11-15T00:00:00+00:00
+[2023-11-14T08:02:26.988+0000] {processor.py:179} INFO - Processing /opt/airflow/dags/Dag_postgres.py took 0.943 seconds
+[2023-11-14T08:02:57.551+0000] {processor.py:157} INFO - Started process (PID=278) to work on /opt/airflow/dags/Dag_postgres.py
+[2023-11-14T08:02:57.555+0000] {processor.py:829} INFO - Processing file /opt/airflow/dags/Dag_postgres.py for tasks to queue
+[2023-11-14T08:02:57.558+0000] {logging_mixin.py:151} INFO - [2023-11-14T08:02:57.558+0000] {dagbag.py:539} INFO - Filling up the DagBag from /opt/airflow/dags/Dag_postgres.py
+[2023-11-14T08:02:58.581+0000] {processor.py:839} INFO - DAG(s) dict_keys(['covid_data_dag_postgres']) retrieved from /opt/airflow/dags/Dag_postgres.py
+[2023-11-14T08:02:58.626+0000] {logging_mixin.py:151} INFO - [2023-11-14T08:02:58.625+0000] {dag.py:2915} INFO - Sync 1 DAGs
+[2023-11-14T08:02:58.667+0000] {logging_mixin.py:151} INFO - [2023-11-14T08:02:58.667+0000] {dag.py:3696} INFO - Setting next_dagrun for covid_data_dag_postgres to 2023-11-14T00:00:00+00:00, run_after=2023-11-15T00:00:00+00:00
+[2023-11-14T08:02:58.754+0000] {processor.py:179} INFO - Processing /opt/airflow/dags/Dag_postgres.py took 1.209 seconds
+[2023-11-14T08:03:29.119+0000] {processor.py:157} INFO - Started process (PID=297) to work on /opt/airflow/dags/Dag_postgres.py
+[2023-11-14T08:03:29.124+0000] {processor.py:829} INFO - Processing file /opt/airflow/dags/Dag_postgres.py for tasks to queue
+[2023-11-14T08:03:29.134+0000] {logging_mixin.py:151} INFO - [2023-11-14T08:03:29.132+0000] {dagbag.py:539} INFO - Filling up the DagBag from /opt/airflow/dags/Dag_postgres.py
+[2023-11-14T08:03:29.719+0000] {processor.py:839} INFO - DAG(s) dict_keys(['covid_data_dag_postgres']) retrieved from /opt/airflow/dags/Dag_postgres.py
+[2023-11-14T08:03:29.765+0000] {logging_mixin.py:151} INFO - [2023-11-14T08:03:29.764+0000] {dag.py:2915} INFO - Sync 1 DAGs
+[2023-11-14T08:03:29.802+0000] {logging_mixin.py:151} INFO - [2023-11-14T08:03:29.802+0000] {dag.py:3696} INFO - Setting next_dagrun for covid_data_dag_postgres to 2023-11-14T00:00:00+00:00, run_after=2023-11-15T00:00:00+00:00
+[2023-11-14T08:03:29.834+0000] {processor.py:179} INFO - Processing /opt/airflow/dags/Dag_postgres.py took 0.739 seconds
+[2023-11-14T08:04:00.510+0000] {processor.py:157} INFO - Started process (PID=317) to work on /opt/airflow/dags/Dag_postgres.py
+[2023-11-14T08:04:00.515+0000] {processor.py:829} INFO - Processing file /opt/airflow/dags/Dag_postgres.py for tasks to queue
+[2023-11-14T08:04:00.522+0000] {logging_mixin.py:151} INFO - [2023-11-14T08:04:00.520+0000] {dagbag.py:539} INFO - Filling up the DagBag from /opt/airflow/dags/Dag_postgres.py
+[2023-11-14T08:04:01.554+0000] {processor.py:839} INFO - DAG(s) dict_keys(['covid_data_dag_postgres']) retrieved from /opt/airflow/dags/Dag_postgres.py
+[2023-11-14T08:04:01.621+0000] {logging_mixin.py:151} INFO - [2023-11-14T08:04:01.620+0000] {dag.py:2915} INFO - Sync 1 DAGs
+[2023-11-14T08:04:01.718+0000] {logging_mixin.py:151} INFO - [2023-11-14T08:04:01.717+0000] {dag.py:3696} INFO - Setting next_dagrun for covid_data_dag_postgres to 2023-11-14T00:00:00+00:00, run_after=2023-11-15T00:00:00+00:00
+[2023-11-14T08:04:01.775+0000] {processor.py:179} INFO - Processing /opt/airflow/dags/Dag_postgres.py took 1.290 seconds
+[2023-11-14T08:04:32.860+0000] {processor.py:157} INFO - Started process (PID=342) to work on /opt/airflow/dags/Dag_postgres.py
+[2023-11-14T08:04:32.866+0000] {processor.py:829} INFO - Processing file /opt/airflow/dags/Dag_postgres.py for tasks to queue
+[2023-11-14T08:04:32.869+0000] {logging_mixin.py:151} INFO - [2023-11-14T08:04:32.868+0000] {dagbag.py:539} INFO - Filling up the DagBag from /opt/airflow/dags/Dag_postgres.py
+[2023-11-14T08:04:35.702+0000] {processor.py:839} INFO - DAG(s) dict_keys(['covid_data_dag_postgres']) retrieved from /opt/airflow/dags/Dag_postgres.py
+[2023-11-14T08:04:35.788+0000] {logging_mixin.py:151} INFO - [2023-11-14T08:04:35.787+0000] {dag.py:2915} INFO - Sync 1 DAGs
+[2023-11-14T08:04:35.833+0000] {logging_mixin.py:151} INFO - [2023-11-14T08:04:35.832+0000] {dag.py:3696} INFO - Setting next_dagrun for covid_data_dag_postgres to 2023-11-14T00:00:00+00:00, run_after=2023-11-15T00:00:00+00:00
+[2023-11-14T08:04:35.869+0000] {processor.py:179} INFO - Processing /opt/airflow/dags/Dag_postgres.py took 3.028 seconds
+[2023-11-14T08:05:06.547+0000] {processor.py:157} INFO - Started process (PID=365) to work on /opt/airflow/dags/Dag_postgres.py
+[2023-11-14T08:05:06.549+0000] {processor.py:829} INFO - Processing file /opt/airflow/dags/Dag_postgres.py for tasks to queue
+[2023-11-14T08:05:06.552+0000] {logging_mixin.py:151} INFO - [2023-11-14T08:05:06.551+0000] {dagbag.py:539} INFO - Filling up the DagBag from /opt/airflow/dags/Dag_postgres.py
+[2023-11-14T08:05:07.789+0000] {processor.py:839} INFO - DAG(s) dict_keys(['covid_data_dag_postgres']) retrieved from /opt/airflow/dags/Dag_postgres.py
+[2023-11-14T08:05:07.899+0000] {logging_mixin.py:151} INFO - [2023-11-14T08:05:07.897+0000] {dag.py:2915} INFO - Sync 1 DAGs
+[2023-11-14T08:05:07.989+0000] {logging_mixin.py:151} INFO - [2023-11-14T08:05:07.988+0000] {dag.py:3696} INFO - Setting next_dagrun for covid_data_dag_postgres to 2023-11-14T00:00:00+00:00, run_after=2023-11-15T00:00:00+00:00
+[2023-11-14T08:05:08.065+0000] {processor.py:179} INFO - Processing /opt/airflow/dags/Dag_postgres.py took 1.573 seconds
+[2023-11-14T08:05:38.585+0000] {processor.py:157} INFO - Started process (PID=392) to work on /opt/airflow/dags/Dag_postgres.py
+[2023-11-14T08:05:38.587+0000] {processor.py:829} INFO - Processing file /opt/airflow/dags/Dag_postgres.py for tasks to queue
+[2023-11-14T08:05:38.589+0000] {logging_mixin.py:151} INFO - [2023-11-14T08:05:38.588+0000] {dagbag.py:539} INFO - Filling up the DagBag from /opt/airflow/dags/Dag_postgres.py
+[2023-11-14T08:05:39.361+0000] {processor.py:839} INFO - DAG(s) dict_keys(['covid_data_dag_postgres']) retrieved from /opt/airflow/dags/Dag_postgres.py
+[2023-11-14T08:05:39.407+0000] {logging_mixin.py:151} INFO - [2023-11-14T08:05:39.406+0000] {dag.py:2915} INFO - Sync 1 DAGs
+[2023-11-14T08:05:39.449+0000] {logging_mixin.py:151} INFO - [2023-11-14T08:05:39.449+0000] {dag.py:3696} INFO - Setting next_dagrun for covid_data_dag_postgres to 2023-11-14T00:00:00+00:00, run_after=2023-11-15T00:00:00+00:00
+[2023-11-14T08:05:39.480+0000] {processor.py:179} INFO - Processing /opt/airflow/dags/Dag_postgres.py took 0.901 seconds
+[2023-11-14T08:05:58.874+0000] {processor.py:157} INFO - Started process (PID=405) to work on /opt/airflow/dags/Dag_postgres.py
+[2023-11-14T08:05:58.877+0000] {processor.py:829} INFO - Processing file /opt/airflow/dags/Dag_postgres.py for tasks to queue
+[2023-11-14T08:05:58.889+0000] {logging_mixin.py:151} INFO - [2023-11-14T08:05:58.888+0000] {dagbag.py:539} INFO - Filling up the DagBag from /opt/airflow/dags/Dag_postgres.py
+[2023-11-14T08:05:59.869+0000] {processor.py:839} INFO - DAG(s) dict_keys(['covid_data_dag_postgres']) retrieved from /opt/airflow/dags/Dag_postgres.py
+[2023-11-14T08:05:59.953+0000] {logging_mixin.py:151} INFO - [2023-11-14T08:05:59.952+0000] {dag.py:2915} INFO - Sync 1 DAGs
+[2023-11-14T08:06:00.000+0000] {logging_mixin.py:151} INFO - [2023-11-14T08:06:00.000+0000] {dag.py:3696} INFO - Setting next_dagrun for covid_data_dag_postgres to 2023-11-14T00:00:00+00:00, run_after=2023-11-15T00:00:00+00:00
+[2023-11-14T08:06:00.073+0000] {processor.py:179} INFO - Processing /opt/airflow/dags/Dag_postgres.py took 1.207 seconds
+[2023-11-14T08:06:01.035+0000] {processor.py:157} INFO - Started process (PID=407) to work on /opt/airflow/dags/Dag_postgres.py
+[2023-11-14T08:06:01.037+0000] {processor.py:829} INFO - Processing file /opt/airflow/dags/Dag_postgres.py for tasks to queue
+[2023-11-14T08:06:01.039+0000] {logging_mixin.py:151} INFO - [2023-11-14T08:06:01.039+0000] {dagbag.py:539} INFO - Filling up the DagBag from /opt/airflow/dags/Dag_postgres.py
+[2023-11-14T08:06:01.915+0000] {processor.py:839} INFO - DAG(s) dict_keys(['covid_data_dag_postgres']) retrieved from /opt/airflow/dags/Dag_postgres.py
+[2023-11-14T08:06:01.975+0000] {logging_mixin.py:151} INFO - [2023-11-14T08:06:01.974+0000] {dag.py:2915} INFO - Sync 1 DAGs
+[2023-11-14T08:06:02.014+0000] {logging_mixin.py:151} INFO - [2023-11-14T08:06:02.013+0000] {dag.py:3696} INFO - Setting next_dagrun for covid_data_dag_postgres to 2023-11-14T00:00:00+00:00, run_after=2023-11-15T00:00:00+00:00
+[2023-11-14T08:06:02.092+0000] {processor.py:179} INFO - Processing /opt/airflow/dags/Dag_postgres.py took 1.064 seconds
+[2023-11-14T08:06:32.504+0000] {processor.py:157} INFO - Started process (PID=428) to work on /opt/airflow/dags/Dag_postgres.py
+[2023-11-14T08:06:32.505+0000] {processor.py:829} INFO - Processing file /opt/airflow/dags/Dag_postgres.py for tasks to queue
+[2023-11-14T08:06:32.507+0000] {logging_mixin.py:151} INFO - [2023-11-14T08:06:32.507+0000] {dagbag.py:539} INFO - Filling up the DagBag from /opt/airflow/dags/Dag_postgres.py
+[2023-11-14T08:06:33.091+0000] {processor.py:839} INFO - DAG(s) dict_keys(['covid_data_dag_postgres']) retrieved from /opt/airflow/dags/Dag_postgres.py
+[2023-11-14T08:06:33.147+0000] {logging_mixin.py:151} INFO - [2023-11-14T08:06:33.146+0000] {dag.py:2915} INFO - Sync 1 DAGs
+[2023-11-14T08:06:33.188+0000] {logging_mixin.py:151} INFO - [2023-11-14T08:06:33.187+0000] {dag.py:3696} INFO - Setting next_dagrun for covid_data_dag_postgres to 2023-11-14T00:00:00+00:00, run_after=2023-11-15T00:00:00+00:00
+[2023-11-14T08:06:33.218+0000] {processor.py:179} INFO - Processing /opt/airflow/dags/Dag_postgres.py took 0.719 seconds
+[2023-11-14T08:07:04.086+0000] {processor.py:157} INFO - Started process (PID=449) to work on /opt/airflow/dags/Dag_postgres.py
+[2023-11-14T08:07:04.088+0000] {processor.py:829} INFO - Processing file /opt/airflow/dags/Dag_postgres.py for tasks to queue
+[2023-11-14T08:07:04.091+0000] {logging_mixin.py:151} INFO - [2023-11-14T08:07:04.090+0000] {dagbag.py:539} INFO - Filling up the DagBag from /opt/airflow/dags/Dag_postgres.py
+[2023-11-14T08:07:04.789+0000] {processor.py:839} INFO - DAG(s) dict_keys(['covid_data_dag_postgres']) retrieved from /opt/airflow/dags/Dag_postgres.py
+[2023-11-14T08:07:04.838+0000] {logging_mixin.py:151} INFO - [2023-11-14T08:07:04.837+0000] {dag.py:2915} INFO - Sync 1 DAGs
+[2023-11-14T08:07:04.887+0000] {logging_mixin.py:151} INFO - [2023-11-14T08:07:04.887+0000] {dag.py:3696} INFO - Setting next_dagrun for covid_data_dag_postgres to 2023-11-14T00:00:00+00:00, run_after=2023-11-15T00:00:00+00:00
+[2023-11-14T08:07:04.930+0000] {processor.py:179} INFO - Processing /opt/airflow/dags/Dag_postgres.py took 0.852 seconds
+[2023-11-14T08:07:07.124+0000] {processor.py:157} INFO - Started process (PID=451) to work on /opt/airflow/dags/Dag_postgres.py
+[2023-11-14T08:07:07.125+0000] {processor.py:829} INFO - Processing file /opt/airflow/dags/Dag_postgres.py for tasks to queue
+[2023-11-14T08:07:07.126+0000] {logging_mixin.py:151} INFO - [2023-11-14T08:07:07.126+0000] {dagbag.py:539} INFO - Filling up the DagBag from /opt/airflow/dags/Dag_postgres.py
+[2023-11-14T08:07:07.775+0000] {processor.py:839} INFO - DAG(s) dict_keys(['covid_data_dag_postgres']) retrieved from /opt/airflow/dags/Dag_postgres.py
+[2023-11-14T08:07:07.839+0000] {logging_mixin.py:151} INFO - [2023-11-14T08:07:07.838+0000] {dag.py:2915} INFO - Sync 1 DAGs
+[2023-11-14T08:07:07.878+0000] {logging_mixin.py:151} INFO - [2023-11-14T08:07:07.878+0000] {dag.py:3696} INFO - Setting next_dagrun for covid_data_dag_postgres to 2023-11-14T00:00:00+00:00, run_after=2023-11-15T00:00:00+00:00
+[2023-11-14T08:07:07.983+0000] {processor.py:179} INFO - Processing /opt/airflow/dags/Dag_postgres.py took 0.865 seconds
+[2023-11-14T08:07:09.146+0000] {processor.py:157} INFO - Started process (PID=460) to work on /opt/airflow/dags/Dag_postgres.py
+[2023-11-14T08:07:09.148+0000] {processor.py:829} INFO - Processing file /opt/airflow/dags/Dag_postgres.py for tasks to queue
+[2023-11-14T08:07:09.151+0000] {logging_mixin.py:151} INFO - [2023-11-14T08:07:09.150+0000] {dagbag.py:539} INFO - Filling up the DagBag from /opt/airflow/dags/Dag_postgres.py
+[2023-11-14T08:07:09.899+0000] {processor.py:839} INFO - DAG(s) dict_keys(['covid_data_dag_postgres']) retrieved from /opt/airflow/dags/Dag_postgres.py
+[2023-11-14T08:07:09.944+0000] {logging_mixin.py:151} INFO - [2023-11-14T08:07:09.944+0000] {dag.py:2915} INFO - Sync 1 DAGs
+[2023-11-14T08:07:09.983+0000] {logging_mixin.py:151} INFO - [2023-11-14T08:07:09.982+0000] {dag.py:3696} INFO - Setting next_dagrun for covid_data_dag_postgres to 2023-11-14T00:00:00+00:00, run_after=2023-11-15T00:00:00+00:00
+[2023-11-14T08:07:10.042+0000] {processor.py:179} INFO - Processing /opt/airflow/dags/Dag_postgres.py took 0.903 seconds
+[2023-11-14T08:07:13.271+0000] {processor.py:157} INFO - Started process (PID=463) to work on /opt/airflow/dags/Dag_postgres.py
+[2023-11-14T08:07:13.274+0000] {processor.py:829} INFO - Processing file /opt/airflow/dags/Dag_postgres.py for tasks to queue
+[2023-11-14T08:07:13.279+0000] {logging_mixin.py:151} INFO - [2023-11-14T08:07:13.278+0000] {dagbag.py:539} INFO - Filling up the DagBag from /opt/airflow/dags/Dag_postgres.py
+[2023-11-14T08:07:14.393+0000] {processor.py:839} INFO - DAG(s) dict_keys(['covid_data_dag_postgres']) retrieved from /opt/airflow/dags/Dag_postgres.py
+[2023-11-14T08:07:14.454+0000] {logging_mixin.py:151} INFO - [2023-11-14T08:07:14.453+0000] {dag.py:2915} INFO - Sync 1 DAGs
+[2023-11-14T08:07:14.495+0000] {logging_mixin.py:151} INFO - [2023-11-14T08:07:14.494+0000] {dag.py:3696} INFO - Setting next_dagrun for covid_data_dag_postgres to 2023-11-14T00:00:00+00:00, run_after=2023-11-15T00:00:00+00:00
+[2023-11-14T08:07:14.635+0000] {processor.py:179} INFO - Processing /opt/airflow/dags/Dag_postgres.py took 1.372 seconds
+[2023-11-14T08:07:17.503+0000] {processor.py:157} INFO - Started process (PID=467) to work on /opt/airflow/dags/Dag_postgres.py
+[2023-11-14T08:07:17.508+0000] {processor.py:829} INFO - Processing file /opt/airflow/dags/Dag_postgres.py for tasks to queue
+[2023-11-14T08:07:17.512+0000] {logging_mixin.py:151} INFO - [2023-11-14T08:07:17.511+0000] {dagbag.py:539} INFO - Filling up the DagBag from /opt/airflow/dags/Dag_postgres.py
+[2023-11-14T08:07:18.484+0000] {processor.py:839} INFO - DAG(s) dict_keys(['covid_data_dag_postgres']) retrieved from /opt/airflow/dags/Dag_postgres.py
+[2023-11-14T08:07:18.533+0000] {logging_mixin.py:151} INFO - [2023-11-14T08:07:18.532+0000] {dag.py:2915} INFO - Sync 1 DAGs
+[2023-11-14T08:07:18.575+0000] {logging_mixin.py:151} INFO - [2023-11-14T08:07:18.575+0000] {dag.py:3696} INFO - Setting next_dagrun for covid_data_dag_postgres to 2023-11-14T00:00:00+00:00, run_after=2023-11-15T00:00:00+00:00
+[2023-11-14T08:07:18.680+0000] {processor.py:179} INFO - Processing /opt/airflow/dags/Dag_postgres.py took 1.196 seconds
+[2023-11-14T08:07:19.510+0000] {processor.py:157} INFO - Started process (PID=469) to work on /opt/airflow/dags/Dag_postgres.py
+[2023-11-14T08:07:19.512+0000] {processor.py:829} INFO - Processing file /opt/airflow/dags/Dag_postgres.py for tasks to queue
+[2023-11-14T08:07:19.513+0000] {logging_mixin.py:151} INFO - [2023-11-14T08:07:19.513+0000] {dagbag.py:539} INFO - Filling up the DagBag from /opt/airflow/dags/Dag_postgres.py
+[2023-11-14T08:07:20.207+0000] {processor.py:839} INFO - DAG(s) dict_keys(['covid_data_dag_postgres']) retrieved from /opt/airflow/dags/Dag_postgres.py
+[2023-11-14T08:07:20.262+0000] {logging_mixin.py:151} INFO - [2023-11-14T08:07:20.261+0000] {dag.py:2915} INFO - Sync 1 DAGs
+[2023-11-14T08:07:20.323+0000] {logging_mixin.py:151} INFO - [2023-11-14T08:07:20.323+0000] {dag.py:3696} INFO - Setting next_dagrun for covid_data_dag_postgres to 2023-11-14T00:00:00+00:00, run_after=2023-11-15T00:00:00+00:00
+[2023-11-14T08:07:20.384+0000] {processor.py:179} INFO - Processing /opt/airflow/dags/Dag_postgres.py took 0.879 seconds
+[2023-11-14T08:07:24.714+0000] {processor.py:157} INFO - Started process (PID=480) to work on /opt/airflow/dags/Dag_postgres.py
+[2023-11-14T08:07:24.719+0000] {processor.py:829} INFO - Processing file /opt/airflow/dags/Dag_postgres.py for tasks to queue
+[2023-11-14T08:07:24.728+0000] {logging_mixin.py:151} INFO - [2023-11-14T08:07:24.725+0000] {dagbag.py:539} INFO - Filling up the DagBag from /opt/airflow/dags/Dag_postgres.py
+[2023-11-14T08:07:25.759+0000] {processor.py:839} INFO - DAG(s) dict_keys(['covid_data_dag_postgres']) retrieved from /opt/airflow/dags/Dag_postgres.py
+[2023-11-14T08:07:25.824+0000] {logging_mixin.py:151} INFO - [2023-11-14T08:07:25.822+0000] {dag.py:2915} INFO - Sync 1 DAGs
+[2023-11-14T08:07:25.880+0000] {logging_mixin.py:151} INFO - [2023-11-14T08:07:25.879+0000] {dag.py:3696} INFO - Setting next_dagrun for covid_data_dag_postgres to 2023-11-14T00:00:00+00:00, run_after=2023-11-15T00:00:00+00:00
+[2023-11-14T08:07:25.953+0000] {processor.py:179} INFO - Processing /opt/airflow/dags/Dag_postgres.py took 1.263 seconds
+[2023-11-14T08:07:35.305+0000] {processor.py:157} INFO - Started process (PID=482) to work on /opt/airflow/dags/Dag_postgres.py
+[2023-11-14T08:07:35.307+0000] {processor.py:829} INFO - Processing file /opt/airflow/dags/Dag_postgres.py for tasks to queue
+[2023-11-14T08:07:35.312+0000] {logging_mixin.py:151} INFO - [2023-11-14T08:07:35.310+0000] {dagbag.py:539} INFO - Filling up the DagBag from /opt/airflow/dags/Dag_postgres.py
+[2023-11-14T08:07:36.297+0000] {processor.py:839} INFO - DAG(s) dict_keys(['covid_data_dag_postgres']) retrieved from /opt/airflow/dags/Dag_postgres.py
+[2023-11-14T08:07:36.359+0000] {logging_mixin.py:151} INFO - [2023-11-14T08:07:36.358+0000] {dag.py:2915} INFO - Sync 1 DAGs
+[2023-11-14T08:07:36.406+0000] {logging_mixin.py:151} INFO - [2023-11-14T08:07:36.406+0000] {dag.py:3696} INFO - Setting next_dagrun for covid_data_dag_postgres to 2023-11-14T00:00:00+00:00, run_after=2023-11-15T00:00:00+00:00
+[2023-11-14T08:07:36.465+0000] {processor.py:179} INFO - Processing /opt/airflow/dags/Dag_postgres.py took 1.173 seconds
+[2023-11-14T08:07:37.359+0000] {processor.py:157} INFO - Started process (PID=484) to work on /opt/airflow/dags/Dag_postgres.py
+[2023-11-14T08:07:37.361+0000] {processor.py:829} INFO - Processing file /opt/airflow/dags/Dag_postgres.py for tasks to queue
+[2023-11-14T08:07:37.364+0000] {logging_mixin.py:151} INFO - [2023-11-14T08:07:37.363+0000] {dagbag.py:539} INFO - Filling up the DagBag from /opt/airflow/dags/Dag_postgres.py
+[2023-11-14T08:07:38.189+0000] {processor.py:839} INFO - DAG(s) dict_keys(['covid_data_dag_postgres']) retrieved from /opt/airflow/dags/Dag_postgres.py
+[2023-11-14T08:07:38.261+0000] {logging_mixin.py:151} INFO - [2023-11-14T08:07:38.260+0000] {dag.py:2915} INFO - Sync 1 DAGs
+[2023-11-14T08:07:38.381+0000] {logging_mixin.py:151} INFO - [2023-11-14T08:07:38.379+0000] {dag.py:3696} INFO - Setting next_dagrun for covid_data_dag_postgres to 2023-11-14T00:00:00+00:00, run_after=2023-11-15T00:00:00+00:00
+[2023-11-14T08:07:38.517+0000] {processor.py:179} INFO - Processing /opt/airflow/dags/Dag_postgres.py took 1.166 seconds
+[2023-11-14T08:07:51.662+0000] {processor.py:157} INFO - Started process (PID=496) to work on /opt/airflow/dags/Dag_postgres.py
+[2023-11-14T08:07:51.669+0000] {processor.py:829} INFO - Processing file /opt/airflow/dags/Dag_postgres.py for tasks to queue
+[2023-11-14T08:07:51.780+0000] {logging_mixin.py:151} INFO - [2023-11-14T08:07:51.778+0000] {dagbag.py:539} INFO - Filling up the DagBag from /opt/airflow/dags/Dag_postgres.py
+[2023-11-14T08:07:53.569+0000] {processor.py:839} INFO - DAG(s) dict_keys(['covid_data_dag_postgres']) retrieved from /opt/airflow/dags/Dag_postgres.py
+[2023-11-14T08:07:53.640+0000] {logging_mixin.py:151} INFO - [2023-11-14T08:07:53.639+0000] {dag.py:2915} INFO - Sync 1 DAGs
+[2023-11-14T08:07:53.687+0000] {logging_mixin.py:151} INFO - [2023-11-14T08:07:53.687+0000] {dag.py:3696} INFO - Setting next_dagrun for covid_data_dag_postgres to 2023-11-14T00:00:00+00:00, run_after=2023-11-15T00:00:00+00:00
+[2023-11-14T08:07:53.732+0000] {processor.py:179} INFO - Processing /opt/airflow/dags/Dag_postgres.py took 2.082 seconds
+[2023-11-14T08:08:23.817+0000] {processor.py:157} INFO - Started process (PID=524) to work on /opt/airflow/dags/Dag_postgres.py
+[2023-11-14T08:08:23.818+0000] {processor.py:829} INFO - Processing file /opt/airflow/dags/Dag_postgres.py for tasks to queue
+[2023-11-14T08:08:23.819+0000] {logging_mixin.py:151} INFO - [2023-11-14T08:08:23.819+0000] {dagbag.py:539} INFO - Filling up the DagBag from /opt/airflow/dags/Dag_postgres.py
+[2023-11-14T08:08:24.785+0000] {processor.py:839} INFO - DAG(s) dict_keys(['covid_data_dag_postgres']) retrieved from /opt/airflow/dags/Dag_postgres.py
+[2023-11-14T08:08:24.856+0000] {logging_mixin.py:151} INFO - [2023-11-14T08:08:24.855+0000] {dag.py:2915} INFO - Sync 1 DAGs
+[2023-11-14T08:08:24.941+0000] {logging_mixin.py:151} INFO - [2023-11-14T08:08:24.941+0000] {dag.py:3696} INFO - Setting next_dagrun for covid_data_dag_postgres to 2023-11-14T00:00:00+00:00, run_after=2023-11-15T00:00:00+00:00
+[2023-11-14T08:08:24.985+0000] {processor.py:179} INFO - Processing /opt/airflow/dags/Dag_postgres.py took 1.174 seconds
+[2023-11-14T08:08:55.197+0000] {processor.py:157} INFO - Started process (PID=544) to work on /opt/airflow/dags/Dag_postgres.py
+[2023-11-14T08:08:55.201+0000] {processor.py:829} INFO - Processing file /opt/airflow/dags/Dag_postgres.py for tasks to queue
+[2023-11-14T08:08:55.205+0000] {logging_mixin.py:151} INFO - [2023-11-14T08:08:55.204+0000] {dagbag.py:539} INFO - Filling up the DagBag from /opt/airflow/dags/Dag_postgres.py
+[2023-11-14T08:08:56.271+0000] {processor.py:839} INFO - DAG(s) dict_keys(['covid_data_dag_postgres']) retrieved from /opt/airflow/dags/Dag_postgres.py
+[2023-11-14T08:08:56.397+0000] {logging_mixin.py:151} INFO - [2023-11-14T08:08:56.396+0000] {dag.py:2915} INFO - Sync 1 DAGs
+[2023-11-14T08:08:56.527+0000] {logging_mixin.py:151} INFO - [2023-11-14T08:08:56.527+0000] {dag.py:3696} INFO - Setting next_dagrun for covid_data_dag_postgres to 2023-11-14T00:00:00+00:00, run_after=2023-11-15T00:00:00+00:00
+[2023-11-14T08:08:56.582+0000] {processor.py:179} INFO - Processing /opt/airflow/dags/Dag_postgres.py took 1.400 seconds
+[2023-11-14T08:09:27.179+0000] {processor.py:157} INFO - Started process (PID=569) to work on /opt/airflow/dags/Dag_postgres.py
+[2023-11-14T08:09:27.181+0000] {processor.py:829} INFO - Processing file /opt/airflow/dags/Dag_postgres.py for tasks to queue
+[2023-11-14T08:09:27.182+0000] {logging_mixin.py:151} INFO - [2023-11-14T08:09:27.182+0000] {dagbag.py:539} INFO - Filling up the DagBag from /opt/airflow/dags/Dag_postgres.py
+[2023-11-14T08:09:27.798+0000] {processor.py:839} INFO - DAG(s) dict_keys(['covid_data_dag_postgres']) retrieved from /opt/airflow/dags/Dag_postgres.py
+[2023-11-14T08:09:28.054+0000] {logging_mixin.py:151} INFO - [2023-11-14T08:09:28.052+0000] {dag.py:2915} INFO - Sync 1 DAGs
+[2023-11-14T08:09:28.236+0000] {logging_mixin.py:151} INFO - [2023-11-14T08:09:28.236+0000] {dag.py:3696} INFO - Setting next_dagrun for covid_data_dag_postgres to 2023-11-14T00:00:00+00:00, run_after=2023-11-15T00:00:00+00:00
+[2023-11-14T08:09:28.312+0000] {processor.py:179} INFO - Processing /opt/airflow/dags/Dag_postgres.py took 1.138 seconds
+[2023-11-14T08:09:59.151+0000] {processor.py:157} INFO - Started process (PID=590) to work on /opt/airflow/dags/Dag_postgres.py
+[2023-11-14T08:09:59.165+0000] {processor.py:829} INFO - Processing file /opt/airflow/dags/Dag_postgres.py for tasks to queue
+[2023-11-14T08:09:59.175+0000] {logging_mixin.py:151} INFO - [2023-11-14T08:09:59.174+0000] {dagbag.py:539} INFO - Filling up the DagBag from /opt/airflow/dags/Dag_postgres.py
+[2023-11-14T08:10:00.423+0000] {processor.py:839} INFO - DAG(s) dict_keys(['covid_data_dag_postgres']) retrieved from /opt/airflow/dags/Dag_postgres.py
+[2023-11-14T08:10:00.484+0000] {logging_mixin.py:151} INFO - [2023-11-14T08:10:00.483+0000] {dag.py:2915} INFO - Sync 1 DAGs
+[2023-11-14T08:10:00.535+0000] {logging_mixin.py:151} INFO - [2023-11-14T08:10:00.535+0000] {dag.py:3696} INFO - Setting next_dagrun for covid_data_dag_postgres to 2023-11-14T00:00:00+00:00, run_after=2023-11-15T00:00:00+00:00
+[2023-11-14T08:10:00.683+0000] {processor.py:179} INFO - Processing /opt/airflow/dags/Dag_postgres.py took 1.571 seconds
+[2023-11-14T08:10:31.355+0000] {processor.py:157} INFO - Started process (PID=609) to work on /opt/airflow/dags/Dag_postgres.py
+[2023-11-14T08:10:31.358+0000] {processor.py:829} INFO - Processing file /opt/airflow/dags/Dag_postgres.py for tasks to queue
+[2023-11-14T08:10:31.367+0000] {logging_mixin.py:151} INFO - [2023-11-14T08:10:31.362+0000] {dagbag.py:539} INFO - Filling up the DagBag from /opt/airflow/dags/Dag_postgres.py
+[2023-11-14T08:10:32.155+0000] {processor.py:839} INFO - DAG(s) dict_keys(['covid_data_dag_postgres']) retrieved from /opt/airflow/dags/Dag_postgres.py
+[2023-11-14T08:10:32.240+0000] {logging_mixin.py:151} INFO - [2023-11-14T08:10:32.238+0000] {dag.py:2915} INFO - Sync 1 DAGs
+[2023-11-14T08:10:32.337+0000] {logging_mixin.py:151} INFO - [2023-11-14T08:10:32.335+0000] {dag.py:3696} INFO - Setting next_dagrun for covid_data_dag_postgres to 2023-11-14T00:00:00+00:00, run_after=2023-11-15T00:00:00+00:00
+[2023-11-14T08:10:32.459+0000] {processor.py:179} INFO - Processing /opt/airflow/dags/Dag_postgres.py took 1.126 seconds
+[2023-11-14T08:10:46.603+0000] {processor.py:157} INFO - Started process (PID=619) to work on /opt/airflow/dags/Dag_postgres.py
+[2023-11-14T08:10:46.604+0000] {processor.py:829} INFO - Processing file /opt/airflow/dags/Dag_postgres.py for tasks to queue
+[2023-11-14T08:10:46.607+0000] {logging_mixin.py:151} INFO - [2023-11-14T08:10:46.606+0000] {dagbag.py:539} INFO - Filling up the DagBag from /opt/airflow/dags/Dag_postgres.py
+[2023-11-14T08:10:47.438+0000] {processor.py:839} INFO - DAG(s) dict_keys(['covid_data_dag_postgres']) retrieved from /opt/airflow/dags/Dag_postgres.py
+[2023-11-14T08:10:47.486+0000] {logging_mixin.py:151} INFO - [2023-11-14T08:10:47.485+0000] {dag.py:2915} INFO - Sync 1 DAGs
+[2023-11-14T08:10:47.546+0000] {logging_mixin.py:151} INFO - [2023-11-14T08:10:47.546+0000] {dag.py:3696} INFO - Setting next_dagrun for covid_data_dag_postgres to 2023-11-14T00:00:00+00:00, run_after=2023-11-15T00:00:00+00:00
+[2023-11-14T08:10:47.647+0000] {processor.py:179} INFO - Processing /opt/airflow/dags/Dag_postgres.py took 1.055 seconds
+[2023-11-14T08:10:48.834+0000] {processor.py:157} INFO - Started process (PID=621) to work on /opt/airflow/dags/Dag_postgres.py
+[2023-11-14T08:10:48.835+0000] {processor.py:829} INFO - Processing file /opt/airflow/dags/Dag_postgres.py for tasks to queue
+[2023-11-14T08:10:48.837+0000] {logging_mixin.py:151} INFO - [2023-11-14T08:10:48.836+0000] {dagbag.py:539} INFO - Filling up the DagBag from /opt/airflow/dags/Dag_postgres.py
+[2023-11-14T08:10:49.660+0000] {processor.py:839} INFO - DAG(s) dict_keys(['covid_data_dag_postgres']) retrieved from /opt/airflow/dags/Dag_postgres.py
+[2023-11-14T08:10:49.706+0000] {logging_mixin.py:151} INFO - [2023-11-14T08:10:49.706+0000] {dag.py:2915} INFO - Sync 1 DAGs
+[2023-11-14T08:10:49.746+0000] {logging_mixin.py:151} INFO - [2023-11-14T08:10:49.746+0000] {dag.py:3696} INFO - Setting next_dagrun for covid_data_dag_postgres to 2023-11-14T00:00:00+00:00, run_after=2023-11-15T00:00:00+00:00
+[2023-11-14T08:10:49.867+0000] {processor.py:179} INFO - Processing /opt/airflow/dags/Dag_postgres.py took 1.042 seconds
+[2023-11-14T08:10:50.942+0000] {processor.py:157} INFO - Started process (PID=623) to work on /opt/airflow/dags/Dag_postgres.py
+[2023-11-14T08:10:50.943+0000] {processor.py:829} INFO - Processing file /opt/airflow/dags/Dag_postgres.py for tasks to queue
+[2023-11-14T08:10:50.945+0000] {logging_mixin.py:151} INFO - [2023-11-14T08:10:50.944+0000] {dagbag.py:539} INFO - Filling up the DagBag from /opt/airflow/dags/Dag_postgres.py
+[2023-11-14T08:10:51.915+0000] {processor.py:839} INFO - DAG(s) dict_keys(['covid_data_dag_postgres']) retrieved from /opt/airflow/dags/Dag_postgres.py
+[2023-11-14T08:10:51.959+0000] {logging_mixin.py:151} INFO - [2023-11-14T08:10:51.958+0000] {dag.py:2915} INFO - Sync 1 DAGs
+[2023-11-14T08:10:52.003+0000] {logging_mixin.py:151} INFO - [2023-11-14T08:10:52.002+0000] {dag.py:3696} INFO - Setting next_dagrun for covid_data_dag_postgres to 2023-11-14T00:00:00+00:00, run_after=2023-11-15T00:00:00+00:00
+[2023-11-14T08:10:52.042+0000] {processor.py:179} INFO - Processing /opt/airflow/dags/Dag_postgres.py took 1.106 seconds
+[2023-11-14T08:11:22.974+0000] {processor.py:157} INFO - Started process (PID=651) to work on /opt/airflow/dags/Dag_postgres.py
+[2023-11-14T08:11:22.981+0000] {processor.py:829} INFO - Processing file /opt/airflow/dags/Dag_postgres.py for tasks to queue
+[2023-11-14T08:11:22.985+0000] {logging_mixin.py:151} INFO - [2023-11-14T08:11:22.984+0000] {dagbag.py:539} INFO - Filling up the DagBag from /opt/airflow/dags/Dag_postgres.py
+[2023-11-14T08:11:26.534+0000] {processor.py:839} INFO - DAG(s) dict_keys(['covid_data_dag_postgres']) retrieved from /opt/airflow/dags/Dag_postgres.py
+[2023-11-14T08:11:26.710+0000] {logging_mixin.py:151} INFO - [2023-11-14T08:11:26.709+0000] {dag.py:2915} INFO - Sync 1 DAGs
+[2023-11-14T08:11:26.825+0000] {logging_mixin.py:151} INFO - [2023-11-14T08:11:26.825+0000] {dag.py:3696} INFO - Setting next_dagrun for covid_data_dag_postgres to 2023-11-14T00:00:00+00:00, run_after=2023-11-15T00:00:00+00:00
+[2023-11-14T08:11:26.895+0000] {processor.py:179} INFO - Processing /opt/airflow/dags/Dag_postgres.py took 3.951 seconds
+[2023-11-14T08:11:57.248+0000] {processor.py:157} INFO - Started process (PID=671) to work on /opt/airflow/dags/Dag_postgres.py
+[2023-11-14T08:11:57.250+0000] {processor.py:829} INFO - Processing file /opt/airflow/dags/Dag_postgres.py for tasks to queue
+[2023-11-14T08:11:57.251+0000] {logging_mixin.py:151} INFO - [2023-11-14T08:11:57.251+0000] {dagbag.py:539} INFO - Filling up the DagBag from /opt/airflow/dags/Dag_postgres.py
+[2023-11-14T08:11:57.941+0000] {processor.py:839} INFO - DAG(s) dict_keys(['covid_data_dag_postgres']) retrieved from /opt/airflow/dags/Dag_postgres.py
+[2023-11-14T08:11:58.002+0000] {logging_mixin.py:151} INFO - [2023-11-14T08:11:58.001+0000] {dag.py:2915} INFO - Sync 1 DAGs
+[2023-11-14T08:11:58.060+0000] {logging_mixin.py:151} INFO - [2023-11-14T08:11:58.060+0000] {dag.py:3696} INFO - Setting next_dagrun for covid_data_dag_postgres to 2023-11-14T00:00:00+00:00, run_after=2023-11-15T00:00:00+00:00
+[2023-11-14T08:11:58.103+0000] {processor.py:179} INFO - Processing /opt/airflow/dags/Dag_postgres.py took 0.863 seconds
+[2023-11-14T08:12:28.817+0000] {processor.py:157} INFO - Started process (PID=691) to work on /opt/airflow/dags/Dag_postgres.py
+[2023-11-14T08:12:28.819+0000] {processor.py:829} INFO - Processing file /opt/airflow/dags/Dag_postgres.py for tasks to queue
+[2023-11-14T08:12:28.822+0000] {logging_mixin.py:151} INFO - [2023-11-14T08:12:28.821+0000] {dagbag.py:539} INFO - Filling up the DagBag from /opt/airflow/dags/Dag_postgres.py
+[2023-11-14T08:12:29.761+0000] {processor.py:839} INFO - DAG(s) dict_keys(['covid_data_dag_postgres']) retrieved from /opt/airflow/dags/Dag_postgres.py
+[2023-11-14T08:12:29.854+0000] {logging_mixin.py:151} INFO - [2023-11-14T08:12:29.852+0000] {dag.py:2915} INFO - Sync 1 DAGs
+[2023-11-14T08:12:29.973+0000] {logging_mixin.py:151} INFO - [2023-11-14T08:12:29.973+0000] {dag.py:3696} INFO - Setting next_dagrun for covid_data_dag_postgres to 2023-11-14T00:00:00+00:00, run_after=2023-11-15T00:00:00+00:00
+[2023-11-14T08:12:30.060+0000] {processor.py:179} INFO - Processing /opt/airflow/dags/Dag_postgres.py took 1.257 seconds
+[2023-11-14T08:12:42.168+0000] {processor.py:157} INFO - Started process (PID=704) to work on /opt/airflow/dags/Dag_postgres.py
+[2023-11-14T08:12:42.170+0000] {processor.py:829} INFO - Processing file /opt/airflow/dags/Dag_postgres.py for tasks to queue
+[2023-11-14T08:12:42.171+0000] {logging_mixin.py:151} INFO - [2023-11-14T08:12:42.171+0000] {dagbag.py:539} INFO - Filling up the DagBag from /opt/airflow/dags/Dag_postgres.py
+[2023-11-14T08:12:43.205+0000] {processor.py:839} INFO - DAG(s) dict_keys(['covid_data_dag_postgres']) retrieved from /opt/airflow/dags/Dag_postgres.py
+[2023-11-14T08:12:43.292+0000] {logging_mixin.py:151} INFO - [2023-11-14T08:12:43.291+0000] {dag.py:2915} INFO - Sync 1 DAGs
+[2023-11-14T08:12:43.410+0000] {logging_mixin.py:151} INFO - [2023-11-14T08:12:43.410+0000] {dag.py:3696} INFO - Setting next_dagrun for covid_data_dag_postgres to 2023-11-14T00:00:00+00:00, run_after=2023-11-15T00:00:00+00:00
+[2023-11-14T08:12:43.586+0000] {processor.py:179} INFO - Processing /opt/airflow/dags/Dag_postgres.py took 1.423 seconds
+[2023-11-14T08:12:44.462+0000] {processor.py:157} INFO - Started process (PID=706) to work on /opt/airflow/dags/Dag_postgres.py
+[2023-11-14T08:12:44.465+0000] {processor.py:829} INFO - Processing file /opt/airflow/dags/Dag_postgres.py for tasks to queue
+[2023-11-14T08:12:44.474+0000] {logging_mixin.py:151} INFO - [2023-11-14T08:12:44.473+0000] {dagbag.py:539} INFO - Filling up the DagBag from /opt/airflow/dags/Dag_postgres.py
+[2023-11-14T08:12:45.836+0000] {processor.py:839} INFO - DAG(s) dict_keys(['covid_data_dag_postgres']) retrieved from /opt/airflow/dags/Dag_postgres.py
+[2023-11-14T08:12:45.903+0000] {logging_mixin.py:151} INFO - [2023-11-14T08:12:45.902+0000] {dag.py:2915} INFO - Sync 1 DAGs
+[2023-11-14T08:12:45.951+0000] {logging_mixin.py:151} INFO - [2023-11-14T08:12:45.950+0000] {dag.py:3696} INFO - Setting next_dagrun for covid_data_dag_postgres to 2023-11-14T00:00:00+00:00, run_after=2023-11-15T00:00:00+00:00
+[2023-11-14T08:12:46.003+0000] {processor.py:179} INFO - Processing /opt/airflow/dags/Dag_postgres.py took 1.559 seconds
+[2023-11-14T08:12:47.208+0000] {processor.py:157} INFO - Started process (PID=708) to work on /opt/airflow/dags/Dag_postgres.py
+[2023-11-14T08:12:47.209+0000] {processor.py:829} INFO - Processing file /opt/airflow/dags/Dag_postgres.py for tasks to queue
+[2023-11-14T08:12:47.212+0000] {logging_mixin.py:151} INFO - [2023-11-14T08:12:47.211+0000] {dagbag.py:539} INFO - Filling up the DagBag from /opt/airflow/dags/Dag_postgres.py
+[2023-11-14T08:12:48.884+0000] {processor.py:839} INFO - DAG(s) dict_keys(['covid_data_dag_postgres']) retrieved from /opt/airflow/dags/Dag_postgres.py
+[2023-11-14T08:12:49.005+0000] {logging_mixin.py:151} INFO - [2023-11-14T08:12:49.003+0000] {dag.py:2915} INFO - Sync 1 DAGs
+[2023-11-14T08:12:49.066+0000] {logging_mixin.py:151} INFO - [2023-11-14T08:12:49.066+0000] {dag.py:3696} INFO - Setting next_dagrun for covid_data_dag_postgres to 2023-11-14T00:00:00+00:00, run_after=2023-11-15T00:00:00+00:00
+[2023-11-14T08:12:49.109+0000] {processor.py:179} INFO - Processing /opt/airflow/dags/Dag_postgres.py took 1.913 seconds
+[2023-11-14T08:13:19.371+0000] {processor.py:157} INFO - Started process (PID=736) to work on /opt/airflow/dags/Dag_postgres.py
+[2023-11-14T08:13:19.377+0000] {processor.py:829} INFO - Processing file /opt/airflow/dags/Dag_postgres.py for tasks to queue
+[2023-11-14T08:13:19.380+0000] {logging_mixin.py:151} INFO - [2023-11-14T08:13:19.379+0000] {dagbag.py:539} INFO - Filling up the DagBag from /opt/airflow/dags/Dag_postgres.py
+[2023-11-14T08:13:20.758+0000] {processor.py:839} INFO - DAG(s) dict_keys(['covid_data_dag_postgres']) retrieved from /opt/airflow/dags/Dag_postgres.py
+[2023-11-14T08:13:20.823+0000] {logging_mixin.py:151} INFO - [2023-11-14T08:13:20.822+0000] {dag.py:2915} INFO - Sync 1 DAGs
+[2023-11-14T08:13:20.887+0000] {logging_mixin.py:151} INFO - [2023-11-14T08:13:20.886+0000] {dag.py:3696} INFO - Setting next_dagrun for covid_data_dag_postgres to 2023-11-14T00:00:00+00:00, run_after=2023-11-15T00:00:00+00:00
+[2023-11-14T08:13:20.944+0000] {processor.py:179} INFO - Processing /opt/airflow/dags/Dag_postgres.py took 1.592 seconds
+[2023-11-14T08:13:51.477+0000] {processor.py:157} INFO - Started process (PID=756) to work on /opt/airflow/dags/Dag_postgres.py
+[2023-11-14T08:13:51.480+0000] {processor.py:829} INFO - Processing file /opt/airflow/dags/Dag_postgres.py for tasks to queue
+[2023-11-14T08:13:51.487+0000] {logging_mixin.py:151} INFO - [2023-11-14T08:13:51.486+0000] {dagbag.py:539} INFO - Filling up the DagBag from /opt/airflow/dags/Dag_postgres.py
+[2023-11-14T08:13:52.988+0000] {processor.py:839} INFO - DAG(s) dict_keys(['covid_data_dag_postgres']) retrieved from /opt/airflow/dags/Dag_postgres.py
+[2023-11-14T08:13:53.037+0000] {logging_mixin.py:151} INFO - [2023-11-14T08:13:53.036+0000] {dag.py:2915} INFO - Sync 1 DAGs
+[2023-11-14T08:13:53.076+0000] {logging_mixin.py:151} INFO - [2023-11-14T08:13:53.076+0000] {dag.py:3696} INFO - Setting next_dagrun for covid_data_dag_postgres to 2023-11-14T00:00:00+00:00, run_after=2023-11-15T00:00:00+00:00
+[2023-11-14T08:13:53.163+0000] {processor.py:179} INFO - Processing /opt/airflow/dags/Dag_postgres.py took 1.708 seconds
+[2023-11-14T08:14:18.386+0000] {processor.py:157} INFO - Started process (PID=777) to work on /opt/airflow/dags/Dag_postgres.py
+[2023-11-14T08:14:18.388+0000] {processor.py:829} INFO - Processing file /opt/airflow/dags/Dag_postgres.py for tasks to queue
+[2023-11-14T08:14:18.398+0000] {logging_mixin.py:151} INFO - [2023-11-14T08:14:18.393+0000] {dagbag.py:539} INFO - Filling up the DagBag from /opt/airflow/dags/Dag_postgres.py
+[2023-11-14T08:14:19.507+0000] {processor.py:839} INFO - DAG(s) dict_keys(['covid_data_dag_postgres']) retrieved from /opt/airflow/dags/Dag_postgres.py
+[2023-11-14T08:14:19.601+0000] {logging_mixin.py:151} INFO - [2023-11-14T08:14:19.600+0000] {dag.py:2915} INFO - Sync 1 DAGs
+[2023-11-14T08:14:19.651+0000] {logging_mixin.py:151} INFO - [2023-11-14T08:14:19.651+0000] {dag.py:3696} INFO - Setting next_dagrun for covid_data_dag_postgres to 2023-11-14T00:00:00+00:00, run_after=2023-11-15T00:00:00+00:00
+[2023-11-14T08:14:19.752+0000] {processor.py:179} INFO - Processing /opt/airflow/dags/Dag_postgres.py took 1.375 seconds
+[2023-11-14T08:14:50.195+0000] {processor.py:157} INFO - Started process (PID=798) to work on /opt/airflow/dags/Dag_postgres.py
+[2023-11-14T08:14:50.196+0000] {processor.py:829} INFO - Processing file /opt/airflow/dags/Dag_postgres.py for tasks to queue
+[2023-11-14T08:14:50.198+0000] {logging_mixin.py:151} INFO - [2023-11-14T08:14:50.198+0000] {dagbag.py:539} INFO - Filling up the DagBag from /opt/airflow/dags/Dag_postgres.py
+[2023-11-14T08:14:50.887+0000] {processor.py:839} INFO - DAG(s) dict_keys(['covid_data_dag_postgres']) retrieved from /opt/airflow/dags/Dag_postgres.py
+[2023-11-14T08:14:50.930+0000] {logging_mixin.py:151} INFO - [2023-11-14T08:14:50.930+0000] {dag.py:2915} INFO - Sync 1 DAGs
+[2023-11-14T08:14:50.964+0000] {logging_mixin.py:151} INFO - [2023-11-14T08:14:50.964+0000] {dag.py:3696} INFO - Setting next_dagrun for covid_data_dag_postgres to 2023-11-14T00:00:00+00:00, run_after=2023-11-15T00:00:00+00:00
+[2023-11-14T08:14:51.063+0000] {processor.py:179} INFO - Processing /opt/airflow/dags/Dag_postgres.py took 0.876 seconds
+[2023-11-14T08:15:18.681+0000] {processor.py:157} INFO - Started process (PID=818) to work on /opt/airflow/dags/Dag_postgres.py
+[2023-11-14T08:15:18.685+0000] {processor.py:829} INFO - Processing file /opt/airflow/dags/Dag_postgres.py for tasks to queue
+[2023-11-14T08:15:18.688+0000] {logging_mixin.py:151} INFO - [2023-11-14T08:15:18.687+0000] {dagbag.py:539} INFO - Filling up the DagBag from /opt/airflow/dags/Dag_postgres.py
+[2023-11-14T08:15:19.172+0000] {processor.py:839} INFO - DAG(s) dict_keys(['covid_data_dag_postgres']) retrieved from /opt/airflow/dags/Dag_postgres.py
+[2023-11-14T08:15:19.209+0000] {logging_mixin.py:151} INFO - [2023-11-14T08:15:19.209+0000] {dag.py:2915} INFO - Sync 1 DAGs
+[2023-11-14T08:15:19.247+0000] {logging_mixin.py:151} INFO - [2023-11-14T08:15:19.247+0000] {dag.py:3696} INFO - Setting next_dagrun for covid_data_dag_postgres to 2023-11-14T00:00:00+00:00, run_after=2023-11-15T00:00:00+00:00
+[2023-11-14T08:15:21.642+0000] {processor.py:179} INFO - Processing /opt/airflow/dags/Dag_postgres.py took 2.970 seconds
+[2023-11-14T08:15:28.907+0000] {processor.py:157} INFO - Started process (PID=828) to work on /opt/airflow/dags/Dag_postgres.py
+[2023-11-14T08:15:28.908+0000] {processor.py:829} INFO - Processing file /opt/airflow/dags/Dag_postgres.py for tasks to queue
+[2023-11-14T08:15:28.911+0000] {logging_mixin.py:151} INFO - [2023-11-14T08:15:28.910+0000] {dagbag.py:539} INFO - Filling up the DagBag from /opt/airflow/dags/Dag_postgres.py
+[2023-11-14T08:15:30.095+0000] {processor.py:839} INFO - DAG(s) dict_keys(['covid_data_dag_postgres']) retrieved from /opt/airflow/dags/Dag_postgres.py
+[2023-11-14T08:15:30.134+0000] {logging_mixin.py:151} INFO - [2023-11-14T08:15:30.133+0000] {dag.py:2915} INFO - Sync 1 DAGs
+[2023-11-14T08:15:30.164+0000] {logging_mixin.py:151} INFO - [2023-11-14T08:15:30.164+0000] {dag.py:3696} INFO - Setting next_dagrun for covid_data_dag_postgres to 2023-11-14T00:00:00+00:00, run_after=2023-11-15T00:00:00+00:00
+[2023-11-14T08:15:30.194+0000] {processor.py:179} INFO - Processing /opt/airflow/dags/Dag_postgres.py took 1.293 seconds
+[2023-11-14T08:16:00.484+0000] {processor.py:157} INFO - Started process (PID=857) to work on /opt/airflow/dags/Dag_postgres.py
+[2023-11-14T08:16:00.486+0000] {processor.py:829} INFO - Processing file /opt/airflow/dags/Dag_postgres.py for tasks to queue
+[2023-11-14T08:16:00.489+0000] {logging_mixin.py:151} INFO - [2023-11-14T08:16:00.488+0000] {dagbag.py:539} INFO - Filling up the DagBag from /opt/airflow/dags/Dag_postgres.py
+[2023-11-14T08:16:01.161+0000] {processor.py:839} INFO - DAG(s) dict_keys(['covid_data_dag_postgres']) retrieved from /opt/airflow/dags/Dag_postgres.py
+[2023-11-14T08:16:01.218+0000] {logging_mixin.py:151} INFO - [2023-11-14T08:16:01.218+0000] {dag.py:2915} INFO - Sync 1 DAGs
+[2023-11-14T08:16:01.260+0000] {logging_mixin.py:151} INFO - [2023-11-14T08:16:01.260+0000] {dag.py:3696} INFO - Setting next_dagrun for covid_data_dag_postgres to 2023-11-14T00:00:00+00:00, run_after=2023-11-15T00:00:00+00:00
+[2023-11-14T08:16:01.330+0000] {processor.py:179} INFO - Processing /opt/airflow/dags/Dag_postgres.py took 0.860 seconds
+[2023-11-14T08:16:31.698+0000] {processor.py:157} INFO - Started process (PID=878) to work on /opt/airflow/dags/Dag_postgres.py
+[2023-11-14T08:16:31.699+0000] {processor.py:829} INFO - Processing file /opt/airflow/dags/Dag_postgres.py for tasks to queue
+[2023-11-14T08:16:31.700+0000] {logging_mixin.py:151} INFO - [2023-11-14T08:16:31.700+0000] {dagbag.py:539} INFO - Filling up the DagBag from /opt/airflow/dags/Dag_postgres.py
+[2023-11-14T08:16:32.103+0000] {processor.py:839} INFO - DAG(s) dict_keys(['covid_data_dag_postgres']) retrieved from /opt/airflow/dags/Dag_postgres.py
+[2023-11-14T08:16:32.135+0000] {logging_mixin.py:151} INFO - [2023-11-14T08:16:32.135+0000] {dag.py:2915} INFO - Sync 1 DAGs
+[2023-11-14T08:16:32.160+0000] {logging_mixin.py:151} INFO - [2023-11-14T08:16:32.160+0000] {dag.py:3696} INFO - Setting next_dagrun for covid_data_dag_postgres to 2023-11-14T00:00:00+00:00, run_after=2023-11-15T00:00:00+00:00
+[2023-11-14T08:16:32.183+0000] {processor.py:179} INFO - Processing /opt/airflow/dags/Dag_postgres.py took 0.488 seconds
+[2023-11-14T08:17:02.507+0000] {processor.py:157} INFO - Started process (PID=908) to work on /opt/airflow/dags/Dag_postgres.py
+[2023-11-14T08:17:02.509+0000] {processor.py:829} INFO - Processing file /opt/airflow/dags/Dag_postgres.py for tasks to queue
+[2023-11-14T08:17:02.511+0000] {logging_mixin.py:151} INFO - [2023-11-14T08:17:02.510+0000] {dagbag.py:539} INFO - Filling up the DagBag from /opt/airflow/dags/Dag_postgres.py
+[2023-11-14T08:17:02.937+0000] {processor.py:839} INFO - DAG(s) dict_keys(['covid_data_dag_postgres']) retrieved from /opt/airflow/dags/Dag_postgres.py
+[2023-11-14T08:17:02.974+0000] {logging_mixin.py:151} INFO - [2023-11-14T08:17:02.973+0000] {dag.py:2915} INFO - Sync 1 DAGs
+[2023-11-14T08:17:03.003+0000] {logging_mixin.py:151} INFO - [2023-11-14T08:17:03.003+0000] {dag.py:3696} INFO - Setting next_dagrun for covid_data_dag_postgres to 2023-11-14T00:00:00+00:00, run_after=2023-11-15T00:00:00+00:00
+[2023-11-14T08:17:03.025+0000] {processor.py:179} INFO - Processing /opt/airflow/dags/Dag_postgres.py took 0.524 seconds
+[2023-11-14T08:17:17.790+0000] {processor.py:157} INFO - Started process (PID=920) to work on /opt/airflow/dags/Dag_postgres.py
+[2023-11-14T08:17:17.791+0000] {processor.py:829} INFO - Processing file /opt/airflow/dags/Dag_postgres.py for tasks to queue
+[2023-11-14T08:17:17.793+0000] {logging_mixin.py:151} INFO - [2023-11-14T08:17:17.792+0000] {dagbag.py:539} INFO - Filling up the DagBag from /opt/airflow/dags/Dag_postgres.py
+[2023-11-14T08:17:18.380+0000] {processor.py:839} INFO - DAG(s) dict_keys(['covid_data_dag_postgres']) retrieved from /opt/airflow/dags/Dag_postgres.py
+[2023-11-14T08:17:18.417+0000] {logging_mixin.py:151} INFO - [2023-11-14T08:17:18.416+0000] {dag.py:2915} INFO - Sync 1 DAGs
+[2023-11-14T08:17:18.446+0000] {logging_mixin.py:151} INFO - [2023-11-14T08:17:18.445+0000] {dag.py:3696} INFO - Setting next_dagrun for covid_data_dag_postgres to 2023-11-14T00:00:00+00:00, run_after=2023-11-15T00:00:00+00:00
+[2023-11-14T08:17:18.490+0000] {processor.py:179} INFO - Processing /opt/airflow/dags/Dag_postgres.py took 0.708 seconds
+[2023-11-14T08:17:20.272+0000] {processor.py:157} INFO - Started process (PID=922) to work on /opt/airflow/dags/Dag_postgres.py
+[2023-11-14T08:17:20.273+0000] {processor.py:829} INFO - Processing file /opt/airflow/dags/Dag_postgres.py for tasks to queue
+[2023-11-14T08:17:20.275+0000] {logging_mixin.py:151} INFO - [2023-11-14T08:17:20.274+0000] {dagbag.py:539} INFO - Filling up the DagBag from /opt/airflow/dags/Dag_postgres.py
+[2023-11-14T08:17:20.751+0000] {processor.py:839} INFO - DAG(s) dict_keys(['covid_data_dag_postgres']) retrieved from /opt/airflow/dags/Dag_postgres.py
+[2023-11-14T08:17:20.788+0000] {logging_mixin.py:151} INFO - [2023-11-14T08:17:20.787+0000] {dag.py:2915} INFO - Sync 1 DAGs
+[2023-11-14T08:17:20.818+0000] {logging_mixin.py:151} INFO - [2023-11-14T08:17:20.818+0000] {dag.py:3696} INFO - Setting next_dagrun for covid_data_dag_postgres to 2023-11-14T00:00:00+00:00, run_after=2023-11-15T00:00:00+00:00
+[2023-11-14T08:17:20.865+0000] {processor.py:179} INFO - Processing /opt/airflow/dags/Dag_postgres.py took 0.598 seconds
+[2023-11-14T08:17:22.613+0000] {processor.py:157} INFO - Started process (PID=924) to work on /opt/airflow/dags/Dag_postgres.py
+[2023-11-14T08:17:22.614+0000] {processor.py:829} INFO - Processing file /opt/airflow/dags/Dag_postgres.py for tasks to queue
+[2023-11-14T08:17:22.615+0000] {logging_mixin.py:151} INFO - [2023-11-14T08:17:22.615+0000] {dagbag.py:539} INFO - Filling up the DagBag from /opt/airflow/dags/Dag_postgres.py
+[2023-11-14T08:17:23.231+0000] {processor.py:839} INFO - DAG(s) dict_keys(['covid_data_dag_postgres']) retrieved from /opt/airflow/dags/Dag_postgres.py
+[2023-11-14T08:17:23.273+0000] {logging_mixin.py:151} INFO - [2023-11-14T08:17:23.272+0000] {dag.py:2915} INFO - Sync 1 DAGs
+[2023-11-14T08:17:23.319+0000] {logging_mixin.py:151} INFO - [2023-11-14T08:17:23.318+0000] {dag.py:3696} INFO - Setting next_dagrun for covid_data_dag_postgres to 2023-11-14T00:00:00+00:00, run_after=2023-11-15T00:00:00+00:00
+[2023-11-14T08:17:24.060+0000] {processor.py:179} INFO - Processing /opt/airflow/dags/Dag_postgres.py took 1.453 seconds
+[2023-11-14T08:17:34.064+0000] {processor.py:157} INFO - Started process (PID=935) to work on /opt/airflow/dags/Dag_postgres.py
+[2023-11-14T08:17:34.065+0000] {processor.py:829} INFO - Processing file /opt/airflow/dags/Dag_postgres.py for tasks to queue
+[2023-11-14T08:17:34.066+0000] {logging_mixin.py:151} INFO - [2023-11-14T08:17:34.066+0000] {dagbag.py:539} INFO - Filling up the DagBag from /opt/airflow/dags/Dag_postgres.py
+[2023-11-14T08:17:34.706+0000] {processor.py:839} INFO - DAG(s) dict_keys(['covid_data_dag_postgres']) retrieved from /opt/airflow/dags/Dag_postgres.py
+[2023-11-14T08:17:34.748+0000] {logging_mixin.py:151} INFO - [2023-11-14T08:17:34.747+0000] {dag.py:2915} INFO - Sync 1 DAGs
+[2023-11-14T08:17:34.786+0000] {logging_mixin.py:151} INFO - [2023-11-14T08:17:34.786+0000] {dag.py:3696} INFO - Setting next_dagrun for covid_data_dag_postgres to 2023-11-14T00:00:00+00:00, run_after=2023-11-15T00:00:00+00:00
+[2023-11-14T08:17:34.820+0000] {processor.py:179} INFO - Processing /opt/airflow/dags/Dag_postgres.py took 0.762 seconds
+[2023-11-14T08:17:41.317+0000] {processor.py:157} INFO - Started process (PID=945) to work on /opt/airflow/dags/Dag_postgres.py
+[2023-11-14T08:17:41.319+0000] {processor.py:829} INFO - Processing file /opt/airflow/dags/Dag_postgres.py for tasks to queue
+[2023-11-14T08:17:41.320+0000] {logging_mixin.py:151} INFO - [2023-11-14T08:17:41.319+0000] {dagbag.py:539} INFO - Filling up the DagBag from /opt/airflow/dags/Dag_postgres.py
+[2023-11-14T08:17:41.844+0000] {processor.py:839} INFO - DAG(s) dict_keys(['covid_data_dag_postgres']) retrieved from /opt/airflow/dags/Dag_postgres.py
+[2023-11-14T08:17:41.883+0000] {logging_mixin.py:151} INFO - [2023-11-14T08:17:41.882+0000] {dag.py:2915} INFO - Sync 1 DAGs
+[2023-11-14T08:17:41.911+0000] {logging_mixin.py:151} INFO - [2023-11-14T08:17:41.911+0000] {dag.py:3696} INFO - Setting next_dagrun for covid_data_dag_postgres to 2023-11-14T00:00:00+00:00, run_after=2023-11-15T00:00:00+00:00
+[2023-11-14T08:17:41.937+0000] {processor.py:179} INFO - Processing /opt/airflow/dags/Dag_postgres.py took 0.624 seconds
+[2023-11-14T08:17:46.055+0000] {processor.py:157} INFO - Started process (PID=949) to work on /opt/airflow/dags/Dag_postgres.py
+[2023-11-14T08:17:46.056+0000] {processor.py:829} INFO - Processing file /opt/airflow/dags/Dag_postgres.py for tasks to queue
+[2023-11-14T08:17:46.058+0000] {logging_mixin.py:151} INFO - [2023-11-14T08:17:46.058+0000] {dagbag.py:539} INFO - Filling up the DagBag from /opt/airflow/dags/Dag_postgres.py
+[2023-11-14T08:17:46.698+0000] {processor.py:839} INFO - DAG(s) dict_keys(['covid_data_dag_postgres']) retrieved from /opt/airflow/dags/Dag_postgres.py
+[2023-11-14T08:17:46.744+0000] {logging_mixin.py:151} INFO - [2023-11-14T08:17:46.743+0000] {dag.py:2915} INFO - Sync 1 DAGs
+[2023-11-14T08:17:46.777+0000] {logging_mixin.py:151} INFO - [2023-11-14T08:17:46.776+0000] {dag.py:3696} INFO - Setting next_dagrun for covid_data_dag_postgres to 2023-11-14T00:00:00+00:00, run_after=2023-11-15T00:00:00+00:00
+[2023-11-14T08:17:46.814+0000] {processor.py:179} INFO - Processing /opt/airflow/dags/Dag_postgres.py took 0.765 seconds
+[2023-11-14T08:17:58.999+0000] {processor.py:157} INFO - Started process (PID=959) to work on /opt/airflow/dags/Dag_postgres.py
+[2023-11-14T08:17:59.000+0000] {processor.py:829} INFO - Processing file /opt/airflow/dags/Dag_postgres.py for tasks to queue
+[2023-11-14T08:17:59.003+0000] {logging_mixin.py:151} INFO - [2023-11-14T08:17:59.002+0000] {dagbag.py:539} INFO - Filling up the DagBag from /opt/airflow/dags/Dag_postgres.py
+[2023-11-14T08:17:59.479+0000] {processor.py:839} INFO - DAG(s) dict_keys(['covid_data_dag_postgres']) retrieved from /opt/airflow/dags/Dag_postgres.py
+[2023-11-14T08:17:59.519+0000] {logging_mixin.py:151} INFO - [2023-11-14T08:17:59.519+0000] {dag.py:2915} INFO - Sync 1 DAGs
+[2023-11-14T08:17:59.559+0000] {logging_mixin.py:151} INFO - [2023-11-14T08:17:59.558+0000] {dag.py:3696} INFO - Setting next_dagrun for covid_data_dag_postgres to 2023-11-14T00:00:00+00:00, run_after=2023-11-15T00:00:00+00:00
+[2023-11-14T08:17:59.603+0000] {processor.py:179} INFO - Processing /opt/airflow/dags/Dag_postgres.py took 0.610 seconds
+[2023-11-14T08:18:01.682+0000] {processor.py:157} INFO - Started process (PID=961) to work on /opt/airflow/dags/Dag_postgres.py
+[2023-11-14T08:18:01.683+0000] {processor.py:829} INFO - Processing file /opt/airflow/dags/Dag_postgres.py for tasks to queue
+[2023-11-14T08:18:01.685+0000] {logging_mixin.py:151} INFO - [2023-11-14T08:18:01.685+0000] {dagbag.py:539} INFO - Filling up the DagBag from /opt/airflow/dags/Dag_postgres.py
+[2023-11-14T08:18:02.237+0000] {processor.py:839} INFO - DAG(s) dict_keys(['covid_data_dag_postgres']) retrieved from /opt/airflow/dags/Dag_postgres.py
+[2023-11-14T08:18:02.275+0000] {logging_mixin.py:151} INFO - [2023-11-14T08:18:02.275+0000] {dag.py:2915} INFO - Sync 1 DAGs
+[2023-11-14T08:18:02.306+0000] {logging_mixin.py:151} INFO - [2023-11-14T08:18:02.305+0000] {dag.py:3696} INFO - Setting next_dagrun for covid_data_dag_postgres to 2023-11-14T00:00:00+00:00, run_after=2023-11-15T00:00:00+00:00
+[2023-11-14T08:18:02.511+0000] {processor.py:179} INFO - Processing /opt/airflow/dags/Dag_postgres.py took 0.833 seconds
+[2023-11-14T08:18:04.230+0000] {processor.py:157} INFO - Started process (PID=963) to work on /opt/airflow/dags/Dag_postgres.py
+[2023-11-14T08:18:04.231+0000] {processor.py:829} INFO - Processing file /opt/airflow/dags/Dag_postgres.py for tasks to queue
+[2023-11-14T08:18:04.232+0000] {logging_mixin.py:151} INFO - [2023-11-14T08:18:04.232+0000] {dagbag.py:539} INFO - Filling up the DagBag from /opt/airflow/dags/Dag_postgres.py
+[2023-11-14T08:18:04.869+0000] {processor.py:839} INFO - DAG(s) dict_keys(['covid_data_dag_postgres']) retrieved from /opt/airflow/dags/Dag_postgres.py
+[2023-11-14T08:18:04.917+0000] {logging_mixin.py:151} INFO - [2023-11-14T08:18:04.916+0000] {dag.py:2915} INFO - Sync 1 DAGs
+[2023-11-14T08:18:05.096+0000] {logging_mixin.py:151} INFO - [2023-11-14T08:18:05.096+0000] {dag.py:3696} INFO - Setting next_dagrun for covid_data_dag_postgres to 2023-11-14T00:00:00+00:00, run_after=2023-11-15T00:00:00+00:00
+[2023-11-14T08:18:05.136+0000] {processor.py:179} INFO - Processing /opt/airflow/dags/Dag_postgres.py took 0.911 seconds
+[2023-11-14T08:18:11.267+0000] {processor.py:157} INFO - Started process (PID=972) to work on /opt/airflow/dags/Dag_postgres.py
+[2023-11-14T08:18:11.268+0000] {processor.py:829} INFO - Processing file /opt/airflow/dags/Dag_postgres.py for tasks to queue
+[2023-11-14T08:18:11.269+0000] {logging_mixin.py:151} INFO - [2023-11-14T08:18:11.269+0000] {dagbag.py:539} INFO - Filling up the DagBag from /opt/airflow/dags/Dag_postgres.py
+[2023-11-14T08:18:11.853+0000] {processor.py:839} INFO - DAG(s) dict_keys(['covid_data_dag_postgres']) retrieved from /opt/airflow/dags/Dag_postgres.py
+[2023-11-14T08:18:11.890+0000] {logging_mixin.py:151} INFO - [2023-11-14T08:18:11.889+0000] {dag.py:2915} INFO - Sync 1 DAGs
+[2023-11-14T08:18:11.924+0000] {logging_mixin.py:151} INFO - [2023-11-14T08:18:11.924+0000] {dag.py:3696} INFO - Setting next_dagrun for covid_data_dag_postgres to 2023-11-14T00:00:00+00:00, run_after=2023-11-15T00:00:00+00:00
+[2023-11-14T08:18:11.957+0000] {processor.py:179} INFO - Processing /opt/airflow/dags/Dag_postgres.py took 0.694 seconds
+[2023-11-14T08:18:42.379+0000] {processor.py:157} INFO - Started process (PID=991) to work on /opt/airflow/dags/Dag_postgres.py
+[2023-11-14T08:18:42.380+0000] {processor.py:829} INFO - Processing file /opt/airflow/dags/Dag_postgres.py for tasks to queue
+[2023-11-14T08:18:42.382+0000] {logging_mixin.py:151} INFO - [2023-11-14T08:18:42.382+0000] {dagbag.py:539} INFO - Filling up the DagBag from /opt/airflow/dags/Dag_postgres.py
+[2023-11-14T08:18:43.141+0000] {processor.py:839} INFO - DAG(s) dict_keys(['covid_data_dag_postgres']) retrieved from /opt/airflow/dags/Dag_postgres.py
+[2023-11-14T08:18:43.226+0000] {logging_mixin.py:151} INFO - [2023-11-14T08:18:43.225+0000] {dag.py:2915} INFO - Sync 1 DAGs
+[2023-11-14T08:18:43.286+0000] {logging_mixin.py:151} INFO - [2023-11-14T08:18:43.285+0000] {dag.py:3696} INFO - Setting next_dagrun for covid_data_dag_postgres to 2023-11-14T00:00:00+00:00, run_after=2023-11-15T00:00:00+00:00
+[2023-11-14T08:18:43.383+0000] {processor.py:179} INFO - Processing /opt/airflow/dags/Dag_postgres.py took 1.011 seconds
+[2023-11-14T08:18:51.560+0000] {processor.py:157} INFO - Started process (PID=1003) to work on /opt/airflow/dags/Dag_postgres.py
+[2023-11-14T08:18:51.561+0000] {processor.py:829} INFO - Processing file /opt/airflow/dags/Dag_postgres.py for tasks to queue
+[2023-11-14T08:18:51.564+0000] {logging_mixin.py:151} INFO - [2023-11-14T08:18:51.563+0000] {dagbag.py:539} INFO - Filling up the DagBag from /opt/airflow/dags/Dag_postgres.py
+[2023-11-14T08:18:52.261+0000] {processor.py:839} INFO - DAG(s) dict_keys(['covid_data_dag_postgres']) retrieved from /opt/airflow/dags/Dag_postgres.py
+[2023-11-14T08:18:52.302+0000] {logging_mixin.py:151} INFO - [2023-11-14T08:18:52.301+0000] {dag.py:2915} INFO - Sync 1 DAGs
+[2023-11-14T08:18:52.355+0000] {logging_mixin.py:151} INFO - [2023-11-14T08:18:52.354+0000] {dag.py:3696} INFO - Setting next_dagrun for covid_data_dag_postgres to 2023-11-14T00:00:00+00:00, run_after=2023-11-15T00:00:00+00:00
+[2023-11-14T08:18:52.396+0000] {processor.py:179} INFO - Processing /opt/airflow/dags/Dag_postgres.py took 0.843 seconds
+[2023-11-14T08:18:56.128+0000] {processor.py:157} INFO - Started process (PID=1005) to work on /opt/airflow/dags/Dag_postgres.py
+[2023-11-14T08:18:56.129+0000] {processor.py:829} INFO - Processing file /opt/airflow/dags/Dag_postgres.py for tasks to queue
+[2023-11-14T08:18:56.131+0000] {logging_mixin.py:151} INFO - [2023-11-14T08:18:56.131+0000] {dagbag.py:539} INFO - Filling up the DagBag from /opt/airflow/dags/Dag_postgres.py
+[2023-11-14T08:18:57.149+0000] {processor.py:839} INFO - DAG(s) dict_keys(['covid_data_dag_postgres']) retrieved from /opt/airflow/dags/Dag_postgres.py
+[2023-11-14T08:18:57.243+0000] {logging_mixin.py:151} INFO - [2023-11-14T08:18:57.239+0000] {dag.py:2915} INFO - Sync 1 DAGs
+[2023-11-14T08:18:57.305+0000] {logging_mixin.py:151} INFO - [2023-11-14T08:18:57.304+0000] {dag.py:3696} INFO - Setting next_dagrun for covid_data_dag_postgres to 2023-11-14T00:00:00+00:00, run_after=2023-11-15T00:00:00+00:00
+[2023-11-14T08:18:57.815+0000] {processor.py:179} INFO - Processing /opt/airflow/dags/Dag_postgres.py took 1.694 seconds
+[2023-11-14T08:19:28.669+0000] {processor.py:157} INFO - Started process (PID=1032) to work on /opt/airflow/dags/Dag_postgres.py
+[2023-11-14T08:19:28.671+0000] {processor.py:829} INFO - Processing file /opt/airflow/dags/Dag_postgres.py for tasks to queue
+[2023-11-14T08:19:28.673+0000] {logging_mixin.py:151} INFO - [2023-11-14T08:19:28.672+0000] {dagbag.py:539} INFO - Filling up the DagBag from /opt/airflow/dags/Dag_postgres.py
+[2023-11-14T08:19:29.490+0000] {processor.py:839} INFO - DAG(s) dict_keys(['covid_data_dag_postgres']) retrieved from /opt/airflow/dags/Dag_postgres.py
+[2023-11-14T08:19:29.563+0000] {logging_mixin.py:151} INFO - [2023-11-14T08:19:29.562+0000] {dag.py:2915} INFO - Sync 1 DAGs
+[2023-11-14T08:19:29.606+0000] {logging_mixin.py:151} INFO - [2023-11-14T08:19:29.606+0000] {dag.py:3696} INFO - Setting next_dagrun for covid_data_dag_postgres to 2023-11-14T00:00:00+00:00, run_after=2023-11-15T00:00:00+00:00
+[2023-11-14T08:19:29.640+0000] {processor.py:179} INFO - Processing /opt/airflow/dags/Dag_postgres.py took 0.978 seconds
+[2023-11-14T08:19:59.953+0000] {processor.py:157} INFO - Started process (PID=1062) to work on /opt/airflow/dags/Dag_postgres.py
+[2023-11-14T08:19:59.954+0000] {processor.py:829} INFO - Processing file /opt/airflow/dags/Dag_postgres.py for tasks to queue
+[2023-11-14T08:19:59.955+0000] {logging_mixin.py:151} INFO - [2023-11-14T08:19:59.955+0000] {dagbag.py:539} INFO - Filling up the DagBag from /opt/airflow/dags/Dag_postgres.py
+[2023-11-14T08:20:00.370+0000] {processor.py:839} INFO - DAG(s) dict_keys(['covid_data_dag_postgres']) retrieved from /opt/airflow/dags/Dag_postgres.py
+[2023-11-14T08:20:00.405+0000] {logging_mixin.py:151} INFO - [2023-11-14T08:20:00.404+0000] {dag.py:2915} INFO - Sync 1 DAGs
+[2023-11-14T08:20:00.436+0000] {logging_mixin.py:151} INFO - [2023-11-14T08:20:00.435+0000] {dag.py:3696} INFO - Setting next_dagrun for covid_data_dag_postgres to 2023-11-14T00:00:00+00:00, run_after=2023-11-15T00:00:00+00:00
+[2023-11-14T08:20:00.476+0000] {processor.py:179} INFO - Processing /opt/airflow/dags/Dag_postgres.py took 0.526 seconds
+[2023-11-14T08:20:30.885+0000] {processor.py:157} INFO - Started process (PID=1083) to work on /opt/airflow/dags/Dag_postgres.py
+[2023-11-14T08:20:30.886+0000] {processor.py:829} INFO - Processing file /opt/airflow/dags/Dag_postgres.py for tasks to queue
+[2023-11-14T08:20:30.887+0000] {logging_mixin.py:151} INFO - [2023-11-14T08:20:30.886+0000] {dagbag.py:539} INFO - Filling up the DagBag from /opt/airflow/dags/Dag_postgres.py
+[2023-11-14T08:20:31.264+0000] {processor.py:839} INFO - DAG(s) dict_keys(['covid_data_dag_postgres']) retrieved from /opt/airflow/dags/Dag_postgres.py
+[2023-11-14T08:20:31.297+0000] {logging_mixin.py:151} INFO - [2023-11-14T08:20:31.296+0000] {dag.py:2915} INFO - Sync 1 DAGs
+[2023-11-14T08:20:31.457+0000] {logging_mixin.py:151} INFO - [2023-11-14T08:20:31.456+0000] {dag.py:3696} INFO - Setting next_dagrun for covid_data_dag_postgres to 2023-11-14T00:00:00+00:00, run_after=2023-11-15T00:00:00+00:00
+[2023-11-14T08:20:31.488+0000] {processor.py:179} INFO - Processing /opt/airflow/dags/Dag_postgres.py took 0.607 seconds
+[2023-11-14T08:21:01.812+0000] {processor.py:157} INFO - Started process (PID=1112) to work on /opt/airflow/dags/Dag_postgres.py
+[2023-11-14T08:21:01.814+0000] {processor.py:829} INFO - Processing file /opt/airflow/dags/Dag_postgres.py for tasks to queue
+[2023-11-14T08:21:01.815+0000] {logging_mixin.py:151} INFO - [2023-11-14T08:21:01.815+0000] {dagbag.py:539} INFO - Filling up the DagBag from /opt/airflow/dags/Dag_postgres.py
+[2023-11-14T08:21:02.506+0000] {processor.py:839} INFO - DAG(s) dict_keys(['covid_data_dag_postgres']) retrieved from /opt/airflow/dags/Dag_postgres.py
+[2023-11-14T08:21:02.561+0000] {logging_mixin.py:151} INFO - [2023-11-14T08:21:02.560+0000] {dag.py:2915} INFO - Sync 1 DAGs
+[2023-11-14T08:21:02.850+0000] {logging_mixin.py:151} INFO - [2023-11-14T08:21:02.850+0000] {dag.py:3696} INFO - Setting next_dagrun for covid_data_dag_postgres to 2023-11-14T00:00:00+00:00, run_after=2023-11-15T00:00:00+00:00
+[2023-11-14T08:21:02.897+0000] {processor.py:179} INFO - Processing /opt/airflow/dags/Dag_postgres.py took 1.091 seconds
+[2023-11-14T08:21:33.246+0000] {processor.py:157} INFO - Started process (PID=1134) to work on /opt/airflow/dags/Dag_postgres.py
+[2023-11-14T08:21:33.247+0000] {processor.py:829} INFO - Processing file /opt/airflow/dags/Dag_postgres.py for tasks to queue
+[2023-11-14T08:21:33.248+0000] {logging_mixin.py:151} INFO - [2023-11-14T08:21:33.247+0000] {dagbag.py:539} INFO - Filling up the DagBag from /opt/airflow/dags/Dag_postgres.py
+[2023-11-14T08:21:33.678+0000] {processor.py:839} INFO - DAG(s) dict_keys(['covid_data_dag_postgres']) retrieved from /opt/airflow/dags/Dag_postgres.py
+[2023-11-14T08:21:33.713+0000] {logging_mixin.py:151} INFO - [2023-11-14T08:21:33.712+0000] {dag.py:2915} INFO - Sync 1 DAGs
+[2023-11-14T08:21:33.741+0000] {logging_mixin.py:151} INFO - [2023-11-14T08:21:33.741+0000] {dag.py:3696} INFO - Setting next_dagrun for covid_data_dag_postgres to 2023-11-14T00:00:00+00:00, run_after=2023-11-15T00:00:00+00:00
+[2023-11-14T08:21:33.777+0000] {processor.py:179} INFO - Processing /opt/airflow/dags/Dag_postgres.py took 0.538 seconds
