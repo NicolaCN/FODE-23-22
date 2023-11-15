@@ -1,0 +1,11 @@
+[2023-11-15T19:42:36.434+0000] {taskinstance.py:1157} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: covid_data_dag_postgres_plis.staging.wrangle_population_data manual__2023-11-15T19:42:05.206768+00:00 [queued]>
+[2023-11-15T19:42:39.019+0000] {taskinstance.py:1157} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: covid_data_dag_postgres_plis.staging.wrangle_population_data manual__2023-11-15T19:42:05.206768+00:00 [queued]>
+[2023-11-15T19:42:39.035+0000] {taskinstance.py:1359} INFO - Starting attempt 1 of 2
+[2023-11-15T19:42:39.596+0000] {taskinstance.py:1380} INFO - Executing <Task(PythonOperator): staging.wrangle_population_data> on 2023-11-15 19:42:05.206768+00:00
+[2023-11-15T19:42:40.189+0000] {standard_task_runner.py:57} INFO - Started process 7725 to run task
+[2023-11-15T19:42:40.677+0000] {standard_task_runner.py:84} INFO - Running: ['***', 'tasks', 'run', 'covid_data_dag_postgres_plis', 'staging.wrangle_population_data', 'manual__2023-11-15T19:42:05.206768+00:00', '--job-id', '1043', '--raw', '--subdir', 'DAGS_FOLDER/Dag_postgres.py', '--cfg-path', '/tmp/tmpd50vn2nr']
+[2023-11-15T19:42:40.761+0000] {standard_task_runner.py:85} INFO - Job 1043: Subtask staging.wrangle_population_data
+[2023-11-15T19:50:03.673+0000] {local_task_job_runner.py:205} ERROR - Heartbeat time limit exceeded!
+[2023-11-15T19:50:03.858+0000] {process_utils.py:131} INFO - Sending 15 to group 7725. PIDs of all processes in the group: [7725]
+[2023-11-15T19:50:03.948+0000] {process_utils.py:86} INFO - Sending the signal 15 to group 7725
+[2023-11-15T19:50:04.029+0000] {process_utils.py:79} INFO - Process psutil.Process(pid=7725, status='terminated', exitcode=<Negsignal.SIGTERM: -15>, started='19:42:39') (7725) terminated with exit code -15

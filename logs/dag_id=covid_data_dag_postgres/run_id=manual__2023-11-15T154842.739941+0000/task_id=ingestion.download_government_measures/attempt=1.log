@@ -1,0 +1,11 @@
+[2023-11-15T15:49:04.653+0000] {taskinstance.py:1157} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: covid_data_dag_postgres.ingestion.download_government_measures manual__2023-11-15T15:48:42.739941+00:00 [queued]>
+[2023-11-15T15:49:05.540+0000] {taskinstance.py:1157} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: covid_data_dag_postgres.ingestion.download_government_measures manual__2023-11-15T15:48:42.739941+00:00 [queued]>
+[2023-11-15T15:49:05.542+0000] {taskinstance.py:1359} INFO - Starting attempt 1 of 2
+[2023-11-15T15:49:05.867+0000] {taskinstance.py:1380} INFO - Executing <Task(PythonOperator): ingestion.download_government_measures> on 2023-11-15 15:48:42.739941+00:00
+[2023-11-15T15:49:06.192+0000] {standard_task_runner.py:57} INFO - Started process 935 to run task
+[2023-11-15T15:49:07.984+0000] {standard_task_runner.py:84} INFO - Running: ['***', 'tasks', 'run', 'covid_data_dag_postgres', 'ingestion.download_government_measures', 'manual__2023-11-15T15:48:42.739941+00:00', '--job-id', '970', '--raw', '--subdir', 'DAGS_FOLDER/Dag_postgres.py', '--cfg-path', '/tmp/tmpvg51a_l2']
+[2023-11-15T15:49:09.079+0000] {standard_task_runner.py:85} INFO - Job 970: Subtask ingestion.download_government_measures
+[2023-11-15T15:50:18.501+0000] {local_task_job_runner.py:294} WARNING - State of this instance has been externally set to removed. Terminating instance.
+[2023-11-15T15:50:18.624+0000] {process_utils.py:131} INFO - Sending 15 to group 935. PIDs of all processes in the group: [935]
+[2023-11-15T15:50:18.634+0000] {process_utils.py:86} INFO - Sending the signal 15 to group 935
+[2023-11-15T15:50:18.906+0000] {process_utils.py:79} INFO - Process psutil.Process(pid=935, status='terminated', exitcode=0, started='15:49:05') (935) terminated with exit code 0

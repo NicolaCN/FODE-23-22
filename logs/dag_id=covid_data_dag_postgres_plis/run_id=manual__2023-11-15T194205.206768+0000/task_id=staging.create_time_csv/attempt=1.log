@@ -1,0 +1,11 @@
+[2023-11-15T19:42:35.840+0000] {taskinstance.py:1157} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: covid_data_dag_postgres_plis.staging.create_time_csv manual__2023-11-15T19:42:05.206768+00:00 [queued]>
+[2023-11-15T19:42:38.631+0000] {taskinstance.py:1157} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: covid_data_dag_postgres_plis.staging.create_time_csv manual__2023-11-15T19:42:05.206768+00:00 [queued]>
+[2023-11-15T19:42:38.639+0000] {taskinstance.py:1359} INFO - Starting attempt 1 of 2
+[2023-11-15T19:42:39.124+0000] {taskinstance.py:1380} INFO - Executing <Task(PythonOperator): staging.create_time_csv> on 2023-11-15 19:42:05.206768+00:00
+[2023-11-15T19:42:39.731+0000] {standard_task_runner.py:57} INFO - Started process 7719 to run task
+[2023-11-15T19:42:40.143+0000] {standard_task_runner.py:84} INFO - Running: ['***', 'tasks', 'run', 'covid_data_dag_postgres_plis', 'staging.create_time_csv', 'manual__2023-11-15T19:42:05.206768+00:00', '--job-id', '1046', '--raw', '--subdir', 'DAGS_FOLDER/Dag_postgres.py', '--cfg-path', '/tmp/tmpljnukriz']
+[2023-11-15T19:42:40.335+0000] {standard_task_runner.py:85} INFO - Job 1046: Subtask staging.create_time_csv
+[2023-11-15T19:50:03.318+0000] {local_task_job_runner.py:205} ERROR - Heartbeat time limit exceeded!
+[2023-11-15T19:50:03.788+0000] {process_utils.py:131} INFO - Sending 15 to group 7719. PIDs of all processes in the group: [7719]
+[2023-11-15T19:50:03.794+0000] {process_utils.py:86} INFO - Sending the signal 15 to group 7719
+[2023-11-15T19:50:04.060+0000] {process_utils.py:79} INFO - Process psutil.Process(pid=7719, status='terminated', exitcode=<Negsignal.SIGTERM: -15>, started='19:42:39') (7719) terminated with exit code -15

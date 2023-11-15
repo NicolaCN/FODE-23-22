@@ -1,0 +1,4 @@
+[2023-11-15T16:14:03.787+0000] {task_command.py:415} INFO - Running <TaskInstance: covid_data_dag_postgres.download_location_data manual__2023-11-15T16:13:47.134099+00:00 [removed]> on host 172.21.0.3
+[2023-11-15T16:14:04.688+0000] {taskinstance.py:1660} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='covid_data_dag_postgres' AIRFLOW_CTX_TASK_ID='download_location_data' AIRFLOW_CTX_EXECUTION_DATE='2023-11-15T16:13:47.134099+00:00' AIRFLOW_CTX_TRY_NUMBER='2' AIRFLOW_CTX_DAG_RUN_ID='manual__2023-11-15T16:13:47.134099+00:00'
+[2023-11-15T16:14:05.475+0000] {python.py:194} INFO - Done. Returned value was: None
+[2023-11-15T16:14:06.182+0000] {taskinstance.py:1398} INFO - Marking task as SUCCESS. dag_id=covid_data_dag_postgres, task_id=download_location_data, execution_date=20231115T161347, start_date=20231115T161354, end_date=20231115T161406

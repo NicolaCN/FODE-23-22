@@ -613,3 +613,18 @@
 [2023-11-14T19:16:32.171+0000] {logging_mixin.py:151} INFO - [2023-11-14T19:16:32.162+0000] {dagbag.py:539} INFO - Filling up the DagBag from /opt/airflow/dags/postgres/country-mapping-iso-continent-region.zip
 [2023-11-14T19:16:32.315+0000] {processor.py:841} WARNING - No viable dags retrieved from /opt/airflow/dags/postgres/country-mapping-iso-continent-region.zip
 [2023-11-14T19:16:32.441+0000] {processor.py:179} INFO - Processing /opt/airflow/dags/postgres/country-mapping-iso-continent-region.zip took 0.312 seconds
+[2023-11-14T19:17:02.779+0000] {processor.py:157} INFO - Started process (PID=2402) to work on /opt/airflow/dags/postgres/country-mapping-iso-continent-region.zip
+[2023-11-14T19:17:02.782+0000] {processor.py:829} INFO - Processing file /opt/airflow/dags/postgres/country-mapping-iso-continent-region.zip for tasks to queue
+[2023-11-14T19:17:02.799+0000] {logging_mixin.py:151} INFO - [2023-11-14T19:17:02.798+0000] {dagbag.py:539} INFO - Filling up the DagBag from /opt/airflow/dags/postgres/country-mapping-iso-continent-region.zip
+[2023-11-14T19:17:02.834+0000] {processor.py:841} WARNING - No viable dags retrieved from /opt/airflow/dags/postgres/country-mapping-iso-continent-region.zip
+[2023-11-14T19:17:02.891+0000] {processor.py:179} INFO - Processing /opt/airflow/dags/postgres/country-mapping-iso-continent-region.zip took 0.157 seconds
+[2023-11-14T19:17:33.319+0000] {processor.py:157} INFO - Started process (PID=2422) to work on /opt/airflow/dags/postgres/country-mapping-iso-continent-region.zip
+[2023-11-14T19:17:33.320+0000] {processor.py:829} INFO - Processing file /opt/airflow/dags/postgres/country-mapping-iso-continent-region.zip for tasks to queue
+[2023-11-14T19:17:33.321+0000] {logging_mixin.py:151} INFO - [2023-11-14T19:17:33.321+0000] {dagbag.py:539} INFO - Filling up the DagBag from /opt/airflow/dags/postgres/country-mapping-iso-continent-region.zip
+[2023-11-14T19:17:33.338+0000] {processor.py:841} WARNING - No viable dags retrieved from /opt/airflow/dags/postgres/country-mapping-iso-continent-region.zip
+[2023-11-14T19:17:33.355+0000] {processor.py:179} INFO - Processing /opt/airflow/dags/postgres/country-mapping-iso-continent-region.zip took 0.040 seconds
+[2023-11-14T19:18:03.461+0000] {processor.py:157} INFO - Started process (PID=2443) to work on /opt/airflow/dags/postgres/country-mapping-iso-continent-region.zip
+[2023-11-14T19:18:03.462+0000] {processor.py:829} INFO - Processing file /opt/airflow/dags/postgres/country-mapping-iso-continent-region.zip for tasks to queue
+[2023-11-14T19:18:03.463+0000] {logging_mixin.py:151} INFO - [2023-11-14T19:18:03.463+0000] {dagbag.py:539} INFO - Filling up the DagBag from /opt/airflow/dags/postgres/country-mapping-iso-continent-region.zip
+[2023-11-14T19:18:03.483+0000] {processor.py:841} WARNING - No viable dags retrieved from /opt/airflow/dags/postgres/country-mapping-iso-continent-region.zip
+[2023-11-14T19:18:03.499+0000] {processor.py:179} INFO - Processing /opt/airflow/dags/postgres/country-mapping-iso-continent-region.zip took 0.043 seconds

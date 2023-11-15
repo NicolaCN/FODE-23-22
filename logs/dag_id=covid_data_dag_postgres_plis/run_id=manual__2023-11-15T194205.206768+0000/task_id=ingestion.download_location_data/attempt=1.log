@@ -1,0 +1,11 @@
+[2023-11-15T19:42:35.268+0000] {taskinstance.py:1157} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: covid_data_dag_postgres_plis.ingestion.download_location_data manual__2023-11-15T19:42:05.206768+00:00 [queued]>
+[2023-11-15T19:42:36.659+0000] {taskinstance.py:1157} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: covid_data_dag_postgres_plis.ingestion.download_location_data manual__2023-11-15T19:42:05.206768+00:00 [queued]>
+[2023-11-15T19:42:36.661+0000] {taskinstance.py:1359} INFO - Starting attempt 1 of 2
+[2023-11-15T19:42:38.723+0000] {taskinstance.py:1380} INFO - Executing <Task(PythonOperator): ingestion.download_location_data> on 2023-11-15 19:42:05.206768+00:00
+[2023-11-15T19:42:39.254+0000] {standard_task_runner.py:57} INFO - Started process 7716 to run task
+[2023-11-15T19:42:39.561+0000] {standard_task_runner.py:84} INFO - Running: ['***', 'tasks', 'run', 'covid_data_dag_postgres_plis', 'ingestion.download_location_data', 'manual__2023-11-15T19:42:05.206768+00:00', '--job-id', '1047', '--raw', '--subdir', 'DAGS_FOLDER/Dag_postgres.py', '--cfg-path', '/tmp/tmpkchsq1vp']
+[2023-11-15T19:42:39.686+0000] {standard_task_runner.py:85} INFO - Job 1047: Subtask ingestion.download_location_data
+[2023-11-15T19:50:01.221+0000] {local_task_job_runner.py:205} ERROR - Heartbeat time limit exceeded!
+[2023-11-15T19:50:01.656+0000] {process_utils.py:131} INFO - Sending 15 to group 7716. PIDs of all processes in the group: [7716]
+[2023-11-15T19:50:01.819+0000] {process_utils.py:86} INFO - Sending the signal 15 to group 7716
+[2023-11-15T19:50:03.957+0000] {process_utils.py:79} INFO - Process psutil.Process(pid=7716, status='terminated', exitcode=<Negsignal.SIGTERM: -15>, started='19:42:38') (7716) terminated with exit code -15

@@ -1,0 +1,9 @@
+[2023-11-15T16:13:54.613+0000] {taskinstance.py:1157} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: covid_data_dag_postgres.download_location_data manual__2023-11-15T16:13:47.134099+00:00 [queued]>
+[2023-11-15T16:13:54.653+0000] {taskinstance.py:1157} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: covid_data_dag_postgres.download_location_data manual__2023-11-15T16:13:47.134099+00:00 [queued]>
+[2023-11-15T16:13:54.654+0000] {taskinstance.py:1359} INFO - Starting attempt 1 of 2
+[2023-11-15T16:13:54.711+0000] {taskinstance.py:1380} INFO - Executing <Task(PythonOperator): download_location_data> on 2023-11-15 16:13:47.134099+00:00
+[2023-11-15T16:13:54.727+0000] {standard_task_runner.py:57} INFO - Started process 1869 to run task
+[2023-11-15T16:13:54.752+0000] {standard_task_runner.py:84} INFO - Running: ['***', 'tasks', 'run', 'covid_data_dag_postgres', 'download_location_data', 'manual__2023-11-15T16:13:47.134099+00:00', '--job-id', '974', '--raw', '--subdir', 'DAGS_FOLDER/Dag_postgres.py', '--cfg-path', '/tmp/tmpb3sybkrz']
+[2023-11-15T16:13:54.766+0000] {standard_task_runner.py:85} INFO - Job 974: Subtask download_location_data
+[2023-11-15T16:14:12.881+0000] {local_task_job_runner.py:228} INFO - Task exited with return code 0
+[2023-11-15T16:14:12.969+0000] {taskinstance.py:2776} INFO - 0 downstream tasks scheduled from follow-on schedule check
