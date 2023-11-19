@@ -1,0 +1,62 @@
+[2023-11-19T14:12:59.759+0000] {taskinstance.py:1157} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: covid_data_dag_postgres_plis.staging.create_cases_deaths_table manual__2023-11-19T14:09:52.171847+00:00 [queued]>
+[2023-11-19T14:12:59.861+0000] {taskinstance.py:1157} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: covid_data_dag_postgres_plis.staging.create_cases_deaths_table manual__2023-11-19T14:09:52.171847+00:00 [queued]>
+[2023-11-19T14:12:59.871+0000] {taskinstance.py:1359} INFO - Starting attempt 1 of 2
+[2023-11-19T14:13:00.071+0000] {taskinstance.py:1380} INFO - Executing <Task(PostgresOperator): staging.create_cases_deaths_table> on 2023-11-19 14:09:52.171847+00:00
+[2023-11-19T14:13:00.105+0000] {standard_task_runner.py:57} INFO - Started process 5584 to run task
+[2023-11-19T14:13:00.182+0000] {standard_task_runner.py:84} INFO - Running: ['***', 'tasks', 'run', 'covid_data_dag_postgres_plis', 'staging.create_cases_deaths_table', 'manual__2023-11-19T14:09:52.171847+00:00', '--job-id', '1352', '--raw', '--subdir', 'DAGS_FOLDER/Dag_postgres.py', '--cfg-path', '/tmp/tmpnoktyy2d']
+[2023-11-19T14:13:00.332+0000] {standard_task_runner.py:85} INFO - Job 1352: Subtask staging.create_cases_deaths_table
+[2023-11-19T14:13:05.273+0000] {task_command.py:415} INFO - Running <TaskInstance: covid_data_dag_postgres_plis.staging.create_cases_deaths_table manual__2023-11-19T14:09:52.171847+00:00 [running]> on host 172.21.0.3
+[2023-11-19T14:13:05.846+0000] {taskinstance.py:1660} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='covid_data_dag_postgres_plis' AIRFLOW_CTX_TASK_ID='staging.create_cases_deaths_table' AIRFLOW_CTX_EXECUTION_DATE='2023-11-19T14:09:52.171847+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='manual__2023-11-19T14:09:52.171847+00:00'
+[2023-11-19T14:13:05.849+0000] {sql.py:274} INFO - Executing: 
+DROP TABLE IF EXISTS cases_deaths;
+CREATE TABLE IF NOT EXISTS cases_deaths (
+    Date_reported DATE,
+    Country VARCHAR(255),
+    Country_code VARCHAR(255),
+    WHO_region VARCHAR(255),
+    New_cases INTEGER,
+    Cumulative_cases INTEGER,
+    New_deaths INTEGER,
+    Cumulative_deaths INTEGER,
+    Weekly_cases INTEGER,
+    Weekly_deaths INTEGER,
+    Weekly_pct_growth_cases FLOAT,
+    Weekly_pct_growth_deaths FLOAT,
+    population INTEGER,
+    New_cases_per_million FLOAT,
+    New_deaths_per_million FLOAT,
+    Cumulative_cases_per_million FLOAT,
+    Cumulative_deaths_per_million FLOAT,
+    Weekly_cases_per_million FLOAT,
+    Weekly_deaths_per_million FLOAT,
+    PRIMARY KEY (Date_reported, Country_code)
+);
+[2023-11-19T14:13:05.903+0000] {base.py:73} INFO - Using connection ID 'postgres_default' for task execution.
+[2023-11-19T14:13:05.947+0000] {base.py:73} INFO - Using connection ID 'postgres_default' for task execution.
+[2023-11-19T14:13:05.973+0000] {sql.py:418} INFO - Running statement: 
+DROP TABLE IF EXISTS cases_deaths;
+CREATE TABLE IF NOT EXISTS cases_deaths (
+    Date_reported DATE,
+    Country VARCHAR(255),
+    Country_code VARCHAR(255),
+    WHO_region VARCHAR(255),
+    New_cases INTEGER,
+    Cumulative_cases INTEGER,
+    New_deaths INTEGER,
+    Cumulative_deaths INTEGER,
+    Weekly_cases INTEGER,
+    Weekly_deaths INTEGER,
+    Weekly_pct_growth_cases FLOAT,
+    Weekly_pct_growth_deaths FLOAT,
+    population INTEGER,
+    New_cases_per_million FLOAT,
+    New_deaths_per_million FLOAT,
+    Cumulative_cases_per_million FLOAT,
+    Cumulative_deaths_per_million FLOAT,
+    Weekly_cases_per_million FLOAT,
+    Weekly_deaths_per_million FLOAT,
+    PRIMARY KEY (Date_reported, Country_code)
+);, parameters: None
+[2023-11-19T14:13:06.067+0000] {taskinstance.py:1398} INFO - Marking task as SUCCESS. dag_id=covid_data_dag_postgres_plis, task_id=staging.create_cases_deaths_table, execution_date=20231119T140952, start_date=20231119T141259, end_date=20231119T141306
+[2023-11-19T14:13:06.269+0000] {local_task_job_runner.py:228} INFO - Task exited with return code 0
+[2023-11-19T14:13:08.260+0000] {taskinstance.py:2776} INFO - 1 downstream tasks scheduled from follow-on schedule check

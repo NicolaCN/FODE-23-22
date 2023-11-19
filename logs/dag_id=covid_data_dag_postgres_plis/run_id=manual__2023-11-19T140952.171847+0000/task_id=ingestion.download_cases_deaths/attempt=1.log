@@ -1,0 +1,13 @@
+[2023-11-19T14:10:13.073+0000] {taskinstance.py:1157} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: covid_data_dag_postgres_plis.ingestion.download_cases_deaths manual__2023-11-19T14:09:52.171847+00:00 [queued]>
+[2023-11-19T14:10:13.372+0000] {taskinstance.py:1157} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: covid_data_dag_postgres_plis.ingestion.download_cases_deaths manual__2023-11-19T14:09:52.171847+00:00 [queued]>
+[2023-11-19T14:10:13.374+0000] {taskinstance.py:1359} INFO - Starting attempt 1 of 2
+[2023-11-19T14:10:13.770+0000] {taskinstance.py:1380} INFO - Executing <Task(PythonOperator): ingestion.download_cases_deaths> on 2023-11-19 14:09:52.171847+00:00
+[2023-11-19T14:10:14.130+0000] {standard_task_runner.py:57} INFO - Started process 5476 to run task
+[2023-11-19T14:10:14.224+0000] {standard_task_runner.py:84} INFO - Running: ['***', 'tasks', 'run', 'covid_data_dag_postgres_plis', 'ingestion.download_cases_deaths', 'manual__2023-11-19T14:09:52.171847+00:00', '--job-id', '1335', '--raw', '--subdir', 'DAGS_FOLDER/Dag_postgres.py', '--cfg-path', '/tmp/tmpyad9ut9o']
+[2023-11-19T14:10:14.404+0000] {standard_task_runner.py:85} INFO - Job 1335: Subtask ingestion.download_cases_deaths
+[2023-11-19T14:10:48.893+0000] {task_command.py:415} INFO - Running <TaskInstance: covid_data_dag_postgres_plis.ingestion.download_cases_deaths manual__2023-11-19T14:09:52.171847+00:00 [running]> on host 172.21.0.3
+[2023-11-19T14:10:51.909+0000] {taskinstance.py:1660} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='covid_data_dag_postgres_plis' AIRFLOW_CTX_TASK_ID='ingestion.download_cases_deaths' AIRFLOW_CTX_EXECUTION_DATE='2023-11-19T14:09:52.171847+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='manual__2023-11-19T14:09:52.171847+00:00'
+[2023-11-19T14:10:57.228+0000] {python.py:194} INFO - Done. Returned value was: None
+[2023-11-19T14:10:57.310+0000] {taskinstance.py:1398} INFO - Marking task as SUCCESS. dag_id=covid_data_dag_postgres_plis, task_id=ingestion.download_cases_deaths, execution_date=20231119T140952, start_date=20231119T141013, end_date=20231119T141057
+[2023-11-19T14:10:58.077+0000] {local_task_job_runner.py:228} INFO - Task exited with return code 0
+[2023-11-19T14:10:58.515+0000] {taskinstance.py:2776} INFO - 0 downstream tasks scheduled from follow-on schedule check

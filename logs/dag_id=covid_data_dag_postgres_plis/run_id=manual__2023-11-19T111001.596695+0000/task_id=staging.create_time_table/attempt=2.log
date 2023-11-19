@@ -1,0 +1,52 @@
+[2023-11-19T11:11:42.658+0000] {taskinstance.py:1157} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: covid_data_dag_postgres_plis.staging.create_time_table manual__2023-11-19T11:10:01.596695+00:00 [queued]>
+[2023-11-19T11:11:42.700+0000] {taskinstance.py:1157} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: covid_data_dag_postgres_plis.staging.create_time_table manual__2023-11-19T11:10:01.596695+00:00 [queued]>
+[2023-11-19T11:11:42.702+0000] {taskinstance.py:1359} INFO - Starting attempt 2 of 2
+[2023-11-19T11:11:42.750+0000] {taskinstance.py:1380} INFO - Executing <Task(PostgresOperator): staging.create_time_table> on 2023-11-19 11:10:01.596695+00:00
+[2023-11-19T11:11:42.759+0000] {standard_task_runner.py:57} INFO - Started process 1501 to run task
+[2023-11-19T11:11:42.774+0000] {standard_task_runner.py:84} INFO - Running: ['***', 'tasks', 'run', 'covid_data_dag_postgres_plis', 'staging.create_time_table', 'manual__2023-11-19T11:10:01.596695+00:00', '--job-id', '1142', '--raw', '--subdir', 'DAGS_FOLDER/Dag_postgres.py', '--cfg-path', '/tmp/tmp07oite76']
+[2023-11-19T11:11:42.779+0000] {standard_task_runner.py:85} INFO - Job 1142: Subtask staging.create_time_table
+[2023-11-19T11:11:43.323+0000] {task_command.py:415} INFO - Running <TaskInstance: covid_data_dag_postgres_plis.staging.create_time_table manual__2023-11-19T11:10:01.596695+00:00 [running]> on host 172.21.0.3
+[2023-11-19T11:11:43.469+0000] {abstractoperator.py:709} ERROR - Exception rendering Jinja template for task 'staging.create_time_table', field 'sql'. Template: '/opt/***/dags/postgres/sql/create_time_table.sql'
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/models/abstractoperator.py", line 701, in _do_render_template_fields
+    rendered_content = self.render_template(
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/template/templater.py", line 154, in render_template
+    template = jinja_env.get_template(value)
+  File "/home/airflow/.local/lib/python3.8/site-packages/jinja2/environment.py", line 1010, in get_template
+    return self._load_template(name, globals)
+  File "/home/airflow/.local/lib/python3.8/site-packages/jinja2/environment.py", line 969, in _load_template
+    template = self.loader.load(self, name, self.make_globals(globals))
+  File "/home/airflow/.local/lib/python3.8/site-packages/jinja2/loaders.py", line 126, in load
+    source, filename, uptodate = self.get_source(environment, name)
+  File "/home/airflow/.local/lib/python3.8/site-packages/jinja2/loaders.py", line 218, in get_source
+    raise TemplateNotFound(template)
+jinja2.exceptions.TemplateNotFound: /opt/airflow/dags/postgres/sql/create_time_table.sql
+[2023-11-19T11:11:43.471+0000] {taskinstance.py:1935} ERROR - Task failed with exception
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/models/taskinstance.py", line 1516, in _run_raw_task
+    self._execute_task_with_callbacks(context, test_mode, session=session)
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/models/taskinstance.py", line 1645, in _execute_task_with_callbacks
+    task_orig = self.render_templates(context=context)
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/models/taskinstance.py", line 2283, in render_templates
+    original_task.render_template_fields(context)
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/models/baseoperator.py", line 1245, in render_template_fields
+    self._do_render_template_fields(self, self.template_fields, context, jinja_env, set())
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/utils/session.py", line 77, in wrapper
+    return func(*args, session=session, **kwargs)
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/models/abstractoperator.py", line 701, in _do_render_template_fields
+    rendered_content = self.render_template(
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/template/templater.py", line 154, in render_template
+    template = jinja_env.get_template(value)
+  File "/home/airflow/.local/lib/python3.8/site-packages/jinja2/environment.py", line 1010, in get_template
+    return self._load_template(name, globals)
+  File "/home/airflow/.local/lib/python3.8/site-packages/jinja2/environment.py", line 969, in _load_template
+    template = self.loader.load(self, name, self.make_globals(globals))
+  File "/home/airflow/.local/lib/python3.8/site-packages/jinja2/loaders.py", line 126, in load
+    source, filename, uptodate = self.get_source(environment, name)
+  File "/home/airflow/.local/lib/python3.8/site-packages/jinja2/loaders.py", line 218, in get_source
+    raise TemplateNotFound(template)
+jinja2.exceptions.TemplateNotFound: /opt/airflow/dags/postgres/sql/create_time_table.sql
+[2023-11-19T11:11:43.486+0000] {taskinstance.py:1398} INFO - Marking task as FAILED. dag_id=covid_data_dag_postgres_plis, task_id=staging.create_time_table, execution_date=20231119T111001, start_date=20231119T111142, end_date=20231119T111143
+[2023-11-19T11:11:43.511+0000] {standard_task_runner.py:104} ERROR - Failed to execute job 1142 for task staging.create_time_table (/opt/airflow/dags/postgres/sql/create_time_table.sql; 1501)
+[2023-11-19T11:11:43.560+0000] {local_task_job_runner.py:228} INFO - Task exited with return code 1
+[2023-11-19T11:11:43.815+0000] {taskinstance.py:2776} INFO - 0 downstream tasks scheduled from follow-on schedule check

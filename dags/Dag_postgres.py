@@ -17,6 +17,7 @@ import numpy as np
 import sys
 import os
 from airflow.utils.task_group import TaskGroup
+from sqlalchemy import create_engine
 #sys.path.insert(0,os.path.abspath(os.path.dirname("Utils.py")))
 #from Utils import _download_cases_deaths, _download_population_data, _download_vaccinations, _download_government_measures, _download_location_table, _create_time_csv, _wrangle_cases_deaths, _wrangle_vaccinations, _wrangle_government_measures, _wrangle_population_data, _wrangle_location_data
 
@@ -198,6 +199,55 @@ def _wrangle_location_data():
     # ...
     #df.to_csv('/opt/airflow/dags/postgres/location_wrangled.csv', index=False)
 
+def _create_joint_table():
+    df = pd.read_csv('/opt/airflow/dags/postgres/joint_table.csv')
+    df.set_index(['Country_code', 'Date_reported'], inplace=True)
+    pd.to_sql('joint_table', con=PostgresHook(postgres_conn_id='postgres_default').get_sqlalchemy_engine(), if_exists='replace', index=True, index_label=['Country', 'Date_reported'])
+
+def _join_tables():
+    df_vaccinations = pd.read_csv('vaccinations.csv')
+    df_cases_deaths = pd.read_csv('cases_deaths_wrangled.csv')
+    df_government_measures = pd.read_csv('government_measures.csv')
+    merged_df = pd.merge(df_cases_deaths, df_vaccinations, left_on=['Country_code', 'Date_repotred'], right_on=['iso_code', 'date'])
+    merged_df = pd.merge(merged_df, df_government_measures, left_on=['Country_code', 'Date_repotred'], right_on=['CountryCode', 'Date'])
+    with open('/opt/airflow/dags/postgres/joint_table.csv', 'wb') as f:
+        f.write(merged_df.to_csv(index=False).encode('utf-8'))
+  
+def _upload_cases_deaths():
+    conn_string = 'postgresql://airflow:airflow@postgres:5432/postgres'
+    db = create_engine(conn_string)
+    conn = db.connect()
+    df = pd.read_csv('/opt/airflow/dags/postgres/cases_deaths_wrangled.csv')
+    df.to_sql('cases_deaths', con=conn, if_exists='replace', index=False)
+
+def _upload_vaccinations():
+    conn_string = 'postgresql://airflow:airflow@postgres:5432/postgres'
+    db = create_engine(conn_string)
+    conn = db.connect()
+    df = pd.read_csv('/opt/airflow/dags/postgres/vaccinations.csv')
+    df.to_sql('vaccinations', con=conn, if_exists='replace', index=False)
+    
+def _upload_government_measures():
+    conn_string = 'postgresql://airflow:airflow@postgres:5432/postgres'
+    db = create_engine(conn_string)
+    conn = db.connect()
+    df = pd.read_csv('/opt/airflow/dags/postgres/government_measures_wrangled.csv')
+    df.to_sql('government_measures', con=conn, if_exists='replace', index=False)
+    
+def _upload_time():
+    conn_string = 'postgresql://airflow:airflow@postgres:5432/postgres'
+    db = create_engine(conn_string)
+    conn = db.connect()
+    df = pd.read_csv('/opt/airflow/dags/postgres/time_table.csv')
+    df.to_sql('time_table', con=conn, if_exists='replace', index=False)
+    
+def _upload_location():
+    conn_string = 'postgresql://airflow:airflow@postgres:5432/postgres'
+    db = create_engine(conn_string)
+    conn = db.connect()
+    df = pd.read_csv('/opt/airflow/dags/postgres/location.csv')
+    df.to_sql('location', con=conn, if_exists='replace', index=False)
+  
 with TaskGroup("ingestion", dag=dag) as ingestion:
     
     ingestion_start = DummyOperator(
@@ -311,40 +361,93 @@ with TaskGroup("staging", dag=dag) as staging:
         dag=dag,
     )
     
-    join_tables = DummyOperator(
-        task_id='join_tables',
-        dag=dag,
-        trigger_rule='all_success'
-    )
-    
-    create_time_table = DummyOperator(
+    create_time_table = PostgresOperator(
         task_id='create_time_table',
         dag=dag,
+        postgres_conn_id='postgres_default',
+        sql='sql/create_time_table.sql',
         trigger_rule='all_success'
     )
     
-    create_location_table = DummyOperator(
+    create_location_table = PostgresOperator(
         task_id='create_location_table',
         dag=dag,
+        postgres_conn_id='postgres_default',
+        sql='sql/create_location_table.sql',
         trigger_rule='all_success'
     )
     
-    create_joint_table = DummyOperator(
+    create_cases_deaths_table = PostgresOperator(
+        task_id='create_cases_deaths_table',
+        dag=dag,
+        postgres_conn_id='postgres_default',
+        sql='sql/create_cases_deaths_table.sql',
+    )
+    
+    create_vaccinations_table = PostgresOperator(
+        task_id='create_vaccinations_table',
+        postgres_conn_id='postgres_default',
+        sql='sql/create_vaccinations_table.sql',
+        dag=dag,
+    )
+    
+    create_government_measures_table = PostgresOperator(
+        task_id='create_government_measures_table',
+        postgres_conn_id='postgres_default',
+        sql='sql/create_government_measures_table.sql',
+        dag=dag
+    )
+    
+    
+    upload_cases_deaths = PythonOperator(
+        task_id='upload_cases_deaths',
+        python_callable=_upload_cases_deaths,
+        dag=dag,
+    )
+
+    upload_vaccinations = PythonOperator(
+        task_id='upload_vaccinations',
+        python_callable=_upload_vaccinations,
+        dag=dag,
+    )
+
+    upload_government_measures = PythonOperator(
+        task_id='upload_government_measures',
+        python_callable=_upload_government_measures,
+        dag=dag,
+    )
+
+    upload_time = PythonOperator(
+        task_id='upload_time',
+        python_callable=_upload_time,
+        dag=dag,
+    )
+    
+    upload_location = PythonOperator(
+        task_id='upload_location',
+        python_callable=_upload_location,
+        dag=dag,
+    )
+    
+    
+    
+'''create_joint_table = PythonOperator(
         task_id='create_joint_table',
+        python_callable=_create_joint_table,
         dag=dag,
         trigger_rule='all_success'
-    )
+)'''
     
 ingestion_start >> [download_cases_deaths, download_population_data, download_location_data, download_government_measures, download_location_data, download_vaccinations]
 [download_cases_deaths, download_population_data, download_location_data, download_government_measures, download_location_data] >> ingestion_end 
 ingestion_end >> staging_start
 staging_start >> [create_time_csv, wrangle_cases_deaths_task, wrangle_vaccinations_task, wrangle_government_measures_task, wrangle_population_data_task, wrangle_location_data_task]
-[wrangle_cases_deaths_task, wrangle_vaccinations_task, wrangle_government_measures_task, wrangle_population_data_task] >> join_tables
-wrangle_location_data_task >> create_location_table
-create_time_csv >> create_time_table 
-join_tables >> create_joint_table
-[create_time_table, create_location_table, create_joint_table] >> staging_end
 
+wrangle_cases_deaths_task >> create_cases_deaths_table >> upload_cases_deaths
+wrangle_vaccinations_task >> create_vaccinations_table >> upload_vaccinations
+wrangle_government_measures_task >> create_government_measures_table >> upload_government_measures
+wrangle_location_data_task >> create_location_table >> upload_location
+create_time_csv >> create_time_table >> upload_time
 
-
+[upload_cases_deaths, upload_vaccinations, upload_government_measures, upload_location, upload_time] >> staging_end
  
