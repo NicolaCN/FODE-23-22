@@ -1,0 +1,32 @@
+[2023-11-26T17:09:26.094+0000] {taskinstance.py:1157} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: covid_data_dag_postgres_plis.staging.create_time_table manual__2023-11-26T17:01:55.155157+00:00 [queued]>
+[2023-11-26T17:09:26.149+0000] {taskinstance.py:1157} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: covid_data_dag_postgres_plis.staging.create_time_table manual__2023-11-26T17:01:55.155157+00:00 [queued]>
+[2023-11-26T17:09:26.151+0000] {taskinstance.py:1359} INFO - Starting attempt 1 of 2
+[2023-11-26T17:09:26.259+0000] {taskinstance.py:1380} INFO - Executing <Task(PostgresOperator): staging.create_time_table> on 2023-11-26 17:01:55.155157+00:00
+[2023-11-26T17:09:26.279+0000] {standard_task_runner.py:57} INFO - Started process 2451 to run task
+[2023-11-26T17:09:26.306+0000] {standard_task_runner.py:84} INFO - Running: ['***', 'tasks', 'run', 'covid_data_dag_postgres_plis', 'staging.create_time_table', 'manual__2023-11-26T17:01:55.155157+00:00', '--job-id', '1590', '--raw', '--subdir', 'DAGS_FOLDER/Dag_postgres.py', '--cfg-path', '/tmp/tmpsopkp021']
+[2023-11-26T17:09:26.322+0000] {standard_task_runner.py:85} INFO - Job 1590: Subtask staging.create_time_table
+[2023-11-26T17:09:26.560+0000] {task_command.py:415} INFO - Running <TaskInstance: covid_data_dag_postgres_plis.staging.create_time_table manual__2023-11-26T17:01:55.155157+00:00 [running]> on host 172.21.0.5
+[2023-11-26T17:09:26.978+0000] {taskinstance.py:1660} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='covid_data_dag_postgres_plis' AIRFLOW_CTX_TASK_ID='staging.create_time_table' AIRFLOW_CTX_EXECUTION_DATE='2023-11-26T17:01:55.155157+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='manual__2023-11-26T17:01:55.155157+00:00'
+[2023-11-26T17:09:26.979+0000] {sql.py:274} INFO - Executing: DROP TABLE IF EXISTS time_table;
+CREATE TABLE time_table (
+    Date DATE,
+    Week INT,
+    Month INT,
+    Trimester INT,
+    Semester INT,
+    Year INT
+);
+[2023-11-26T17:09:27.004+0000] {base.py:73} INFO - Using connection ID 'postgres_default' for task execution.
+[2023-11-26T17:09:27.016+0000] {base.py:73} INFO - Using connection ID 'postgres_default' for task execution.
+[2023-11-26T17:09:27.030+0000] {sql.py:418} INFO - Running statement: DROP TABLE IF EXISTS time_table;
+CREATE TABLE time_table (
+    Date DATE,
+    Week INT,
+    Month INT,
+    Trimester INT,
+    Semester INT,
+    Year INT
+);, parameters: None
+[2023-11-26T17:09:27.224+0000] {taskinstance.py:1398} INFO - Marking task as SUCCESS. dag_id=covid_data_dag_postgres_plis, task_id=staging.create_time_table, execution_date=20231126T170155, start_date=20231126T170926, end_date=20231126T170927
+[2023-11-26T17:09:27.364+0000] {local_task_job_runner.py:228} INFO - Task exited with return code 0
+[2023-11-26T17:09:27.488+0000] {taskinstance.py:2776} INFO - 1 downstream tasks scheduled from follow-on schedule check

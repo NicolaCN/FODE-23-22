@@ -1,0 +1,49 @@
+[2023-11-24T19:15:51.526+0000] {taskinstance.py:1157} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: covid_data_dag_postgres_plis.staging.upload_government_measures manual__2023-11-24T18:57:23.260150+00:00 [queued]>
+[2023-11-24T19:15:51.705+0000] {taskinstance.py:1157} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: covid_data_dag_postgres_plis.staging.upload_government_measures manual__2023-11-24T18:57:23.260150+00:00 [queued]>
+[2023-11-24T19:15:51.727+0000] {taskinstance.py:1359} INFO - Starting attempt 1 of 2
+[2023-11-24T19:15:51.950+0000] {taskinstance.py:1380} INFO - Executing <Task(PythonOperator): staging.upload_government_measures> on 2023-11-24 18:57:23.260150+00:00
+[2023-11-24T19:15:52.114+0000] {standard_task_runner.py:57} INFO - Started process 4580 to run task
+[2023-11-24T19:15:52.150+0000] {standard_task_runner.py:84} INFO - Running: ['***', 'tasks', 'run', 'covid_data_dag_postgres_plis', 'staging.upload_government_measures', 'manual__2023-11-24T18:57:23.260150+00:00', '--job-id', '1506', '--raw', '--subdir', 'DAGS_FOLDER/Dag_postgres.py', '--cfg-path', '/tmp/tmpoht_47fx']
+[2023-11-24T19:15:52.180+0000] {standard_task_runner.py:85} INFO - Job 1506: Subtask staging.upload_government_measures
+[2023-11-24T19:15:53.039+0000] {task_command.py:415} INFO - Running <TaskInstance: covid_data_dag_postgres_plis.staging.upload_government_measures manual__2023-11-24T18:57:23.260150+00:00 [running]> on host 172.21.0.6
+[2023-11-24T19:15:55.099+0000] {taskinstance.py:1660} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='covid_data_dag_postgres_plis' AIRFLOW_CTX_TASK_ID='staging.upload_government_measures' AIRFLOW_CTX_EXECUTION_DATE='2023-11-24T18:57:23.260150+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='manual__2023-11-24T18:57:23.260150+00:00'
+[2023-11-24T19:15:56.489+0000] {local_task_job_runner.py:115} ERROR - Received SIGTERM. Terminating subprocesses
+[2023-11-24T19:15:56.678+0000] {process_utils.py:131} INFO - Sending 15 to group 4580. PIDs of all processes in the group: [4580]
+[2023-11-24T19:15:56.755+0000] {process_utils.py:86} INFO - Sending the signal 15 to group 4580
+[2023-11-24T19:15:57.001+0000] {taskinstance.py:1630} ERROR - Received SIGTERM. Terminating subprocesses.
+[2023-11-24T19:15:57.733+0000] {taskinstance.py:1935} ERROR - Task failed with exception
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/operators/python.py", line 192, in execute
+    return_value = self.execute_callable()
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/operators/python.py", line 209, in execute_callable
+    return self.python_callable(*self.op_args, **self.op_kwargs)
+  File "/opt/airflow/dags/Dag_postgres.py", line 362, in _upload_government_measures
+    df.to_sql('government_measures', con=conn, if_exists='replace', index=False)
+  File "/home/airflow/.local/lib/python3.8/site-packages/pandas/core/generic.py", line 2878, in to_sql
+    return sql.to_sql(
+  File "/home/airflow/.local/lib/python3.8/site-packages/pandas/io/sql.py", line 769, in to_sql
+    return pandas_sql.to_sql(
+  File "/home/airflow/.local/lib/python3.8/site-packages/pandas/io/sql.py", line 1920, in to_sql
+    total_inserted = sql_engine.insert_records(
+  File "/home/airflow/.local/lib/python3.8/site-packages/pandas/io/sql.py", line 1461, in insert_records
+    return table.insert(chunksize=chunksize, method=method)
+  File "/home/airflow/.local/lib/python3.8/site-packages/pandas/io/sql.py", line 1001, in insert
+    keys, data_list = self.insert_data()
+  File "/home/airflow/.local/lib/python3.8/site-packages/pandas/io/sql.py", line 981, in insert_data
+    mask = isna(d)
+  File "/home/airflow/.local/lib/python3.8/site-packages/pandas/core/dtypes/missing.py", line 183, in isna
+    return _isna(obj)
+  File "/home/airflow/.local/lib/python3.8/site-packages/pandas/core/dtypes/missing.py", line 212, in _isna
+    return _isna_array(obj, inf_as_na=inf_as_na)
+  File "/home/airflow/.local/lib/python3.8/site-packages/pandas/core/dtypes/missing.py", line 294, in _isna_array
+    result = _isna_string_dtype(values, inf_as_na=inf_as_na)
+  File "/home/airflow/.local/lib/python3.8/site-packages/pandas/core/dtypes/missing.py", line 315, in _isna_string_dtype
+    result = libmissing.isnaobj(values, inf_as_na=inf_as_na)
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/models/taskinstance.py", line 1632, in signal_handler
+    raise AirflowException("Task received SIGTERM signal")
+airflow.exceptions.AirflowException: Task received SIGTERM signal
+[2023-11-24T19:16:01.467+0000] {taskinstance.py:1398} INFO - Marking task as UP_FOR_RETRY. dag_id=covid_data_dag_postgres_plis, task_id=staging.upload_government_measures, execution_date=20231124T185723, start_date=20231124T191551, end_date=20231124T191601
+[2023-11-24T19:16:02.007+0000] {standard_task_runner.py:104} ERROR - Failed to execute job 1506 for task staging.upload_government_measures (Task received SIGTERM signal; 4580)
+[2023-11-24T19:16:02.382+0000] {process_utils.py:79} INFO - Process psutil.Process(pid=4580, status='terminated', exitcode=1, started='19:15:51') (4580) terminated with exit code 1
+[2023-11-24T19:16:02.429+0000] {local_task_job_runner.py:228} INFO - Task exited with return code 143
+[2023-11-24T19:16:03.901+0000] {taskinstance.py:2776} INFO - 0 downstream tasks scheduled from follow-on schedule check

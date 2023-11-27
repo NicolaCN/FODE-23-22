@@ -1,0 +1,13 @@
+[2023-11-26T16:40:18.578+0000] {taskinstance.py:1157} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: covid_data_dag_postgres_plis.ingestion.store_government_measures manual__2023-11-26T16:39:57.170703+00:00 [queued]>
+[2023-11-26T16:40:18.641+0000] {taskinstance.py:1157} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: covid_data_dag_postgres_plis.ingestion.store_government_measures manual__2023-11-26T16:39:57.170703+00:00 [queued]>
+[2023-11-26T16:40:18.643+0000] {taskinstance.py:1359} INFO - Starting attempt 1 of 2
+[2023-11-26T16:40:18.667+0000] {taskinstance.py:1380} INFO - Executing <Task(PythonOperator): ingestion.store_government_measures> on 2023-11-26 16:39:57.170703+00:00
+[2023-11-26T16:40:18.741+0000] {standard_task_runner.py:57} INFO - Started process 1412 to run task
+[2023-11-26T16:40:18.787+0000] {standard_task_runner.py:84} INFO - Running: ['***', 'tasks', 'run', 'covid_data_dag_postgres_plis', 'ingestion.store_government_measures', 'manual__2023-11-26T16:39:57.170703+00:00', '--job-id', '1546', '--raw', '--subdir', 'DAGS_FOLDER/Dag_postgres.py', '--cfg-path', '/tmp/tmplqq7ata7']
+[2023-11-26T16:40:18.806+0000] {standard_task_runner.py:85} INFO - Job 1546: Subtask ingestion.store_government_measures
+[2023-11-26T16:40:19.007+0000] {task_command.py:415} INFO - Running <TaskInstance: covid_data_dag_postgres_plis.ingestion.store_government_measures manual__2023-11-26T16:39:57.170703+00:00 [running]> on host 172.21.0.5
+[2023-11-26T16:40:19.341+0000] {taskinstance.py:1660} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='covid_data_dag_postgres_plis' AIRFLOW_CTX_TASK_ID='ingestion.store_government_measures' AIRFLOW_CTX_EXECUTION_DATE='2023-11-26T16:39:57.170703+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='manual__2023-11-26T16:39:57.170703+00:00'
+[2023-11-26T16:41:26.647+0000] {python.py:194} INFO - Done. Returned value was: None
+[2023-11-26T16:41:26.793+0000] {taskinstance.py:1398} INFO - Marking task as SUCCESS. dag_id=covid_data_dag_postgres_plis, task_id=ingestion.store_government_measures, execution_date=20231126T163957, start_date=20231126T164018, end_date=20231126T164126
+[2023-11-26T16:41:27.016+0000] {local_task_job_runner.py:228} INFO - Task exited with return code 0
+[2023-11-26T16:41:27.464+0000] {taskinstance.py:2776} INFO - 0 downstream tasks scheduled from follow-on schedule check

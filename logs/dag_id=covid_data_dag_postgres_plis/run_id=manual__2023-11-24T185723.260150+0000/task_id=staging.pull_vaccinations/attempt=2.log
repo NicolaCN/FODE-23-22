@@ -1,0 +1,13 @@
+[2023-11-24T19:07:49.403+0000] {taskinstance.py:1157} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: covid_data_dag_postgres_plis.staging.pull_vaccinations manual__2023-11-24T18:57:23.260150+00:00 [queued]>
+[2023-11-24T19:07:49.494+0000] {taskinstance.py:1157} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: covid_data_dag_postgres_plis.staging.pull_vaccinations manual__2023-11-24T18:57:23.260150+00:00 [queued]>
+[2023-11-24T19:07:49.516+0000] {taskinstance.py:1359} INFO - Starting attempt 2 of 2
+[2023-11-24T19:07:49.643+0000] {taskinstance.py:1380} INFO - Executing <Task(PythonOperator): staging.pull_vaccinations> on 2023-11-24 18:57:23.260150+00:00
+[2023-11-24T19:07:49.689+0000] {standard_task_runner.py:57} INFO - Started process 4335 to run task
+[2023-11-24T19:07:49.729+0000] {standard_task_runner.py:84} INFO - Running: ['***', 'tasks', 'run', 'covid_data_dag_postgres_plis', 'staging.pull_vaccinations', 'manual__2023-11-24T18:57:23.260150+00:00', '--job-id', '1497', '--raw', '--subdir', 'DAGS_FOLDER/Dag_postgres.py', '--cfg-path', '/tmp/tmpju7465is']
+[2023-11-24T19:07:49.752+0000] {standard_task_runner.py:85} INFO - Job 1497: Subtask staging.pull_vaccinations
+[2023-11-24T19:07:50.439+0000] {task_command.py:415} INFO - Running <TaskInstance: covid_data_dag_postgres_plis.staging.pull_vaccinations manual__2023-11-24T18:57:23.260150+00:00 [running]> on host 172.21.0.6
+[2023-11-24T19:07:51.645+0000] {taskinstance.py:1660} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='covid_data_dag_postgres_plis' AIRFLOW_CTX_TASK_ID='staging.pull_vaccinations' AIRFLOW_CTX_EXECUTION_DATE='2023-11-24T18:57:23.260150+00:00' AIRFLOW_CTX_TRY_NUMBER='2' AIRFLOW_CTX_DAG_RUN_ID='manual__2023-11-24T18:57:23.260150+00:00'
+[2023-11-24T19:09:17.784+0000] {python.py:194} INFO - Done. Returned value was: None
+[2023-11-24T19:09:18.162+0000] {taskinstance.py:1398} INFO - Marking task as SUCCESS. dag_id=covid_data_dag_postgres_plis, task_id=staging.pull_vaccinations, execution_date=20231124T185723, start_date=20231124T190749, end_date=20231124T190918
+[2023-11-24T19:09:18.466+0000] {local_task_job_runner.py:228} INFO - Task exited with return code 0
+[2023-11-24T19:09:19.619+0000] {taskinstance.py:2776} INFO - 1 downstream tasks scheduled from follow-on schedule check

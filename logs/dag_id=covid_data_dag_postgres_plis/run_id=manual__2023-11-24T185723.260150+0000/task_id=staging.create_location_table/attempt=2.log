@@ -1,0 +1,42 @@
+[2023-11-24T19:07:03.577+0000] {taskinstance.py:1157} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: covid_data_dag_postgres_plis.staging.create_location_table manual__2023-11-24T18:57:23.260150+00:00 [queued]>
+[2023-11-24T19:07:03.687+0000] {taskinstance.py:1157} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: covid_data_dag_postgres_plis.staging.create_location_table manual__2023-11-24T18:57:23.260150+00:00 [queued]>
+[2023-11-24T19:07:03.695+0000] {taskinstance.py:1359} INFO - Starting attempt 2 of 2
+[2023-11-24T19:07:03.864+0000] {taskinstance.py:1380} INFO - Executing <Task(PostgresOperator): staging.create_location_table> on 2023-11-24 18:57:23.260150+00:00
+[2023-11-24T19:07:03.941+0000] {standard_task_runner.py:57} INFO - Started process 4314 to run task
+[2023-11-24T19:07:04.024+0000] {standard_task_runner.py:84} INFO - Running: ['***', 'tasks', 'run', 'covid_data_dag_postgres_plis', 'staging.create_location_table', 'manual__2023-11-24T18:57:23.260150+00:00', '--job-id', '1495', '--raw', '--subdir', 'DAGS_FOLDER/Dag_postgres.py', '--cfg-path', '/tmp/tmpsqjj72oq']
+[2023-11-24T19:07:04.047+0000] {standard_task_runner.py:85} INFO - Job 1495: Subtask staging.create_location_table
+[2023-11-24T19:07:04.483+0000] {task_command.py:415} INFO - Running <TaskInstance: covid_data_dag_postgres_plis.staging.create_location_table manual__2023-11-24T18:57:23.260150+00:00 [running]> on host 172.21.0.6
+[2023-11-24T19:07:05.204+0000] {taskinstance.py:1660} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='covid_data_dag_postgres_plis' AIRFLOW_CTX_TASK_ID='staging.create_location_table' AIRFLOW_CTX_EXECUTION_DATE='2023-11-24T18:57:23.260150+00:00' AIRFLOW_CTX_TRY_NUMBER='2' AIRFLOW_CTX_DAG_RUN_ID='manual__2023-11-24T18:57:23.260150+00:00'
+[2023-11-24T19:07:05.212+0000] {sql.py:274} INFO - Executing: DROP TABLE IF EXISTS location;
+CREATE TABLE location (
+  country VARCHAR(255),
+  alpha_2 VARCHAR(2),
+  alpha_3 VARCHAR(3),
+  country_code INT,
+  iso_3166_2 VARCHAR(255),
+  region VARCHAR(255),
+  sub_region VARCHAR(255),
+  intermediate_region VARCHAR(255),
+  region_code INT,
+  sub_region_code INT,
+  intermediate_region_code INT
+);
+[2023-11-24T19:07:05.232+0000] {base.py:73} INFO - Using connection ID 'postgres_default' for task execution.
+[2023-11-24T19:07:05.283+0000] {base.py:73} INFO - Using connection ID 'postgres_default' for task execution.
+[2023-11-24T19:07:05.292+0000] {sql.py:418} INFO - Running statement: DROP TABLE IF EXISTS location;
+CREATE TABLE location (
+  country VARCHAR(255),
+  alpha_2 VARCHAR(2),
+  alpha_3 VARCHAR(3),
+  country_code INT,
+  iso_3166_2 VARCHAR(255),
+  region VARCHAR(255),
+  sub_region VARCHAR(255),
+  intermediate_region VARCHAR(255),
+  region_code INT,
+  sub_region_code INT,
+  intermediate_region_code INT
+);, parameters: None
+[2023-11-24T19:07:05.620+0000] {taskinstance.py:1398} INFO - Marking task as SUCCESS. dag_id=covid_data_dag_postgres_plis, task_id=staging.create_location_table, execution_date=20231124T185723, start_date=20231124T190703, end_date=20231124T190705
+[2023-11-24T19:07:05.805+0000] {local_task_job_runner.py:228} INFO - Task exited with return code 0
+[2023-11-24T19:07:06.033+0000] {taskinstance.py:2776} INFO - 1 downstream tasks scheduled from follow-on schedule check

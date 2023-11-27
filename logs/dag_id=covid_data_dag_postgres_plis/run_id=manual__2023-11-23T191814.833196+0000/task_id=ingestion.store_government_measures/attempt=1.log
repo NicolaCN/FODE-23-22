@@ -1,0 +1,10 @@
+[2023-11-23T19:20:02.270+0000] {taskinstance.py:1157} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: covid_data_dag_postgres_plis.ingestion.store_government_measures manual__2023-11-23T19:18:14.833196+00:00 [queued]>
+[2023-11-23T19:20:02.671+0000] {taskinstance.py:1157} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: covid_data_dag_postgres_plis.ingestion.store_government_measures manual__2023-11-23T19:18:14.833196+00:00 [queued]>
+[2023-11-23T19:20:02.688+0000] {taskinstance.py:1359} INFO - Starting attempt 1 of 2
+[2023-11-23T19:20:03.210+0000] {taskinstance.py:1380} INFO - Executing <Task(PythonOperator): ingestion.store_government_measures> on 2023-11-23 19:18:14.833196+00:00
+[2023-11-23T19:20:03.340+0000] {standard_task_runner.py:57} INFO - Started process 1816 to run task
+[2023-11-23T19:20:03.380+0000] {standard_task_runner.py:84} INFO - Running: ['***', 'tasks', 'run', 'covid_data_dag_postgres_plis', 'ingestion.store_government_measures', 'manual__2023-11-23T19:18:14.833196+00:00', '--job-id', '1391', '--raw', '--subdir', 'DAGS_FOLDER/Dag_postgres.py', '--cfg-path', '/tmp/tmpw2iqb0tk']
+[2023-11-23T19:20:03.430+0000] {standard_task_runner.py:85} INFO - Job 1391: Subtask ingestion.store_government_measures
+[2023-11-23T19:20:03.777+0000] {task_command.py:415} INFO - Running <TaskInstance: covid_data_dag_postgres_plis.ingestion.store_government_measures manual__2023-11-23T19:18:14.833196+00:00 [running]> on host 172.21.0.5
+[2023-11-23T19:20:04.267+0000] {taskinstance.py:1660} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='covid_data_dag_postgres_plis' AIRFLOW_CTX_TASK_ID='ingestion.store_government_measures' AIRFLOW_CTX_EXECUTION_DATE='2023-11-23T19:18:14.833196+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='manual__2023-11-23T19:18:14.833196+00:00'
+[2023-11-23T19:29:24.731+0000] {local_task_job_runner.py:115} ERROR - Received SIGTERM. Terminating subprocesses

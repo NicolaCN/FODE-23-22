@@ -1,4 +1,0 @@
-[2023-11-15T15:50:13.583+0000] {task_command.py:415} INFO - Running <TaskInstance: covid_data_dag_postgres.ingestion.download_vaccinations manual__2023-11-15T15:48:42.739941+00:00 [removed]> on host 172.21.0.3
-[2023-11-15T15:50:14.854+0000] {taskinstance.py:1660} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='covid_data_dag_postgres' AIRFLOW_CTX_TASK_ID='ingestion.download_vaccinations' AIRFLOW_CTX_EXECUTION_DATE='2023-11-15T15:48:42.739941+00:00' AIRFLOW_CTX_TRY_NUMBER='2' AIRFLOW_CTX_DAG_RUN_ID='manual__2023-11-15T15:48:42.739941+00:00'
-[2023-11-15T15:50:17.020+0000] {python.py:194} INFO - Done. Returned value was: None
-[2023-11-15T15:50:17.165+0000] {taskinstance.py:1398} INFO - Marking task as SUCCESS. dag_id=covid_data_dag_postgres, task_id=ingestion.download_vaccinations, execution_date=20231115T154842, start_date=20231115T154900, end_date=20231115T155017

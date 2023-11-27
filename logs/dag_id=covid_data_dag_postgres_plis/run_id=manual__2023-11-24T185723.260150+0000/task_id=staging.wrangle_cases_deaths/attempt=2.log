@@ -1,0 +1,34 @@
+[2023-11-24T19:11:31.848+0000] {taskinstance.py:1157} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: covid_data_dag_postgres_plis.staging.wrangle_cases_deaths manual__2023-11-24T18:57:23.260150+00:00 [queued]>
+[2023-11-24T19:11:31.892+0000] {taskinstance.py:1157} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: covid_data_dag_postgres_plis.staging.wrangle_cases_deaths manual__2023-11-24T18:57:23.260150+00:00 [queued]>
+[2023-11-24T19:11:31.956+0000] {taskinstance.py:1359} INFO - Starting attempt 2 of 2
+[2023-11-24T19:11:32.038+0000] {taskinstance.py:1380} INFO - Executing <Task(PythonOperator): staging.wrangle_cases_deaths> on 2023-11-24 18:57:23.260150+00:00
+[2023-11-24T19:11:32.056+0000] {standard_task_runner.py:57} INFO - Started process 4450 to run task
+[2023-11-24T19:11:32.069+0000] {standard_task_runner.py:84} INFO - Running: ['***', 'tasks', 'run', 'covid_data_dag_postgres_plis', 'staging.wrangle_cases_deaths', 'manual__2023-11-24T18:57:23.260150+00:00', '--job-id', '1503', '--raw', '--subdir', 'DAGS_FOLDER/Dag_postgres.py', '--cfg-path', '/tmp/tmp1jwu4aef']
+[2023-11-24T19:11:32.085+0000] {standard_task_runner.py:85} INFO - Job 1503: Subtask staging.wrangle_cases_deaths
+[2023-11-24T19:11:32.498+0000] {task_command.py:415} INFO - Running <TaskInstance: covid_data_dag_postgres_plis.staging.wrangle_cases_deaths manual__2023-11-24T18:57:23.260150+00:00 [running]> on host 172.21.0.6
+[2023-11-24T19:11:33.127+0000] {taskinstance.py:1660} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='covid_data_dag_postgres_plis' AIRFLOW_CTX_TASK_ID='staging.wrangle_cases_deaths' AIRFLOW_CTX_EXECUTION_DATE='2023-11-24T18:57:23.260150+00:00' AIRFLOW_CTX_TRY_NUMBER='2' AIRFLOW_CTX_DAG_RUN_ID='manual__2023-11-24T18:57:23.260150+00:00'
+[2023-11-24T19:11:33.927+0000] {logging_mixin.py:151} INFO - Formatting date…
+[2023-11-24T19:11:34.025+0000] {logging_mixin.py:151} INFO - Discarding rows…
+[2023-11-24T19:11:34.969+0000] {taskinstance.py:1935} ERROR - Task failed with exception
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/operators/python.py", line 192, in execute
+    return_value = self.execute_callable()
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/operators/python.py", line 209, in execute_callable
+    return self.python_callable(*self.op_args, **self.op_kwargs)
+  File "/opt/airflow/dags/Dag_postgres.py", line 258, in _wrangle_cases_deaths
+    df = _inject_population(df)
+  File "/opt/airflow/dags/Dag_postgres.py", line 230, in _inject_population
+    df_merged = pd.merge(df, df_population, how='left', on=['Country', 'Year'])
+  File "/home/airflow/.local/lib/python3.8/site-packages/pandas/core/reshape/merge.py", line 148, in merge
+    op = _MergeOperation(
+  File "/home/airflow/.local/lib/python3.8/site-packages/pandas/core/reshape/merge.py", line 737, in __init__
+    ) = self._get_merge_keys()
+  File "/home/airflow/.local/lib/python3.8/site-packages/pandas/core/reshape/merge.py", line 1203, in _get_merge_keys
+    right_keys.append(right._get_label_or_level_values(rk))
+  File "/home/airflow/.local/lib/python3.8/site-packages/pandas/core/generic.py", line 1778, in _get_label_or_level_values
+    raise KeyError(key)
+KeyError: 'Year'
+[2023-11-24T19:11:35.015+0000] {taskinstance.py:1398} INFO - Marking task as FAILED. dag_id=covid_data_dag_postgres_plis, task_id=staging.wrangle_cases_deaths, execution_date=20231124T185723, start_date=20231124T191131, end_date=20231124T191135
+[2023-11-24T19:11:35.045+0000] {standard_task_runner.py:104} ERROR - Failed to execute job 1503 for task staging.wrangle_cases_deaths ('Year'; 4450)
+[2023-11-24T19:11:35.098+0000] {local_task_job_runner.py:228} INFO - Task exited with return code 1
+[2023-11-24T19:11:35.146+0000] {taskinstance.py:2776} INFO - 0 downstream tasks scheduled from follow-on schedule check

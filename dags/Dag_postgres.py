@@ -18,13 +18,18 @@ import sys
 import os
 from airflow.utils.task_group import TaskGroup
 from sqlalchemy import create_engine
+from airflow.operators.python_operator import PythonOperator
+from airflow.models import DAG
+from airflow.utils.task_group import TaskGroup
 #sys.path.insert(0,os.path.abspath(os.path.dirname("Utils.py")))
 #from Utils import _download_cases_deaths, _download_population_data, _download_vaccinations, _download_government_measures, _download_location_table, _create_time_csv, _wrangle_cases_deaths, _wrangle_vaccinations, _wrangle_government_measures, _wrangle_population_data, _wrangle_location_data
+from pymongo import MongoClient
 
 location_csv = 'https://raw.githubusercontent.com/lukes/ISO-3166-Countries-with-Regional-Codes/master/all/all.csv'
 population_data='https://api.worldbank.org/v2/en/indicator/SP.POP.TOTL?downloadformat=csv'
 cases_deaths='https://covid19.who.int/WHO-COVID-19-global-data.csv'
-vaccinations='https://raw.githubusercontent.com/owid/covid-19-data/master/public/data/vaccinations/vaccinations.csv'
+vaccinations='https://storage.googleapis.com/covid19-open-data/v3/vaccinations.csv'
+#vaccinations='https://raw.githubusercontent.com/owid/covid-19-data/master/public/data/vaccinations/vaccinations.csv'
 government_measures='https://raw.githubusercontent.com/OxCGRT/covid-policy-dataset/main/data/OxCGRT_compact_national_v1.csv'
 
 
@@ -90,18 +95,108 @@ def _download_population_data():
     data_reshaped['Year'] = data_reshaped['Year'].apply(lambda year: int(year[2:]))
     
     data_reshaped.to_csv('/opt/airflow/dags/postgres/population_data.csv', index=False)
+    
+def csv_to_json(filename, header=None):
+    data = pd.read_csv(filename, header=header)
+    return data.to_dict('records')
 
-def format_date(df: pd.DataFrame) -> pd.DataFrame:
+def _store_location_csv():
+    # Code to store location.csv in MongoDB
+    client = MongoClient('mongodb://mongo:27017/')
+    db = client["covid"] 
+    db.drop_collection('location')
+    collection = db['location']
+    collection.insert_many(csv_to_json(location_csv, 0))
+    
+    '''with open('/opt/airflow/dags/postgres/location.csv', 'r') as f:
+        # Read the CSV file
+        data = f.read()
+        # Insert the data into the collection
+        collection.insert_many(data)'''
+
+def _store_population_data():
+    data = wb.data.DataFrame('SP.POP.TOTL', labels=True, time=range(2019, 2023))
+    
+    client = MongoClient('mongodb://mongo:27017/')
+    db = client["covid"]
+    db.drop_collection('population_data')
+    collection = db['population_data']
+    collection.insert_many(data.to_dict('records'))
+
+# For big files it might be better to first store
+def _store_cases_deaths():
+    client = MongoClient('mongodb://mongo:27017/')
+    db = client["covid"]
+    db.drop_collection('cases_deaths')
+    collection = db['cases_deaths']
+    collection.insert_many(csv_to_json(cases_deaths, 0))
+    
+
+def _store_vaccinations():
+    df = pd.read_csv(vaccinations).iloc[:, :9]
+    json = df.to_dict('records')
+    client = MongoClient('mongodb://mongo:27017/')
+    db = client["covid"]
+    db.drop_collection('vaccinations')
+    collection = db['vaccinations']
+    collection.insert_many(json)
+    
+
+def _store_government_measures():
+    client = MongoClient('mongodb://mongo:27017/')
+    db = client["covid"]
+    db.drop_collection('government_measures')
+    collection = db['government_measures']
+    collection.insert_many(csv_to_json(government_measures, 0))
+    
+def _pull_location_csv():
+    # Code to pull location.csv from MongoDB
+    client = MongoClient('mongodb://mongo:27017/')
+    db = client["covid"] 
+    collection = db['location']
+    data = pd.DataFrame(list(collection.find())).drop('_id', axis=1)
+    data.to_csv('/opt/airflow/dags/files/location.csv', index=False)
+    
+def _pull_population_data():
+    client = MongoClient('mongodb://mongo:27017/')
+    db = client["covid"]
+    collection = db['population_data']
+    data = pd.DataFrame(list(collection.find())).drop('_id', axis=1)
+    data.to_csv('/opt/airflow/dags/files/population_data.csv', index=False)
+
+def _pull_cases_deaths():
+    client = MongoClient('mongodb://mongo:27017/')
+    db = client["covid"]
+    collection = db['cases_deaths']
+    data = pd.DataFrame(list(collection.find())).drop('_id', axis=1)
+    data.to_csv('/opt/airflow/dags/files/cases_deaths.csv', index=False)
+    
+def _pull_vaccinations():
+    client = MongoClient('mongodb://mongo:27017/')
+    db = client["covid"]
+    collection = db['vaccinations']
+    data = pd.DataFrame(list(collection.find())).drop('_id', axis=1)
+    data.to_csv('/opt/airflow/dags/files/vaccinations.csv', index=False)
+
+def _pull_government_measures():
+    client = MongoClient('mongodb://mongo:27017/')
+    db = client["covid"]
+    collection = db['government_measures']
+    data = pd.DataFrame(list(collection.find())).drop('_id', axis=1)
+    data.to_csv('/opt/airflow/dags/files/government_measures.csv', index=False)
+
+def format_date(df: pd.DataFrame, date_col) -> pd.DataFrame:
     print("Formatting date…")
-    df["Date_reported"] = pd.to_datetime(df["Date_reported"], format="%Y-%m-%d")
+    df[date_col] = pd.to_datetime(df[date_col], format="%Y-%m-%d")
     return df
 
-def discard_rows(df):
+def discard_rows(df, columns):
     print("Discarding rows…")
     # For all rows where new_cases or new_deaths is negative, we keep the cumulative value but set
     # the daily change to NA. This also sets the 7-day rolling average to NA for the next 7 days.
-    df.loc[df.New_cases < 0, "New_cases"] = np.nan
-    df.loc[df.New_deaths < 0, "New_deaths"] = np.nan
+    for col in columns:
+        df.loc[df[col] < 0, col] = np.nan
+    
     return df
 
 def _inject_growth(df, prefix, periods):
@@ -128,11 +223,11 @@ def _inject_growth(df, prefix, periods):
     
     return df
     
-def _inject_population(df):
+def _inject_population(df, date_col):
     'dags\postgres\population_data.csv'
-    df_population = pd.read_csv('/opt/airflow/dags/postgres/population_data.csv')
+    df_population = pd.read_csv('/opt/airflow/dags/files/population_data.csv')
     # Extract year from Date_reported column and create a new column Year
-    df['Year'] = pd.DatetimeIndex(df['Date_reported']).year
+    df['Year'] = pd.DatetimeIndex([date_col]).year
     # 
     # Merge the two dataframes based on Country and Year columns
     df_merged = pd.merge(df, df_population, how='left', on=['Country', 'Year'])
@@ -148,53 +243,103 @@ def _per_capita(df, measures):
     #df = drop_population(df)
     return df
 
-def convert_iso_code(df):
-    converting_table = pd.read_csv('/opt/airflow/dags/postgres/location.csv')
+def convert_iso_code(df, iso_col):
+    converting_table = pd.read_csv('/opt/airflow/dags/files/location.csv')
     converting_table = converting_table[['alpha-2', 'alpha-3']]
-    merged = pd.merge(df, converting_table, how='left', left_on=['Country_code'], right_on=['alpha-2'])
+    merged = pd.merge(df, converting_table, how='left', left_on=[iso_col], right_on=['alpha-2'])
     
-    merged.drop(['Country_code', 'alpha-2'], axis=1, inplace=True)
+    merged.drop([iso_col, 'alpha-2'], axis=1, inplace=True)
     merged.rename(columns={'alpha-3': 'Country_code'}, inplace=True)
     return merged
 
 def _wrangle_cases_deaths():
-    df = pd.read_csv('/opt/airflow/dags/postgres/cases_deaths.csv')
+    df = pd.read_csv('/opt/airflow/dags/files/cases_deaths.csv')
     
-    df = format_date(df)
-    df = discard_rows(df)
+    df = format_date(df, date_col="Date_reported")
+    df = discard_rows(df, ["New_cases", "New_deaths"])
     df = _inject_growth(df, 'Weekly', 7)   
-    df = _inject_population(df)
+    df = _inject_population(df, date_col="Date_reported")
     df = _per_capita(df, ["New_cases", "New_deaths", "Cumulative_cases", 
                           "Cumulative_deaths", "Weekly_cases", "Weekly_deaths",])
-    df = convert_iso_code(df)
+    df = convert_iso_code(df, iso_col='Country_code')
     
     
-    df.to_csv('/opt/airflow/dags/postgres/cases_deaths_wrangled.csv', index=False)
+    df.to_csv('/opt/airflow/dags/files/cases_deaths.csv', index=False)
+
+def _inject_growth_vacc(df, prefix, periods):
+    vaccinated_colname = "%s_persons_vaccinated" % prefix
+    fully_vaccinated_colname = "%s_persons_fully_vaccinated" % prefix
+    vaccine_doses_colname = "%s_vaccine_doses_administered" % prefix
+    vaccinated_growth_colname = "%s_pct_growth_persons_vaccinated" % prefix
+    fully_vaccinated_growth_colname = "%s_pct_growth_persons_fully_vaccinated" % prefix
+    vaccine_doses_growth_colname = "%s_pct_growth_vaccine_doses_administered" % prefix
+    cases_growth_colname = "%s_pct_growth_cases" % prefix
+    deaths_growth_colname = "%s_pct_growth_deaths" % prefix
+
+    df[[vaccinated_colname, fully_vaccinated_colname, vaccine_doses_colname]] = (
+        df[["location_key", "new_persons_vaccinated", "new_persons_fully_vaccinated", "new_vaccine_doses_administered"]]
+        .groupby("location_key")[["new_persons_vaccinated", "new_persons_fully_vaccinated", "new_vaccine_doses_administered"]]
+        .rolling(window=periods, min_periods=periods - 1, center=False)
+        .sum()
+        .reset_index(level=0, drop=True)
+    )
+    df[[cases_growth_colname, deaths_growth_colname]] = (
+        df[["location_key", vaccinated_colname, fully_vaccinated_colname, vaccine_doses_colname]]
+        .groupby("location_key")[[vaccinated_colname, fully_vaccinated_colname, vaccine_doses_colname]]
+        .pct_change(periods=periods, fill_method=None)
+        .round(3)
+        .replace([np.inf, -np.inf], pd.NA)
+        * 100
+    )
+    
+    return df
+
+def rollup(df):
+    # Discard rows where location_key is null
+    df.dropna(subset = ["location_key"], inplace=True)
+    
+    # Discard rows where location_key contains "_", i.e. regional/province data
+    df.drop(df[df["location_key"].str.contains("_")].index, inplace=True)
+    
+    return df
 
 def _wrangle_vaccinations():
-    df = pd.read_csv('/opt/airflow/dags/postgres/vaccinations.csv')
-    
+    df = pd.read_csv('/opt/airflow/dags/files/vaccinations.csv')
+    df = df.iloc[:, :9]     
+    df = format_date(df, date_col="date")
+    df = discard_rows(df, ["new_persons_vaccinated", "new_persons_fully_vaccinated", "new_vaccine_doses_administered"])
+    df = rollup(df) 
+    df = _inject_growth_vacc(df, 'Weekly', 7)
+    df = _inject_population(df, date_col="date")
+    df = _per_capita(df, ["new_persons_vaccinated", "new_persons_fully_vaccinated", "new_vaccine_doses_administered" 
+                          "weekly_persons_vaccinated", "weekly_persons_fully_vaccinated", "weekly_vaccine_doses_administered"])
+    df = convert_iso_code(df, iso_col='location_key')
     
     #df.to_csv('/opt/airflow/dags/postgres/vaccinations_wrangled.csv', index=False)
 
 def _wrangle_government_measures():
-    df = pd.read_csv('/opt/airflow/dags/postgres/government_measures.csv')
+    df = pd.read_csv('/opt/airflow/dags/files/government_measures.csv')
     # Apply data wrangling here
     
     # Mantain only the columns of interest
     df = df[['CountryName', 'CountryCode', 'Jurisdiction', 'Date', 'StringencyIndex_Average', 'GovernmentResponseIndex_Average', 'ContainmentHealthIndex_Average', 'EconomicSupportIndex']]
     
     
-    df.to_csv('/opt/airflow/dags/postgres/government_measures_wrangled.csv', index=False)
+    df.to_csv('/opt/airflow/dags/files/government_measures.csv', index=False)
 
 def _wrangle_population_data():
-    df = pd.read_csv('/opt/airflow/dags/postgres/population_data.csv')
-    # Apply data wrangling here
-    # ...
+    data = pd.read_csv('/opt/airflow/dags/files/population_data.csv')
+    
+    data["YR2023"] = data["YR2022"]
+    
+    data_reshaped = pd.melt(data, id_vars=['Country'], var_name='Year', value_name='population')
+    data_reshaped['Year'] = data_reshaped['Year'].apply(lambda year: int(year[2:]))
+    
+    data_reshaped.to_csv('/opt/airflow/dags/postgres/population_data.csv', index=False)
     #df.to_csv('/opt/airflow/dags/postgres/population_data_wrangled.csv', index=False)
     
 def _wrangle_location_data():
-    df = pd.read_csv('/opt/airflow/dags/postgres/location.csv')
+    df = pd.read_csv('/opt/airflow/dags/files/location.csv')
     # Apply data wrangling here
     # ...
     #df.to_csv('/opt/airflow/dags/postgres/location_wrangled.csv', index=False)
@@ -255,7 +400,7 @@ with TaskGroup("ingestion", dag=dag) as ingestion:
         dag=dag,
     )
     
-    # Download the cases_deaths.csv file from the WHO website
+    '''# Download the cases_deaths.csv file from the WHO website
     download_cases_deaths = PythonOperator(
         task_id='download_cases_deaths',
         dag=dag,
@@ -303,15 +448,65 @@ with TaskGroup("ingestion", dag=dag) as ingestion:
         op_kwargs={},
         trigger_rule='all_success',
         depends_on_past=False,
-    )
+    )'''
     
+    # Store the location_csv in MongoDB
+    store_location_csv = PythonOperator(
+        task_id='store_location_csv',
+        dag=dag,
+        python_callable=_store_location_csv,
+        op_kwargs={},
+        trigger_rule='all_success',
+        depends_on_past=False,
+    )
+
+    # Store the population_data in MongoDB
+    store_population_data = PythonOperator(
+        task_id='store_population_data',
+        dag=dag,
+        python_callable=_store_population_data,
+        op_kwargs={},
+        trigger_rule='all_success',
+        depends_on_past=False,
+    )
+
+    # Store the cases_deaths in MongoDB
+    store_cases_deaths = PythonOperator(
+        task_id='store_cases_deaths',
+        dag=dag,
+        python_callable=_store_cases_deaths,
+        op_kwargs={},
+        trigger_rule='all_success',
+        depends_on_past=False,
+    )
+
+    # Store the vaccinations in MongoDB
+    store_vaccinations = PythonOperator(
+        task_id='store_vaccinations',
+        dag=dag,
+        python_callable=_store_vaccinations,
+        op_kwargs={},
+        trigger_rule='all_success',
+        depends_on_past=False,
+    )
+
+    # Store the government_measures in MongoDB
+    store_government_measures = PythonOperator(
+        task_id='store_government_measures',
+        dag=dag,
+        python_callable=_store_government_measures,
+        op_kwargs={},
+        trigger_rule='all_success',
+        depends_on_past=False,
+    )
+
     ingestion_end = DummyOperator(
         task_id='ingestion_end',
         dag=dag,
         trigger_rule='all_success'
     )
-
-with TaskGroup("staging", dag=dag) as staging:
+    
+with TaskGroup("staging", dag=dag) as staging:    
     
     staging_start = DummyOperator(
         task_id='staging_start',
@@ -324,6 +519,56 @@ with TaskGroup("staging", dag=dag) as staging:
         trigger_rule='all_success'
     )
     
+    # Pull data from Mongo for location_csv
+    pull_location_csv = PythonOperator(
+        task_id='pull_location_csv',
+        dag=dag,
+        python_callable=_pull_location_csv,
+        op_kwargs={},
+        trigger_rule='all_success',
+        depends_on_past=False,
+    )
+    
+    # Pull data from Mongo for population_data
+    pull_population_data = PythonOperator(
+        task_id='pull_population_data',
+        dag=dag,
+        python_callable=_pull_population_data,
+        op_kwargs={},
+        trigger_rule='all_success',
+        depends_on_past=False,
+    )
+    
+    # Pull data from Mongo for cases_deaths
+    pull_cases_deaths = PythonOperator(
+        task_id='pull_cases_deaths',
+        dag=dag,
+        python_callable=_pull_cases_deaths,
+        op_kwargs={},
+        trigger_rule='all_success',
+        depends_on_past=False,
+    )
+    
+    # Pull data from Mongo for vaccinations
+    pull_vaccinations = PythonOperator(
+        task_id='pull_vaccinations',
+        dag=dag,
+        python_callable=_pull_vaccinations,
+        op_kwargs={},
+        trigger_rule='all_success',
+        depends_on_past=False,
+    )
+    
+    # Pull data from Mongo for government_measures
+    pull_government_measures = PythonOperator(
+        task_id='pull_government_measures',
+        dag=dag,
+        python_callable=_pull_government_measures,
+        op_kwargs={},
+        trigger_rule='all_success',
+        depends_on_past=False,
+    )
+        
     # Create the time_table.csv file with the time dimensions
     create_time_csv = PythonOperator(
         task_id='create_time_csv',
@@ -438,16 +683,17 @@ with TaskGroup("staging", dag=dag) as staging:
         trigger_rule='all_success'
 )'''
     
-ingestion_start >> [download_cases_deaths, download_population_data, download_location_data, download_government_measures, download_location_data, download_vaccinations]
-[download_cases_deaths, download_population_data, download_location_data, download_government_measures, download_location_data] >> ingestion_end 
+ingestion_start >> [store_location_csv, store_population_data, store_cases_deaths, store_vaccinations, store_government_measures]
+[store_location_csv, store_population_data, store_cases_deaths, store_vaccinations, store_government_measures] >> ingestion_end
 ingestion_end >> staging_start
-staging_start >> [create_time_csv, wrangle_cases_deaths_task, wrangle_vaccinations_task, wrangle_government_measures_task, wrangle_population_data_task, wrangle_location_data_task]
 
-wrangle_cases_deaths_task >> create_cases_deaths_table >> upload_cases_deaths
-wrangle_vaccinations_task >> create_vaccinations_table >> upload_vaccinations
-wrangle_government_measures_task >> create_government_measures_table >> upload_government_measures
-wrangle_location_data_task >> create_location_table >> upload_location
-create_time_csv >> create_time_table >> upload_time
+staging_start >> [pull_location_csv, pull_population_data, pull_cases_deaths, pull_vaccinations, pull_government_measures]
+[pull_cases_deaths, wrangle_population_data_task] >> wrangle_cases_deaths_task >> create_cases_deaths_table >> upload_cases_deaths
+[pull_vaccinations, wrangle_population_data_task] >> wrangle_vaccinations_task >> create_vaccinations_table >> upload_vaccinations
+pull_government_measures >> wrangle_government_measures_task >> create_government_measures_table >> upload_government_measures
+pull_location_csv >> wrangle_location_data_task >> create_location_table >> upload_location
+pull_population_data >> wrangle_population_data_task 
+staging_start >> create_time_csv >> create_time_table >> upload_time
 
 [upload_cases_deaths, upload_vaccinations, upload_government_measures, upload_location, upload_time] >> staging_end
  

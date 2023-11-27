@@ -1,0 +1,22 @@
+[2023-11-24T18:52:09.739+0000] {taskinstance.py:1157} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: covid_data_dag_postgres_plis.ingestion.store_population_data manual__2023-11-24T18:47:49.668566+00:00 [queued]>
+[2023-11-24T18:52:09.769+0000] {taskinstance.py:1157} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: covid_data_dag_postgres_plis.ingestion.store_population_data manual__2023-11-24T18:47:49.668566+00:00 [queued]>
+[2023-11-24T18:52:09.771+0000] {taskinstance.py:1359} INFO - Starting attempt 2 of 2
+[2023-11-24T18:52:09.809+0000] {taskinstance.py:1380} INFO - Executing <Task(PythonOperator): ingestion.store_population_data> on 2023-11-24 18:47:49.668566+00:00
+[2023-11-24T18:52:09.824+0000] {standard_task_runner.py:57} INFO - Started process 3860 to run task
+[2023-11-24T18:52:09.857+0000] {standard_task_runner.py:84} INFO - Running: ['***', 'tasks', 'run', 'covid_data_dag_postgres_plis', 'ingestion.store_population_data', 'manual__2023-11-24T18:47:49.668566+00:00', '--job-id', '1478', '--raw', '--subdir', 'DAGS_FOLDER/Dag_postgres.py', '--cfg-path', '/tmp/tmppvv2lpql']
+[2023-11-24T18:52:09.875+0000] {standard_task_runner.py:85} INFO - Job 1478: Subtask ingestion.store_population_data
+[2023-11-24T18:52:10.148+0000] {task_command.py:415} INFO - Running <TaskInstance: covid_data_dag_postgres_plis.ingestion.store_population_data manual__2023-11-24T18:47:49.668566+00:00 [running]> on host 172.21.0.6
+[2023-11-24T18:52:10.715+0000] {taskinstance.py:1660} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='covid_data_dag_postgres_plis' AIRFLOW_CTX_TASK_ID='ingestion.store_population_data' AIRFLOW_CTX_EXECUTION_DATE='2023-11-24T18:47:49.668566+00:00' AIRFLOW_CTX_TRY_NUMBER='2' AIRFLOW_CTX_DAG_RUN_ID='manual__2023-11-24T18:47:49.668566+00:00'
+[2023-11-24T18:52:19.446+0000] {taskinstance.py:1935} ERROR - Task failed with exception
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/operators/python.py", line 192, in execute
+    return_value = self.execute_callable()
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/operators/python.py", line 209, in execute_callable
+    return self.python_callable(*self.op_args, **self.op_kwargs)
+  File "/opt/airflow/dags/Dag_postgres.py", line 120, in _store_population_data
+    db.drop_collection('population_data')
+UnboundLocalError: local variable 'db' referenced before assignment
+[2023-11-24T18:52:19.531+0000] {taskinstance.py:1398} INFO - Marking task as FAILED. dag_id=covid_data_dag_postgres_plis, task_id=ingestion.store_population_data, execution_date=20231124T184749, start_date=20231124T185209, end_date=20231124T185219
+[2023-11-24T18:52:19.588+0000] {standard_task_runner.py:104} ERROR - Failed to execute job 1478 for task ingestion.store_population_data (local variable 'db' referenced before assignment; 3860)
+[2023-11-24T18:52:19.685+0000] {local_task_job_runner.py:228} INFO - Task exited with return code 1
+[2023-11-24T18:52:19.845+0000] {taskinstance.py:2776} INFO - 0 downstream tasks scheduled from follow-on schedule check

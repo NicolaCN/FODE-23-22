@@ -1,0 +1,40 @@
+[2023-11-26T16:44:05.770+0000] {taskinstance.py:1157} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: covid_data_dag_postgres_plis.staging.wrangle_cases_deaths manual__2023-11-26T16:39:57.170703+00:00 [queued]>
+[2023-11-26T16:44:05.919+0000] {taskinstance.py:1157} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: covid_data_dag_postgres_plis.staging.wrangle_cases_deaths manual__2023-11-26T16:39:57.170703+00:00 [queued]>
+[2023-11-26T16:44:05.924+0000] {taskinstance.py:1359} INFO - Starting attempt 1 of 2
+[2023-11-26T16:44:06.089+0000] {taskinstance.py:1380} INFO - Executing <Task(PythonOperator): staging.wrangle_cases_deaths> on 2023-11-26 16:39:57.170703+00:00
+[2023-11-26T16:44:06.273+0000] {standard_task_runner.py:57} INFO - Started process 1580 to run task
+[2023-11-26T16:44:06.932+0000] {standard_task_runner.py:84} INFO - Running: ['***', 'tasks', 'run', 'covid_data_dag_postgres_plis', 'staging.wrangle_cases_deaths', 'manual__2023-11-26T16:39:57.170703+00:00', '--job-id', '1563', '--raw', '--subdir', 'DAGS_FOLDER/Dag_postgres.py', '--cfg-path', '/tmp/tmp09wvghpl']
+[2023-11-26T16:44:07.158+0000] {standard_task_runner.py:85} INFO - Job 1563: Subtask staging.wrangle_cases_deaths
+[2023-11-26T16:44:10.701+0000] {task_command.py:415} INFO - Running <TaskInstance: covid_data_dag_postgres_plis.staging.wrangle_cases_deaths manual__2023-11-26T16:39:57.170703+00:00 [running]> on host 172.21.0.5
+[2023-11-26T16:44:12.036+0000] {taskinstance.py:1660} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='covid_data_dag_postgres_plis' AIRFLOW_CTX_TASK_ID='staging.wrangle_cases_deaths' AIRFLOW_CTX_EXECUTION_DATE='2023-11-26T16:39:57.170703+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='manual__2023-11-26T16:39:57.170703+00:00'
+[2023-11-26T16:44:18.429+0000] {logging_mixin.py:151} INFO - Formatting date…
+[2023-11-26T16:44:19.010+0000] {logging_mixin.py:151} INFO - Discarding rows…
+[2023-11-26T16:44:27.996+0000] {taskinstance.py:1935} ERROR - Task failed with exception
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/operators/python.py", line 192, in execute
+    return_value = self.execute_callable()
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/operators/python.py", line 209, in execute_callable
+    return self.python_callable(*self.op_args, **self.op_kwargs)
+  File "/opt/airflow/dags/Dag_postgres.py", line 259, in _wrangle_cases_deaths
+    df = discard_rows(df, ["New_cases", "New_deaths"])
+  File "/opt/airflow/dags/Dag_postgres.py", line 228, in _inject_population
+    df_population = pd.read_csv('/opt/airflow/dags/files/population_data.csv')
+  File "/home/airflow/.local/lib/python3.8/site-packages/pandas/core/indexes/datetimes.py", line 339, in __new__
+    dtarr = DatetimeArray._from_sequence_not_strict(
+  File "/home/airflow/.local/lib/python3.8/site-packages/pandas/core/arrays/datetimes.py", line 333, in _from_sequence_not_strict
+    subarr, tz, inferred_freq = _sequence_to_dt64ns(
+  File "/home/airflow/.local/lib/python3.8/site-packages/pandas/core/arrays/datetimes.py", line 2057, in _sequence_to_dt64ns
+    data, inferred_tz = objects_to_datetime64ns(
+  File "/home/airflow/.local/lib/python3.8/site-packages/pandas/core/arrays/datetimes.py", line 2177, in objects_to_datetime64ns
+    result, tz_parsed = tslib.array_to_datetime(
+  File "pandas/_libs/tslib.pyx", line 402, in pandas._libs.tslib.array_to_datetime
+  File "pandas/_libs/tslib.pyx", line 551, in pandas._libs.tslib.array_to_datetime
+  File "pandas/_libs/tslib.pyx", line 516, in pandas._libs.tslib.array_to_datetime
+  File "pandas/_libs/tslibs/conversion.pyx", line 557, in pandas._libs.tslibs.conversion.convert_str_to_tsobject
+  File "pandas/_libs/tslibs/parsing.pyx", line 329, in pandas._libs.tslibs.parsing.parse_datetime_string
+  File "pandas/_libs/tslibs/parsing.pyx", line 658, in pandas._libs.tslibs.parsing.dateutil_parse
+pandas._libs.tslibs.parsing.DateParseError: Unknown datetime string format, unable to parse: Date_reported, at position 0
+[2023-11-26T16:44:28.150+0000] {taskinstance.py:1398} INFO - Marking task as UP_FOR_RETRY. dag_id=covid_data_dag_postgres_plis, task_id=staging.wrangle_cases_deaths, execution_date=20231126T163957, start_date=20231126T164405, end_date=20231126T164428
+[2023-11-26T16:44:28.302+0000] {standard_task_runner.py:104} ERROR - Failed to execute job 1563 for task staging.wrangle_cases_deaths (Unknown datetime string format, unable to parse: Date_reported, at position 0; 1580)
+[2023-11-26T16:44:28.412+0000] {local_task_job_runner.py:228} INFO - Task exited with return code 1
+[2023-11-26T16:44:28.497+0000] {taskinstance.py:2776} INFO - 0 downstream tasks scheduled from follow-on schedule check

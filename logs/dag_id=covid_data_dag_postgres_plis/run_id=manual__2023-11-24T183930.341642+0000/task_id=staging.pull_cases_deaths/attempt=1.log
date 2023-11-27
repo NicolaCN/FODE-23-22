@@ -1,0 +1,16 @@
+[2023-11-24T18:44:49.306+0000] {taskinstance.py:1157} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: covid_data_dag_postgres_plis.staging.pull_cases_deaths manual__2023-11-24T18:39:30.341642+00:00 [queued]>
+[2023-11-24T18:44:49.763+0000] {taskinstance.py:1157} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: covid_data_dag_postgres_plis.staging.pull_cases_deaths manual__2023-11-24T18:39:30.341642+00:00 [queued]>
+[2023-11-24T18:44:49.767+0000] {taskinstance.py:1359} INFO - Starting attempt 1 of 2
+[2023-11-24T18:44:50.485+0000] {taskinstance.py:1380} INFO - Executing <Task(PythonOperator): staging.pull_cases_deaths> on 2023-11-24 18:39:30.341642+00:00
+[2023-11-24T18:44:51.169+0000] {standard_task_runner.py:57} INFO - Started process 3633 to run task
+[2023-11-24T18:44:51.642+0000] {standard_task_runner.py:84} INFO - Running: ['***', 'tasks', 'run', 'covid_data_dag_postgres_plis', 'staging.pull_cases_deaths', 'manual__2023-11-24T18:39:30.341642+00:00', '--job-id', '1468', '--raw', '--subdir', 'DAGS_FOLDER/Dag_postgres.py', '--cfg-path', '/tmp/tmpoiysj0c4']
+[2023-11-24T18:44:52.166+0000] {standard_task_runner.py:85} INFO - Job 1468: Subtask staging.pull_cases_deaths
+[2023-11-24T18:44:56.262+0000] {task_command.py:415} INFO - Running <TaskInstance: covid_data_dag_postgres_plis.staging.pull_cases_deaths manual__2023-11-24T18:39:30.341642+00:00 [running]> on host 172.21.0.6
+[2023-11-24T18:44:59.391+0000] {taskinstance.py:1660} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='covid_data_dag_postgres_plis' AIRFLOW_CTX_TASK_ID='staging.pull_cases_deaths' AIRFLOW_CTX_EXECUTION_DATE='2023-11-24T18:39:30.341642+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='manual__2023-11-24T18:39:30.341642+00:00'
+[2023-11-24T18:47:43.311+0000] {local_task_job_runner.py:294} WARNING - State of this instance has been externally set to failed. Terminating instance.
+[2023-11-24T18:47:44.548+0000] {process_utils.py:131} INFO - Sending 15 to group 3633. PIDs of all processes in the group: [3633]
+[2023-11-24T18:47:44.597+0000] {process_utils.py:86} INFO - Sending the signal 15 to group 3633
+[2023-11-24T18:48:47.792+0000] {process_utils.py:149} WARNING - process psutil.Process(pid=3633, name='airflow task ru', status='running', started='18:44:50') did not respond to SIGTERM. Trying SIGKILL
+[2023-11-24T18:48:52.992+0000] {process_utils.py:86} INFO - Sending the signal 9 to group 3633
+[2023-11-24T18:49:00.177+0000] {process_utils.py:79} INFO - Process psutil.Process(pid=3633, name='airflow task ru', status='terminated', exitcode=<Negsignal.SIGKILL: -9>, started='18:44:50') (3633) terminated with exit code -9
+[2023-11-24T18:49:01.154+0000] {standard_task_runner.py:172} ERROR - Job 1468 was killed before it finished (likely due to running out of memory)

@@ -1,0 +1,13 @@
+[2023-11-26T16:05:12.971+0000] {taskinstance.py:1157} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: covid_data_dag_postgres_plis.ingestion.store_location_csv manual__2023-11-26T16:05:07.277984+00:00 [queued]>
+[2023-11-26T16:05:12.992+0000] {taskinstance.py:1157} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: covid_data_dag_postgres_plis.ingestion.store_location_csv manual__2023-11-26T16:05:07.277984+00:00 [queued]>
+[2023-11-26T16:05:12.993+0000] {taskinstance.py:1359} INFO - Starting attempt 1 of 2
+[2023-11-26T16:05:13.042+0000] {taskinstance.py:1380} INFO - Executing <Task(PythonOperator): ingestion.store_location_csv> on 2023-11-26 16:05:07.277984+00:00
+[2023-11-26T16:05:13.049+0000] {standard_task_runner.py:57} INFO - Started process 163 to run task
+[2023-11-26T16:05:13.068+0000] {standard_task_runner.py:84} INFO - Running: ['***', 'tasks', 'run', 'covid_data_dag_postgres_plis', 'ingestion.store_location_csv', 'manual__2023-11-26T16:05:07.277984+00:00', '--job-id', '1510', '--raw', '--subdir', 'DAGS_FOLDER/Dag_postgres.py', '--cfg-path', '/tmp/tmp3__vlbnw']
+[2023-11-26T16:05:13.100+0000] {standard_task_runner.py:85} INFO - Job 1510: Subtask ingestion.store_location_csv
+[2023-11-26T16:05:13.186+0000] {task_command.py:415} INFO - Running <TaskInstance: covid_data_dag_postgres_plis.ingestion.store_location_csv manual__2023-11-26T16:05:07.277984+00:00 [running]> on host 172.21.0.5
+[2023-11-26T16:05:13.440+0000] {taskinstance.py:1660} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='covid_data_dag_postgres_plis' AIRFLOW_CTX_TASK_ID='ingestion.store_location_csv' AIRFLOW_CTX_EXECUTION_DATE='2023-11-26T16:05:07.277984+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='manual__2023-11-26T16:05:07.277984+00:00'
+[2023-11-26T16:05:16.740+0000] {python.py:194} INFO - Done. Returned value was: None
+[2023-11-26T16:05:16.797+0000] {taskinstance.py:1398} INFO - Marking task as SUCCESS. dag_id=covid_data_dag_postgres_plis, task_id=ingestion.store_location_csv, execution_date=20231126T160507, start_date=20231126T160512, end_date=20231126T160516
+[2023-11-26T16:05:17.192+0000] {local_task_job_runner.py:228} INFO - Task exited with return code 0
+[2023-11-26T16:05:17.989+0000] {taskinstance.py:2776} INFO - 0 downstream tasks scheduled from follow-on schedule check

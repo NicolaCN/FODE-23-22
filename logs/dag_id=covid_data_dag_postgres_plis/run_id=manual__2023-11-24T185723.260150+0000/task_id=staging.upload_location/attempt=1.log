@@ -1,0 +1,13 @@
+[2023-11-24T19:07:12.398+0000] {taskinstance.py:1157} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: covid_data_dag_postgres_plis.staging.upload_location manual__2023-11-24T18:57:23.260150+00:00 [queued]>
+[2023-11-24T19:07:12.582+0000] {taskinstance.py:1157} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: covid_data_dag_postgres_plis.staging.upload_location manual__2023-11-24T18:57:23.260150+00:00 [queued]>
+[2023-11-24T19:07:12.584+0000] {taskinstance.py:1359} INFO - Starting attempt 1 of 2
+[2023-11-24T19:07:12.666+0000] {taskinstance.py:1380} INFO - Executing <Task(PythonOperator): staging.upload_location> on 2023-11-24 18:57:23.260150+00:00
+[2023-11-24T19:07:12.726+0000] {standard_task_runner.py:57} INFO - Started process 4317 to run task
+[2023-11-24T19:07:12.746+0000] {standard_task_runner.py:84} INFO - Running: ['***', 'tasks', 'run', 'covid_data_dag_postgres_plis', 'staging.upload_location', 'manual__2023-11-24T18:57:23.260150+00:00', '--job-id', '1496', '--raw', '--subdir', 'DAGS_FOLDER/Dag_postgres.py', '--cfg-path', '/tmp/tmpsy_t5cg8']
+[2023-11-24T19:07:12.757+0000] {standard_task_runner.py:85} INFO - Job 1496: Subtask staging.upload_location
+[2023-11-24T19:07:12.885+0000] {task_command.py:415} INFO - Running <TaskInstance: covid_data_dag_postgres_plis.staging.upload_location manual__2023-11-24T18:57:23.260150+00:00 [running]> on host 172.21.0.6
+[2023-11-24T19:07:13.120+0000] {taskinstance.py:1660} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='covid_data_dag_postgres_plis' AIRFLOW_CTX_TASK_ID='staging.upload_location' AIRFLOW_CTX_EXECUTION_DATE='2023-11-24T18:57:23.260150+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='manual__2023-11-24T18:57:23.260150+00:00'
+[2023-11-24T19:07:13.438+0000] {python.py:194} INFO - Done. Returned value was: None
+[2023-11-24T19:07:13.459+0000] {taskinstance.py:1398} INFO - Marking task as SUCCESS. dag_id=covid_data_dag_postgres_plis, task_id=staging.upload_location, execution_date=20231124T185723, start_date=20231124T190712, end_date=20231124T190713
+[2023-11-24T19:07:13.621+0000] {local_task_job_runner.py:228} INFO - Task exited with return code 0
+[2023-11-24T19:07:13.762+0000] {taskinstance.py:2776} INFO - 0 downstream tasks scheduled from follow-on schedule check

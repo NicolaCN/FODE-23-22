@@ -1,0 +1,52 @@
+[2023-11-23T18:44:30.114+0000] {taskinstance.py:1157} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: covid_data_dag_postgres_plis.ingestion.store_location_csv manual__2023-11-23T18:41:13.508197+00:00 [queued]>
+[2023-11-23T18:44:30.468+0000] {taskinstance.py:1157} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: covid_data_dag_postgres_plis.ingestion.store_location_csv manual__2023-11-23T18:41:13.508197+00:00 [queued]>
+[2023-11-23T18:44:30.474+0000] {taskinstance.py:1359} INFO - Starting attempt 2 of 2
+[2023-11-23T18:44:30.913+0000] {taskinstance.py:1380} INFO - Executing <Task(PythonOperator): ingestion.store_location_csv> on 2023-11-23 18:41:13.508197+00:00
+[2023-11-23T18:44:31.432+0000] {standard_task_runner.py:57} INFO - Started process 546 to run task
+[2023-11-23T18:44:32.511+0000] {standard_task_runner.py:84} INFO - Running: ['***', 'tasks', 'run', 'covid_data_dag_postgres_plis', 'ingestion.store_location_csv', 'manual__2023-11-23T18:41:13.508197+00:00', '--job-id', '1370', '--raw', '--subdir', 'DAGS_FOLDER/Dag_postgres.py', '--cfg-path', '/tmp/tmpuzfzptlb']
+[2023-11-23T18:44:32.569+0000] {standard_task_runner.py:85} INFO - Job 1370: Subtask ingestion.store_location_csv
+[2023-11-23T18:44:36.695+0000] {task_command.py:415} INFO - Running <TaskInstance: covid_data_dag_postgres_plis.ingestion.store_location_csv manual__2023-11-23T18:41:13.508197+00:00 [running]> on host 172.21.0.5
+[2023-11-23T18:44:37.576+0000] {taskinstance.py:1660} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='covid_data_dag_postgres_plis' AIRFLOW_CTX_TASK_ID='ingestion.store_location_csv' AIRFLOW_CTX_EXECUTION_DATE='2023-11-23T18:41:13.508197+00:00' AIRFLOW_CTX_TRY_NUMBER='2' AIRFLOW_CTX_DAG_RUN_ID='manual__2023-11-23T18:41:13.508197+00:00'
+[2023-11-23T18:44:38.905+0000] {taskinstance.py:1935} ERROR - Task failed with exception
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/operators/python.py", line 192, in execute
+    return_value = self.execute_callable()
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/operators/python.py", line 209, in execute_callable
+    return self.python_callable(*self.op_args, **self.op_kwargs)
+  File "/opt/airflow/dags/Dag_postgres.py", line 107, in _store_location_csv
+    collection.insert_many(csv_to_json(location_csv))
+  File "/home/airflow/.local/lib/python3.8/site-packages/pymongo/_csot.py", line 107, in csot_wrapper
+    return func(self, *args, **kwargs)
+  File "/home/airflow/.local/lib/python3.8/site-packages/pymongo/collection.py", line 755, in insert_many
+    blk.execute(write_concern, session=session)
+  File "/home/airflow/.local/lib/python3.8/site-packages/pymongo/bulk.py", line 576, in execute
+    return self.execute_command(generator, write_concern, session)
+  File "/home/airflow/.local/lib/python3.8/site-packages/pymongo/bulk.py", line 443, in execute_command
+    client._retryable_write(self.is_retryable, retryable_bulk, session, bulk=self)
+  File "/home/airflow/.local/lib/python3.8/site-packages/pymongo/mongo_client.py", line 1523, in _retryable_write
+    return self._retry_with_session(retryable, func, s, bulk)
+  File "/home/airflow/.local/lib/python3.8/site-packages/pymongo/mongo_client.py", line 1421, in _retry_with_session
+    return self._retry_internal(
+  File "/home/airflow/.local/lib/python3.8/site-packages/pymongo/_csot.py", line 107, in csot_wrapper
+    return func(self, *args, **kwargs)
+  File "/home/airflow/.local/lib/python3.8/site-packages/pymongo/mongo_client.py", line 1453, in _retry_internal
+    return _ClientConnectionRetryable(
+  File "/home/airflow/.local/lib/python3.8/site-packages/pymongo/mongo_client.py", line 2315, in run
+    return self._read() if self._is_read else self._write()
+  File "/home/airflow/.local/lib/python3.8/site-packages/pymongo/mongo_client.py", line 2422, in _write
+    return self._func(self._session, conn, self._retryable)  # type: ignore
+  File "/home/airflow/.local/lib/python3.8/site-packages/pymongo/bulk.py", line 432, in retryable_bulk
+    self._execute_command(
+  File "/home/airflow/.local/lib/python3.8/site-packages/pymongo/bulk.py", line 378, in _execute_command
+    result, to_send = bwc.execute(cmd, ops, client)
+  File "/home/airflow/.local/lib/python3.8/site-packages/pymongo/message.py", line 963, in execute
+    request_id, msg, to_send = self.__batch_command(cmd, docs)
+  File "/home/airflow/.local/lib/python3.8/site-packages/pymongo/message.py", line 953, in __batch_command
+    request_id, msg, to_send = _do_batched_op_msg(
+  File "/home/airflow/.local/lib/python3.8/site-packages/pymongo/message.py", line 1352, in _do_batched_op_msg
+    return _batched_op_msg(operation, command, docs, ack, opts, ctx)
+bson.errors.InvalidDocument: documents must have only string keys, key was 0
+[2023-11-23T18:44:39.034+0000] {taskinstance.py:1398} INFO - Marking task as FAILED. dag_id=covid_data_dag_postgres_plis, task_id=ingestion.store_location_csv, execution_date=20231123T184113, start_date=20231123T184430, end_date=20231123T184439
+[2023-11-23T18:44:39.184+0000] {standard_task_runner.py:104} ERROR - Failed to execute job 1370 for task ingestion.store_location_csv (documents must have only string keys, key was 0; 546)
+[2023-11-23T18:44:39.282+0000] {local_task_job_runner.py:228} INFO - Task exited with return code 1
+[2023-11-23T18:44:39.430+0000] {taskinstance.py:2776} INFO - 0 downstream tasks scheduled from follow-on schedule check

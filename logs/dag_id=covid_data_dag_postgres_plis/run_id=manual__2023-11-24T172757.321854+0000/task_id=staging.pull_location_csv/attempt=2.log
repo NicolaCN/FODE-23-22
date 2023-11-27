@@ -1,0 +1,32 @@
+[2023-11-24T17:32:11.861+0000] {taskinstance.py:1157} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: covid_data_dag_postgres_plis.staging.pull_location_csv manual__2023-11-24T17:27:57.321854+00:00 [queued]>
+[2023-11-24T17:32:11.891+0000] {taskinstance.py:1157} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: covid_data_dag_postgres_plis.staging.pull_location_csv manual__2023-11-24T17:27:57.321854+00:00 [queued]>
+[2023-11-24T17:32:11.899+0000] {taskinstance.py:1359} INFO - Starting attempt 2 of 2
+[2023-11-24T17:32:11.930+0000] {taskinstance.py:1380} INFO - Executing <Task(PythonOperator): staging.pull_location_csv> on 2023-11-24 17:27:57.321854+00:00
+[2023-11-24T17:32:11.975+0000] {standard_task_runner.py:57} INFO - Started process 1751 to run task
+[2023-11-24T17:32:11.992+0000] {standard_task_runner.py:84} INFO - Running: ['***', 'tasks', 'run', 'covid_data_dag_postgres_plis', 'staging.pull_location_csv', 'manual__2023-11-24T17:27:57.321854+00:00', '--job-id', '1423', '--raw', '--subdir', 'DAGS_FOLDER/Dag_postgres.py', '--cfg-path', '/tmp/tmp6lkwe0ef']
+[2023-11-24T17:32:12.003+0000] {standard_task_runner.py:85} INFO - Job 1423: Subtask staging.pull_location_csv
+[2023-11-24T17:32:12.186+0000] {task_command.py:415} INFO - Running <TaskInstance: covid_data_dag_postgres_plis.staging.pull_location_csv manual__2023-11-24T17:27:57.321854+00:00 [running]> on host 172.21.0.6
+[2023-11-24T17:32:12.835+0000] {taskinstance.py:1660} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='covid_data_dag_postgres_plis' AIRFLOW_CTX_TASK_ID='staging.pull_location_csv' AIRFLOW_CTX_EXECUTION_DATE='2023-11-24T17:27:57.321854+00:00' AIRFLOW_CTX_TRY_NUMBER='2' AIRFLOW_CTX_DAG_RUN_ID='manual__2023-11-24T17:27:57.321854+00:00'
+[2023-11-24T17:32:13.107+0000] {taskinstance.py:1935} ERROR - Task failed with exception
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/operators/python.py", line 192, in execute
+    return_value = self.execute_callable()
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/operators/python.py", line 209, in execute_callable
+    return self.python_callable(*self.op_args, **self.op_kwargs)
+  File "/opt/airflow/dags/Dag_postgres.py", line 150, in _pull_location_csv
+    data.to_csv('/opt/airflow/dags/postgres/files/location.csv', index=False)
+  File "/home/airflow/.local/lib/python3.8/site-packages/pandas/core/generic.py", line 3772, in to_csv
+    return DataFrameRenderer(formatter).to_csv(
+  File "/home/airflow/.local/lib/python3.8/site-packages/pandas/io/formats/format.py", line 1186, in to_csv
+    csv_formatter.save()
+  File "/home/airflow/.local/lib/python3.8/site-packages/pandas/io/formats/csvs.py", line 240, in save
+    with get_handle(
+  File "/home/airflow/.local/lib/python3.8/site-packages/pandas/io/common.py", line 737, in get_handle
+    check_parent_directory(str(handle))
+  File "/home/airflow/.local/lib/python3.8/site-packages/pandas/io/common.py", line 600, in check_parent_directory
+    raise OSError(rf"Cannot save file into a non-existent directory: '{parent}'")
+OSError: Cannot save file into a non-existent directory: '/opt/***/dags/postgres/files'
+[2023-11-24T17:32:13.154+0000] {taskinstance.py:1398} INFO - Marking task as FAILED. dag_id=covid_data_dag_postgres_plis, task_id=staging.pull_location_csv, execution_date=20231124T172757, start_date=20231124T173211, end_date=20231124T173213
+[2023-11-24T17:32:13.226+0000] {standard_task_runner.py:104} ERROR - Failed to execute job 1423 for task staging.pull_location_csv (Cannot save file into a non-existent directory: '/opt/***/dags/postgres/files'; 1751)
+[2023-11-24T17:32:13.309+0000] {local_task_job_runner.py:228} INFO - Task exited with return code 1
+[2023-11-24T17:32:13.548+0000] {taskinstance.py:2776} INFO - 0 downstream tasks scheduled from follow-on schedule check
